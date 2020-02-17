@@ -1,63 +1,72 @@
-var request = require('request');
-var cheerio = require('cheerio');
-var _       = require('lodash');
-var fs      = require('fs');
+var request = require("request");
+var cheerio = require("cheerio");
+var _ = require("lodash");
+var fs = require("fs");
 
-var baseUrl = 'http://www.zeldadungeon.net';
+var baseUrl = "http://www.zeldadungeon.net";
 var paths = {
-  hearts: 'Zelda05-ocarina-of-time-pieces-of-heart.php'
-}
+  hearts: "Zelda05-ocarina-of-time-pieces-of-heart.php"
+};
 
 function scrape() {
-  request([baseUrl, paths.hearts].join('/'), function(error, response, body) {
+  request([baseUrl, paths.hearts].join("/"), function(error, response, body) {
     var $ = cheerio.load(body);
 
-    var $bodyContent = $('#body_content');
-    var $boxes       = $bodyContent.find('.box1');
+    var $bodyContent = $("#body_content");
+    var $boxes = $bodyContent.find(".box1");
 
-    var sections = _($boxes).
-    map(function(box, index) {
-      var $box = $(box);
-      var $cells = $box.find('tr td');
+    var sections = _($boxes)
+      .map(function(box, index) {
+        var $box = $(box);
+        var $cells = $box.find("tr td");
 
-      var section = {
-        title: $box.find('.title_section').text(),
-      };
-
-      section.pieces = _($cells).
-      map(function(cell) {
-        var $cell = $(cell);
-
-        // Look for a cell with title/image/directions
-        var $piece = $cell.find('.box2');
-
-        if ($piece.length === 0) {
-          return null;
-        }
-
-        return {
-          number     : parseInt($piece.find('b').text().split('#')[1].trim().trimLeft()),
-          img        : $piece.find('img').attr('src'),
-          directions : $piece.find('.pad.font_tiny').text()
+        var section = {
+          title: $box.find(".title_section").text()
         };
-      }).
-      compact().
-      value();
 
-      return section;
+        section.pieces = _($cells)
+          .map(function(cell) {
+            var $cell = $(cell);
 
-      // TODO: Look for a cell with just an img
-      // TODO: Look for a cell with just a video
-    }).
-    compact().
-    value();
+            // Look for a cell with title/image/directions
+            var $piece = $cell.find(".box2");
 
-    console.log('sections');
+            if ($piece.length === 0) {
+              return null;
+            }
+
+            return {
+              number: parseInt(
+                $piece
+                  .find("b")
+                  .text()
+                  .split("#")[1]
+                  .trim()
+                  .trimLeft()
+              ),
+              img: $piece.find("img").attr("src"),
+              directions: $piece.find(".pad.font_tiny").text()
+            };
+          })
+          .compact()
+          .value();
+
+        return section;
+
+        // TODO: Look for a cell with just an img
+        // TODO: Look for a cell with just a video
+      })
+      .compact()
+      .value();
+
+    console.log("sections");
     console.log(JSON.stringify(sections));
 
-    fs.writeFile('./heart_pieces.json', JSON.stringify(sections), function(err) {
-      if(err) {
-          return console.log(err);
+    fs.writeFile("./heart_pieces.json", JSON.stringify(sections), function(
+      err
+    ) {
+      if (err) {
+        return console.log(err);
       }
 
       console.log("The file was saved!");

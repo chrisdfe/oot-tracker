@@ -10,6 +10,7 @@ const BASE_URL = "http://www.zeldadungeon.net";
 
 const HEART_PIECES_URL = `${BASE_URL}/wiki/Ocarina_of_Time_Heart_Pieces`;
 
+const CACHE_PATH = path.resolve(__dirname, ".cache");
 const OUTPUT_PATH = path.resolve(__dirname, "..", "data");
 
 const writeJSONToFile = async (outputPath, data) => {
@@ -22,13 +23,13 @@ const writeJSONToFile = async (outputPath, data) => {
 
 const getHeartPiecePageBody = async () => {
   try {
-    const data = await fs.readFile(path.join(OUTPUT_PATH, "hearts.html"));
+    const data = await fs.readFile(path.join(CACHE_PATH, "hearts.html"));
     console.log("Using cached response");
     return data;
   } catch (e) {
     console.log("No cached response found - fetching");
     const response = await axios.get(HEART_PIECES_URL);
-    await fs.writeFile(path.join(OUTPUT_PATH, "hearts.html"), response.data);
+    await fs.writeFile(path.join(CACHE_PATH, "hearts.html"), response.data);
     return response.data;
   }
 };

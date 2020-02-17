@@ -1,0 +1,67 @@
+<div class="jumbotron">
+
+  <div class="container">
+    <h1>Heart Pieces</h1>
+  </div>
+
+</div>
+
+<div class="sticky-banner-wrapper">
+  <div class="sticky-banner" scrollfix>
+
+    <div class="container">
+      <div class="pieces-progress-bar-wrapper"
+           ng-class="{ complete: storage.foundPieces.length === totalPieces }">
+
+        <progressbar max="totalPieces"
+                     value="storage.foundPieces.length">
+          <span>{{ storage.foundPieces.length }}/{{ totalPieces }}</span>
+        </progressbar>
+
+        <div class="heart-piece">
+          <img src="/assets/images/heart-piece.png" alt="">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+
+    <div class="piece-section panel"
+         ng-repeat="section in HeartPieces.sections">
+      <div class="panel-body">
+
+        <h2>{{ section.title }}</h2>
+
+        <div class="piece container no-gutter"
+             ng-repeat="piece in section.pieces"
+             ng-class="{ 'has-found': piece.found }">
+          <div class="row">
+            <div class="col-md-4">
+              <img ng-src="http://www.zeldadungeon.net/{{ piece.img }}" alt="">
+            </div>
+
+            <div class="col-md-8">
+              <h3>Heart piece #{{ piece.number }}</h3>
+              <p>
+                {{ piece.directions }}
+              </p>
+
+              <div class="has-found-checkbox">
+                <label for="">
+                  <input type="checkbox" ng-model="piece.check" ng-click="toggleFound(piece)">
+
+                  I have found this one.
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</div>

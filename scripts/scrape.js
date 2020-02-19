@@ -11,7 +11,7 @@ const BASE_URL = "http://www.zeldadungeon.net";
 const HEART_PIECES_URL = `${BASE_URL}/wiki/Ocarina_of_Time_Heart_Pieces`;
 
 const CACHE_PATH = path.resolve(__dirname, ".cache");
-const OUTPUT_PATH = path.resolve(__dirname, "..", "data");
+const OUTPUT_PATH = path.resolve(__dirname, "..", "src/data/");
 
 const writeJSONToFile = async (outputPath, data) => {
   await fs.mkdirp(OUTPUT_PATH);
@@ -41,20 +41,22 @@ const scrape = async () => {
   const boxes = document.querySelectorAll("li.gallerybox");
 
   const sections = Array.from(boxes).map((box, index) => {
-    const [title, conditions, directions] = box.textContent
+    const [location, conditions, directions] = box.textContent
       .split("\n")
       .filter(line => !!line);
 
+    const cleanedLocation = location.replace(/^Location: /, "");
+    const cleanedConditions = conditions.replace(/^Conditions /, "");
     const [, number] = /^Heart Piece #(\d+) - /.exec(directions);
     const [, cleanedDirections] = directions.split(/^Heart Piece #[\d]+ - /);
-    const image = box.querySelector("img").src;
+    const imageUrl = box.querySelector("img").src;
 
     return {
-      title,
-      number: index + 1,
-      conditions,
-      image,
-      directions: cleanedDirections
+      number,
+      location: cleanedLocation,
+      conditions: cleanedConditions,
+      directions: cleanedDirections,
+      imageUrl
     };
   });
 
@@ -63,7 +65,7 @@ const scrape = async () => {
 
 const run = async () => {
   const data = await scrape();
-  await writeJSONToFile("./heart_pieces.json", data);
+  await writeJSONToFile("./heartPieces.json", data);
   console.log("done.");
 };
 

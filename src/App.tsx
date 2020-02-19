@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import HeartsPiecesPage from "./components/HeartsPiecesPage";
+import HeartsPiecesPage from "./pages/HeartPieces/HeartPiecesPage";
 
 function App() {
   return (

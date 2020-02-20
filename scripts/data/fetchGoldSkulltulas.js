@@ -10,14 +10,11 @@ const { fetchFromURLOrCache, outputJSONToFile } = require("./utils");
 
 const GOLD_SKULLTULA_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Gold_Skulltulas`;
 
-const getGoldSkulltulaPageBody = async () => {
+const fetchGoldSkulltulaPageBody = async () => {
   return fetchFromURLOrCache(GOLD_SKULLTULA_URL, "gold-skulltulas.html");
 };
 
-const fetchHeartPieceData = async () => {
-  const data = await getGoldSkulltulaPageBody();
-  const { document } = new JSDOM(data).window;
-
+const getList = async document => {
   const boxes = document.querySelectorAll("li.gallerybox");
 
   const sections = Array.from(boxes).map((box, index) => {
@@ -45,9 +42,40 @@ const fetchHeartPieceData = async () => {
   return sections;
 };
 
-const fetchAndWriteHeartPieceData = async () => {
-  const data = await fetchHeartPieceData();
+const getRewards = async document => {
+  const table = document.querySelector(".wikitable");
+  // Leave out the header tr
+  const [, ...rows] = table.querySelectorAll("tr");
+  return Array.from(rows)
+    .map(tr => {
+      const cells = tr.querySelectorAll("td");
+      const [name, tokenCount] = Array.from(cells).map(td => td.textContent);
+      // tokenCount comes with a \n at the end
+      const cleanedTokenCount = tokenCount.trim();
+      return { name, tokenCount: cleanedTokenCount };
+    })
+    .map(data => {
+      // This field ends up being "Shard of Agony (3DS)Stone of Agony (N64) 20"
+      if (data.name.includes("Stone of Agony")) {
+        return { ...data, name: "Stone of Agony" };
+      }
+      return data;
+    });
+};
+
+const fetchAndWriteGoldSkulltulaData = async () => {
+  const response = await fetchGoldSkulltulaPageBody();
+  const { document } = new JSDOM(response).window;
+
+  const list = await getList(document);
+  const rewards = await getRewards(document);
+
+  const data = {
+    list,
+    rewards
+  };
+
   await outputJSONToFile("goldSkulltulas.json", data);
 };
 
-module.exports = fetchAndWriteHeartPieceData;
+module.exports = fetchAndWriteGoldSkulltulaData;

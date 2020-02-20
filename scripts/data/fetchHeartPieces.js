@@ -10,12 +10,12 @@ const { fetchFromURLOrCache, outputJSONToFile } = require("./utils");
 
 const HEART_PIECES_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Heart_Pieces`;
 
-const getHeartPiecePageBody = async () => {
+const fetchHeartPiecePageBody = async () => {
   return fetchFromURLOrCache(HEART_PIECES_URL, "hearts.html");
 };
 
 const fetchHeartPieceData = async () => {
-  const data = await getHeartPiecePageBody();
+  const data = await fetchHeartPiecePageBody();
   const { document } = new JSDOM(data).window;
 
   const boxes = document.querySelectorAll("li.gallerybox");

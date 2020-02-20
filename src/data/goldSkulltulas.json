@@ -1,702 +1,730 @@
-[
-    {
-        "number": "1",
-        "location": "Inside The Deku Tree",
-        "conditions": "Enter the Deku Tree (Past)",
-        "directions": "In the same room with Compass, raise the platforms and use them to get onto the platform on the left side. The Skulltula is right behind the treasure chest.",
-        "imageUrl": "/wiki/images/c/c2/OoT-Gold-Skulltula-001.jpg"
-    },
-    {
-        "number": "2",
-        "location": "Inside The Deku Tree",
-        "conditions": "Enter the Deku Tree (Past)",
-        "directions": "After breaking through the spider web and reaching the lower floor of the Great Deku Tree, turn back and look at the vines leading up. Shoot down the Skulltula with the Slingshot.",
-        "imageUrl": "/wiki/images/7/77/OoT-Gold-Skulltula-002.jpg"
-    },
-    {
-        "number": "3",
-        "location": "Inside The Deku Tree",
-        "conditions": "Enter the Deku Tree (Past)",
-        "directions": "After breaking through the spider web and reaching the lower floor of the Great Deku Tree, look at the grating at the north end of the room to find another Skulltula.",
-        "imageUrl": "/wiki/images/5/51/OoT-Gold-Skulltula-003.jpg"
-    },
-    {
-        "number": "4",
-        "location": "Castle Town",
-        "conditions": "Reach the Castle Market (Past)",
-        "directions": "Once you enter Castle Market, enter the first building where you will find a Soldier. At the back of the room, roll into a wooden crate to get the Skulltula.",
-        "imageUrl": "/wiki/images/a/a8/OoT-Gold-Skulltula-004.jpg"
-    },
-    {
-        "number": "5",
-        "location": "Hyrule Castle",
-        "conditions": "Reach the Hyrule Castle (Past)",
-        "directions": "Exit Castle Town towards Hyrule Castle and you'll find a lone tree nearby. Roll into it to get the Skulltula to pop out.",
-        "imageUrl": "/wiki/images/d/d2/OoT-Gold-Skulltula-005.jpg"
-    },
-    {
-        "number": "6",
-        "location": "Kakariko Graveyard",
-        "conditions": "An Empty Bottle and Bottle Bugs (Past)",
-        "directions": "In the Graveyard, there is a soft soil location on the left side. Drop some bugs from a bottle to get a Skulltula to pop out.",
-        "imageUrl": "/wiki/images/f/fd/OoT-Gold-Skulltula-006.jpg"
-    },
-    {
-        "number": "7",
-        "location": "Kakariko Village",
-        "conditions": "Reach Kakariko Village (Past) (Night)",
-        "directions": "There is a building under construction at the center of the village. At nighttime, a Gold Skulltula will appear.",
-        "imageUrl": "/wiki/images/8/83/OoT-Gold-Skulltula-007.jpg"
-    },
-    {
-        "number": "8",
-        "location": "Kakariko Village",
-        "conditions": "Reach Kakariko Village (Past) (Night)",
-        "directions": "At the side of the Skulltula House, there is a Gold Skulltula found here at nighttime.",
-        "imageUrl": "/wiki/images/2/25/OoT-Gold-Skulltula-008.jpg"
-    },
-    {
-        "number": "9",
-        "location": "Kakariko Village",
-        "conditions": "Reach Kakariko Village (Past) (Night)",
-        "directions": "Right when you enter the Village, there is a tree straight ahead. Roll into the tree and a Skulltula will pop out.",
-        "imageUrl": "/wiki/images/5/54/OoT-Gold-Skulltula-009.jpg"
-    },
-    {
-        "number": "10",
-        "location": "Kakariko Village",
-        "conditions": "Reach Kakariko Village (Past) (Night)",
-        "directions": "At nighttime, a Gold Skulltula will appear near the top of the watch tower. Shoot it down with your Slingshot.",
-        "imageUrl": "/wiki/images/6/62/OoT-Gold-Skulltula-010.jpg"
-    },
-    {
-        "number": "11",
-        "location": "Kakariko Village",
-        "conditions": "Reach Kakariko Village (Past) (Night)",
-        "directions": "Found at nighttime on the side of the house located closest to the gate that leads to Death Mountain.",
-        "imageUrl": "/wiki/images/8/8c/OoT-Gold-Skulltula-011.jpg"
-    },
-    {
-        "number": "12",
-        "location": "Lon Lon Ranch",
-        "conditions": "Reach Lon Lon Ranch (Past)",
-        "directions": "Once you enter the Ranch, walk forward past the initial buildings and turn left. Roll into the nearby tree and a Skulltula will fall down from the tree.",
-        "imageUrl": "/wiki/images/d/d8/OoT-Gold-Skulltula-012.jpg"
-    },
-    {
-        "number": "13",
-        "location": "Lon Lon Ranch",
-        "conditions": "Reach Lon Lon Ranch (Past) (Night)",
-        "directions": "On the outside of the corral, at the southeast part of the area. Just behind the wooden boards, a Gold Skulltula can be found here at nighttime.",
-        "imageUrl": "/wiki/images/4/4b/OoT-Gold-Skulltula-013.jpg"
-    },
-    {
-        "number": "14",
-        "location": "Gerudo Valley",
-        "conditions": "An Empty Bottle and Bottle Bugs (Past)",
-        "directions": "At Gerudo Valley, grab a Cucco and leap off the ledge towards the water below. Along the west side of the water, you'll find a Gerudo next to a soft soil location. Drop some bugs to get the Skulltula.",
-        "imageUrl": "/wiki/images/c/c0/OoT-Gold-Skulltula-014.jpg"
-    },
-    {
-        "number": "15",
-        "location": "Lake Hylia",
-        "conditions": "An Empty Bottle and Bottle Bugs (Past)",
-        "directions": "Near the Lakeside Laboratory at the northwest portion of the area, you will find a soft soil location. Drop some bugs to get the Skulltula.",
-        "imageUrl": "/wiki/images/e/e7/OoT-Gold-Skulltula-016.jpg"
-    },
-    {
-        "number": "16",
-        "location": "Lake Hylia",
-        "conditions": "Reach Lake Hylia (Past) (Night)",
-        "directions": "At Lake Hylia, there is an island at the southeast corner of the map. This Gold Skulltula will only appear at nighttime.",
-        "imageUrl": "/wiki/images/5/57/OoT-Gold-Skulltula-015.jpg"
-    },
-    {
-        "number": "17",
-        "location": "Kokiri Forest",
-        "conditions": "(Night) (Past)",
-        "directions": "Found only at nighttime in the Kokiri Forest. The Skulltula is on the backside of the Know-It-All Brothers' House, located at the southwest part of the village.",
-        "imageUrl": "/wiki/images/3/38/OoT-Gold-Skulltula-017.jpg"
-    },
-    {
-        "number": "18",
-        "location": "Lost Woods",
-        "conditions": "An Empty Bottle and Bottle Bugs (Past)",
-        "directions": "From the entrance of the Lost Woods, go left and left again. Drop some bugs into the Soft Soil and the Skulltula will pop out.",
-        "imageUrl": "/wiki/images/3/37/OoT-Gold-Skulltula-018.jpg"
-    },
-    {
-        "number": "19",
-        "location": "Lost Woods",
-        "conditions": "An Empty Bottle and Bottle Bugs (Past)",
-        "directions": "From the entrance of the Lost Woods, go right, left, right, left, and left to find yourself in a Meadow. Walk forward and you'll find a Soft Soil location. Drop some bugs and the Skulltula will pop out.",
-        "imageUrl": "/wiki/images/4/44/OoT-Gold-Skulltula-019.jpg"
-    },
-    {
-        "number": "20",
-        "location": "Kokiri Forest",
-        "conditions": "An Empty Bottle and Bottle Bugs (Past)",
-        "directions": "Right behind the Kokiri Shop, you will find a soft soil location. Drop some bugs to get the Skulltula.",
-        "imageUrl": "/wiki/images/3/3d/OoT-Gold-Skulltula-020.jpg"
-    },
-    {
-        "number": "21",
-        "location": "Death Mountain Trail",
-        "conditions": "An Empty Bottle and Bottle Bugs (Past)",
-        "directions": "Right outside of Dodongo's Cavern, there is a Soft Soil location. Drop some bugs into it and the Skulltula will appear.",
-        "imageUrl": "/wiki/images/4/45/OoT-Gold-Skulltula-021.jpg"
-    },
-    {
-        "number": "22",
-        "location": "Dodongo's Cavern",
-        "conditions": "Reach Dodongo's Cavern (Past)",
-        "directions": "In the room without the giant staircase, climb up to the very top and walk around to the south part of the room. Use the Slingshot to defeat the Skulltula and climb up to get the token.",
-        "imageUrl": "/wiki/images/6/64/OoT-Gold-Skulltula-022.jpg"
-    },
-    {
-        "number": "23",
-        "location": "Dodongo's Cavern",
-        "conditions": "Bombs are Recommended (Past)",
-        "directions": "From the entrance of the dungeon, head through the southeast door to reach the room with the Baby Dodongos. Blast away at the wall with a bomb and head down a room where you will find the Gold Skulltula.",
-        "imageUrl": "/wiki/images/a/ab/OoT-Gold-Skulltula-023.jpg"
-    },
-    {
-        "number": "24",
-        "location": "Dodongo's Cavern",
-        "conditions": "Bombs (Past)",
-        "directions": "In the room with the Fire Keese towards the end of the dungeon, there is a bombable wall at the north end of the room. Blast it open and you'll find a Gold Skulltula behind the Armos statue.",
-        "imageUrl": "/wiki/images/f/fd/OoT-Gold-Skulltula-024.jpg"
-    },
-    {
-        "number": "25",
-        "location": "Death Mountain Trail",
-        "conditions": "Bombs (Past)",
-        "directions": "On the trail between Kakariko Village and Dodongo's Cavern, there is a bombable wall on the side where you can hear a Gold Skulltula. Bomb the wall and defeat the Skulltula for the token.",
-        "imageUrl": "/wiki/images/7/7b/OoT-Gold-Skulltula-025.jpg"
-    },
-    {
-        "number": "26",
-        "location": "Goron City",
-        "conditions": "Bombs (Past)",
-        "directions": "Once you enter Goron City, bomb the three boulders on the left. This leads to a room where you should bomb the boulders along the right path. Once you reach the back of the room, roll into the wooden crate to find a Gold Skulltula.",
-        "imageUrl": "/wiki/images/2/29/OoT-Gold-Skulltula-026.jpg"
-    },
-    {
-        "number": "27",
-        "location": "Death Mountain Crater",
-        "conditions": "Reach Death Mountain Crater (Past)",
-        "directions": "At the very top of Death Mountain, enter the Death Mountain Crater and you'll find a wooden crate. Roll into it to find a Gold Skulltula.",
-        "imageUrl": "/wiki/images/6/67/OoT-Gold-Skulltula-027.jpg"
-    },
-    {
-        "number": "28",
-        "location": "Zora's River",
-        "conditions": "Reach Zora's River (Past)",
-        "directions": "At the entrance of Zora's River, roll into the first tree and a Gold Skulltula will pop out.",
-        "imageUrl": "/wiki/images/e/e0/OoT-Gold-Skulltula-028.jpg"
-    },
-    {
-        "number": "29",
-        "location": "Zora's River",
-        "conditions": "Acquire Bombs (Past) (Night)",
-        "directions": "At the end of Zora's River, right near the waterfall, there is a ladder leading out of the water. At nighttime, a Skulltula can be found here. Shoot it down with a Slingshot and collect the token.",
-        "imageUrl": "/wiki/images/8/81/OoT-Gold-Skulltula-029.jpg"
-    },
-    {
-        "number": "30",
-        "location": "Zora's Fountain",
-        "conditions": "Reach Zora's Fountain (Past)",
-        "directions": "At the southeast portion of Zora's Fountain, roll into the lone tree here and the Skulltula will pop out.",
-        "imageUrl": "/wiki/images/c/cb/OoT-Gold-Skulltula-030.jpg"
-    },
-    {
-        "number": "31",
-        "location": "Inside Jabu-Jabu's Belly",
-        "conditions": "Reach Jabu-Jabu's Belly (Past)",
-        "directions": "After meeting Ruto and falling down below, you'll pick her up and bring her to a room with a floor switch. Shoot the Skulltula on the side wall and climb up to get the token.",
-        "imageUrl": "/wiki/images/b/b2/OoT-Gold-Skulltula-031.jpg"
-    },
-    {
-        "number": "32",
-        "location": "Inside Jabu-Jabu's Belly",
-        "conditions": "Boomerang (Past)",
-        "directions": "After falling down to the lower floor for a second time, you'll find two Skulltulas on the wall. Defeat them and use the Boomerang to grab the closer token.",
-        "imageUrl": "/wiki/images/1/1e/OoT-Gold-Skulltula-032.jpg"
-    },
-    {
-        "number": "33",
-        "location": "Inside Jabu-Jabu's Belly",
-        "conditions": "Boomerang (Past)",
-        "directions": "After falling down to the lower floor for a second time, you'll find two Skulltulas on the wall. Defeat them and use the Boomerang to grab the further token.",
-        "imageUrl": "/wiki/images/f/fc/OoT-Gold-Skulltula-033.jpg"
-    },
-    {
-        "number": "34",
-        "location": "Inside Jabu-Jabu's Belly",
-        "conditions": "Boomerang (Past)",
-        "directions": "In the final room before the boss, there is a Gold Skulltula on the vines. Defeat it and grab the token.",
-        "imageUrl": "/wiki/images/4/4d/OoT-Gold-Skulltula-034.jpg"
-    },
-    {
-        "number": "35",
-        "location": "Zora's Fountain",
-        "conditions": "Boomerang (Past) (Night)",
-        "directions": "At Zora's Fountain, stand on the log just south of Lord Jabu-Jabu. At nighttime, there will be a Skulltula crawling around on the wall. Toss your Boomerang at it to defeat it and collect the token.",
-        "imageUrl": "/wiki/images/1/16/OoT-Gold-Skulltula-035.jpg"
-    },
-    {
-        "number": "36",
-        "location": "Inside The Deku Tree",
-        "conditions": "Boomerang (Past)",
-        "directions": "Way back inside of the Great Deku Tree. There was a room in the first basement at the northwest corner of the map that we previously never entered. Burn the spider web and then blast the boulder away with a bomb. Inside, you will find a Gold Skulltula on the wall. Use the Boomerang to snag the token.",
-        "imageUrl": "/wiki/images/e/ed/OoT-Gold-Skulltula-036.jpg"
-    },
-    {
-        "number": "37",
-        "location": "Lon Lon Ranch",
-        "conditions": "Boomerang (Past) (Night)",
-        "directions": "Once you enter Lon Lon Ranch at nighttime, you will find a Gold Skulltula on the window of the building on the left side. Defeat the Skulltula and collect the token with the Boomerang.",
-        "imageUrl": "/wiki/images/8/88/OoT-Gold-Skulltula-037.jpg"
-    },
-    {
-        "number": "38",
-        "location": "Lon Lon Ranch",
-        "conditions": "Boomerang (Past) (Night)",
-        "directions": "At Lon Lon Ranch at nighttime, make your way to the far southwest side of the map. Higher up on the edge, you will find a Skulltula. Defeat it and retrieve the token with the Boomerang.",
-        "imageUrl": "/wiki/images/1/11/OoT-Gold-Skulltula-038.jpg"
-    },
-    {
-        "number": "39",
-        "location": "Hyrule Field",
-        "conditions": "Boomerang and Din's Fire",
-        "directions": "At the west end of Hyrule Field, near the entrance of Gerudo Valley, you will find a circle of rocks. The Shard of Agony will chime if you stand in the middle. Drop a bomb to blast open a hole to reveal an underground grotto. Use Din's Fire to burn all of the spider webs and you’ll find a Cow. Behind the cow up near the top, there is a Gold Skulltula. Use the Boomerang to retrieve the token.",
-        "imageUrl": "/wiki/images/d/d9/OoT-Gold-Skulltula-039.jpg"
-    },
-    {
-        "number": "40",
-        "location": "Gerudo Valley",
-        "conditions": "Boomerang (Past) (Night)",
-        "directions": "Once you enter Gerudo Valley, walk forward and you'll come to a wooden ramp. If you turn to the right, there is some water coming out of a hole in the wall. At nighttime, the Gold Skulltula can be found here.",
-        "imageUrl": "/wiki/images/2/2a/OoT-Gold-Skulltula-040.jpg"
-    },
-    {
-        "number": "41",
-        "location": "Lake Hylia",
-        "conditions": "Boomerang (Past) (Night)",
-        "directions": "At the northwest side of Lake Hylia, walk onto the bridge near the Lakeside Laboratory. At nighttime, look at the building and you’ll find a Skulltula. Defeat it and use the Boomerang to snag the token.",
-        "imageUrl": "/wiki/images/c/c1/OoT-Gold-Skulltula-041.jpg"
-    },
-    {
-        "number": "42",
-        "location": "Hyrule Field",
-        "conditions": "Boomerang",
-        "directions": "Located in Hyrule Field, right near the entrance to Kakariko Village. Just north of the small bridge that is between Castle Town and Kakariko Village, you will find a tree. The Shard of Agony will chime when you are nearby. Inside, you will find a Big Skulltula and a Gold Skulltula higher up on the wall.",
-        "imageUrl": "/wiki/images/d/d8/OoT-Gold-Skulltula-042.jpg"
-    },
-    {
-        "number": "43",
-        "location": "Kakariko Graveyard",
-        "conditions": "Boomerang (Past) (Night)",
-        "directions": "Found on the wall at the southeast corner of the Graveyard. The Skulltula can be found at nighttime and you'll need the Boomerang to retrieve the token.",
-        "imageUrl": "/wiki/images/e/e1/OoT-Gold-Skulltula-043.jpg"
-    },
-    {
-        "number": "44",
-        "location": "Dodongo's Cavern",
-        "conditions": "Boomerang or Hookshot",
-        "directions": "The Gold Skulltula is located in Dodongo’s Cavern, within the room with the massive explodable staircase. However, you'll have to go the long route to get this one. Ride the tall pillar up to the second floor and head east a room. Drop down below and climb the staircase at the southwest portion of the room before returning to the main room. Cross the large bridge to get back to the room with the Armos statues. Push the statue, climb the staircase, and step on the switch to unlock the door. At last, you’ll be back in the room with the giant staircase. The Skulltula is located at the top of the staircase in a cubby hole. Either go around the left side and climb the vines or jump off so you land on the steps themselves in order to find this hidden area. You'll need the Boomerang to collect the token.",
-        "imageUrl": "/wiki/images/a/ad/OoT-Gold-Skulltula-044.jpg"
-    },
-    {
-        "number": "45",
-        "location": "Kakariko Village",
-        "conditions": "Hookshot (Night)",
-        "directions": "The Gold Skulltula is located on top of Impa's House in Kakariko Village. Make your way to the south end of Kakariko Village, next to Impa's House. From here, Hookshot onto the roof of the Skulltula House and then Hookshot onto the roof of Impa's House. At nighttime, you will find a Gold Skulltula located here.",
-        "imageUrl": "/wiki/images/2/2c/OoT-Gold-Skulltula-045.jpg"
-    },
-    {
-        "number": "46",
-        "location": "Ganon's Castle",
-        "conditions": "Hookshot",
-        "directions": "Return to the Market and make your way to where Hyrule Castle used to be. You'll find that it is now Ganon's Castle. Follow the path to the right passed the archway and then turn around. The Skulltula can be found on the backside. Use the Hookshot to defeat it and grab the token.",
-        "imageUrl": "/wiki/images/b/b5/OoT-Gold-Skulltula-046.jpg"
-    },
-    {
-        "number": "47",
-        "location": "Kokiri Forest",
-        "conditions": "Hookshot (Night)",
-        "directions": "At nighttime in Kokiri Forest, make your way over to the Twins' House, located at the southeast part of the forest. Use your Hookshot to defeat a Skulltula that is located above the building.",
-        "imageUrl": "/wiki/images/1/17/OoT-Gold-Skulltula-047.jpg"
-    },
-    {
-        "number": "48",
-        "location": "Lost Woods",
-        "conditions": "Plant Magic Bean (Night)",
-        "directions": "At nighttime in the Meadow of the Lost Woods. From the entrance of the Lost Woods, head right, left, right, left, and left to reach the Meadow. Ride the Magic Bean plant up to the top and slash away at the Gold Skulltula.",
-        "imageUrl": "/wiki/images/f/fd/OoT-Gold-Skulltula-048.jpg"
-    },
-    {
-        "number": "49",
-        "location": "Sacred Forest Meadow",
-        "conditions": "Hookshot (Night)",
-        "directions": "At nighttime in the Sacred Forest Meadow, climb up the ladder to the higher ledge and look up at the east wall. There is a Gold Skulltula that you can defeat with the Hookshot.",
-        "imageUrl": "/wiki/images/5/5f/OoT-Gold-Skulltula-049.jpg"
-    },
-    {
-        "number": "50",
-        "location": "Forest Temple",
-        "conditions": "Hookshot",
-        "directions": "In the first room of the Forest Temple, climb the vines on the right side. Use the Hookshot to defeat the Gold Skulltula.",
-        "imageUrl": "/wiki/images/0/0b/OoT-Gold-Skulltula-050.jpg"
-    },
-    {
-        "number": "51",
-        "location": "Forest Temple",
-        "conditions": "Hookshot",
-        "directions": "In the large central room, run straight ahead to the north door. Look at the wall to the right and you'll find the Gold Skulltula.",
-        "imageUrl": "/wiki/images/1/18/OoT-Gold-Skulltula-051.jpg"
-    },
-    {
-        "number": "52",
-        "location": "Forest Temple",
-        "conditions": "Hookshot",
-        "directions": "In the courtyard northeast of the center room, you'll find a treasure chest on a higher ledge. Use the Hookshot to latch on to the front of the chest, pulling you up to the higher ledge. From here, find the Skulltula right around the corner.",
-        "imageUrl": "/wiki/images/4/48/OoT-Gold-Skulltula-052.jpg"
-    },
-    {
-        "number": "53",
-        "location": "Forest Temple",
-        "conditions": "Hookshot",
-        "directions": "When you enter the other courtyard northwest of the center room, jump over to the narrow platform with recovery hearts. From there, look up against the wall and you'll find the Gold Skulltula.",
-        "imageUrl": "/wiki/images/b/b8/OoT-Gold-Skulltula-053.jpg"
-    },
-    {
-        "number": "54",
-        "location": "Forest Temple",
-        "conditions": "Hookshot",
-        "directions": "In the basement of the Forest Temple, just before the boss, there is a Gold Skulltula located in the room with the Treasure Chest.",
-        "imageUrl": "/wiki/images/e/e7/OoT-Gold-Skulltula-054.jpg"
-    },
-    {
-        "number": "55",
-        "location": "Dodongo's Cavern",
-        "conditions": "Scarecrow's Song, Hookshot",
-        "directions": "Re-enter Dodongo's Cavern and make your way to the room at the southeast part of the main room. This is the room with the Baby Dodongos and if you pay close attention, you'll notice Navi will fly up to a higher ledge and turn green. Play the Scarecrow's Song to summon Pierre and Hookshot up to find a Gold Skulltula.",
-        "imageUrl": "/wiki/images/8/8e/OoT-Gold-Skulltula-055.jpg"
-    },
-    {
-        "number": "56",
-        "location": "Goron City",
-        "conditions": "Hookshot",
-        "directions": "Once you enter Goron City, walk across the tightropes that are straight ahead. On the backside of the pedestal located at the top of the City, you will find a Gold Skulltula.",
-        "imageUrl": "/wiki/images/7/78/OoT-Gold-Skulltula-056.jpg"
-    },
-    {
-        "number": "57",
-        "location": "Death Mountain Crater",
-        "conditions": "Learn Bolero of Fire and Prelude of Light, Bottle Bugs",
-        "directions": "Once you have learned the Bolero of Fire, warp to the Death Mountain Crater as a child. Drop some bugs into the soft soil location to get the Skulltula to appear.",
-        "imageUrl": "/wiki/images/1/14/OoT-Gold-Skulltula-057.jpg"
-    },
-    {
-        "number": "58",
-        "location": "Fire Temple",
-        "conditions": "Enter Fire Temple",
-        "directions": "In the large lava room with the broken bridge, found very early in the dungeon, turn to the left and you'll find a Time Block on a higher ledge. Stand on the lower platform and play the Song of Time when Navi turns green. Climb up and enter the room here. Defeat the Floor Tiles and Like Like to find the Gold Skulltula on the back wall.",
-        "imageUrl": "/wiki/images/5/50/OoT-Gold-Skulltula-058.jpg"
-    },
-    {
-        "number": "59",
-        "location": "Fire Temple",
-        "conditions": "Enter Fire Temple",
-        "directions": "In the boulder maze room of the Fire Temple, there is a bombable wall near the northeast portion of the room. It is located on the bottom floor, right beneath the overhang. You can slash your sword against the wall and the false sound of the wall will indicate it can be bombed. Drop a bomb and defeat the Skulltula.",
-        "imageUrl": "/wiki/images/d/db/OoT-Gold-Skulltula-059.jpg"
-    },
-    {
-        "number": "60",
-        "location": "Fire Temple",
-        "conditions": "Scarecrow's Song",
-        "directions": "In the boulder maze room of the Fire Temple, once you are on the higher level after passing through the room where the fire is chasing you, turn to the right and play the Scarecrow's Song. Hookshot to Pierre and then Hookshot to the secret elevator. Go through the door and climb the grate to find the Skulltula.",
-        "imageUrl": "/wiki/images/2/2d/OoT-Gold-Skulltula-060.jpg"
-    },
-    {
-        "number": "61",
-        "location": "Fire Temple",
-        "conditions": "Scarecrow's Song",
-        "directions": "In the boulder maze room of the Fire Temple, once you are on the higher level after passing through the room where the fire is chasing you, turn to the right and play the Scarecrow's Song. Hookshot to the secret elevator and continue to climb up until you reach the large open room. Walk close to the edge and turn to the left to find a Skulltula on the wall.",
-        "imageUrl": "/wiki/images/9/93/OoT-Gold-Skulltula-061.jpg"
-    },
-    {
-        "number": "62",
-        "location": "Fire Temple",
-        "conditions": "Megaton Hammer",
-        "directions": "In the room just before the second battle with the Flare Dancer, block all the Floor Tiles and defeat the Like Like. The Skulltula is found on the back wall.",
-        "imageUrl": "/wiki/images/0/0f/OoT-Gold-Skulltula-062.jpg"
-    },
-    {
-        "number": "63",
-        "location": "Death Mountain Trail",
-        "conditions": "Megaton Hammer (Night)",
-        "directions": "Located on the Death Mountain Trail, in the area where there were falling boulders as a child. There are three rocks on this trail that you cannot break with bombs. The closest one to the summit has a Gold Skulltula hiding behind it. At nighttime, break the boulder and collect the token.",
-        "imageUrl": "/wiki/images/f/ff/OoT-Gold-Skulltula-063.jpg"
-    },
-    {
-        "number": "64",
-        "location": "Death Mountain Trail",
-        "conditions": "Megaton Hammer (Night)",
-        "directions": "Located on the Death Mountain Trail, near the entrance to Goron City. There is a boulder located just above Dodongo's Cavern and you'll need the Megaton Hammer to break it. The Skulltula can be found hiding behind it.",
-        "imageUrl": "/wiki/images/a/ab/OoT-Gold-Skulltula-064.jpg"
-    },
-    {
-        "number": "65",
-        "location": "Zora's River",
-        "conditions": "Hookshot (Night)",
-        "directions": "In Zora's River, located high up on the southern wall. Ride the Magic Bean plant up to the large plateau in the center of the River. If you never planted the Magic Bean, you can still reach it from the east, by swimming down the narrow stream and climbing a ladder. The Skulltula is on that southern wall. At nighttime, use the Hookshot to snag the token.",
-        "imageUrl": "/wiki/images/e/e1/OoT-Gold-Skulltula-065.jpg"
-    },
-    {
-        "number": "66",
-        "location": "Zora's River",
-        "conditions": "Hookshot (Night)",
-        "directions": "In Zora's River, once you cross the small river, heading towards Zora's Domain, if you look up high at the wall at nighttime, you'll find a Gold Skulltula. It is just out of reach from when you are standing on the ground. Jump onto the fence and your Hookshot will be able to reach it. Snag the token.",
-        "imageUrl": "/wiki/images/e/ee/OoT-Gold-Skulltula-066.jpg"
-    },
-    {
-        "number": "67",
-        "location": "Zora's Domain",
-        "conditions": "Hookshot (Night)",
-        "directions": "Found inside of Zora's Domain, there is a Skulltula near the top of the frozen waterfall. Go through King Zora's Chamber and walk right up to the edge. Turn to the left and defeat the Skulltula. This Skulltula will only appear at nighttime.",
-        "imageUrl": "/wiki/images/1/15/OoT-Gold-Skulltula-067.jpg"
-    },
-    {
-        "number": "68",
-        "location": "Ice Cavern",
-        "conditions": "Hookshot",
-        "directions": "In the Ice Cavern, make your way to the first spinning blade room with the Silver Rupees. The Skulltula is located high up on the wall, just above one of the silver rupees. Use the Hookshot to snag the token.",
-        "imageUrl": "/wiki/images/e/e6/OoT-Gold-Skulltula-068.jpg"
-    },
-    {
-        "number": "69",
-        "location": "Ice Cavern",
-        "conditions": "Hookshot, Blue Fire",
-        "directions": "In the Ice Cavern, located in the room with the Compass. From the first spinning blade room, use Blue Fire to melt the Red Ice and head east. The Gold Skulltula is hidden up on a higher pillar. Use the Hookshot to grab the token.",
-        "imageUrl": "/wiki/images/3/31/OoT-Gold-Skulltula-069.jpg"
-    },
-    {
-        "number": "70",
-        "location": "Ice Cavern",
-        "conditions": "Hookshot, Blue Fire",
-        "directions": "In the large block pushing room of the Ice Cavern, the Gold Skulltula is found waiting on one of the higher walls.",
-        "imageUrl": "/wiki/images/3/38/OoT-Gold-Skulltula-070.jpg"
-    },
-    {
-        "number": "71",
-        "location": "Lake Hylia",
-        "conditions": "Iron Boots",
-        "directions": "Enter the Lakeside Laboratory and use the Iron Boots to sink down to the bottom of the small pool. Roll into the wooden crate here and a Skulltula will pop out. Use the Hookshot to defeat it and grab the token.",
-        "imageUrl": "/wiki/images/e/eb/OoT-Gold-Skulltula-071.jpg"
-    },
-    {
-        "number": "72",
-        "location": "Water Temple",
-        "conditions": "Iron Boots",
-        "directions": "On the lowest level of the main room, walk through the south path and bomb the floor. Travel to the next room, step on the switch, and Hookshot over to the target. Hit the crystal switch and snag the Gold Skulltula. NOTE: In the Nintendo 64 version of this game, the crystal switch is behind the gate. You'll need to use a spin attack to hit the crystal switch.",
-        "imageUrl": "/wiki/images/e/ec/OoT-Gold-Skulltula-072.jpg"
-    },
-    {
-        "number": "73",
-        "location": "Water Temple",
-        "conditions": "Longshot",
-        "directions": "After acquiring the Longshot and traveling through the area with the vortexes in the water, you'll find a Skulltula on one of the walls. Use the Iron Boots and Longshot to defeat the Skulltula while in the water.",
-        "imageUrl": "/wiki/images/3/32/OoT-Gold-Skulltula-073.jpg"
-    },
-    {
-        "number": "74",
-        "location": "Water Temple",
-        "conditions": "Longshot",
-        "directions": "Once you have the Longshot, return to the room west of the main chamber on the highest floor. Use the Longshot to defeat the Skulltula on the wall to the right and snag the Gold Skulltula.",
-        "imageUrl": "/wiki/images/a/af/OoT-Gold-Skulltula-074.jpg"
-    },
-    {
-        "number": "75",
-        "location": "Water Temple",
-        "conditions": "Longshot",
-        "directions": "Inside the large central pillar of the main room, once you have the Longshot, you will be able to defeat a Skulltula all the way at the top of the room and snag the token.",
-        "imageUrl": "/wiki/images/4/4f/OoT-Gold-Skulltula-075.jpg"
-    },
-    {
-        "number": "76",
-        "location": "Water Temple",
-        "conditions": "Longshot",
-        "directions": "In the area of the Water Temple, right before you acquire the Boss Key, there is a small waterfall with a Skulltula hiding behind it. Stand on the ledge and inch forward to the edge of the floor. Look to the right to find a Skulltula. Use the Longshot to defeat it and snag the token.",
-        "imageUrl": "/wiki/images/1/13/OoT-Gold-Skulltula-076.jpg"
-    },
-    {
-        "number": "77",
-        "location": "Lake Hylia",
-        "conditions": "Longshot (Night)",
-        "directions": "After acquiring the Longshot, grapple up to the top of the tree, located on the island just above the entrance to the Water Temple. At nighttime, you'll find a Gold Skulltula up here.",
-        "imageUrl": "/wiki/images/0/03/OoT-Gold-Skulltula-077.jpg"
-    },
-    {
-        "number": "78",
-        "location": "Hyrule Castle",
-        "conditions": "Song of Storms (Past)",
-        "directions": "After learning the Song of Storms, return to the pathway that leads to Hyrule Castle. Just outside Hyrule Castle, there is a tree in the corner of the gate. Stand next to it and play the Song of Storms. Drop down the hole, bomb the wall on the left, and collect the Skulltula.",
-        "imageUrl": "/wiki/images/0/0f/OoT-Gold-Skulltula-078.jpg"
-    },
-    {
-        "number": "79",
-        "location": "Bottom of the Well",
-        "conditions": "Enter Bottom of the Well",
-        "directions": "In the center room of the Bottom of the Well, there are two locked doors. The room on the left has a Deku Baba and some flying pots. The Skulltula can be found along the back wall.",
-        "imageUrl": "/wiki/images/4/42/OoT-Gold-Skulltula-079.jpg"
-    },
-    {
-        "number": "80",
-        "location": "Bottom of the Well",
-        "conditions": "Enter Bottom of the Well",
-        "directions": "In the center room of the Bottom of the Well, there are two locked doors. The room on the right has a bunch of Keese. Defeat them and then use the Lens of Truth to find the path that leads to the Skulltula.",
-        "imageUrl": "/wiki/images/5/53/OoT-Gold-Skulltula-080.jpg"
-    },
-    {
-        "number": "81",
-        "location": "Bottom of the Well",
-        "conditions": "Enter Bottom of the Well",
-        "directions": "At the top-right corner of the Bottom of the Well, crawl through the small hole and use a key on the locked door. Carefully navigate through this room, avoiding the invisible pits. In the next room with the Like Like, the Skulltula can be found on the wall.",
-        "imageUrl": "/wiki/images/e/ef/OoT-Gold-Skulltula-081.jpg"
-    },
-    {
-        "number": "82",
-        "location": "Shadow Temple",
-        "conditions": "Hover Boots",
-        "directions": "After going down the pathway with the guillotines and reaching the lone Stalfos, take the path on the left, using the Lens of Truth. Defeat the Like Like and all the Keese to unlock the gate and defeat the Skulltula.",
-        "imageUrl": "/wiki/images/6/61/OoT-Gold-Skulltula-082.jpg"
-    },
-    {
-        "number": "83",
-        "location": "Shadow Temple",
-        "conditions": "Hover Boots",
-        "directions": "In the room with the falling spike traps, use the Lens of Truth to find a block hidden in the wall. Push the block so that it prevents both of the falling traps from hitting the ground. Check behind the fence on the left side to find the Gold Skulltula.",
-        "imageUrl": "/wiki/images/6/6a/OoT-Gold-Skulltula-083.jpg"
-    },
-    {
-        "number": "84",
-        "location": "Shadow Temple",
-        "conditions": "Hover Boots",
-        "directions": "The Skulltula can be found in the room with the giant skull, where you have to toss a bomb into it to find a small key. There is a Gold Skulltula tucked away behind where the skull stood.",
-        "imageUrl": "/wiki/images/3/33/OoT-Gold-Skulltula-084.jpg"
-    },
-    {
-        "number": "85",
-        "location": "Shadow Temple",
-        "conditions": "Scarecrow's Song",
-        "directions": "Once you arrive on top of the large moving boat, look back to where the shortcut is located, which is by the fencing. Navi will fly up and turn green. Play the Scarecrow's Song and Longshot over to this ledge where you will find the Skulltula.",
-        "imageUrl": "/wiki/images/0/0b/OoT-Gold-Skulltula-085.jpg"
-    },
-    {
-        "number": "86",
-        "location": "Shadow Temple",
-        "conditions": "Hover Boots",
-        "directions": "In the room with the invisible walls, just before acquiring the Boss Key, head to the room to the west where you will find three spinning skulls. The Skulltula is hidden just behind them.",
-        "imageUrl": "/wiki/images/4/43/OoT-Gold-Skulltula-086.jpg"
-    },
-    {
-        "number": "87",
-        "location": "Gerudo Valley",
-        "conditions": "Longshot or Epona (Night)",
-        "directions": "In Gerudo Valley, just behind the Carpenters' tent, there is a Skulltula on the back wall. Use your Longshot to defeat it and snag the token.",
-        "imageUrl": "/wiki/images/c/cc/OoT-Gold-Skulltula-087.jpg"
-    },
-    {
-        "number": "88",
-        "location": "Gerudo Valley",
-        "conditions": "Longshot or Epona (Night)",
-        "directions": "In Gerudo Valley, once you cross the bridge, there is an archway just to the left. Look up on one of the sides at nighttime to find the Skulltula.",
-        "imageUrl": "/wiki/images/3/30/OoT-Gold-Skulltula-088.jpg"
-    },
-    {
-        "number": "89",
-        "location": "Gerudo's Fortress",
-        "conditions": "Longshot or Epona (Night)",
-        "directions": "Located near the top of Gerudo's Fortress, against the back wall. The Skulltula is only there at nighttime. Use your Longshot to snag the token.",
-        "imageUrl": "/wiki/images/e/ec/OoT-Gold-Skulltula-089.jpg"
-    },
-    {
-        "number": "90",
-        "location": "Gerudo's Fortress",
-        "conditions": "Gerudo Token (Night)",
-        "directions": "At nighttime in the Gerudo's Fortress, head to the back area where the archery game is located. Located on the target at the far end of the area is a Gold Skulltula. Use the Longshot to defeat it and collect the token.",
-        "imageUrl": "/wiki/images/1/14/OoT-Gold-Skulltula-090.jpg"
-    },
-    {
-        "number": "91",
-        "location": "Haunted Wasteland",
-        "conditions": "Gerudo Token",
-        "directions": "When traveling through the Haunted Wasteland, you'll come to a lone structure right in the middle of the Desert. Drop down into the below chamber and you'll find the Skulltula ahead, right between the two torches.",
-        "imageUrl": "/wiki/images/e/e3/OoT-Gold-Skulltula-091.jpg"
-    },
-    {
-        "number": "92",
-        "location": "Desert Colossus",
-        "conditions": "Requiem of Spirit, Bottle Bugs (Past)",
-        "directions": "As a child, drop some bugs into the Soft Soil location just outside of the Spirit Temple to get a Gold Skulltula to appear.",
-        "imageUrl": "/wiki/images/d/db/OoT-Gold-Skulltula-092.jpg"
-    },
-    {
-        "number": "93",
-        "location": "Desert Colossus",
-        "conditions": "Requiem of Spirit, Magic Bean (Night)",
-        "directions": "In the Desert Colossus, ride the Magic Bean plant to a large rock, near the north-central portion of the map. Play the Sun's Song to make it nighttime and you'll find a Skulltula right here.",
-        "imageUrl": "/wiki/images/f/f1/OoT-Gold-Skulltula-093.jpg"
-    },
-    {
-        "number": "94",
-        "location": "Desert Colossus",
-        "conditions": "Reach Desert Colossus (Night)",
-        "directions": "Near the oasis at the south end of the Desert Colossus, you'll find the Skulltula at the top of one of the palm trees at nighttime. Use the Longshot to defeat it and grab the token.",
-        "imageUrl": "/wiki/images/8/85/OoT-Gold-Skulltula-094.jpg"
-    },
-    {
-        "number": "95",
-        "location": "Spirit Temple",
-        "conditions": "Enter Spirit Temple (Past)",
-        "directions": "As a child in the Spirit Temple, the Gold Skulltula is located in the room found early on with the five silver rupees and a Wallmaster. Grab the rupees to drop the bridge and then use your Boomerang to snag the token from the Skulltula.",
-        "imageUrl": "/wiki/images/6/65/OoT-Gold-Skulltula-095.jpg"
-    },
-    {
-        "number": "96",
-        "location": "Spirit Temple",
-        "conditions": "Enter Spirit Temple (Past)",
-        "directions": "As a child in the Spirit Temple, the Skulltula is located in the room with the Bombchu puzzle. Once you enter the room, climb the wall where there are two regular Skulltulas. Turn around and look down to find the Gold Skulltula. Use the Boomerang to defeat it and snag the token.",
-        "imageUrl": "/wiki/images/7/75/OoT-Gold-Skulltula-096.jpg"
-    },
-    {
-        "number": "97",
-        "location": "Spirit Temple",
-        "conditions": "Enter Spirit Temple (Past)",
-        "directions": "As a child in the Spirit Temple, the Skulltula is located in the room just before the Iron Knuckle battle. In this narrow hallway, turn around and look at the door you came through and the Skulltula is located just above.",
-        "imageUrl": "/wiki/images/e/ee/OoT-Gold-Skulltula-097.jpg"
-    },
-    {
-        "number": "98",
-        "location": "Spirit Temple",
-        "conditions": "Silver Gauntlets",
-        "directions": "As an adult in the Spirit Temple, the Skulltula is located in the room with rolling boulders and five silver rupees. Play the Song of Time in front of the Time Block to find the Skulltula hidden right behind.",
-        "imageUrl": "/wiki/images/9/9a/OoT-Gold-Skulltula-098.jpg"
-    },
-    {
-        "number": "99",
-        "location": "Spirit Temple",
-        "conditions": "Silver Gauntlets, Scarecrow's Song",
-        "directions": "In the large Colossus room where the giant statue, climb up to the top on the west of the room. Navi will float over to a platform in the distance, so play the Scarecrow's Song. Longshot over and defeat the Skulltula here.",
-        "imageUrl": "/wiki/images/5/51/OoT-Gold-Skulltula-099.jpg"
-    },
-    {
-        "number": "100",
-        "location": "Zora's Fountain",
-        "conditions": "Silver Gauntlets (Night)",
-        "directions": "At nighttime, make your way to Zora's Fountain and then head on over to the southeast corner, where the Great Fairy was located. There is a lone silver boulder here and now that you have the Silver Gauntlets, you can lift it up. Do so and then bomb the regular boulder that is underneath. Drop down and then use the Lens of Truth to navigate through this passageway. Climb up the at the end and the Gold Skulltula will be found on the wall at nighttime.",
-        "imageUrl": "/wiki/images/6/6b/OoT-Gold-Skulltula-100.jpg"
-    }
-]
+{
+    "list": [
+        {
+            "number": "1",
+            "location": "Inside The Deku Tree",
+            "conditions": "Enter the Deku Tree (Past)",
+            "directions": "In the same room with Compass, raise the platforms and use them to get onto the platform on the left side. The Skulltula is right behind the treasure chest.",
+            "imageUrl": "/wiki/images/c/c2/OoT-Gold-Skulltula-001.jpg"
+        },
+        {
+            "number": "2",
+            "location": "Inside The Deku Tree",
+            "conditions": "Enter the Deku Tree (Past)",
+            "directions": "After breaking through the spider web and reaching the lower floor of the Great Deku Tree, turn back and look at the vines leading up. Shoot down the Skulltula with the Slingshot.",
+            "imageUrl": "/wiki/images/7/77/OoT-Gold-Skulltula-002.jpg"
+        },
+        {
+            "number": "3",
+            "location": "Inside The Deku Tree",
+            "conditions": "Enter the Deku Tree (Past)",
+            "directions": "After breaking through the spider web and reaching the lower floor of the Great Deku Tree, look at the grating at the north end of the room to find another Skulltula.",
+            "imageUrl": "/wiki/images/5/51/OoT-Gold-Skulltula-003.jpg"
+        },
+        {
+            "number": "4",
+            "location": "Castle Town",
+            "conditions": "Reach the Castle Market (Past)",
+            "directions": "Once you enter Castle Market, enter the first building where you will find a Soldier. At the back of the room, roll into a wooden crate to get the Skulltula.",
+            "imageUrl": "/wiki/images/a/a8/OoT-Gold-Skulltula-004.jpg"
+        },
+        {
+            "number": "5",
+            "location": "Hyrule Castle",
+            "conditions": "Reach the Hyrule Castle (Past)",
+            "directions": "Exit Castle Town towards Hyrule Castle and you'll find a lone tree nearby. Roll into it to get the Skulltula to pop out.",
+            "imageUrl": "/wiki/images/d/d2/OoT-Gold-Skulltula-005.jpg"
+        },
+        {
+            "number": "6",
+            "location": "Kakariko Graveyard",
+            "conditions": "An Empty Bottle and Bottle Bugs (Past)",
+            "directions": "In the Graveyard, there is a soft soil location on the left side. Drop some bugs from a bottle to get a Skulltula to pop out.",
+            "imageUrl": "/wiki/images/f/fd/OoT-Gold-Skulltula-006.jpg"
+        },
+        {
+            "number": "7",
+            "location": "Kakariko Village",
+            "conditions": "Reach Kakariko Village (Past) (Night)",
+            "directions": "There is a building under construction at the center of the village. At nighttime, a Gold Skulltula will appear.",
+            "imageUrl": "/wiki/images/8/83/OoT-Gold-Skulltula-007.jpg"
+        },
+        {
+            "number": "8",
+            "location": "Kakariko Village",
+            "conditions": "Reach Kakariko Village (Past) (Night)",
+            "directions": "At the side of the Skulltula House, there is a Gold Skulltula found here at nighttime.",
+            "imageUrl": "/wiki/images/2/25/OoT-Gold-Skulltula-008.jpg"
+        },
+        {
+            "number": "9",
+            "location": "Kakariko Village",
+            "conditions": "Reach Kakariko Village (Past) (Night)",
+            "directions": "Right when you enter the Village, there is a tree straight ahead. Roll into the tree and a Skulltula will pop out.",
+            "imageUrl": "/wiki/images/5/54/OoT-Gold-Skulltula-009.jpg"
+        },
+        {
+            "number": "10",
+            "location": "Kakariko Village",
+            "conditions": "Reach Kakariko Village (Past) (Night)",
+            "directions": "At nighttime, a Gold Skulltula will appear near the top of the watch tower. Shoot it down with your Slingshot.",
+            "imageUrl": "/wiki/images/6/62/OoT-Gold-Skulltula-010.jpg"
+        },
+        {
+            "number": "11",
+            "location": "Kakariko Village",
+            "conditions": "Reach Kakariko Village (Past) (Night)",
+            "directions": "Found at nighttime on the side of the house located closest to the gate that leads to Death Mountain.",
+            "imageUrl": "/wiki/images/8/8c/OoT-Gold-Skulltula-011.jpg"
+        },
+        {
+            "number": "12",
+            "location": "Lon Lon Ranch",
+            "conditions": "Reach Lon Lon Ranch (Past)",
+            "directions": "Once you enter the Ranch, walk forward past the initial buildings and turn left. Roll into the nearby tree and a Skulltula will fall down from the tree.",
+            "imageUrl": "/wiki/images/d/d8/OoT-Gold-Skulltula-012.jpg"
+        },
+        {
+            "number": "13",
+            "location": "Lon Lon Ranch",
+            "conditions": "Reach Lon Lon Ranch (Past) (Night)",
+            "directions": "On the outside of the corral, at the southeast part of the area. Just behind the wooden boards, a Gold Skulltula can be found here at nighttime.",
+            "imageUrl": "/wiki/images/4/4b/OoT-Gold-Skulltula-013.jpg"
+        },
+        {
+            "number": "14",
+            "location": "Gerudo Valley",
+            "conditions": "An Empty Bottle and Bottle Bugs (Past)",
+            "directions": "At Gerudo Valley, grab a Cucco and leap off the ledge towards the water below. Along the west side of the water, you'll find a Gerudo next to a soft soil location. Drop some bugs to get the Skulltula.",
+            "imageUrl": "/wiki/images/c/c0/OoT-Gold-Skulltula-014.jpg"
+        },
+        {
+            "number": "15",
+            "location": "Lake Hylia",
+            "conditions": "An Empty Bottle and Bottle Bugs (Past)",
+            "directions": "Near the Lakeside Laboratory at the northwest portion of the area, you will find a soft soil location. Drop some bugs to get the Skulltula.",
+            "imageUrl": "/wiki/images/e/e7/OoT-Gold-Skulltula-016.jpg"
+        },
+        {
+            "number": "16",
+            "location": "Lake Hylia",
+            "conditions": "Reach Lake Hylia (Past) (Night)",
+            "directions": "At Lake Hylia, there is an island at the southeast corner of the map. This Gold Skulltula will only appear at nighttime.",
+            "imageUrl": "/wiki/images/5/57/OoT-Gold-Skulltula-015.jpg"
+        },
+        {
+            "number": "17",
+            "location": "Kokiri Forest",
+            "conditions": "(Night) (Past)",
+            "directions": "Found only at nighttime in the Kokiri Forest. The Skulltula is on the backside of the Know-It-All Brothers' House, located at the southwest part of the village.",
+            "imageUrl": "/wiki/images/3/38/OoT-Gold-Skulltula-017.jpg"
+        },
+        {
+            "number": "18",
+            "location": "Lost Woods",
+            "conditions": "An Empty Bottle and Bottle Bugs (Past)",
+            "directions": "From the entrance of the Lost Woods, go left and left again. Drop some bugs into the Soft Soil and the Skulltula will pop out.",
+            "imageUrl": "/wiki/images/3/37/OoT-Gold-Skulltula-018.jpg"
+        },
+        {
+            "number": "19",
+            "location": "Lost Woods",
+            "conditions": "An Empty Bottle and Bottle Bugs (Past)",
+            "directions": "From the entrance of the Lost Woods, go right, left, right, left, and left to find yourself in a Meadow. Walk forward and you'll find a Soft Soil location. Drop some bugs and the Skulltula will pop out.",
+            "imageUrl": "/wiki/images/4/44/OoT-Gold-Skulltula-019.jpg"
+        },
+        {
+            "number": "20",
+            "location": "Kokiri Forest",
+            "conditions": "An Empty Bottle and Bottle Bugs (Past)",
+            "directions": "Right behind the Kokiri Shop, you will find a soft soil location. Drop some bugs to get the Skulltula.",
+            "imageUrl": "/wiki/images/3/3d/OoT-Gold-Skulltula-020.jpg"
+        },
+        {
+            "number": "21",
+            "location": "Death Mountain Trail",
+            "conditions": "An Empty Bottle and Bottle Bugs (Past)",
+            "directions": "Right outside of Dodongo's Cavern, there is a Soft Soil location. Drop some bugs into it and the Skulltula will appear.",
+            "imageUrl": "/wiki/images/4/45/OoT-Gold-Skulltula-021.jpg"
+        },
+        {
+            "number": "22",
+            "location": "Dodongo's Cavern",
+            "conditions": "Reach Dodongo's Cavern (Past)",
+            "directions": "In the room without the giant staircase, climb up to the very top and walk around to the south part of the room. Use the Slingshot to defeat the Skulltula and climb up to get the token.",
+            "imageUrl": "/wiki/images/6/64/OoT-Gold-Skulltula-022.jpg"
+        },
+        {
+            "number": "23",
+            "location": "Dodongo's Cavern",
+            "conditions": "Bombs are Recommended (Past)",
+            "directions": "From the entrance of the dungeon, head through the southeast door to reach the room with the Baby Dodongos. Blast away at the wall with a bomb and head down a room where you will find the Gold Skulltula.",
+            "imageUrl": "/wiki/images/a/ab/OoT-Gold-Skulltula-023.jpg"
+        },
+        {
+            "number": "24",
+            "location": "Dodongo's Cavern",
+            "conditions": "Bombs (Past)",
+            "directions": "In the room with the Fire Keese towards the end of the dungeon, there is a bombable wall at the north end of the room. Blast it open and you'll find a Gold Skulltula behind the Armos statue.",
+            "imageUrl": "/wiki/images/f/fd/OoT-Gold-Skulltula-024.jpg"
+        },
+        {
+            "number": "25",
+            "location": "Death Mountain Trail",
+            "conditions": "Bombs (Past)",
+            "directions": "On the trail between Kakariko Village and Dodongo's Cavern, there is a bombable wall on the side where you can hear a Gold Skulltula. Bomb the wall and defeat the Skulltula for the token.",
+            "imageUrl": "/wiki/images/7/7b/OoT-Gold-Skulltula-025.jpg"
+        },
+        {
+            "number": "26",
+            "location": "Goron City",
+            "conditions": "Bombs (Past)",
+            "directions": "Once you enter Goron City, bomb the three boulders on the left. This leads to a room where you should bomb the boulders along the right path. Once you reach the back of the room, roll into the wooden crate to find a Gold Skulltula.",
+            "imageUrl": "/wiki/images/2/29/OoT-Gold-Skulltula-026.jpg"
+        },
+        {
+            "number": "27",
+            "location": "Death Mountain Crater",
+            "conditions": "Reach Death Mountain Crater (Past)",
+            "directions": "At the very top of Death Mountain, enter the Death Mountain Crater and you'll find a wooden crate. Roll into it to find a Gold Skulltula.",
+            "imageUrl": "/wiki/images/6/67/OoT-Gold-Skulltula-027.jpg"
+        },
+        {
+            "number": "28",
+            "location": "Zora's River",
+            "conditions": "Reach Zora's River (Past)",
+            "directions": "At the entrance of Zora's River, roll into the first tree and a Gold Skulltula will pop out.",
+            "imageUrl": "/wiki/images/e/e0/OoT-Gold-Skulltula-028.jpg"
+        },
+        {
+            "number": "29",
+            "location": "Zora's River",
+            "conditions": "Acquire Bombs (Past) (Night)",
+            "directions": "At the end of Zora's River, right near the waterfall, there is a ladder leading out of the water. At nighttime, a Skulltula can be found here. Shoot it down with a Slingshot and collect the token.",
+            "imageUrl": "/wiki/images/8/81/OoT-Gold-Skulltula-029.jpg"
+        },
+        {
+            "number": "30",
+            "location": "Zora's Fountain",
+            "conditions": "Reach Zora's Fountain (Past)",
+            "directions": "At the southeast portion of Zora's Fountain, roll into the lone tree here and the Skulltula will pop out.",
+            "imageUrl": "/wiki/images/c/cb/OoT-Gold-Skulltula-030.jpg"
+        },
+        {
+            "number": "31",
+            "location": "Inside Jabu-Jabu's Belly",
+            "conditions": "Reach Jabu-Jabu's Belly (Past)",
+            "directions": "After meeting Ruto and falling down below, you'll pick her up and bring her to a room with a floor switch. Shoot the Skulltula on the side wall and climb up to get the token.",
+            "imageUrl": "/wiki/images/b/b2/OoT-Gold-Skulltula-031.jpg"
+        },
+        {
+            "number": "32",
+            "location": "Inside Jabu-Jabu's Belly",
+            "conditions": "Boomerang (Past)",
+            "directions": "After falling down to the lower floor for a second time, you'll find two Skulltulas on the wall. Defeat them and use the Boomerang to grab the closer token.",
+            "imageUrl": "/wiki/images/1/1e/OoT-Gold-Skulltula-032.jpg"
+        },
+        {
+            "number": "33",
+            "location": "Inside Jabu-Jabu's Belly",
+            "conditions": "Boomerang (Past)",
+            "directions": "After falling down to the lower floor for a second time, you'll find two Skulltulas on the wall. Defeat them and use the Boomerang to grab the further token.",
+            "imageUrl": "/wiki/images/f/fc/OoT-Gold-Skulltula-033.jpg"
+        },
+        {
+            "number": "34",
+            "location": "Inside Jabu-Jabu's Belly",
+            "conditions": "Boomerang (Past)",
+            "directions": "In the final room before the boss, there is a Gold Skulltula on the vines. Defeat it and grab the token.",
+            "imageUrl": "/wiki/images/4/4d/OoT-Gold-Skulltula-034.jpg"
+        },
+        {
+            "number": "35",
+            "location": "Zora's Fountain",
+            "conditions": "Boomerang (Past) (Night)",
+            "directions": "At Zora's Fountain, stand on the log just south of Lord Jabu-Jabu. At nighttime, there will be a Skulltula crawling around on the wall. Toss your Boomerang at it to defeat it and collect the token.",
+            "imageUrl": "/wiki/images/1/16/OoT-Gold-Skulltula-035.jpg"
+        },
+        {
+            "number": "36",
+            "location": "Inside The Deku Tree",
+            "conditions": "Boomerang (Past)",
+            "directions": "Way back inside of the Great Deku Tree. There was a room in the first basement at the northwest corner of the map that we previously never entered. Burn the spider web and then blast the boulder away with a bomb. Inside, you will find a Gold Skulltula on the wall. Use the Boomerang to snag the token.",
+            "imageUrl": "/wiki/images/e/ed/OoT-Gold-Skulltula-036.jpg"
+        },
+        {
+            "number": "37",
+            "location": "Lon Lon Ranch",
+            "conditions": "Boomerang (Past) (Night)",
+            "directions": "Once you enter Lon Lon Ranch at nighttime, you will find a Gold Skulltula on the window of the building on the left side. Defeat the Skulltula and collect the token with the Boomerang.",
+            "imageUrl": "/wiki/images/8/88/OoT-Gold-Skulltula-037.jpg"
+        },
+        {
+            "number": "38",
+            "location": "Lon Lon Ranch",
+            "conditions": "Boomerang (Past) (Night)",
+            "directions": "At Lon Lon Ranch at nighttime, make your way to the far southwest side of the map. Higher up on the edge, you will find a Skulltula. Defeat it and retrieve the token with the Boomerang.",
+            "imageUrl": "/wiki/images/1/11/OoT-Gold-Skulltula-038.jpg"
+        },
+        {
+            "number": "39",
+            "location": "Hyrule Field",
+            "conditions": "Boomerang and Din's Fire",
+            "directions": "At the west end of Hyrule Field, near the entrance of Gerudo Valley, you will find a circle of rocks. The Shard of Agony will chime if you stand in the middle. Drop a bomb to blast open a hole to reveal an underground grotto. Use Din's Fire to burn all of the spider webs and you’ll find a Cow. Behind the cow up near the top, there is a Gold Skulltula. Use the Boomerang to retrieve the token.",
+            "imageUrl": "/wiki/images/d/d9/OoT-Gold-Skulltula-039.jpg"
+        },
+        {
+            "number": "40",
+            "location": "Gerudo Valley",
+            "conditions": "Boomerang (Past) (Night)",
+            "directions": "Once you enter Gerudo Valley, walk forward and you'll come to a wooden ramp. If you turn to the right, there is some water coming out of a hole in the wall. At nighttime, the Gold Skulltula can be found here.",
+            "imageUrl": "/wiki/images/2/2a/OoT-Gold-Skulltula-040.jpg"
+        },
+        {
+            "number": "41",
+            "location": "Lake Hylia",
+            "conditions": "Boomerang (Past) (Night)",
+            "directions": "At the northwest side of Lake Hylia, walk onto the bridge near the Lakeside Laboratory. At nighttime, look at the building and you’ll find a Skulltula. Defeat it and use the Boomerang to snag the token.",
+            "imageUrl": "/wiki/images/c/c1/OoT-Gold-Skulltula-041.jpg"
+        },
+        {
+            "number": "42",
+            "location": "Hyrule Field",
+            "conditions": "Boomerang",
+            "directions": "Located in Hyrule Field, right near the entrance to Kakariko Village. Just north of the small bridge that is between Castle Town and Kakariko Village, you will find a tree. The Shard of Agony will chime when you are nearby. Inside, you will find a Big Skulltula and a Gold Skulltula higher up on the wall.",
+            "imageUrl": "/wiki/images/d/d8/OoT-Gold-Skulltula-042.jpg"
+        },
+        {
+            "number": "43",
+            "location": "Kakariko Graveyard",
+            "conditions": "Boomerang (Past) (Night)",
+            "directions": "Found on the wall at the southeast corner of the Graveyard. The Skulltula can be found at nighttime and you'll need the Boomerang to retrieve the token.",
+            "imageUrl": "/wiki/images/e/e1/OoT-Gold-Skulltula-043.jpg"
+        },
+        {
+            "number": "44",
+            "location": "Dodongo's Cavern",
+            "conditions": "Boomerang or Hookshot",
+            "directions": "The Gold Skulltula is located in Dodongo’s Cavern, within the room with the massive explodable staircase. However, you'll have to go the long route to get this one. Ride the tall pillar up to the second floor and head east a room. Drop down below and climb the staircase at the southwest portion of the room before returning to the main room. Cross the large bridge to get back to the room with the Armos statues. Push the statue, climb the staircase, and step on the switch to unlock the door. At last, you’ll be back in the room with the giant staircase. The Skulltula is located at the top of the staircase in a cubby hole. Either go around the left side and climb the vines or jump off so you land on the steps themselves in order to find this hidden area. You'll need the Boomerang to collect the token.",
+            "imageUrl": "/wiki/images/a/ad/OoT-Gold-Skulltula-044.jpg"
+        },
+        {
+            "number": "45",
+            "location": "Kakariko Village",
+            "conditions": "Hookshot (Night)",
+            "directions": "The Gold Skulltula is located on top of Impa's House in Kakariko Village. Make your way to the south end of Kakariko Village, next to Impa's House. From here, Hookshot onto the roof of the Skulltula House and then Hookshot onto the roof of Impa's House. At nighttime, you will find a Gold Skulltula located here.",
+            "imageUrl": "/wiki/images/2/2c/OoT-Gold-Skulltula-045.jpg"
+        },
+        {
+            "number": "46",
+            "location": "Ganon's Castle",
+            "conditions": "Hookshot",
+            "directions": "Return to the Market and make your way to where Hyrule Castle used to be. You'll find that it is now Ganon's Castle. Follow the path to the right passed the archway and then turn around. The Skulltula can be found on the backside. Use the Hookshot to defeat it and grab the token.",
+            "imageUrl": "/wiki/images/b/b5/OoT-Gold-Skulltula-046.jpg"
+        },
+        {
+            "number": "47",
+            "location": "Kokiri Forest",
+            "conditions": "Hookshot (Night)",
+            "directions": "At nighttime in Kokiri Forest, make your way over to the Twins' House, located at the southeast part of the forest. Use your Hookshot to defeat a Skulltula that is located above the building.",
+            "imageUrl": "/wiki/images/1/17/OoT-Gold-Skulltula-047.jpg"
+        },
+        {
+            "number": "48",
+            "location": "Lost Woods",
+            "conditions": "Plant Magic Bean (Night)",
+            "directions": "At nighttime in the Meadow of the Lost Woods. From the entrance of the Lost Woods, head right, left, right, left, and left to reach the Meadow. Ride the Magic Bean plant up to the top and slash away at the Gold Skulltula.",
+            "imageUrl": "/wiki/images/f/fd/OoT-Gold-Skulltula-048.jpg"
+        },
+        {
+            "number": "49",
+            "location": "Sacred Forest Meadow",
+            "conditions": "Hookshot (Night)",
+            "directions": "At nighttime in the Sacred Forest Meadow, climb up the ladder to the higher ledge and look up at the east wall. There is a Gold Skulltula that you can defeat with the Hookshot.",
+            "imageUrl": "/wiki/images/5/5f/OoT-Gold-Skulltula-049.jpg"
+        },
+        {
+            "number": "50",
+            "location": "Forest Temple",
+            "conditions": "Hookshot",
+            "directions": "In the first room of the Forest Temple, climb the vines on the right side. Use the Hookshot to defeat the Gold Skulltula.",
+            "imageUrl": "/wiki/images/0/0b/OoT-Gold-Skulltula-050.jpg"
+        },
+        {
+            "number": "51",
+            "location": "Forest Temple",
+            "conditions": "Hookshot",
+            "directions": "In the large central room, run straight ahead to the north door. Look at the wall to the right and you'll find the Gold Skulltula.",
+            "imageUrl": "/wiki/images/1/18/OoT-Gold-Skulltula-051.jpg"
+        },
+        {
+            "number": "52",
+            "location": "Forest Temple",
+            "conditions": "Hookshot",
+            "directions": "In the courtyard northeast of the center room, you'll find a treasure chest on a higher ledge. Use the Hookshot to latch on to the front of the chest, pulling you up to the higher ledge. From here, find the Skulltula right around the corner.",
+            "imageUrl": "/wiki/images/4/48/OoT-Gold-Skulltula-052.jpg"
+        },
+        {
+            "number": "53",
+            "location": "Forest Temple",
+            "conditions": "Hookshot",
+            "directions": "When you enter the other courtyard northwest of the center room, jump over to the narrow platform with recovery hearts. From there, look up against the wall and you'll find the Gold Skulltula.",
+            "imageUrl": "/wiki/images/b/b8/OoT-Gold-Skulltula-053.jpg"
+        },
+        {
+            "number": "54",
+            "location": "Forest Temple",
+            "conditions": "Hookshot",
+            "directions": "In the basement of the Forest Temple, just before the boss, there is a Gold Skulltula located in the room with the Treasure Chest.",
+            "imageUrl": "/wiki/images/e/e7/OoT-Gold-Skulltula-054.jpg"
+        },
+        {
+            "number": "55",
+            "location": "Dodongo's Cavern",
+            "conditions": "Scarecrow's Song, Hookshot",
+            "directions": "Re-enter Dodongo's Cavern and make your way to the room at the southeast part of the main room. This is the room with the Baby Dodongos and if you pay close attention, you'll notice Navi will fly up to a higher ledge and turn green. Play the Scarecrow's Song to summon Pierre and Hookshot up to find a Gold Skulltula.",
+            "imageUrl": "/wiki/images/8/8e/OoT-Gold-Skulltula-055.jpg"
+        },
+        {
+            "number": "56",
+            "location": "Goron City",
+            "conditions": "Hookshot",
+            "directions": "Once you enter Goron City, walk across the tightropes that are straight ahead. On the backside of the pedestal located at the top of the City, you will find a Gold Skulltula.",
+            "imageUrl": "/wiki/images/7/78/OoT-Gold-Skulltula-056.jpg"
+        },
+        {
+            "number": "57",
+            "location": "Death Mountain Crater",
+            "conditions": "Learn Bolero of Fire and Prelude of Light, Bottle Bugs",
+            "directions": "Once you have learned the Bolero of Fire, warp to the Death Mountain Crater as a child. Drop some bugs into the soft soil location to get the Skulltula to appear.",
+            "imageUrl": "/wiki/images/1/14/OoT-Gold-Skulltula-057.jpg"
+        },
+        {
+            "number": "58",
+            "location": "Fire Temple",
+            "conditions": "Enter Fire Temple",
+            "directions": "In the large lava room with the broken bridge, found very early in the dungeon, turn to the left and you'll find a Time Block on a higher ledge. Stand on the lower platform and play the Song of Time when Navi turns green. Climb up and enter the room here. Defeat the Floor Tiles and Like Like to find the Gold Skulltula on the back wall.",
+            "imageUrl": "/wiki/images/5/50/OoT-Gold-Skulltula-058.jpg"
+        },
+        {
+            "number": "59",
+            "location": "Fire Temple",
+            "conditions": "Enter Fire Temple",
+            "directions": "In the boulder maze room of the Fire Temple, there is a bombable wall near the northeast portion of the room. It is located on the bottom floor, right beneath the overhang. You can slash your sword against the wall and the false sound of the wall will indicate it can be bombed. Drop a bomb and defeat the Skulltula.",
+            "imageUrl": "/wiki/images/d/db/OoT-Gold-Skulltula-059.jpg"
+        },
+        {
+            "number": "60",
+            "location": "Fire Temple",
+            "conditions": "Scarecrow's Song",
+            "directions": "In the boulder maze room of the Fire Temple, once you are on the higher level after passing through the room where the fire is chasing you, turn to the right and play the Scarecrow's Song. Hookshot to Pierre and then Hookshot to the secret elevator. Go through the door and climb the grate to find the Skulltula.",
+            "imageUrl": "/wiki/images/2/2d/OoT-Gold-Skulltula-060.jpg"
+        },
+        {
+            "number": "61",
+            "location": "Fire Temple",
+            "conditions": "Scarecrow's Song",
+            "directions": "In the boulder maze room of the Fire Temple, once you are on the higher level after passing through the room where the fire is chasing you, turn to the right and play the Scarecrow's Song. Hookshot to the secret elevator and continue to climb up until you reach the large open room. Walk close to the edge and turn to the left to find a Skulltula on the wall.",
+            "imageUrl": "/wiki/images/9/93/OoT-Gold-Skulltula-061.jpg"
+        },
+        {
+            "number": "62",
+            "location": "Fire Temple",
+            "conditions": "Megaton Hammer",
+            "directions": "In the room just before the second battle with the Flare Dancer, block all the Floor Tiles and defeat the Like Like. The Skulltula is found on the back wall.",
+            "imageUrl": "/wiki/images/0/0f/OoT-Gold-Skulltula-062.jpg"
+        },
+        {
+            "number": "63",
+            "location": "Death Mountain Trail",
+            "conditions": "Megaton Hammer (Night)",
+            "directions": "Located on the Death Mountain Trail, in the area where there were falling boulders as a child. There are three rocks on this trail that you cannot break with bombs. The closest one to the summit has a Gold Skulltula hiding behind it. At nighttime, break the boulder and collect the token.",
+            "imageUrl": "/wiki/images/f/ff/OoT-Gold-Skulltula-063.jpg"
+        },
+        {
+            "number": "64",
+            "location": "Death Mountain Trail",
+            "conditions": "Megaton Hammer (Night)",
+            "directions": "Located on the Death Mountain Trail, near the entrance to Goron City. There is a boulder located just above Dodongo's Cavern and you'll need the Megaton Hammer to break it. The Skulltula can be found hiding behind it.",
+            "imageUrl": "/wiki/images/a/ab/OoT-Gold-Skulltula-064.jpg"
+        },
+        {
+            "number": "65",
+            "location": "Zora's River",
+            "conditions": "Hookshot (Night)",
+            "directions": "In Zora's River, located high up on the southern wall. Ride the Magic Bean plant up to the large plateau in the center of the River. If you never planted the Magic Bean, you can still reach it from the east, by swimming down the narrow stream and climbing a ladder. The Skulltula is on that southern wall. At nighttime, use the Hookshot to snag the token.",
+            "imageUrl": "/wiki/images/e/e1/OoT-Gold-Skulltula-065.jpg"
+        },
+        {
+            "number": "66",
+            "location": "Zora's River",
+            "conditions": "Hookshot (Night)",
+            "directions": "In Zora's River, once you cross the small river, heading towards Zora's Domain, if you look up high at the wall at nighttime, you'll find a Gold Skulltula. It is just out of reach from when you are standing on the ground. Jump onto the fence and your Hookshot will be able to reach it. Snag the token.",
+            "imageUrl": "/wiki/images/e/ee/OoT-Gold-Skulltula-066.jpg"
+        },
+        {
+            "number": "67",
+            "location": "Zora's Domain",
+            "conditions": "Hookshot (Night)",
+            "directions": "Found inside of Zora's Domain, there is a Skulltula near the top of the frozen waterfall. Go through King Zora's Chamber and walk right up to the edge. Turn to the left and defeat the Skulltula. This Skulltula will only appear at nighttime.",
+            "imageUrl": "/wiki/images/1/15/OoT-Gold-Skulltula-067.jpg"
+        },
+        {
+            "number": "68",
+            "location": "Ice Cavern",
+            "conditions": "Hookshot",
+            "directions": "In the Ice Cavern, make your way to the first spinning blade room with the Silver Rupees. The Skulltula is located high up on the wall, just above one of the silver rupees. Use the Hookshot to snag the token.",
+            "imageUrl": "/wiki/images/e/e6/OoT-Gold-Skulltula-068.jpg"
+        },
+        {
+            "number": "69",
+            "location": "Ice Cavern",
+            "conditions": "Hookshot, Blue Fire",
+            "directions": "In the Ice Cavern, located in the room with the Compass. From the first spinning blade room, use Blue Fire to melt the Red Ice and head east. The Gold Skulltula is hidden up on a higher pillar. Use the Hookshot to grab the token.",
+            "imageUrl": "/wiki/images/3/31/OoT-Gold-Skulltula-069.jpg"
+        },
+        {
+            "number": "70",
+            "location": "Ice Cavern",
+            "conditions": "Hookshot, Blue Fire",
+            "directions": "In the large block pushing room of the Ice Cavern, the Gold Skulltula is found waiting on one of the higher walls.",
+            "imageUrl": "/wiki/images/3/38/OoT-Gold-Skulltula-070.jpg"
+        },
+        {
+            "number": "71",
+            "location": "Lake Hylia",
+            "conditions": "Iron Boots",
+            "directions": "Enter the Lakeside Laboratory and use the Iron Boots to sink down to the bottom of the small pool. Roll into the wooden crate here and a Skulltula will pop out. Use the Hookshot to defeat it and grab the token.",
+            "imageUrl": "/wiki/images/e/eb/OoT-Gold-Skulltula-071.jpg"
+        },
+        {
+            "number": "72",
+            "location": "Water Temple",
+            "conditions": "Iron Boots",
+            "directions": "On the lowest level of the main room, walk through the south path and bomb the floor. Travel to the next room, step on the switch, and Hookshot over to the target. Hit the crystal switch and snag the Gold Skulltula. NOTE: In the Nintendo 64 version of this game, the crystal switch is behind the gate. You'll need to use a spin attack to hit the crystal switch.",
+            "imageUrl": "/wiki/images/e/ec/OoT-Gold-Skulltula-072.jpg"
+        },
+        {
+            "number": "73",
+            "location": "Water Temple",
+            "conditions": "Longshot",
+            "directions": "After acquiring the Longshot and traveling through the area with the vortexes in the water, you'll find a Skulltula on one of the walls. Use the Iron Boots and Longshot to defeat the Skulltula while in the water.",
+            "imageUrl": "/wiki/images/3/32/OoT-Gold-Skulltula-073.jpg"
+        },
+        {
+            "number": "74",
+            "location": "Water Temple",
+            "conditions": "Longshot",
+            "directions": "Once you have the Longshot, return to the room west of the main chamber on the highest floor. Use the Longshot to defeat the Skulltula on the wall to the right and snag the Gold Skulltula.",
+            "imageUrl": "/wiki/images/a/af/OoT-Gold-Skulltula-074.jpg"
+        },
+        {
+            "number": "75",
+            "location": "Water Temple",
+            "conditions": "Longshot",
+            "directions": "Inside the large central pillar of the main room, once you have the Longshot, you will be able to defeat a Skulltula all the way at the top of the room and snag the token.",
+            "imageUrl": "/wiki/images/4/4f/OoT-Gold-Skulltula-075.jpg"
+        },
+        {
+            "number": "76",
+            "location": "Water Temple",
+            "conditions": "Longshot",
+            "directions": "In the area of the Water Temple, right before you acquire the Boss Key, there is a small waterfall with a Skulltula hiding behind it. Stand on the ledge and inch forward to the edge of the floor. Look to the right to find a Skulltula. Use the Longshot to defeat it and snag the token.",
+            "imageUrl": "/wiki/images/1/13/OoT-Gold-Skulltula-076.jpg"
+        },
+        {
+            "number": "77",
+            "location": "Lake Hylia",
+            "conditions": "Longshot (Night)",
+            "directions": "After acquiring the Longshot, grapple up to the top of the tree, located on the island just above the entrance to the Water Temple. At nighttime, you'll find a Gold Skulltula up here.",
+            "imageUrl": "/wiki/images/0/03/OoT-Gold-Skulltula-077.jpg"
+        },
+        {
+            "number": "78",
+            "location": "Hyrule Castle",
+            "conditions": "Song of Storms (Past)",
+            "directions": "After learning the Song of Storms, return to the pathway that leads to Hyrule Castle. Just outside Hyrule Castle, there is a tree in the corner of the gate. Stand next to it and play the Song of Storms. Drop down the hole, bomb the wall on the left, and collect the Skulltula.",
+            "imageUrl": "/wiki/images/0/0f/OoT-Gold-Skulltula-078.jpg"
+        },
+        {
+            "number": "79",
+            "location": "Bottom of the Well",
+            "conditions": "Enter Bottom of the Well",
+            "directions": "In the center room of the Bottom of the Well, there are two locked doors. The room on the left has a Deku Baba and some flying pots. The Skulltula can be found along the back wall.",
+            "imageUrl": "/wiki/images/4/42/OoT-Gold-Skulltula-079.jpg"
+        },
+        {
+            "number": "80",
+            "location": "Bottom of the Well",
+            "conditions": "Enter Bottom of the Well",
+            "directions": "In the center room of the Bottom of the Well, there are two locked doors. The room on the right has a bunch of Keese. Defeat them and then use the Lens of Truth to find the path that leads to the Skulltula.",
+            "imageUrl": "/wiki/images/5/53/OoT-Gold-Skulltula-080.jpg"
+        },
+        {
+            "number": "81",
+            "location": "Bottom of the Well",
+            "conditions": "Enter Bottom of the Well",
+            "directions": "At the top-right corner of the Bottom of the Well, crawl through the small hole and use a key on the locked door. Carefully navigate through this room, avoiding the invisible pits. In the next room with the Like Like, the Skulltula can be found on the wall.",
+            "imageUrl": "/wiki/images/e/ef/OoT-Gold-Skulltula-081.jpg"
+        },
+        {
+            "number": "82",
+            "location": "Shadow Temple",
+            "conditions": "Hover Boots",
+            "directions": "After going down the pathway with the guillotines and reaching the lone Stalfos, take the path on the left, using the Lens of Truth. Defeat the Like Like and all the Keese to unlock the gate and defeat the Skulltula.",
+            "imageUrl": "/wiki/images/6/61/OoT-Gold-Skulltula-082.jpg"
+        },
+        {
+            "number": "83",
+            "location": "Shadow Temple",
+            "conditions": "Hover Boots",
+            "directions": "In the room with the falling spike traps, use the Lens of Truth to find a block hidden in the wall. Push the block so that it prevents both of the falling traps from hitting the ground. Check behind the fence on the left side to find the Gold Skulltula.",
+            "imageUrl": "/wiki/images/6/6a/OoT-Gold-Skulltula-083.jpg"
+        },
+        {
+            "number": "84",
+            "location": "Shadow Temple",
+            "conditions": "Hover Boots",
+            "directions": "The Skulltula can be found in the room with the giant skull, where you have to toss a bomb into it to find a small key. There is a Gold Skulltula tucked away behind where the skull stood.",
+            "imageUrl": "/wiki/images/3/33/OoT-Gold-Skulltula-084.jpg"
+        },
+        {
+            "number": "85",
+            "location": "Shadow Temple",
+            "conditions": "Scarecrow's Song",
+            "directions": "Once you arrive on top of the large moving boat, look back to where the shortcut is located, which is by the fencing. Navi will fly up and turn green. Play the Scarecrow's Song and Longshot over to this ledge where you will find the Skulltula.",
+            "imageUrl": "/wiki/images/0/0b/OoT-Gold-Skulltula-085.jpg"
+        },
+        {
+            "number": "86",
+            "location": "Shadow Temple",
+            "conditions": "Hover Boots",
+            "directions": "In the room with the invisible walls, just before acquiring the Boss Key, head to the room to the west where you will find three spinning skulls. The Skulltula is hidden just behind them.",
+            "imageUrl": "/wiki/images/4/43/OoT-Gold-Skulltula-086.jpg"
+        },
+        {
+            "number": "87",
+            "location": "Gerudo Valley",
+            "conditions": "Longshot or Epona (Night)",
+            "directions": "In Gerudo Valley, just behind the Carpenters' tent, there is a Skulltula on the back wall. Use your Longshot to defeat it and snag the token.",
+            "imageUrl": "/wiki/images/c/cc/OoT-Gold-Skulltula-087.jpg"
+        },
+        {
+            "number": "88",
+            "location": "Gerudo Valley",
+            "conditions": "Longshot or Epona (Night)",
+            "directions": "In Gerudo Valley, once you cross the bridge, there is an archway just to the left. Look up on one of the sides at nighttime to find the Skulltula.",
+            "imageUrl": "/wiki/images/3/30/OoT-Gold-Skulltula-088.jpg"
+        },
+        {
+            "number": "89",
+            "location": "Gerudo's Fortress",
+            "conditions": "Longshot or Epona (Night)",
+            "directions": "Located near the top of Gerudo's Fortress, against the back wall. The Skulltula is only there at nighttime. Use your Longshot to snag the token.",
+            "imageUrl": "/wiki/images/e/ec/OoT-Gold-Skulltula-089.jpg"
+        },
+        {
+            "number": "90",
+            "location": "Gerudo's Fortress",
+            "conditions": "Gerudo Token (Night)",
+            "directions": "At nighttime in the Gerudo's Fortress, head to the back area where the archery game is located. Located on the target at the far end of the area is a Gold Skulltula. Use the Longshot to defeat it and collect the token.",
+            "imageUrl": "/wiki/images/1/14/OoT-Gold-Skulltula-090.jpg"
+        },
+        {
+            "number": "91",
+            "location": "Haunted Wasteland",
+            "conditions": "Gerudo Token",
+            "directions": "When traveling through the Haunted Wasteland, you'll come to a lone structure right in the middle of the Desert. Drop down into the below chamber and you'll find the Skulltula ahead, right between the two torches.",
+            "imageUrl": "/wiki/images/e/e3/OoT-Gold-Skulltula-091.jpg"
+        },
+        {
+            "number": "92",
+            "location": "Desert Colossus",
+            "conditions": "Requiem of Spirit, Bottle Bugs (Past)",
+            "directions": "As a child, drop some bugs into the Soft Soil location just outside of the Spirit Temple to get a Gold Skulltula to appear.",
+            "imageUrl": "/wiki/images/d/db/OoT-Gold-Skulltula-092.jpg"
+        },
+        {
+            "number": "93",
+            "location": "Desert Colossus",
+            "conditions": "Requiem of Spirit, Magic Bean (Night)",
+            "directions": "In the Desert Colossus, ride the Magic Bean plant to a large rock, near the north-central portion of the map. Play the Sun's Song to make it nighttime and you'll find a Skulltula right here.",
+            "imageUrl": "/wiki/images/f/f1/OoT-Gold-Skulltula-093.jpg"
+        },
+        {
+            "number": "94",
+            "location": "Desert Colossus",
+            "conditions": "Reach Desert Colossus (Night)",
+            "directions": "Near the oasis at the south end of the Desert Colossus, you'll find the Skulltula at the top of one of the palm trees at nighttime. Use the Longshot to defeat it and grab the token.",
+            "imageUrl": "/wiki/images/8/85/OoT-Gold-Skulltula-094.jpg"
+        },
+        {
+            "number": "95",
+            "location": "Spirit Temple",
+            "conditions": "Enter Spirit Temple (Past)",
+            "directions": "As a child in the Spirit Temple, the Gold Skulltula is located in the room found early on with the five silver rupees and a Wallmaster. Grab the rupees to drop the bridge and then use your Boomerang to snag the token from the Skulltula.",
+            "imageUrl": "/wiki/images/6/65/OoT-Gold-Skulltula-095.jpg"
+        },
+        {
+            "number": "96",
+            "location": "Spirit Temple",
+            "conditions": "Enter Spirit Temple (Past)",
+            "directions": "As a child in the Spirit Temple, the Skulltula is located in the room with the Bombchu puzzle. Once you enter the room, climb the wall where there are two regular Skulltulas. Turn around and look down to find the Gold Skulltula. Use the Boomerang to defeat it and snag the token.",
+            "imageUrl": "/wiki/images/7/75/OoT-Gold-Skulltula-096.jpg"
+        },
+        {
+            "number": "97",
+            "location": "Spirit Temple",
+            "conditions": "Enter Spirit Temple (Past)",
+            "directions": "As a child in the Spirit Temple, the Skulltula is located in the room just before the Iron Knuckle battle. In this narrow hallway, turn around and look at the door you came through and the Skulltula is located just above.",
+            "imageUrl": "/wiki/images/e/ee/OoT-Gold-Skulltula-097.jpg"
+        },
+        {
+            "number": "98",
+            "location": "Spirit Temple",
+            "conditions": "Silver Gauntlets",
+            "directions": "As an adult in the Spirit Temple, the Skulltula is located in the room with rolling boulders and five silver rupees. Play the Song of Time in front of the Time Block to find the Skulltula hidden right behind.",
+            "imageUrl": "/wiki/images/9/9a/OoT-Gold-Skulltula-098.jpg"
+        },
+        {
+            "number": "99",
+            "location": "Spirit Temple",
+            "conditions": "Silver Gauntlets, Scarecrow's Song",
+            "directions": "In the large Colossus room where the giant statue, climb up to the top on the west of the room. Navi will float over to a platform in the distance, so play the Scarecrow's Song. Longshot over and defeat the Skulltula here.",
+            "imageUrl": "/wiki/images/5/51/OoT-Gold-Skulltula-099.jpg"
+        },
+        {
+            "number": "100",
+            "location": "Zora's Fountain",
+            "conditions": "Silver Gauntlets (Night)",
+            "directions": "At nighttime, make your way to Zora's Fountain and then head on over to the southeast corner, where the Great Fairy was located. There is a lone silver boulder here and now that you have the Silver Gauntlets, you can lift it up. Do so and then bomb the regular boulder that is underneath. Drop down and then use the Lens of Truth to navigate through this passageway. Climb up the at the end and the Gold Skulltula will be found on the wall at nighttime.",
+            "imageUrl": "/wiki/images/6/6b/OoT-Gold-Skulltula-100.jpg"
+        }
+    ],
+    "rewards": [
+        {
+            "name": "Adult's Wallet",
+            "tokenCount": "10"
+        },
+        {
+            "name": "Stone of Agony",
+            "tokenCount": "20"
+        },
+        {
+            "name": "Giant's Wallet",
+            "tokenCount": "30"
+        },
+        {
+            "name": "Bombchus",
+            "tokenCount": "40"
+        },
+        {
+            "name": "Piece of Heart",
+            "tokenCount": "50"
+        },
+        {
+            "name": "Golden Rupee",
+            "tokenCount": "100"
+        }
+    ]
+}

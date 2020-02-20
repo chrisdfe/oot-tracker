@@ -87,7 +87,9 @@ const HeartPiece = ({
           <strong>conditions:</strong> {heartPiece.conditions}
         </Paragraph>
 
-        <DescriptionParagraph>{heartPiece.directions}</DescriptionParagraph>
+        {heartPiece.directions.split("\n").map(paragraph => (
+          <DescriptionParagraph>{paragraph}</DescriptionParagraph>
+        ))}
       </BodyContent>
     </Wrapper>
   );

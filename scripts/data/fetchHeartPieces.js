@@ -26,7 +26,7 @@ const fetchHeartPieceData = async () => {
       .filter(line => !!line);
 
     const cleanedLocation = location.replace(/^Location: /, "");
-    const cleanedConditions = conditions.replace(/^Conditions /, "");
+    const cleanedConditions = conditions.replace(/^Conditions: /, "");
     const [, number] = /^Heart Piece #(\d+) - /.exec(directions);
     const [, cleanedDirections] = directions
       .join("\n")

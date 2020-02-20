@@ -1,55 +1,118 @@
 import React from "react";
+import styled from "styled-components";
 
 import usePersistedState from "../../utils/usePersistedState";
-import heartPieces from "../../data/heartPieces.json";
+import allHeartPieces from "../../data/heartPieces.json";
 
-import HeartPiece from "./components/HeartPiece";
+import HeartPieceList from "./components/HeartPieceList";
+import FiltersBar from "./components/FiltersBar";
+import StickyInfoBar from "./components/StickyInfoBar";
 
-const LOCAL_STORAGE_HEART_PIECES_KEY = "oot-tracker.collected-heart-pieces";
+const heartPieceLocations = allHeartPieces
+  .reduce<HeartPieceLocations>((acc, { location }) => {
+    if (!acc.includes(location)) {
+      return [...acc, location];
+    }
+    return acc;
+  }, [])
+  // Alphebetize
+  .sort((a, b) => a.localeCompare(b));
 
-const HeartPiecesPage = () => {
-  const [collectedHearts, setCollectedHearts] = usePersistedState<string[]>(
-    LOCAL_STORAGE_HEART_PIECES_KEY,
-    []
-  );
+function usePersistedStringArray(
+  key: string,
+  defaultValue: string[]
+): [
+  string[],
+  React.Dispatch<React.SetStateAction<string[]>>,
+  (targetValue: string) => void
+] {
+  const [value, setValue] = usePersistedState<string[]>(key, defaultValue);
 
-  const heartHasBeenCollected = (heartPiece: HeartPiece) =>
-    collectedHearts.includes(heartPiece.number);
-
-  const addCollectedHeart = (heartPiece: HeartPiece) => {
-    setCollectedHearts([...collectedHearts, heartPiece.number]);
+  const addValue = (newElement: string) => {
+    setValue([...value, newElement]);
   };
 
-  const removeCollectedHeart = (targetHeartPiece: HeartPiece) => {
-    const filteredHearts = collectedHearts.filter(
-      (heartNumber: string) => heartNumber !== targetHeartPiece.number
+  const removeValue = (elementToRemove: string) => {
+    const filteredValue = value.filter(
+      (currentValue: string) => currentValue !== elementToRemove
     );
-    setCollectedHearts(filteredHearts);
+    setValue(filteredValue);
   };
 
-  const toggleCollectedHeart = (targetHeartPiece: HeartPiece) => {
-    if (heartHasBeenCollected(targetHeartPiece)) {
-      removeCollectedHeart(targetHeartPiece);
+  const toggleValue = (targetValue: string) => {
+    if (value.includes(targetValue)) {
+      removeValue(targetValue);
     } else {
-      addCollectedHeart(targetHeartPiece);
+      addValue(targetValue);
     }
   };
 
+  return [value, setValue, toggleValue];
+}
+
+const HeartPiecesPage = () => {
+  const [
+    collectedHearts,
+    setCollectedHearts,
+    toggleCollectedHeart
+  ] = usePersistedStringArray("oot-tracker.collected-heart-pieces", []);
+
+  const [
+    heartPieceLocationsWhitelist,
+    setHeartPieceLocationsWhitelist,
+    toggleHeartPieceLocationWhitelist
+  ] = usePersistedStringArray("oot-tracker.heart-pieces-location-filter", [
+    ...heartPieceLocations
+  ]);
+
   return (
     <div className="HeartPiecesPage">
-      <h1>
-        {collectedHearts.length}/{heartPieces.length}
-      </h1>
+      <StickyInfoBar>
+        <h2>
+          hearts collected: {collectedHearts.length}/{allHeartPieces.length}
+        </h2>
+        <button
+          onClick={() => {
+            setCollectedHearts(
+              allHeartPieces.map(heartPiece => heartPiece.number)
+            );
+          }}
+        >
+          collect all
+        </button>
+        <button
+          onClick={() => {
+            setCollectedHearts([]);
+          }}
+        >
+          uncollect all
+        </button>
+      </StickyInfoBar>
 
-      {heartPieces.map(heartPiece => (
-        <HeartPiece
-          heartPiece={heartPiece}
-          hasBeenCollected={heartHasBeenCollected(heartPiece)}
+      <FiltersBar
+        allLocations={heartPieceLocations}
+        selectedLocations={heartPieceLocationsWhitelist}
+        onLocationsClearAll={() => {
+          setHeartPieceLocationsWhitelist([]);
+        }}
+        onLocationsSelectAll={() => {
+          setHeartPieceLocationsWhitelist(heartPieceLocations);
+        }}
+        onFilterToggle={location => {
+          toggleHeartPieceLocationWhitelist(location);
+        }}
+      />
+
+      <div className="container">
+        <HeartPieceList
+          heartPieces={allHeartPieces}
+          collectedHearts={collectedHearts}
+          locationWhitelist={heartPieceLocationsWhitelist}
           onToggleCollected={heartPiece => {
-            toggleCollectedHeart(heartPiece);
+            toggleCollectedHeart(heartPiece.number);
           }}
         />
-      ))}
+      </div>
     </div>
   );
 };

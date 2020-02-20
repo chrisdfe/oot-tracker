@@ -5,3 +5,5 @@ type HeartPiece = {
   directions: string;
   imageUrl: string;
 };
+
+type HeartPieceLocations = string[];

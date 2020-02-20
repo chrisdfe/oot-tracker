@@ -1,12 +1,5 @@
 import React from "react";
-
-type HeartPiece = {
-  number: string;
-  location: string;
-  conditions: string;
-  directions: string;
-  imageUrl: string;
-};
+import styled, { css, StyledComponent } from "styled-components";
 
 export interface Props {
   heartPiece: HeartPiece;
@@ -14,32 +7,89 @@ export interface Props {
   onToggleCollected: (heartPiece: HeartPiece) => void;
 }
 
+const Wrapper = styled.div`
+  padding: 1rem;
+  border: 1px solid #222;
+  margin-bottom: 2rem;
+
+  text-align: left;
+`;
+
+const HeaderBar = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+`;
+
+const Heading = styled.h2`
+  margin: 0;
+`;
+
+const Paragraph = styled.p`
+  line-height: 1.7em;
+  margin: 0 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+const DescriptionParagraph = styled(Paragraph)`
+  margin-top: 1rem;
+`;
+
+const Button = styled.button`
+  padding: 5px;
+  border: 1px solid #333;
+  background: transparent;
+  border-radius: 3px;
+  color: #333;
+  cursor: pointer;
+`;
+
+interface BodyContentProps {
+  hasBeenCollected: boolean;
+}
+
+const BodyContent = styled.div<BodyContentProps>`
+  overflow: hidden;
+  ${({ hasBeenCollected }) => css`
+    height: ${hasBeenCollected ? "0" : "auto"};
+  `}
+`;
+
 const HeartPiece = ({
   heartPiece,
   hasBeenCollected,
   onToggleCollected
 }: Props) => {
   return (
-    <div>
-      <h2>Heart Piece #{heartPiece.number}</h2>
+    <Wrapper>
+      <HeaderBar>
+        <Heading>Heart Piece #{heartPiece.number}</Heading>
 
-      <h3>location</h3>
-      <p>{heartPiece.location}</p>
+        <Button
+          onClick={() => {
+            onToggleCollected(heartPiece);
+          }}
+        >
+          {hasBeenCollected ? "uncollect" : "collect"}
+        </Button>
+      </HeaderBar>
 
-      <h3>conditions</h3>
-      <p>{heartPiece.conditions}</p>
+      <BodyContent hasBeenCollected={hasBeenCollected}>
+        <Paragraph>
+          <strong>location:</strong> {heartPiece.location}
+        </Paragraph>
 
-      <h3>directions</h3>
-      <p>{heartPiece.directions}</p>
+        <Paragraph>
+          <strong>conditions:</strong> {heartPiece.conditions}
+        </Paragraph>
 
-      <button
-        onClick={() => {
-          onToggleCollected(heartPiece);
-        }}
-      >
-        {hasBeenCollected ? "uncollect" : "collect"}
-      </button>
-    </div>
+        <DescriptionParagraph>{heartPiece.directions}</DescriptionParagraph>
+      </BodyContent>
+    </Wrapper>
   );
 };
 

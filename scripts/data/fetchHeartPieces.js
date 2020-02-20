@@ -21,14 +21,16 @@ const fetchHeartPieceData = async () => {
   const boxes = document.querySelectorAll("li.gallerybox");
 
   const sections = Array.from(boxes).map((box, index) => {
-    const [location, conditions, directions] = box.textContent
+    const [location, conditions, ...directions] = box.textContent
       .split("\n")
       .filter(line => !!line);
 
     const cleanedLocation = location.replace(/^Location: /, "");
     const cleanedConditions = conditions.replace(/^Conditions /, "");
     const [, number] = /^Heart Piece #(\d+) - /.exec(directions);
-    const [, cleanedDirections] = directions.split(/^Heart Piece #[\d]+ - /);
+    const [, cleanedDirections] = directions
+      .join("\n")
+      .split(/^Heart Piece #[\d]+ - /);
     const imageUrl = box.querySelector("img").src;
 
     return {

@@ -70,8 +70,8 @@ const FiltersBar = ({
           select all
         </button>
         <div>
-          {heartPieceLocationsColumns.map(locations => (
-            <div>
+          {heartPieceLocationsColumns.map((locations, index) => (
+            <div key={`location-column-${index}`}>
               {locations.map(location => (
                 <label key={location} htmlFor={`filter-${location}`}>
                   <input

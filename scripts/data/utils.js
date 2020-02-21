@@ -26,7 +26,34 @@ const outputJSONToFile = async (outputPath, data) => {
   );
 };
 
+const readJSONFromFile = async filePath => {
+  const fullPath = path.join(OUTPUT_PATH, filePath);
+  const fileContents = await fs.readFile(fullPath);
+  const parsedData = JSON.parse(fileContents);
+  console.log("parsedData", parsedData);
+  return parsedData;
+};
+
+const downloadImage = async (url, outputPath) => {
+  const writer = fs.createWriteStream(outputPath);
+
+  const response = await axios({
+    url,
+    method: "GET",
+    responseType: "stream"
+  });
+
+  response.data.pipe(writer);
+
+  return new Promise((resolve, reject) => {
+    writer.on("finish", resolve);
+    writer.on("error", reject);
+  });
+};
+
 module.exports = {
   fetchFromURLOrCache,
-  outputJSONToFile
+  outputJSONToFile,
+  readJSONFromFile,
+  downloadImage
 };

@@ -76,6 +76,7 @@ const fetchAndWriteGoldSkulltulaData = async () => {
   };
 
   await outputJSONToFile("goldSkulltulas.json", data);
+  console.log("done collecting gold skulltulas.");
 };
 
 module.exports = fetchAndWriteGoldSkulltulaData;

@@ -1,20 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-// position: sticky;
-// top: 0;
 const Wrapper = styled.div`
-  background-color: #fff;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
   // border-bottom: 1px solid #333;
-  padding: 0.2rem 0;
+  padding: 0.5rem 0;
+  text-align: center;
+
+  button {
+    font-size: 0.7em;
+  }
 `;
 
 const ContentWrapper = styled.div``;
 
 const HeadingWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  text-align: center;
 `;
 
 const Heading = styled.h2`
@@ -38,25 +41,25 @@ const StickyInfoBar = ({
       <ContentWrapper>
         <HeadingWrapper>
           <Heading>
-            hearts collected: {collectedHearts.length}/{allHeartPieces.length}
+            heart pieces: {collectedHearts.length}/{allHeartPieces.length}
           </Heading>
-          <button
-            onClick={() => {
-              setCollectedHearts(
-                allHeartPieces.map(heartPiece => heartPiece.number)
-              );
-            }}
-          >
-            collect all
-          </button>
-          <button
-            onClick={() => {
-              setCollectedHearts([]);
-            }}
-          >
-            uncollect all
-          </button>
         </HeadingWrapper>
+        <button
+          onClick={() => {
+            setCollectedHearts(
+              allHeartPieces.map(heartPiece => heartPiece.number)
+            );
+          }}
+        >
+          collect all
+        </button>
+        <button
+          onClick={() => {
+            setCollectedHearts([]);
+          }}
+        >
+          uncollect all
+        </button>
       </ContentWrapper>
     </div>
   </Wrapper>

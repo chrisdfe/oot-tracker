@@ -16,7 +16,6 @@ function usePersistedState<T>(
   });
 
   useEffect(() => {
-    const value = JSON.stringify(state);
     localStorage.setItem(key, JSON.stringify(state));
   }, [key, state]);
 

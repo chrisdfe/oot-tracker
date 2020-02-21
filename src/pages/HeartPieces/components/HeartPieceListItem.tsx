@@ -1,5 +1,5 @@
-import React from "react";
-import styled, { css, StyledComponent } from "styled-components";
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
 
 export interface Props {
   heartPiece: HeartPiece;
@@ -23,10 +23,14 @@ const HeadingWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+
+  button {
+    font-size: 0.7em;
+  }
 `;
 
 const Heading = styled.h4`
-  margin: 0;
+  margin: 0 0.4rem 0 0;
   font-weight: normal;
 `;
 
@@ -39,8 +43,12 @@ const Paragraph = styled.p`
   }
 `;
 
+const ConditionsParagraph = styled(Paragraph)`
+  margin-bottom: 0.5rem;
+`;
+
 const DescriptionParagraph = styled(Paragraph)`
-  margin-top: 1rem;
+  font-size: 14px;
 `;
 
 const Checkbox = styled.button`
@@ -51,21 +59,25 @@ const Checkbox = styled.button`
   align-items: center;
   justify-content: center;
   background: transparent;
-  // border-radius: 3px;
   color: #333;
   cursor: pointer;
   font-weight: bold;
 `;
 
 interface BodyContentProps {
-  hasBeenCollected: boolean;
+  isOpen: boolean;
 }
 
 const BodyContent = styled.div<BodyContentProps>`
   overflow: hidden;
-  ${({ hasBeenCollected }) => css`
-    height: ${hasBeenCollected ? "0" : "auto"};
-  `}
+  height: 0;
+  ${({ isOpen }) =>
+    isOpen
+      ? css`
+          padding: 1.5rem 0;
+          height: auto;
+        `
+      : ""}
 `;
 
 const padNumber = (num: string) => (num.length === 2 ? num : `0${num}`);
@@ -75,6 +87,8 @@ const HeartPieceListItem = ({
   hasBeenCollected,
   onToggleCollected
 }: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Wrapper>
       <HeaderBar>
@@ -83,6 +97,13 @@ const HeartPieceListItem = ({
             <strong>#{padNumber(heartPiece.number)}</strong>&nbsp;
             {heartPiece.location}
           </Heading>
+          <button
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            {isOpen ? "close" : "open"}
+          </button>
         </HeadingWrapper>
         <Checkbox
           onClick={() => {
@@ -93,21 +114,17 @@ const HeartPieceListItem = ({
         </Checkbox>
       </HeaderBar>
 
-      {/*<BodyContent hasBeenCollected={hasBeenCollected}>
-        <Paragraph>
-          <strong>location:</strong> {heartPiece.location}
-        </Paragraph>
-
-        <Paragraph>
+      <BodyContent isOpen={isOpen}>
+        <ConditionsParagraph>
           <strong>conditions:</strong> {heartPiece.conditions}
-        </Paragraph>
+        </ConditionsParagraph>
 
         {heartPiece.directions.split("\n").map((paragraph, index) => (
           <DescriptionParagraph key={`paragraph-${index}`}>
             {paragraph}
           </DescriptionParagraph>
         ))}
-      </BodyContent>*/}
+      </BodyContent>
     </Wrapper>
   );
 };

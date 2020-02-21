@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import usePersistedStringArray from "../../utils/usePersistedStringArray";
 import allHeartPieces from "../../data/heartPieces.json";

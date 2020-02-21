@@ -8,8 +8,7 @@ export interface Props {
 }
 
 const Wrapper = styled.div`
-  padding: 0.1rem;
-  border-bottom: 1px solid #222;
+  padding: 0rem;
   text-align: left;
 `;
 
@@ -17,7 +16,7 @@ const HeaderBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4rem 0;
+  padding: 0.2rem 0;
 `;
 
 const HeadingWrapper = styled.div`
@@ -26,11 +25,7 @@ const HeadingWrapper = styled.div`
   align-items: flex-end;
 `;
 
-const Heading = styled.h3`
-  margin: 0 1rem 0 0;
-`;
-
-const SubHeading = styled.h4`
+const Heading = styled.h4`
   margin: 0;
   font-weight: normal;
 `;
@@ -48,13 +43,18 @@ const DescriptionParagraph = styled(Paragraph)`
   margin-top: 1rem;
 `;
 
-const Button = styled.button`
-  padding: 5px;
-  border: 1px solid #333;
+const Checkbox = styled.button`
+  border: 2px solid #333;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
-  border-radius: 3px;
+  // border-radius: 3px;
   color: #333;
   cursor: pointer;
+  font-weight: bold;
 `;
 
 interface BodyContentProps {
@@ -79,16 +79,18 @@ const HeartPieceListItem = ({
     <Wrapper>
       <HeaderBar>
         <HeadingWrapper>
-          <Heading>#{padNumber(heartPiece.number)}</Heading>
-          <SubHeading>{heartPiece.location}</SubHeading>
+          <Heading>
+            <strong>#{padNumber(heartPiece.number)}</strong>&nbsp;
+            {heartPiece.location}
+          </Heading>
         </HeadingWrapper>
-        <Button
+        <Checkbox
           onClick={() => {
             onToggleCollected(heartPiece);
           }}
         >
-          {hasBeenCollected ? "uncollect" : "collect"}
-        </Button>
+          {hasBeenCollected ? "y" : " "}
+        </Checkbox>
       </HeaderBar>
 
       {/*<BodyContent hasBeenCollected={hasBeenCollected}>

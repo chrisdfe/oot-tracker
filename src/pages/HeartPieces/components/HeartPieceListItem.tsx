@@ -8,10 +8,8 @@ export interface Props {
 }
 
 const Wrapper = styled.div`
-  padding: 1rem;
-  border: 1px solid #222;
-  margin-bottom: 2rem;
-
+  padding: 0.1rem;
+  border-bottom: 1px solid #222;
   text-align: left;
 `;
 
@@ -22,8 +20,19 @@ const HeaderBar = styled.div`
   padding: 0.4rem 0;
 `;
 
-const Heading = styled.h2`
+const HeadingWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+`;
+
+const Heading = styled.h3`
+  margin: 0 1rem 0 0;
+`;
+
+const SubHeading = styled.h4`
   margin: 0;
+  font-weight: normal;
 `;
 
 const Paragraph = styled.p`
@@ -59,7 +68,9 @@ const BodyContent = styled.div<BodyContentProps>`
   `}
 `;
 
-const HeartPiece = ({
+const padNumber = (num: string) => (num.length === 2 ? num : `0${num}`);
+
+const HeartPieceListItem = ({
   heartPiece,
   hasBeenCollected,
   onToggleCollected
@@ -67,8 +78,10 @@ const HeartPiece = ({
   return (
     <Wrapper>
       <HeaderBar>
-        <Heading>Heart Piece #{heartPiece.number}</Heading>
-
+        <HeadingWrapper>
+          <Heading>#{padNumber(heartPiece.number)}</Heading>
+          <SubHeading>{heartPiece.location}</SubHeading>
+        </HeadingWrapper>
         <Button
           onClick={() => {
             onToggleCollected(heartPiece);
@@ -78,7 +91,7 @@ const HeartPiece = ({
         </Button>
       </HeaderBar>
 
-      <BodyContent hasBeenCollected={hasBeenCollected}>
+      {/*<BodyContent hasBeenCollected={hasBeenCollected}>
         <Paragraph>
           <strong>location:</strong> {heartPiece.location}
         </Paragraph>
@@ -92,9 +105,9 @@ const HeartPiece = ({
             {paragraph}
           </DescriptionParagraph>
         ))}
-      </BodyContent>
+      </BodyContent>*/}
     </Wrapper>
   );
 };
 
-export default HeartPiece;
+export default HeartPieceListItem;

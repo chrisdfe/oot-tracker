@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
 
 interface Props {
   onFilterToggle: (filter: string) => void;
@@ -23,18 +23,31 @@ const Wrapper = styled.div`
   label {
     display: block;
   }
+`;
 
-  > div {
-    display: flex;
-    flex-direction: row;
+const FilterSection = styled.div``;
 
-    div {
-      margin-right: 1rem;
+const FilterSectionTopBar = styled.div`
+  display: flex;
+`;
 
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+const FilterSectionBody = styled.div<{ isOpen: boolean }>`
+  ${({ isOpen }) => css`
+    overflow: hidden;
+    height: ${isOpen ? "auto" : "0"};
+  `}
+`;
+
+const FilterSectionColumns = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const FilterSectionColumn = styled.div`
+  margin-right: 1rem;
+
+  &:last-child {
+    margin-right: 0;
   }
 `;
 
@@ -50,44 +63,61 @@ const FiltersBar = ({
     allLocations.slice(Math.floor(allLocations.length / 2))
   ];
 
+  const [locationsIsOpen, setLocationsIsOpen] = useState(false);
+
   return (
     <div className="container">
       <Wrapper>
         <h3>Filters</h3>
-        <h4>Location</h4>
-        <button
-          onClick={() => {
-            onLocationsClearAll();
-          }}
-        >
-          clear all
-        </button>
-        <button
-          onClick={() => {
-            onLocationsSelectAll();
-          }}
-        >
-          select all
-        </button>
-        <div>
-          {heartPieceLocationsColumns.map((locations, index) => (
-            <div key={`location-column-${index}`}>
-              {locations.map(location => (
-                <label key={location} htmlFor={`filter-${location}`}>
-                  <input
-                    id={`filter-${location}`}
-                    type="checkbox"
-                    checked={selectedLocations.includes(location)}
-                    onChange={() => {
-                      onFilterToggle(location);
-                    }}
-                  />
-                  {location}
-                </label>
-              ))}
+        <FilterSection>
+          <FilterSectionTopBar>
+            <h4>Location</h4>
+            <button
+              onClick={() => {
+                setLocationsIsOpen(!locationsIsOpen);
+              }}
+            >
+              {locationsIsOpen ? "close" : "open"}
+            </button>
+          </FilterSectionTopBar>
+          <FilterSectionBody isOpen={locationsIsOpen}>
+            <div>
+              <button
+                onClick={() => {
+                  onLocationsClearAll();
+                }}
+              >
+                clear all
+              </button>
+              <button
+                onClick={() => {
+                  onLocationsSelectAll();
+                }}
+              >
+                select all
+              </button>
             </div>
-          ))}
-        </div>
+            <FilterSectionColumns>
+              {heartPieceLocationsColumns.map((locations, index) => (
+                <FilterSectionColumn key={`location-column-${index}`}>
+                  {locations.map(location => (
+                    <label key={location} htmlFor={`filter-${location}`}>
+                      <input
+                        id={`filter-${location}`}
+                        type="checkbox"
+                        checked={selectedLocations.includes(location)}
+                        onChange={() => {
+                          onFilterToggle(location);
+                        }}
+                      />
+                      {location}
+                    </label>
+                  ))}
+                </FilterSectionColumn>
+              ))}
+            </FilterSectionColumns>
+          </FilterSectionBody>
+        </FilterSection>
       </Wrapper>
     </div>
   );

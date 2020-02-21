@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import HeartPiece from "./HeartPiece";
+import HeartPieceListItem from "./HeartPieceListItem";
 
 interface Props {
   heartPieces: HeartPiece[];
@@ -30,7 +30,7 @@ const HeartPieceList = ({
         Showing {filteredHeartPieces.length} hearts ({heartPieces.length} total)
       </h4>
       {filteredHeartPieces.map(heartPiece => (
-        <HeartPiece
+        <HeartPieceListItem
           key={heartPiece.number}
           heartPiece={heartPiece}
           hasBeenCollected={collectedHearts.includes(heartPiece.number)}

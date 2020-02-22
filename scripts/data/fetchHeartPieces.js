@@ -1,16 +1,14 @@
 const path = require("path");
 const fs = require("fs-extra");
 const axios = require("axios");
-const jsdom = require("jsdom");
 const Bottleneck = require("bottleneck");
-
-const { JSDOM } = jsdom;
 
 const {
   PROJECT_ROOT_PATH,
   ZELDA_DUNGEON_BASE_URL,
   IMAGES_PATH
 } = require("./constants");
+
 const {
   fetchFromURLOrCache,
   outputJSONToFile,
@@ -29,8 +27,7 @@ const fetchHeartPiecePageBody = async () => {
 };
 
 const fetchHeartPieceData = async () => {
-  const data = await fetchHeartPiecePageBody();
-  const { document } = new JSDOM(data).window;
+  const { document } = await fetchHeartPiecePageBody();
 
   const boxes = document.querySelectorAll("li.gallerybox");
 

@@ -1,21 +1,25 @@
 const fs = require("fs-extra");
 const path = require("path");
 const axios = require("axios");
+const jsdom = require("jsdom");
+
+const { JSDOM } = jsdom;
 
 const { DATA_PATH, CACHE_PATH } = require("./constants");
 
 const fetchFromURLOrCache = async (url, cacheFile) => {
   const cachePath = path.join(CACHE_PATH, cacheFile);
+  let data;
   try {
-    const data = await fs.readFile(cachePath);
+    data = await fs.readFile(cachePath);
     console.log("Using cached response");
-    return data;
   } catch (e) {
     console.log("No cached response found - fetching");
     const response = await axios.get(url);
     await fs.writeFile(cachePath, response.data);
-    return response.data;
+    data = response.data;
   }
+  return new JSDOM(data).window;
 };
 
 const outputJSONToFile = async (outputPath, data) => {
@@ -29,9 +33,7 @@ const outputJSONToFile = async (outputPath, data) => {
 const readJSONFromFile = async filePath => {
   const fullPath = path.join(DATA_PATH, filePath);
   const fileContents = await fs.readFile(fullPath);
-  const parsedData = JSON.parse(fileContents);
-  console.log("parsedData", parsedData);
-  return parsedData;
+  return JSON.parse(fileContents);
 };
 
 const downloadImage = async (url, outputPath) => {

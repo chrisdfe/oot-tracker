@@ -10,9 +10,8 @@ const { fetchFromURLOrCache, outputJSONToFile } = require("./utils");
 
 const GOLD_SKULLTULA_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Gold_Skulltulas`;
 
-const fetchGoldSkulltulaPageBody = async () => {
-  return fetchFromURLOrCache(GOLD_SKULLTULA_URL, "gold-skulltulas.html");
-};
+const fetchGoldSkulltulaPageBody = async () =>
+  fetchFromURLOrCache(GOLD_SKULLTULA_URL, "gold-skulltulas.html");
 
 const getList = async document => {
   const boxes = document.querySelectorAll("li.gallerybox");
@@ -44,6 +43,7 @@ const getList = async document => {
 
 const getRewards = async document => {
   const table = document.querySelector(".wikitable");
+
   // Leave out the header tr
   const [, ...rows] = table.querySelectorAll("tr");
   return Array.from(rows)
@@ -64,8 +64,8 @@ const getRewards = async document => {
 };
 
 const fetchAndWriteGoldSkulltulaData = async () => {
-  const response = await fetchGoldSkulltulaPageBody();
-  const { document } = new JSDOM(response).window;
+  const { document } = await fetchGoldSkulltulaPageBody();
+  console.log("document,", document);
 
   const list = await getList(document);
   const rewards = await getRewards(document);

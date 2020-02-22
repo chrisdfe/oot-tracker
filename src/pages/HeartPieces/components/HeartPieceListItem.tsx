@@ -76,8 +76,13 @@ const ThumbCheckboxWrapper = styled.div`
   }
 `;
 
-const Checkbox = styled.button`
+interface CheckboxProps {
+  isSelected: boolean;
+}
+
+const Checkbox = styled.button<CheckboxProps>`
   border: 2px solid #333;
+  // border-radius: 3px;
   width: 1.5rem;
   height: 1.5rem;
   display: flex;
@@ -87,7 +92,20 @@ const Checkbox = styled.button`
   color: #333;
   cursor: pointer;
   font-weight: bold;
+
+  &:focus {
+    outline: 0 none;
+    // This is a good color:
+    box-shadow: 0 0 0 2px #22d07a;
+  }
 `;
+// ${({ isSelected }) =>
+//   isSelected
+//     ? css`
+//         // background-color: #b6eac8;
+//         // background-color: #c9ede1;
+//       `
+//     : ""}
 
 interface BodyContentProps {
   isOpen: boolean;
@@ -132,11 +150,12 @@ const HeartPieceListItem = ({
             <img src={imageSrc} />
           </ThumbWrapper>
           <Checkbox
+            isSelected={hasBeenCollected}
             onClick={() => {
               onToggleCollected(heartPiece);
             }}
           >
-            {hasBeenCollected ? "y" : " "}
+            {hasBeenCollected ? "x" : ""}
           </Checkbox>
         </ThumbCheckboxWrapper>
       </HeaderBar>

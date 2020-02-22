@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   padding: 0rem;
   text-align: left;
   border-bottom: 1px solid #333;
+
+  &:last-child {
+    border-bottom-width: 0;
+  }
 `;
 
 const HeaderBar = styled.div`

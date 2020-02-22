@@ -123,6 +123,7 @@ const run = async () => {
   const data = await fetchAndWriteHeartPieceData();
   await fetchHeartPieceImages(data);
   console.log("done collecting heart pieces.");
+  return data;
 };
 
 module.exports = run;

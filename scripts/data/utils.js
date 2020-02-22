@@ -2,7 +2,7 @@ const fs = require("fs-extra");
 const path = require("path");
 const axios = require("axios");
 
-const { OUTPUT_PATH, CACHE_PATH } = require("./constants");
+const { DATA_PATH, CACHE_PATH } = require("./constants");
 
 const fetchFromURLOrCache = async (url, cacheFile) => {
   const cachePath = path.join(CACHE_PATH, cacheFile);
@@ -19,15 +19,15 @@ const fetchFromURLOrCache = async (url, cacheFile) => {
 };
 
 const outputJSONToFile = async (outputPath, data) => {
-  await fs.mkdirp(OUTPUT_PATH);
+  await fs.mkdirp(DATA_PATH);
   await fs.writeFile(
-    path.join(OUTPUT_PATH, outputPath),
+    path.join(DATA_PATH, outputPath),
     JSON.stringify(data, null, 4)
   );
 };
 
 const readJSONFromFile = async filePath => {
-  const fullPath = path.join(OUTPUT_PATH, filePath);
+  const fullPath = path.join(DATA_PATH, filePath);
   const fileContents = await fs.readFile(fullPath);
   const parsedData = JSON.parse(fileContents);
   console.log("parsedData", parsedData);

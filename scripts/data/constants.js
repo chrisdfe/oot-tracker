@@ -2,13 +2,23 @@ const path = require("path");
 
 const ZELDA_DUNGEON_BASE_URL = "http://www.zeldadungeon.net";
 
-const CACHE_PATH = path.resolve(__dirname, "..", ".cache");
-const OUTPUT_PATH = path.resolve(__dirname, "..", "..", "src", "data");
-const IMAGES_OUTPUT_PATH = path.join(OUTPUT_PATH, "images");
+const PROJECT_ROOT_PATH = path.join(__dirname, "..", "..");
+
+const SCRIPTS_PATH = path.join(PROJECT_ROOT_PATH, "scripts");
+const CACHE_PATH = path.join(SCRIPTS_PATH, ".cache");
+
+const SOURCE_PATH = path.join(PROJECT_ROOT_PATH, "src");
+const DATA_PATH = path.join(SOURCE_PATH, "data");
+const IMAGES_PATH = path.join(DATA_PATH, "images");
 
 module.exports = {
   ZELDA_DUNGEON_BASE_URL,
+
+  PROJECT_ROOT_PATH,
+  SCRIPTS_PATH,
   CACHE_PATH,
-  OUTPUT_PATH,
-  IMAGES_OUTPUT_PATH
+
+  SOURCE_PATH,
+  DATA_PATH,
+  IMAGES_PATH
 };

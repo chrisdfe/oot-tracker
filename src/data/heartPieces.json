@@ -4,287 +4,323 @@
         "location": "Kakariko Village Graveyard",
         "conditions": "Acquire Sun's Song (Past)",
         "directions": "Go up to the giant tombstone (Royal Family's Tomb) and turn back to the exit. There are five tombstones on your left side directly in front of you. The second from the right can be pulled back. Do so and drop down into the hole to find a ReDead. Defeat it (freeze it first with the Sun's Song), then stand on the steps and play the Sun's Song again to make a chest appear containing a Piece of Heart.",
+        "fileName": "heart-piece-1.jpg",
         "sourceImageUrl": "/wiki/images/thumb/f/fa/OoT-Heart-Piece-01-Map.jpg/400px-OoT-Heart-Piece-01-Map.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-1.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-1.jpg"
     },
     {
         "number": "2",
         "location": "Kakariko Village Graveyard",
         "conditions": "Have Enough Rupees",
         "directions": "Once you have a lot of Rupees to throw around, enter the Graveyard between 18:00 and 21:00 (you can talk to the guard at the entrance of Kakariko Village to check the time). You will have the option of playing Dampé's Heart-Pounding Gravedigging Tour for 10 Rupees a try. Speak to him when he is standing in front of a patch of Soft Soil, pay up, and see what you find. Mostly, you find nothing, but occasionally you get Rupees. Eventually, you will find a Piece of Heart. Unfortunately, it is completely random, so you could end up being here awhile...",
+        "fileName": "heart-piece-2.jpg",
         "sourceImageUrl": "/wiki/images/f/fa/OoT-Heart-Piece-02.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-2.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-2.jpg"
     },
     {
         "number": "3",
         "location": "Lon Lon Ranch",
         "conditions": "Reach Lon Lon Ranch (Past)",
         "directions": "During the past, go to Lon Lon Ranch and enter the storage building at the back of the ranch. Pull the crates back to reach the far corner where you will find a hole you can crawl through. This leads to a little area with a Piece of Heart in a nest.",
+        "fileName": "heart-piece-3.jpg",
         "sourceImageUrl": "/wiki/images/d/df/OoT-Heart-Piece-03.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-3.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-3.jpg"
     },
     {
         "number": "4",
         "location": "Gerudo Valley",
         "conditions": "Reach Gerudo Valley",
         "directions": "In Gerudo Valley, there is a giant waterfall to the north. In the center of the waterfall is an alcove with a Piece of Heart. There is a ladder to get up there, so the general idea is to drop down into the water closest to the waterfall and swim over to the ladder. As a child, you can grab the Cucco nearby and float over to it. As an adult, you will probably have more luck getting on the \"Gerudo side\" of the bridge and jumping down on to the solid land, then running over to the higher water and jumping in.",
+        "fileName": "heart-piece-4.jpg",
         "sourceImageUrl": "/wiki/images/thumb/0/0b/Oot_heart_16.jpg/400px-Oot_heart_16.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-4.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-4.jpg"
     },
     {
         "number": "5",
         "location": "Gerudo Valley",
         "conditions": "Reach Gerudo Valley",
         "directions": "When standing on the bridge, if you look towards the \"Gerudo side\" of the bridge and look off to the left, you will see a platform up against the wall with a crate. Roll into the crate to find a Piece of Heart. There are two ways to get over to this platform:\n1) As a child, grab the Cucco and float over to the crate.\n2) As an adult, jump down on to the similar platform on the \"Hyrule Field side,\" and then use the Longshot on the crate to get across.",
+        "fileName": "heart-piece-5.jpg",
         "sourceImageUrl": "/wiki/images/thumb/d/d3/Oot_heart_17.jpg/400px-Oot_heart_17.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-5.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-5.jpg"
     },
     {
         "number": "6",
         "location": "Lake Hylia",
         "conditions": "Reach Lake Hylia (Past)",
         "directions": "In the Fishing Pond game, catch a 10-pound fish as a child and show it to the Fishing Hole Man to get a Piece of Heart.",
+        "fileName": "heart-piece-6.jpg",
         "sourceImageUrl": "/wiki/images/5/5f/OoT-Heart-Piece-06.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-6.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-6.jpg"
     },
     {
         "number": "7",
         "location": "Lost Woods",
         "conditions": "Acquire Fairy Ocarina (Past)",
         "directions": "When you enter the Lost Woods as a child, go right one screen then jump down into the lower area. Stand on the stump off to the right to make two Skull Kids appear. Pull out your Ocarina and they'll let you play along with their songs. If you can manage to play three of their songs in a row (that steadily get more difficult), they will reward you with a Piece of Heart.",
+        "fileName": "heart-piece-7.jpg",
         "sourceImageUrl": "/wiki/images/1/1c/OoT-Heart-Piece-07.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-7.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-7.jpg"
     },
     {
         "number": "8",
         "location": "Lost Woods",
         "conditions": "Learn Saria's Song (Past)",
         "directions": "Enter the Lost Woods as a child and go left one screen. Stand on the stump, pull out your Ocarina and play Saria's Song once you have acquired it. The Skull Kid on top of the tree trunk in front of you will get excited and offer you a Piece of Heart for his new friend. That's the sign of a true friend!",
+        "fileName": "heart-piece-8.jpg",
         "sourceImageUrl": "/wiki/images/f/f6/OoT-Heart-Piece-08.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-8.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-8.jpg"
     },
     {
         "number": "9",
         "location": "Market",
         "conditions": "Reach Market (Past)",
         "directions": "During the night, there are lots of dogs roaming the streets. If you touch one, it will follow you until you enter a building or leave the area entirely. There is one specific dog we want, which is the white one who is hanging out by the blue market stall. It is located to the left of the exit leading back to Hyrule Field. Make it follow you, then head over to the right a bit and enter the Back Alley between the buildings. Enter the door straight ahead to your left, which is the only one open at night. Inside, you will find Mamamu Yan who is constantly raving about her \"Little Richard\" during the day. For bringing him back, she will gift you with a Piece of Heart.",
+        "fileName": "heart-piece-9.jpg",
         "sourceImageUrl": "/wiki/images/d/d6/OoT-Heart-Piece-09.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-9.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-9.jpg"
     },
     {
         "number": "10",
         "location": "Goron City",
         "conditions": "Acquire Goron's Bracelet",
         "directions": "At the lowest level of the city, light all the torches using Deku Sticks (and the lit torch in Darunia's chamber). Alternatively you can use Din's Fire. Once all of them are lit, the giant goron-faced urn in the center will begin spinning. Go up to the second floor where you can toss either Bomb Flowers or Bombs into the vase once it gets close. If they explode when the face that's towards you is smiling, you will get a Piece of Heart and some Rupees. It can take awhile and is very frustrating, so don't feel like you're the only one.",
+        "fileName": "heart-piece-10.jpg",
         "sourceImageUrl": "/wiki/images/f/f5/OoT-Heart-Piece-10.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-10.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-10.jpg"
     },
     {
         "number": "11",
         "location": "Death Mountain Crater",
         "conditions": "Reach Death Mountain Crater",
         "directions": "The wall that leads up to the large area at the entrance of Death Mountain Crater is climbable and it has an alcove with a Piece of Heart in it. There are two ways you can get it:\n1) You can enter Death Mountain Crater as a child and run straight forward. When you hit the ledge, rather than jumping, Link will turn around and start climbing down. Get to the alcove and claim your prize, then quickly leave before you run out of time (the limit is based on the amount of Heart Containers you have, so the more health the better). You can use this method as an adult as well.\n2) The other way is to plant a Magic Bean at the base of the Crater as a child and ride the Magic Bean Plant as an adult. It will eventually take you over to the alcove.",
+        "fileName": "heart-piece-11.jpg",
         "sourceImageUrl": "/wiki/images/thumb/d/dc/Oot_heart_06.jpg/400px-Oot_heart_06.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-11.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-11.jpg"
     },
     {
         "number": "12",
         "location": "Kakariko Village",
         "conditions": "Reach Top of Death Mountain or Hookshot",
         "directions": "To get this Piece of Heart, you need to get on top of Impa's House (the building to the far southwest of Kakariko Village). You can get there by either catching a ride from the Owl atop Death Mountain as a child, or using the Hookshot as an adult to first get on top of the House of Skulltula, and then on top of Impa's House.\nOnce you get up there, jump off to the east side where there is a ledge above the fence. Enter the hole in the wall which takes you into a cage inside the house with a cow...? and a Piece of Heart!",
+        "fileName": "heart-piece-12.jpg",
         "sourceImageUrl": "/wiki/images/f/fa/OoT-Heart-Piece-12.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-12.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-12.jpg"
     },
     {
         "number": "13",
         "location": "Market",
         "conditions": "Acquire Bombs (Past)",
         "directions": "During the day, the Bombchu Bowling Alley is open and ready for business! The game cycles through five different prizes, in this order: Bombchu, Piece of Heart, Bombs, Bomb Bag, and a purple Rupee (50). If you mess up playing the game for the prize you want, you will have to wait for the prize to cycle around again.",
+        "fileName": "heart-piece-13.jpg",
         "sourceImageUrl": "/wiki/images/9/9c/OoT-Heart-Piece-13.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-13.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-13.jpg"
     },
     {
         "number": "14",
         "location": "Hyrule Field",
         "conditions": "Acquire Bombs",
         "directions": "In the southwest corner of Hyrule Field is the entrance to Lake Hylia. Just before the entrance itself is four fences that form a square. Lay a bomb in the center to reveal a hole. Jump down and purchase the Piece of Heart from the Business Scrub for 10 Rupees.",
+        "fileName": "heart-piece-14.jpg",
         "sourceImageUrl": "/wiki/images/0/06/OoT-Heart-Piece-14.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-14.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-14.jpg"
     },
     {
         "number": "15",
         "location": "Zora's River",
         "conditions": "Reach Zora's River",
         "directions": "The heart piece is located on a pillar found right in the center of Zora's River region. There are a few different ways to get to it:\n1) You can bring the Cucco from the beginning of the area, jump at the nearby platform and let go of the Cucco at the last moment to grab on, pull yourself up and jump to the Piece of Heart.\n2) Use the Boomerang as a child to retrieve it.\n3) Use the Hover Boots as an adult to float over and grab it.",
+        "fileName": "heart-piece-15.jpg",
         "sourceImageUrl": "/wiki/images/1/1e/OoT-Heart-Piece-15.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-15.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-15.jpg"
     },
     {
         "number": "16",
         "location": "Zora's River",
         "conditions": "Reach Zora's River",
         "directions": "At the end of Zora's River, near the entrance to Zora's Domain, there is a platform in the corner with a Piece of Heart. There are a few ways to get it:\n1) Bring the Cucco from the beginning of the area, throw it up on the ledges and quickly grab it before it touches water and flies off. Get to the highest point near the platform, jump to it, let go of the Cucco at the last moment to grab on to the ledge, and snag the prize.\n2) Use the Boomerang as a child to retrieve it.\n3) Use the Hover Boots as an adult to float over and grab it.",
+        "fileName": "heart-piece-16.jpg",
         "sourceImageUrl": "/wiki/images/d/de/OoT-Heart-Piece-16.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-16.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-16.jpg"
     },
     {
         "number": "17",
         "location": "Zora's Domain",
         "conditions": "Reach Zora's Domain (Past)",
         "directions": "There are five unlit torches in Zora's Domain.\n1) As a child, run up to the Throne Room and light a Deku Stick, then run down the stairs and light the torch you find at the corner. This one will stay lit.\n2) Get out a new Deku Stick so you have the most time and start spiraling down the ramp.\n3) Next to the shop is another torch, continue on into the water.\n4) In the northern corner is a torch next to a circle of stones. Light it and then quickly head to the waterfall.\n5) The final two torches are behind the waterfall. Stay close to the edge, run inside and light them to make a large chest appear.",
+        "fileName": "heart-piece-17.jpg",
         "sourceImageUrl": "/wiki/images/d/de/OoT-Heart-Piece-17.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-17.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-17.jpg"
     },
     {
         "number": "18",
         "location": "Kakariko Village Graveyard",
         "conditions": "Plant Magic Bean",
         "directions": "On the left side of the Graveyard as a child, there is a soft soil location. Plant a Magic Bean and return as an adult later on. Ride the Magic Bean Plant up on to the ledge and roll into the crate to find a Piece of Heart.",
+        "fileName": "heart-piece-18.jpg",
         "sourceImageUrl": "/wiki/images/c/c5/OoT-Heart-Piece-18.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-18.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-18.jpg"
     },
     {
         "number": "19",
         "location": "Kakariko Village",
         "conditions": "Acquire Boomerang as a Child or Race Dampé as an Adult",
         "directions": "Within the Windmill is a ledge with a Piece of Heart resting atop it. After you race against Dampé in the Graveyard as an adult, you come out of the Windmill and you can jump across the moving platforms to get it. Alternatively, you could have gotten this as a child after acquiring the Boomerang.",
+        "fileName": "heart-piece-19.jpg",
         "sourceImageUrl": "/wiki/images/c/c3/OoT-Heart-Piece-19.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-19.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-19.jpg"
     },
     {
         "number": "20",
         "location": "Kakariko Village Graveyard",
         "conditions": "Acquire Hookshot",
         "directions": "Once you have acquired the Hookshot, you can race against Dampé again anytime you like. If you can beat him in under a minute, you will get a Piece of Heart. A trick to cut sometime at the end is to use the Longshot to latch on to the torch near the end of the maze, shaving a few seconds off your travels. However, you can do this without the Longshot.",
+        "fileName": "heart-piece-20.jpg",
         "sourceImageUrl": "/wiki/images/0/06/OoT-Heart-Piece-20.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-20.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-20.jpg"
     },
     {
         "number": "21",
         "location": "Kakariko Village",
         "conditions": "Acquire Hookshot",
         "directions": "When you are an adult, use the Hookshot to get on top of the roof of Granny's Potion Shop and then talk to the guy up there and he will give you the Piece of Heart. You can reach the roof by standing on the fence right in front of the Windmill. After you acquire the Longshot, you can reach the roof from many other locations.\nThis Heart Piece can be acquired way earlier in the game, when Link first reached Kakariko Village as a child. You can climb on top of the lookout tower, face to the south, target, and side jump to the left. This will cause you to land on top of the fence, which you can then use to climb up to the roof.",
+        "fileName": "heart-piece-21.jpg",
         "sourceImageUrl": "/wiki/images/9/93/OoT-Heart-Piece-21.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-21.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-21.jpg"
     },
     {
         "number": "22",
         "location": "Kakariko Village",
         "conditions": "Collect 50 Gold Skulltulas",
         "directions": "Once you have collected 50 Gold Skulltulas, go into the House of Skulltula and claim your prize.",
+        "fileName": "heart-piece-22.jpg",
         "sourceImageUrl": "/wiki/images/a/a3/OoT-Heart-Piece-22.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-22.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-22.jpg"
     },
     {
         "number": "23",
         "location": "Lake Hylia",
         "conditions": "Plant Magic Bean or Learn Scarecrow's Song",
         "directions": "At the very top of the Lakeside Laboratory is a Piece of Heart. To get up there, you can either plant a Magic Bean as a child and ride it as an adult or use the Scarecrow's Song and Hookshot up. Watch out for the Guays, a crow-like enemy while you're at it too.",
+        "fileName": "heart-piece-23.jpg",
         "sourceImageUrl": "/wiki/images/e/e3/OoT-Heart-Piece-23.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-23.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-23.jpg"
     },
     {
         "number": "24",
         "location": "Lake Hylia",
         "conditions": "Acquire the Golden Scale",
         "directions": "Once you win the Golden Scale from the Fishing Pond, you can enter the Lakeside Laboratory and use it to dive down as far as you can. Link will touch the bottom and you will hear the \"secret\" chime. Swim back up and speak with Lake Scientist to get a reward.",
+        "fileName": "heart-piece-24.jpg",
         "sourceImageUrl": "/wiki/images/d/d2/OoT-Heart-Piece-24.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-24.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-24.jpg"
     },
     {
         "number": "25",
         "location": "Hyrule Field",
         "conditions": "Acquire the Golden Scale or Iron Boots",
         "directions": "Northwest of Lon Lon Ranch, between Gerudo Valley and Hyrule Castle, there is a tree. Once you walk by it the Shard of Agony will chime, or if you are playing the N64 version, the Stone of Agony will shake. Place a bomb next to it to reveal a hole. Inside, use either the Iron Boots or the Golden Scale to dive deep into the water and retrieve this Piece of Heart.",
+        "fileName": "heart-piece-25.jpg",
         "sourceImageUrl": "/wiki/images/0/0a/OoT-Heart-Piece-25.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-25.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-25.jpg"
     },
     {
         "number": "26",
         "location": "Death Mountain Trail",
         "conditions": "Plant Magic Bean",
         "directions": "As a child, plant a Magic Bean in the soft soil at the entrance of Dodongo's Cavern. When you return as an adult, you can ride the Magic Bean Plant to jump on to the ledge just above Dodongo's Cavern where a Piece of Heart awaits.\nAnother way to get there is to go to the Bomb Flower that is directly above Dodongo's Cavern. Move the Bomb Flower out of the way, then face away towards the southeast (opposite the cavern), target and backflip. If done right, you will land on the platform and can get the Piece of Heart early.",
+        "fileName": "heart-piece-26.jpg",
         "sourceImageUrl": "/wiki/images/f/f7/OoT-Heart-Piece-26.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-26.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-26.jpg"
     },
     {
         "number": "27",
         "location": "Death Mountain Crater",
         "conditions": "Learn Bolero of Fire, Plant Magic Bean",
         "directions": "As a child, warp to Death Mountain Crater and plant a Magic Bean in the soft soil next to the Triforce Pedestal. Warp back as an adult and ride the Magic Bean up to one of the two smoky mountains in the center of the area, which has a Piece of Heart atop it.",
+        "fileName": "heart-piece-27.jpg",
         "sourceImageUrl": "/wiki/images/f/f0/OoT-Heart-Piece-27.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-27.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-27.jpg"
     },
     {
         "number": "28",
         "location": "Zora's Fountain",
         "conditions": "Become an Adult",
         "directions": "When you return to Zora's Domain as an adult, Lord Jabu-Jabu is no longer here and there are now a bunch of icebergs floating around. Jump across them to find a Piece of Heart atop one of them.",
+        "fileName": "heart-piece-28.jpg",
         "sourceImageUrl": "/wiki/images/b/be/OoT-Heart-Piece-28.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-28.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-28.jpg"
     },
     {
         "number": "29",
         "location": "Ice Cavern",
         "conditions": "Blue Fire",
         "directions": "In the far right room of the Ice Cavern, which is the same room where you can acquire some Blue Fire and find the Compass, there are lots of stalactites that fall from the ceiling. There are a few patches of Red Ice and within one of them is a Piece of Heart. Use Blue Fire to melt it.",
+        "fileName": "heart-piece-29.jpg",
         "sourceImageUrl": "/wiki/images/0/07/OoT-Heart-Piece-29.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-29.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-29.jpg"
     },
     {
         "number": "30",
         "location": "Zora's Fountain",
         "conditions": "Iron Boots",
         "directions": "Located at the very bottom of Zora's Fountain. Use the Iron Boots to reach the ground floor and collect the heart piece.",
+        "fileName": "heart-piece-30.jpg",
         "sourceImageUrl": "/wiki/images/7/7b/OoT-Heart-Piece-30.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-30.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-30.jpg"
     },
     {
         "number": "31",
         "location": "Zora's River",
         "conditions": "Song of Storms (Child)",
         "directions": "At Zora's River as a child, near the center of the map, step on the nearby log that sticks out into the water. Pull out your Ocarina to get five Frogs to appear. Play the Song of Storms and you'll be rewarded with a Piece of Heart.",
+        "fileName": "heart-piece-31.jpg",
         "sourceImageUrl": "/wiki/images/4/4f/OoT-Heart-Piece-31.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-31.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-31.jpg"
     },
     {
         "number": "32",
         "location": "Zora's River",
         "conditions": "Epona's Song, Sun's Song, Song of Storms (Child)",
         "directions": "At Zora's River as a child, when you meet the five frogs, play Zelda's Lullaby, Saria's Song, Epona's Song, Sun's Song, and the Song of Time. Each time one of the frogs will grow in size. Once all five frogs are grown, and you also played the Song of Storms to get the other heart piece, you can play a game of Simon says. You will have to quickly press the right button, depending on where the butterfly appears over the frogs head. The pattern is as follows.\nNintendo 3DS Version – L, X, Y, R, X, Y, R, L, R, L, R, Y, X, L\nNintendo 64 Version – A, C-left, C-right, C-down, C-left, C-right, C-down, A, C-down, A, C-down, C-right, C-left, A",
+        "fileName": "heart-piece-32.jpg",
         "sourceImageUrl": "/wiki/images/1/1f/OoT-Heart-Piece-32.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-32.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-32.jpg"
     },
     {
         "number": "33",
         "location": "Market",
         "conditions": "Lens of Truth (Child)",
         "directions": "The Treasure Chest Shop is open only at night. Enter and you can play this game for 10 Rupees a try. In each room, you are given a choice between two chests, one being a prize while the other allows you to move forward to better prizes. Each decision is a fifty-fifty chance, so your chances of getting all the way through aren't that good. Once you have acquired the Lens of Truth, you can use it during the game in order to see what is inside the chests. Pick all the Small Key chests to get to the end.",
+        "fileName": "heart-piece-33.jpg",
         "sourceImageUrl": "/wiki/images/5/56/OoT-Heart-Piece-33.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-33.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-33.jpg"
     },
     {
         "number": "34",
         "location": "Gerudo's Fortress",
         "conditions": "Gerudo Token",
         "directions": "At the very top of the fortress is a large treasure chest. One of the doors to the south takes you to an upper ledge where you can walk around and climb up some vines to get to the highest point. Run over to the north and at the gap, you can play the Scarecrow's Song to make Pierre appear. Use the Hookshot to get across and open the chest for a Piece of Heart. If you have the Longshot, you should just barely be able to grapple on to the chest itself.",
+        "fileName": "heart-piece-34.jpg",
         "sourceImageUrl": "/wiki/images/b/be/OoT-Heart-Piece-34.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-34.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-34.jpg"
     },
     {
         "number": "35",
         "location": "Gerudo's Fortress",
         "conditions": "Gerudo Token, Epona",
         "directions": "Once you have saved all the carpenters and acquired the Gerudo Token, you can bring Epona to the far east and play the Horseback Archery game. If you can manage to get over 1,000 points, you will be rewarded with a Piece of Heart.",
+        "fileName": "heart-piece-35.jpg",
         "sourceImageUrl": "/wiki/images/d/df/OoT-Heart-Piece-35.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-35.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-35.jpg"
     },
     {
         "number": "36",
         "location": "Desert Colossus",
         "conditions": "Gerudo Token, Epona",
         "directions": "Next to the entrance of the Spirit Temple is a soft soil location. Plant a Magic Bean as a child, and then come back as an adult and ride it. Near the end of its travels, it will go over the stonehenge-looking platform where there is a Piece of Heart. Jump off and collect the final one in the game!",
+        "fileName": "heart-piece-36.jpg",
         "sourceImageUrl": "/wiki/images/9/99/OoT-Heart-Piece-36.jpg",
-        "localImageUrl": "/Users/christopherferris/Documents/projects/oot-tracker/src/data/images/heart-pieces/heart-piece-36.jpg"
+        "localImageUrl": "heart-pieces/heart-piece-36.jpg"
     }
 ]

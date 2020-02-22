@@ -6,7 +6,11 @@ const Bottleneck = require("bottleneck");
 
 const { JSDOM } = jsdom;
 
-const { ZELDA_DUNGEON_BASE_URL, IMAGES_OUTPUT_PATH } = require("./constants");
+const {
+  PROJECT_ROOT_PATH,
+  ZELDA_DUNGEON_BASE_URL,
+  IMAGES_PATH
+} = require("./constants");
 const {
   fetchFromURLOrCache,
   outputJSONToFile,
@@ -16,7 +20,7 @@ const {
 
 const HEART_PIECES_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Heart_Pieces`;
 
-const HEART_IMAGES_BASE_PATH = path.join(IMAGES_OUTPUT_PATH, "heart-pieces");
+const HEART_IMAGES_BASE_PATH = "heart-pieces";
 
 const HEART_PIECES_JSON_FILENAME = "heartPieces.json";
 
@@ -41,17 +45,16 @@ const fetchHeartPieceData = async () => {
     const [, cleanedDirections] = directions
       .join("\n")
       .split(/^Heart Piece #[\d]+ - /);
+    const fileName = `heart-piece-${number}.jpg`;
     const sourceImageUrl = box.querySelector("img").src;
-    const localImageUrl = path.join(
-      HEART_IMAGES_BASE_PATH,
-      `heart-piece-${number}.jpg`
-    );
+    const localImageUrl = path.join(HEART_IMAGES_BASE_PATH, fileName);
 
     return {
       number,
       location: cleanedLocation,
       conditions: cleanedConditions,
       directions: cleanedDirections,
+      fileName,
       sourceImageUrl,
       localImageUrl
     };
@@ -77,14 +80,16 @@ const fetchHeartPieceImage = async ({
   sourceImageUrl,
   localImageUrl
 }) => {
-  console.log(`fetching image for heart #${number}`);
+  console.log(`fetching heart piece #${number}`);
   const fullImageUrl = `${ZELDA_DUNGEON_BASE_URL}${sourceImageUrl}`;
-  await downloadImage(fullImageUrl, localImageUrl);
+  await downloadImage(fullImageUrl, path.join(IMAGES_PATH, localImageUrl));
 };
 
 const getImagesThatNeedFetching = async data => {
   const imageExistenceArray = await Promise.all(
-    data.map(heartPiece => fs.pathExists(heartPiece.localImageUrl))
+    data.map(heartPiece =>
+      fs.pathExists(path.join(IMAGES_PATH, heartPiece.localImageUrl))
+    )
   );
 
   return imageExistenceArray
@@ -96,6 +101,7 @@ const getImagesThatNeedFetching = async data => {
     })
     .filter(val => !!val);
 };
+
 const fetchHeartPieceImages = async data => {
   await fs.mkdirp(HEART_IMAGES_BASE_PATH);
 
@@ -120,10 +126,6 @@ const run = async () => {
   const data = await fetchAndWriteHeartPieceData();
   await fetchHeartPieceImages(data);
   console.log("done collecting heart pieces.");
-
-  // console.log("testing");
-  // const parsedJSON = await loadHeartPieceDataFromFile();
-  // console.log("data", parsedJSON);
 };
 
 module.exports = run;

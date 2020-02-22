@@ -10,6 +10,7 @@ export interface Props {
 const Wrapper = styled.div`
   padding: 0rem;
   text-align: left;
+  border-bottom: 1px solid #333;
 `;
 
 const HeaderBar = styled.div`
@@ -32,10 +33,25 @@ const HeadingWrapper = styled.div`
 const Heading = styled.h4`
   margin: 0 0.4rem 0 0;
   font-weight: normal;
+  font-size: 14px;
+`;
+
+const ThumbWrapper = styled.div`
+  height: 30px;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  margin-bottom: 1rem;
 `;
 
 const Paragraph = styled.p`
   line-height: 1.7em;
+  font-size: 14px;
   margin: 0 0;
 
   &:last-child {
@@ -49,6 +65,15 @@ const ConditionsParagraph = styled(Paragraph)`
 
 const DescriptionParagraph = styled(Paragraph)`
   font-size: 14px;
+`;
+
+const ThumbCheckboxWrapper = styled.div`
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 0.5rem;
+  }
 `;
 
 const Checkbox = styled.button`
@@ -70,14 +95,18 @@ interface BodyContentProps {
 
 const BodyContent = styled.div<BodyContentProps>`
   overflow: hidden;
-  height: 0;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
   ${({ isOpen }) =>
     isOpen
       ? css`
-          padding: 1.5rem 0;
-          height: auto;
+          max-height: 40em;
         `
       : ""}
+`;
+
+const BodyContentInner = styled.div`
+  padding: 1.5rem 0;
 `;
 
 const padNumber = (num: string) => (num.length === 2 ? num : `0${num}`);
@@ -87,7 +116,7 @@ const HeartPieceListItem = ({
   hasBeenCollected,
   onToggleCollected
 }: Props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const imageSrc = require(`../../../data/images/${heartPiece.localImageUrl}`);
 
   return (
     <Wrapper>
@@ -97,33 +126,36 @@ const HeartPieceListItem = ({
             <strong>#{padNumber(heartPiece.number)}</strong>&nbsp;
             {heartPiece.location}
           </Heading>
-          <button
+        </HeadingWrapper>
+        <ThumbCheckboxWrapper>
+          <ThumbWrapper>
+            <img src={imageSrc} />
+          </ThumbWrapper>
+          <Checkbox
             onClick={() => {
-              setIsOpen(!isOpen);
+              onToggleCollected(heartPiece);
             }}
           >
-            {isOpen ? "close" : "open"}
-          </button>
-        </HeadingWrapper>
-        <Checkbox
-          onClick={() => {
-            onToggleCollected(heartPiece);
-          }}
-        >
-          {hasBeenCollected ? "y" : " "}
-        </Checkbox>
+            {hasBeenCollected ? "y" : " "}
+          </Checkbox>
+        </ThumbCheckboxWrapper>
       </HeaderBar>
 
-      <BodyContent isOpen={isOpen}>
-        <ConditionsParagraph>
-          <strong>conditions:</strong> {heartPiece.conditions}
-        </ConditionsParagraph>
+      <BodyContent isOpen={!hasBeenCollected}>
+        <BodyContentInner>
+          <ImageWrapper>
+            <img src={imageSrc} />
+          </ImageWrapper>
+          <ConditionsParagraph>
+            <strong>conditions:</strong> {heartPiece.conditions}
+          </ConditionsParagraph>
 
-        {heartPiece.directions.split("\n").map((paragraph, index) => (
-          <DescriptionParagraph key={`paragraph-${index}`}>
-            {paragraph}
-          </DescriptionParagraph>
-        ))}
+          {heartPiece.directions.split("\n").map((paragraph, index) => (
+            <DescriptionParagraph key={`paragraph-${index}`}>
+              {paragraph}
+            </DescriptionParagraph>
+          ))}
+        </BodyContentInner>
       </BodyContent>
     </Wrapper>
   );

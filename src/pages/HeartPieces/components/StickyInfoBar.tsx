@@ -4,8 +4,8 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  // border-bottom: 1px solid #333;
+  background-color: #fff;
+  border-bottom: 1px solid #333;
   padding: 0.5rem 0;
   text-align: center;
 

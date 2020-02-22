@@ -3,7 +3,9 @@ type HeartPiece = {
   location: string;
   conditions: string;
   directions: string;
-  imageUrl: string;
+  fileName: string;
+  sourceImageUrl: string;
+  localImageUrl: string;
 };
 
 type HeartPieceLocations = string[];

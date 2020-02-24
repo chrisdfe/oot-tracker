@@ -1,7 +1,13 @@
 const { outputJSONToFile } = require("./utils");
 
-const getLocationsFromLists = lists =>
-  lists
+const slugify = str =>
+  str
+    .toLowerCase()
+    .replace(/\s/g, "-")
+    .replace(/[']/g, "");
+
+const getLocations = (heartPieces, goldSkulltulas) =>
+  [heartPieces, goldSkulltulas]
     .reduce((acc, list) => {
       const listLocations = list.map(({ location }) => location);
       const result = [...acc];
@@ -16,17 +22,25 @@ const getLocationsFromLists = lists =>
     .sort((a, b) => a.localeCompare(b))
     // Map to an object
     .map(title => {
-      const slug = title
-        .toLowerCase()
-        .replace(/\s/g, "-")
-        .replace(/[']/g, "");
+      const slug = slugify(title);
       return { slug, title };
+    })
+    .map(location => {
+      const heartPieceIds = heartPieces
+        .filter(heartPiece => heartPiece.location === location.title)
+        .map(location => location.number);
+      const goldSkulltulaIds = goldSkulltulas
+        .filter(goldSkulltula => goldSkulltula.location === location.title)
+        .map(location => location.number);
+      return { ...location, heartPieceIds, goldSkulltulaIds };
     });
 
-const run = async (...data) => {
-  const locations = getLocationsFromLists(data);
-  await outputJSONToFile("locations.json", locations);
-  return locations;
+const run = async (heartPieces, goldSkulltulas) => {
+  const allLocations = getLocations(heartPieces, goldSkulltulas);
+
+  await outputJSONToFile("locations.json", allLocations);
+
+  return allLocations;
 };
 
 module.exports = run;

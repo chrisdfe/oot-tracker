@@ -1,134 +1,384 @@
 [
     {
         "slug": "bottom-of-the-well",
-        "title": "Bottom of the Well"
+        "title": "Bottom of the Well",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "79",
+            "80",
+            "81"
+        ]
     },
     {
         "slug": "castle-town",
-        "title": "Castle Town"
+        "title": "Castle Town",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "4"
+        ]
     },
     {
         "slug": "death-mountain-crater",
-        "title": "Death Mountain Crater"
+        "title": "Death Mountain Crater",
+        "heartPieceIds": [
+            "11",
+            "27"
+        ],
+        "goldSkulltulaIds": [
+            "27",
+            "57"
+        ]
     },
     {
         "slug": "death-mountain-trail",
-        "title": "Death Mountain Trail"
+        "title": "Death Mountain Trail",
+        "heartPieceIds": [
+            "26"
+        ],
+        "goldSkulltulaIds": [
+            "21",
+            "25",
+            "63",
+            "64"
+        ]
     },
     {
         "slug": "desert-colossus",
-        "title": "Desert Colossus"
+        "title": "Desert Colossus",
+        "heartPieceIds": [
+            "36"
+        ],
+        "goldSkulltulaIds": [
+            "92",
+            "93",
+            "94"
+        ]
     },
     {
         "slug": "dodongos-cavern",
-        "title": "Dodongo's Cavern"
+        "title": "Dodongo's Cavern",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "22",
+            "23",
+            "24",
+            "44",
+            "55"
+        ]
     },
     {
         "slug": "fire-temple",
-        "title": "Fire Temple"
+        "title": "Fire Temple",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "58",
+            "59",
+            "60",
+            "61",
+            "62"
+        ]
     },
     {
         "slug": "forest-temple",
-        "title": "Forest Temple"
+        "title": "Forest Temple",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "50",
+            "51",
+            "52",
+            "53",
+            "54"
+        ]
     },
     {
         "slug": "ganons-castle",
-        "title": "Ganon's Castle"
+        "title": "Ganon's Castle",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "46"
+        ]
     },
     {
         "slug": "gerudo-valley",
-        "title": "Gerudo Valley"
+        "title": "Gerudo Valley",
+        "heartPieceIds": [
+            "4",
+            "5"
+        ],
+        "goldSkulltulaIds": [
+            "14",
+            "40",
+            "87",
+            "88"
+        ]
     },
     {
         "slug": "gerudos-fortress",
-        "title": "Gerudo's Fortress"
+        "title": "Gerudo's Fortress",
+        "heartPieceIds": [
+            "34",
+            "35"
+        ],
+        "goldSkulltulaIds": [
+            "89",
+            "90"
+        ]
     },
     {
         "slug": "goron-city",
-        "title": "Goron City"
+        "title": "Goron City",
+        "heartPieceIds": [
+            "10"
+        ],
+        "goldSkulltulaIds": [
+            "26",
+            "56"
+        ]
     },
     {
         "slug": "haunted-wasteland",
-        "title": "Haunted Wasteland"
+        "title": "Haunted Wasteland",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "91"
+        ]
     },
     {
         "slug": "hyrule-castle",
-        "title": "Hyrule Castle"
+        "title": "Hyrule Castle",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "5",
+            "78"
+        ]
     },
     {
         "slug": "hyrule-field",
-        "title": "Hyrule Field"
+        "title": "Hyrule Field",
+        "heartPieceIds": [
+            "14",
+            "25"
+        ],
+        "goldSkulltulaIds": [
+            "39",
+            "42"
+        ]
     },
     {
         "slug": "ice-cavern",
-        "title": "Ice Cavern"
+        "title": "Ice Cavern",
+        "heartPieceIds": [
+            "29"
+        ],
+        "goldSkulltulaIds": [
+            "68",
+            "69",
+            "70"
+        ]
     },
     {
         "slug": "inside-jabu-jabus-belly",
-        "title": "Inside Jabu-Jabu's Belly"
+        "title": "Inside Jabu-Jabu's Belly",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "31",
+            "32",
+            "33",
+            "34"
+        ]
     },
     {
         "slug": "inside-the-deku-tree",
-        "title": "Inside The Deku Tree"
+        "title": "Inside The Deku Tree",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "1",
+            "2",
+            "3",
+            "36"
+        ]
     },
     {
         "slug": "kakariko-graveyard",
-        "title": "Kakariko Graveyard"
+        "title": "Kakariko Graveyard",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "6",
+            "43"
+        ]
     },
     {
         "slug": "kakariko-village",
-        "title": "Kakariko Village"
+        "title": "Kakariko Village",
+        "heartPieceIds": [
+            "12",
+            "19",
+            "21",
+            "22"
+        ],
+        "goldSkulltulaIds": [
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "45"
+        ]
     },
     {
         "slug": "kakariko-village-graveyard",
-        "title": "Kakariko Village Graveyard"
+        "title": "Kakariko Village Graveyard",
+        "heartPieceIds": [
+            "1",
+            "2",
+            "18",
+            "20"
+        ],
+        "goldSkulltulaIds": []
     },
     {
         "slug": "kokiri-forest",
-        "title": "Kokiri Forest"
+        "title": "Kokiri Forest",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "17",
+            "20",
+            "47"
+        ]
     },
     {
         "slug": "lake-hylia",
-        "title": "Lake Hylia"
+        "title": "Lake Hylia",
+        "heartPieceIds": [
+            "6",
+            "23",
+            "24"
+        ],
+        "goldSkulltulaIds": [
+            "15",
+            "16",
+            "41",
+            "71",
+            "77"
+        ]
     },
     {
         "slug": "lon-lon-ranch",
-        "title": "Lon Lon Ranch"
+        "title": "Lon Lon Ranch",
+        "heartPieceIds": [
+            "3"
+        ],
+        "goldSkulltulaIds": [
+            "12",
+            "13",
+            "37",
+            "38"
+        ]
     },
     {
         "slug": "lost-woods",
-        "title": "Lost Woods"
+        "title": "Lost Woods",
+        "heartPieceIds": [
+            "7",
+            "8"
+        ],
+        "goldSkulltulaIds": [
+            "18",
+            "19",
+            "48"
+        ]
     },
     {
         "slug": "market",
-        "title": "Market"
+        "title": "Market",
+        "heartPieceIds": [
+            "9",
+            "13",
+            "33"
+        ],
+        "goldSkulltulaIds": []
     },
     {
         "slug": "sacred-forest-meadow",
-        "title": "Sacred Forest Meadow"
+        "title": "Sacred Forest Meadow",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "49"
+        ]
     },
     {
         "slug": "shadow-temple",
-        "title": "Shadow Temple"
+        "title": "Shadow Temple",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "82",
+            "83",
+            "84",
+            "85",
+            "86"
+        ]
     },
     {
         "slug": "spirit-temple",
-        "title": "Spirit Temple"
+        "title": "Spirit Temple",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "95",
+            "96",
+            "97",
+            "98",
+            "99"
+        ]
     },
     {
         "slug": "water-temple",
-        "title": "Water Temple"
+        "title": "Water Temple",
+        "heartPieceIds": [],
+        "goldSkulltulaIds": [
+            "72",
+            "73",
+            "74",
+            "75",
+            "76"
+        ]
     },
     {
         "slug": "zoras-domain",
-        "title": "Zora's Domain"
+        "title": "Zora's Domain",
+        "heartPieceIds": [
+            "17"
+        ],
+        "goldSkulltulaIds": [
+            "67"
+        ]
     },
     {
         "slug": "zoras-fountain",
-        "title": "Zora's Fountain"
+        "title": "Zora's Fountain",
+        "heartPieceIds": [
+            "28",
+            "30"
+        ],
+        "goldSkulltulaIds": [
+            "30",
+            "35",
+            "100"
+        ]
     },
     {
         "slug": "zoras-river",
-        "title": "Zora's River"
+        "title": "Zora's River",
+        "heartPieceIds": [
+            "15",
+            "16",
+            "31",
+            "32"
+        ],
+        "goldSkulltulaIds": [
+            "28",
+            "29",
+            "65",
+            "66"
+        ]
     }
 ]

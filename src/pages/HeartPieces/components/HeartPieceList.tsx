@@ -6,8 +6,8 @@ import HeartPieceListItem from "./HeartPieceListItem";
 interface Props {
   heartPieces: HeartPiece[];
   collectedHearts: string[];
-  locationWhitelist: HeartPieceLocations;
   onToggleCollected: (heartPiece: HeartPiece) => void;
+  locationWhitelist?: HeartPieceLocations;
 }
 
 const HeartPieceListWrapper = styled.div`
@@ -16,19 +16,22 @@ const HeartPieceListWrapper = styled.div`
 
 const HeartPieceList = ({
   heartPieces,
-  locationWhitelist,
   collectedHearts,
-  onToggleCollected
+  onToggleCollected,
+  locationWhitelist
 }: Props) => {
-  const filteredHeartPieces = heartPieces.filter(({ location }) =>
-    locationWhitelist.includes(location)
-  );
+  const filteredHeartPieces = locationWhitelist
+    ? heartPieces.filter(({ location }) => locationWhitelist.includes(location))
+    : heartPieces;
 
   return (
     <HeartPieceListWrapper>
-      <h4>
-        Showing {filteredHeartPieces.length} hearts ({heartPieces.length} total)
-      </h4>
+      {locationWhitelist && (
+        <h4>
+          Showing {filteredHeartPieces.length} hearts ({heartPieces.length}{" "}
+          total)
+        </h4>
+      )}
       {filteredHeartPieces.map(heartPiece => (
         <HeartPieceListItem
           key={heartPiece.number}

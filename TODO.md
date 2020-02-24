@@ -1,11 +1,11 @@
 # TODO
 
-- Add redux?
 - Add styled components theme
-- Add react router
-- Add gold skulltula page
+- Add amount of acquired heart pieces/gold skulltulas on locations index page
 
 # Done
 
 - Add react helmet to enable adding stuff to head
 - normalize css
+- Add react router
+- Add gold skulltula page

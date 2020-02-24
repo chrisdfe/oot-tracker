@@ -3,6 +3,8 @@ import React from "react";
 import usePersistedStringArray from "../../utils/usePersistedStringArray";
 import allHeartPieces from "../../data/heartPieces.json";
 
+import Container from "../../components/layout/Container";
+
 import HeartPieceList from "./components/HeartPieceList";
 import FiltersBar from "./components/FiltersBar";
 import StickyInfoBar from "./components/StickyInfoBar";
@@ -54,7 +56,7 @@ const HeartPiecesPage = () => {
         }}
       />
 
-      <div className="container">
+      <Container>
         <HeartPieceList
           heartPieces={allHeartPieces}
           collectedHearts={collectedHearts}
@@ -63,7 +65,7 @@ const HeartPiecesPage = () => {
             toggleCollectedHeart(heartPiece.number);
           }}
         />
-      </div>
+      </Container>
     </div>
   );
 };

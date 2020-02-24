@@ -13,7 +13,15 @@ const getLocationsFromLists = lists =>
       return result;
     }, [])
     // Alphebetize
-    .sort((a, b) => a.localeCompare(b));
+    .sort((a, b) => a.localeCompare(b))
+    // Map to an object
+    .map(title => {
+      const slug = title
+        .toLowerCase()
+        .replace(/\s/g, "-")
+        .replace(/[']/g, "");
+      return { slug, title };
+    });
 
 const run = async (...data) => {
   const locations = getLocationsFromLists(data);

@@ -1,9 +1,15 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { Helmet } from "react-helmet";
 import { createGlobalStyle } from "styled-components";
 
+import Navbar from "./components/Navbar";
+
+import LocationDetailPage from "./pages/locations/LocationDetailPage";
+import LocationsIndexPage from "./pages/locations/LocationsIndexPage";
 import HeartsPiecesPage from "./pages/HeartPieces/HeartPiecesPage";
+import GoldSkulltulasPage from "./pages/GoldSkulltulas/GoldSkulltulasPage";
 
 const GlobalFontStyles = createGlobalStyle`
   * {
@@ -30,7 +36,28 @@ function App() {
           rel="stylesheet"
         />
       </Helmet>
-      <HeartsPiecesPage />
+
+      <Router>
+        <Navbar />
+
+        <Switch>
+          <Route path="/locations/:slug">
+            <LocationDetailPage />
+          </Route>
+          <Route path="/locations">
+            <LocationsIndexPage />
+          </Route>
+          <Route path="/heart-pieces">
+            <HeartsPiecesPage />
+          </Route>
+          <Route path="/gold-skulltulas">
+            <GoldSkulltulasPage />
+          </Route>
+          <Route path="/">
+            <h2>home</h2>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

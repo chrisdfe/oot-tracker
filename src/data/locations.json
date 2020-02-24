@@ -1,35 +1,134 @@
 [
-    "Bottom of the Well",
-    "Castle Town",
-    "Death Mountain Crater",
-    "Death Mountain Trail",
-    "Desert Colossus",
-    "Dodongo's Cavern",
-    "Fire Temple",
-    "Forest Temple",
-    "Ganon's Castle",
-    "Gerudo Valley",
-    "Gerudo's Fortress",
-    "Goron City",
-    "Haunted Wasteland",
-    "Hyrule Castle",
-    "Hyrule Field",
-    "Ice Cavern",
-    "Inside Jabu-Jabu's Belly",
-    "Inside The Deku Tree",
-    "Kakariko Graveyard",
-    "Kakariko Village",
-    "Kakariko Village Graveyard",
-    "Kokiri Forest",
-    "Lake Hylia",
-    "Lon Lon Ranch",
-    "Lost Woods",
-    "Market",
-    "Sacred Forest Meadow",
-    "Shadow Temple",
-    "Spirit Temple",
-    "Water Temple",
-    "Zora's Domain",
-    "Zora's Fountain",
-    "Zora's River"
+    {
+        "slug": "bottom-of-the-well",
+        "title": "Bottom of the Well"
+    },
+    {
+        "slug": "castle-town",
+        "title": "Castle Town"
+    },
+    {
+        "slug": "death-mountain-crater",
+        "title": "Death Mountain Crater"
+    },
+    {
+        "slug": "death-mountain-trail",
+        "title": "Death Mountain Trail"
+    },
+    {
+        "slug": "desert-colossus",
+        "title": "Desert Colossus"
+    },
+    {
+        "slug": "dodongos-cavern",
+        "title": "Dodongo's Cavern"
+    },
+    {
+        "slug": "fire-temple",
+        "title": "Fire Temple"
+    },
+    {
+        "slug": "forest-temple",
+        "title": "Forest Temple"
+    },
+    {
+        "slug": "ganons-castle",
+        "title": "Ganon's Castle"
+    },
+    {
+        "slug": "gerudo-valley",
+        "title": "Gerudo Valley"
+    },
+    {
+        "slug": "gerudos-fortress",
+        "title": "Gerudo's Fortress"
+    },
+    {
+        "slug": "goron-city",
+        "title": "Goron City"
+    },
+    {
+        "slug": "haunted-wasteland",
+        "title": "Haunted Wasteland"
+    },
+    {
+        "slug": "hyrule-castle",
+        "title": "Hyrule Castle"
+    },
+    {
+        "slug": "hyrule-field",
+        "title": "Hyrule Field"
+    },
+    {
+        "slug": "ice-cavern",
+        "title": "Ice Cavern"
+    },
+    {
+        "slug": "inside-jabu-jabus-belly",
+        "title": "Inside Jabu-Jabu's Belly"
+    },
+    {
+        "slug": "inside-the-deku-tree",
+        "title": "Inside The Deku Tree"
+    },
+    {
+        "slug": "kakariko-graveyard",
+        "title": "Kakariko Graveyard"
+    },
+    {
+        "slug": "kakariko-village",
+        "title": "Kakariko Village"
+    },
+    {
+        "slug": "kakariko-village-graveyard",
+        "title": "Kakariko Village Graveyard"
+    },
+    {
+        "slug": "kokiri-forest",
+        "title": "Kokiri Forest"
+    },
+    {
+        "slug": "lake-hylia",
+        "title": "Lake Hylia"
+    },
+    {
+        "slug": "lon-lon-ranch",
+        "title": "Lon Lon Ranch"
+    },
+    {
+        "slug": "lost-woods",
+        "title": "Lost Woods"
+    },
+    {
+        "slug": "market",
+        "title": "Market"
+    },
+    {
+        "slug": "sacred-forest-meadow",
+        "title": "Sacred Forest Meadow"
+    },
+    {
+        "slug": "shadow-temple",
+        "title": "Shadow Temple"
+    },
+    {
+        "slug": "spirit-temple",
+        "title": "Spirit Temple"
+    },
+    {
+        "slug": "water-temple",
+        "title": "Water Temple"
+    },
+    {
+        "slug": "zoras-domain",
+        "title": "Zora's Domain"
+    },
+    {
+        "slug": "zoras-fountain",
+        "title": "Zora's Fountain"
+    },
+    {
+        "slug": "zoras-river",
+        "title": "Zora's River"
+    }
 ]

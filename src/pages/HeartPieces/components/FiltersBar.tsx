@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 
+import Container from "../../../components/layout/Container";
+
 interface Props {
   onFilterToggle: (filter: string) => void;
   onLocationsClearAll: () => void;
@@ -66,7 +68,7 @@ const FiltersBar = ({
   const [locationsIsOpen, setLocationsIsOpen] = useState(false);
 
   return (
-    <div className="container">
+    <Container>
       <Wrapper>
         <h3>Filters</h3>
         <FilterSection>
@@ -119,7 +121,7 @@ const FiltersBar = ({
           </FilterSectionBody>
         </FilterSection>
       </Wrapper>
-    </div>
+    </Container>
   );
 };
 

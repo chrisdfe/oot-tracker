@@ -67,13 +67,13 @@ const fetchAndWriteGoldSkulltulaData = async () => {
   const { document } = await fetchGoldSkulltulaPageBody();
   console.log("document,", document);
 
-  const list = await getList(document);
-  const rewards = await getRewards(document);
+  const data = await getList(document);
+  // const rewards = await getRewards(document);
 
-  const data = {
-    list,
-    rewards
-  };
+  // const data = {
+  //   list,
+  //   rewards
+  // };
 
   await outputJSONToFile("goldSkulltulas.json", data);
   console.log("done collecting gold skulltulas.");

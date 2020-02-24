@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { createGlobalStyle } from "styled-components";
 
 import Navbar from "./components/Navbar";
+import AppState from "./AppState";
 
 import LocationDetailPage from "./pages/locations/LocationDetailPage";
 import LocationsIndexPage from "./pages/locations/LocationsIndexPage";
@@ -20,44 +21,46 @@ const GlobalFontStyles = createGlobalStyle`
 function App() {
   return (
     <div className="App">
-      <GlobalFontStyles />
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>OOT item tracker</title>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-          integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
-          // @ts-ignore
-          crossorigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
+      <AppState>
+        <GlobalFontStyles />
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>OOT item tracker</title>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+            // @ts-ignore
+            crossorigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
+            rel="stylesheet"
+          />
+        </Helmet>
 
-      <Router>
-        <Navbar />
+        <Router>
+          <Navbar />
 
-        <Switch>
-          <Route path="/locations/:slug">
-            <LocationDetailPage />
-          </Route>
-          <Route path="/locations">
-            <LocationsIndexPage />
-          </Route>
-          <Route path="/heart-pieces">
-            <HeartsPiecesPage />
-          </Route>
-          <Route path="/gold-skulltulas">
-            <GoldSkulltulasPage />
-          </Route>
-          <Route path="/">
-            <h2>home</h2>
-          </Route>
-        </Switch>
-      </Router>
+          <Switch>
+            <Route path="/locations/:slug">
+              <LocationDetailPage />
+            </Route>
+            <Route path="/locations">
+              <LocationsIndexPage />
+            </Route>
+            <Route path="/heart-pieces">
+              <HeartsPiecesPage />
+            </Route>
+            <Route path="/gold-skulltulas">
+              <GoldSkulltulasPage />
+            </Route>
+            <Route path="/">
+              <h2>home</h2>
+            </Route>
+          </Switch>
+        </Router>
+      </AppState>
     </div>
   );
 }

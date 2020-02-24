@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import usePersistedStringArray from "../../utils/usePersistedStringArray";
+
+import { AppStateContext } from "../../AppState";
 import allHeartPieces from "../../data/heartPieces.json";
 
 import Container from "../../components/layout/Container";
@@ -20,6 +22,9 @@ const heartPieceLocations = allHeartPieces
   .sort((a, b) => a.localeCompare(b));
 
 const HeartPiecesPage = () => {
+  const appState = useContext(AppStateContext);
+  console.log("appState", appState);
+
   const [
     collectedHearts,
     setCollectedHearts,

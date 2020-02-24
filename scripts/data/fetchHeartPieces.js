@@ -100,7 +100,7 @@ const getImagesThatNeedFetching = async data => {
 };
 
 const fetchHeartPieceImages = async data => {
-  await fs.mkdirp(HEART_IMAGES_BASE_PATH);
+  await fs.mkdirp(path.join(IMAGES_PATH, HEART_IMAGES_BASE_PATH));
 
   const imagesThatNeedFetching = await getImagesThatNeedFetching(data);
 

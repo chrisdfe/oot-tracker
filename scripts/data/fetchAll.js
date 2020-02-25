@@ -3,9 +3,9 @@ const fetchGoldSkulltulas = require("./fetchGoldSkulltulas");
 const extractLocations = require("./extractLocations");
 
 const run = async () => {
-  const heartPieces = await fetchHeartPieces();
+  // const heartPieces = await fetchHeartPieces();
   const goldSkulltulas = await fetchGoldSkulltulas();
-  await extractLocations(heartPieces, goldSkulltulas);
+  // await extractLocations(heartPieces, goldSkulltulas);
   console.log("done.");
 };
 

@@ -134,9 +134,9 @@ const BodyContentInner = styled.div`
 const padNumber = (num: string) => (num.length === 2 ? num : `0${num}`);
 
 const HeartPieceListItem = ({ goldSkulltula }: Props) => {
-  // const imageSrc = require(`../../../data/images/${
-  //   goldSkulltula.localImageUrl
-  // }`);
+  const imageSrc = require(`../../../data/images/${
+    goldSkulltula.localImageUrl
+  }`);
 
   const appState = useContext(AppStateContext);
 
@@ -161,7 +161,9 @@ const HeartPieceListItem = ({ goldSkulltula }: Props) => {
           </Heading>
         </HeadingWrapper>
         <ThumbCheckboxWrapper>
-          <ThumbWrapper>{/*<img src={imageSrc} />*/}</ThumbWrapper>
+          <ThumbWrapper>
+            <img src={imageSrc} />
+          </ThumbWrapper>
           <Checkbox
             isSelected={hasBeenCollected}
             onClick={() => {
@@ -175,7 +177,9 @@ const HeartPieceListItem = ({ goldSkulltula }: Props) => {
 
       <BodyContent isOpen={!hasBeenCollected}>
         <BodyContentInner>
-          <ImageWrapper>{/*<img src={imageSrc} />*/}</ImageWrapper>
+          <ImageWrapper>
+            <img src={imageSrc} />
+          </ImageWrapper>
           <ConditionsParagraph>
             <strong>conditions:</strong> {goldSkulltula.conditions}
           </ConditionsParagraph>

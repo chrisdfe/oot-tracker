@@ -17,9 +17,7 @@ const {
 } = require("./utils");
 
 const HEART_PIECES_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Heart_Pieces`;
-
 const HEART_IMAGES_BASE_PATH = "heart-pieces";
-
 const HEART_PIECES_JSON_FILENAME = "heartPieces.json";
 
 const fetchHeartPiecePageBody = async () => {
@@ -60,9 +58,6 @@ const fetchHeartPieceData = async () => {
   return sections;
 };
 
-const loadHeartPieceDataFromFile = async () =>
-  await readJSONFromFile(HEART_PIECES_JSON_FILENAME);
-
 const writeHeartPieceData = async data =>
   await outputJSONToFile(HEART_PIECES_JSON_FILENAME, data);
 
@@ -100,6 +95,7 @@ const getImagesThatNeedFetching = async data => {
 };
 
 const fetchHeartPieceImages = async data => {
+  console.log("fetching heart piece images");
   await fs.mkdirp(path.join(IMAGES_PATH, HEART_IMAGES_BASE_PATH));
 
   const imagesThatNeedFetching = await getImagesThatNeedFetching(data);
@@ -120,6 +116,7 @@ const fetchHeartPieceImages = async data => {
 };
 
 const run = async () => {
+  console.log("fetching heart piece data");
   const data = await fetchAndWriteHeartPieceData();
   await fetchHeartPieceImages(data);
   console.log("done collecting heart pieces.");

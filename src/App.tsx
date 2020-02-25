@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { createGlobalStyle } from "styled-components";
 
-import AppData from "./AppData";
-import AppState from "./AppState";
+import AppContainer from "./AppContainer";
+import AppGlobalStyles from "./AppGlobalStyles";
 
 import Navbar from "./components/Navbar";
 
@@ -14,18 +14,11 @@ import LocationsIndexPage from "./pages/locations/LocationsIndexPage";
 import HeartsPiecesPage from "./pages/HeartPieces/HeartPiecesPage";
 import GoldSkulltulasPage from "./pages/GoldSkulltulas/GoldSkulltulasPage";
 
-const GlobalFontStyles = createGlobalStyle`
-  * {
-    font-family: 'Source Code Pro';
-  }
-`;
-
 function App() {
   return (
     <div className="App">
-      <AppData>
-        <AppState>
-          <GlobalFontStyles />
+      <AppContainer>
+        <AppGlobalStyles>
           <Helmet>
             <meta charSet="utf-8" />
             <title>OOT item tracker</title>
@@ -36,6 +29,11 @@ function App() {
               // @ts-ignore
               crossorigin="anonymous"
             />
+            <link
+              href="https://fonts.googleapis.com/css?family=Merriweather&display=swap"
+              rel="stylesheet"
+            />
+
             <link
               href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
               rel="stylesheet"
@@ -63,8 +61,8 @@ function App() {
               </Route>
             </Switch>
           </Router>
-        </AppState>
-      </AppData>
+        </AppGlobalStyles>
+      </AppContainer>
     </div>
   );
 }

@@ -1,12 +1,12 @@
 # TODO
 
-- Add styled components theme
 - Add amount of acquired heart pieces/gold skulltulas on locations index page
 - Add "has heart pieces" or "add gold skulltulas" filters to locations page
 - Add filters bar back in
 
 # Done
 
+- Add styled components theme
 - Add react helmet to enable adding stuff to head
 - normalize css
 - Add react router

@@ -10,7 +10,7 @@ export interface Props {
 const Wrapper = styled.div`
   padding: 0rem;
   text-align: left;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid ${props => props.theme.textColorPrimary};
 
   &:last-child {
     border-bottom-width: 0;
@@ -85,7 +85,7 @@ interface CheckboxProps {
 }
 
 const Checkbox = styled.button<CheckboxProps>`
-  border: 2px solid #333;
+  border: 2px solid ${({ theme }) => theme.border.color.primary};
   // border-radius: 3px;
   width: 1.5rem;
   height: 1.5rem;
@@ -93,7 +93,7 @@ const Checkbox = styled.button<CheckboxProps>`
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #333;
+  color: ${({ theme }) => theme.text.color.primary};
   cursor: pointer;
   font-weight: bold;
 

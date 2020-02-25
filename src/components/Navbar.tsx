@@ -33,7 +33,8 @@ const StyledNavbar = styled.div`
     text-decoration: none;
 
     &:hover {
-      background: #edeeef;
+      // background: ${({ theme }) => theme.rawColors.white};
+      background: rgba(255, 255, 255, 0.7);
     }
 
     span {

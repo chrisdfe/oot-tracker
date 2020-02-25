@@ -7,8 +7,8 @@ import { AppStateContext } from "../../../AppState";
 const Wrapper = styled.div`
   position: sticky;
   top: 0;
-  background-color: #fff;
-  border-bottom: 1px solid #333;
+  background-color: ${({ theme }) => theme.background.color.primary};
+  border-bottom: 1px solid ${({ theme }) => theme.border.color.primary};
   padding: 0.5rem 0;
   text-align: center;
 

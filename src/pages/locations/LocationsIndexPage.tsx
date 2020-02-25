@@ -34,7 +34,7 @@ const LocationsIndexPage = () => {
   return (
     <Container>
       {allLocations.map(location => (
-        <LocationListItem location={location} />
+        <LocationListItem key={location.slug} location={location} />
       ))}
     </Container>
   );

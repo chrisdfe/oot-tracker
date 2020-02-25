@@ -33,28 +33,30 @@ const StickyInfoBar = () => {
   const appState = useContext(AppStateContext);
 
   // @ts-ignore
-  const { heartPieces } = appData;
+  const { goldSkulltulas } = appData;
 
   const {
-    collectedHearts,
-    setCollectedHearts,
-    toggleCollectedHeart
+    collectedGoldSkulltulas,
+    setCollectedGoldSkulltulas,
+    toggleCollectedGoldSkulltula
     // @ts-ignore
-  } = appState.heartPieces;
+  } = appState.goldSkulltulas;
+
   return (
     <Wrapper>
       <div className="container">
         <ContentWrapper>
           <HeadingWrapper>
             <Heading>
-              heart pieces: {collectedHearts.length}/{heartPieces.length}
+              gold skulltulas: {collectedGoldSkulltulas.length}/
+              {goldSkulltulas.length}
             </Heading>
           </HeadingWrapper>
           <button
             onClick={() => {
-              setCollectedHearts(
+              setCollectedGoldSkulltulas(
                 // @ts-ignore
-                heartPieces.map(heartPiece => heartPiece.number)
+                goldSkulltulas.map(goldSkulltula => goldSkulltula.number)
               );
             }}
           >
@@ -62,7 +64,7 @@ const StickyInfoBar = () => {
           </button>
           <button
             onClick={() => {
-              setCollectedHearts([]);
+              setCollectedGoldSkulltulas([]);
             }}
           >
             uncollect all

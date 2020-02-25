@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { AppStateContext } from "../../../AppState";
 
 export interface Props {
-  heartPiece: HeartPiece;
+  goldSkulltula: GoldSkulltulaData;
 }
 
 const Wrapper = styled.div`
@@ -133,37 +133,39 @@ const BodyContentInner = styled.div`
 
 const padNumber = (num: string) => (num.length === 2 ? num : `0${num}`);
 
-const HeartPieceListItem = ({ heartPiece }: Props) => {
-  const imageSrc = require(`../../../data/images/${heartPiece.localImageUrl}`);
+const HeartPieceListItem = ({ goldSkulltula }: Props) => {
+  // const imageSrc = require(`../../../data/images/${
+  //   goldSkulltula.localImageUrl
+  // }`);
 
   const appState = useContext(AppStateContext);
 
   const {
-    collectedHearts,
-    setCollectedHearts,
-    toggleCollectedHeart
+    collectedGoldSkulltulas,
+    setCollectedGoldSkulltulas,
+    toggleCollectedGoldSkulltula
     // @ts-ignore
-  } = appState.heartPieces;
+  } = appState.goldSkulltulas;
 
-  const hasBeenCollected = collectedHearts.includes(heartPiece.number);
+  const hasBeenCollected = collectedGoldSkulltulas.includes(
+    goldSkulltula.number
+  );
 
   return (
     <Wrapper>
       <HeaderBar>
         <HeadingWrapper>
           <Heading>
-            <strong>#{padNumber(heartPiece.number)}</strong>&nbsp;
-            {heartPiece.location}
+            <strong>#{padNumber(goldSkulltula.number)}</strong>&nbsp;
+            {goldSkulltula.location}
           </Heading>
         </HeadingWrapper>
         <ThumbCheckboxWrapper>
-          <ThumbWrapper>
-            <img src={imageSrc} />
-          </ThumbWrapper>
+          <ThumbWrapper>{/*<img src={imageSrc} />*/}</ThumbWrapper>
           <Checkbox
             isSelected={hasBeenCollected}
             onClick={() => {
-              toggleCollectedHeart(heartPiece.number);
+              toggleCollectedGoldSkulltula(goldSkulltula.number);
             }}
           >
             {hasBeenCollected ? "x" : ""}
@@ -173,14 +175,12 @@ const HeartPieceListItem = ({ heartPiece }: Props) => {
 
       <BodyContent isOpen={!hasBeenCollected}>
         <BodyContentInner>
-          <ImageWrapper>
-            <img src={imageSrc} />
-          </ImageWrapper>
+          <ImageWrapper>{/*<img src={imageSrc} />*/}</ImageWrapper>
           <ConditionsParagraph>
-            <strong>conditions:</strong> {heartPiece.conditions}
+            <strong>conditions:</strong> {goldSkulltula.conditions}
           </ConditionsParagraph>
 
-          {heartPiece.directions.split("\n").map((paragraph, index) => (
+          {goldSkulltula.directions.split("\n").map((paragraph, index) => (
             <DescriptionParagraph key={`paragraph-${index}`}>
               {paragraph}
             </DescriptionParagraph>

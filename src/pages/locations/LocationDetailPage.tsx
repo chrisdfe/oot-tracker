@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import Container from "../../components/layout/Container";
 
-import usePersistedStringArray from "../../utils/usePersistedStringArray";
+import { AppDataContext } from "../../AppData";
+import { AppStateContext } from "../../AppState";
 
 import allLocations from "../../data/locations.json";
 import heartPieces from "../../data/heartPieces.json";
 import goldSkulltulas from "../../data/goldSkulltulas.json";
 
 import HeartPieceList from "../../pages/HeartPieces/components/HeartPieceList";
+import GoldSkulltulaList from "../../pages/GoldSkulltulas/components/GoldSkulltulaList";
 
 type Location = {
   slug: string;
@@ -28,11 +30,13 @@ const LocationNotFound = () => (
 const LocationDetailPage = () => {
   const { slug } = useParams();
 
-  const [
-    collectedHearts,
-    setCollectedHearts,
-    toggleCollectedHeart
-  ] = usePersistedStringArray("oot-tracker.collected-heart-pieces", []);
+  const appState = useContext(AppStateContext);
+  const appData = useContext(AppDataContext);
+
+  // @ts-ignore
+  const { collectedHearts } = appState.heartPieces;
+  // @ts-ignore
+  const { collectedGoldSkulltulas } = appState.goldSkulltulas;
 
   const currentLocation = allLocations.find(location => location.slug === slug);
 
@@ -54,17 +58,12 @@ const LocationDetailPage = () => {
 
       <div>
         <h3>{locationHeartPieces.length} heart pieces</h3>
-        <HeartPieceList
-          heartPieces={locationHeartPieces}
-          collectedHearts={collectedHearts}
-          onToggleCollected={heartPiece => {
-            toggleCollectedHeart(heartPiece.number);
-          }}
-        />
+        <HeartPieceList heartPieces={locationHeartPieces} />
       </div>
 
       <div>
         <h3>{locationGoldSkulltulas.length} gold skulltulas</h3>
+        <GoldSkulltulaList goldSkulltulas={locationGoldSkulltulas} />
       </div>
     </Container>
   );

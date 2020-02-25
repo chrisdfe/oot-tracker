@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 
-import usePersistedStringArray from "../../utils/usePersistedStringArray";
-
+import { AppDataContext } from "../../AppData";
 import { AppStateContext } from "../../AppState";
-import allHeartPieces from "../../data/heartPieces.json";
 
 import Container from "../../components/layout/Container";
 
@@ -11,65 +9,19 @@ import HeartPieceList from "./components/HeartPieceList";
 import FiltersBar from "./components/FiltersBar";
 import StickyInfoBar from "./components/StickyInfoBar";
 
-const heartPieceLocations = allHeartPieces
-  .reduce<HeartPieceLocations>((acc, { location }) => {
-    if (!acc.includes(location)) {
-      return [...acc, location];
-    }
-    return acc;
-  }, [])
-  // Alphebetize
-  .sort((a, b) => a.localeCompare(b));
-
 const HeartPiecesPage = () => {
+  const appData = useContext(AppDataContext);
   const appState = useContext(AppStateContext);
-  console.log("appState", appState);
 
-  const [
-    collectedHearts,
-    setCollectedHearts,
-    toggleCollectedHeart
-  ] = usePersistedStringArray("oot-tracker.collected-heart-pieces", []);
-
-  const [
-    heartPieceLocationsWhitelist,
-    setHeartPieceLocationsWhitelist,
-    toggleHeartPieceLocationWhitelist
-  ] = usePersistedStringArray("oot-tracker.heart-pieces-location-filter", [
-    ...heartPieceLocations
-  ]);
+  // @ts-ignore
+  const { heartPieces } = appData;
 
   return (
     <div className="HeartPiecesPage">
-      <StickyInfoBar
-        collectedHearts={collectedHearts}
-        allHeartPieces={allHeartPieces}
-        setCollectedHearts={setCollectedHearts}
-      />
-
-      <FiltersBar
-        allLocations={heartPieceLocations}
-        selectedLocations={heartPieceLocationsWhitelist}
-        onLocationsClearAll={() => {
-          setHeartPieceLocationsWhitelist([]);
-        }}
-        onLocationsSelectAll={() => {
-          setHeartPieceLocationsWhitelist(heartPieceLocations);
-        }}
-        onFilterToggle={location => {
-          toggleHeartPieceLocationWhitelist(location);
-        }}
-      />
+      <StickyInfoBar />
 
       <Container>
-        <HeartPieceList
-          heartPieces={allHeartPieces}
-          collectedHearts={collectedHearts}
-          locationWhitelist={heartPieceLocationsWhitelist}
-          onToggleCollected={heartPiece => {
-            toggleCollectedHeart(heartPiece.number);
-          }}
-        />
+        <HeartPieceList heartPieces={heartPieces} />
       </Container>
     </div>
   );

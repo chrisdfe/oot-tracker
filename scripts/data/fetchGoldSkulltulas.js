@@ -13,6 +13,8 @@ const {
   fetchFromURLOrCache,
   outputJSONToFile,
   readJSONFromFile,
+  // getImagesThatNeedFetching,
+  // fetchImage,
   downloadImage
 } = require("./utils");
 
@@ -106,6 +108,14 @@ const fetchGoldSkulltulaImages = async data => {
   });
 
   console.log("imagesThatNeedFetching.length", imagesThatNeedFetching.length);
+
+  const imageFetchList = imagesThatNeedFetching.map(
+    ({ number, sourceImageUrl, localImageUrl }) => ({
+      name: `Gold Skulltula #${number}`,
+      sourceImageUrl,
+      localImageUrl
+    })
+  );
 
   if (imagesThatNeedFetching.length) {
     console.log(`fetching ${imagesThatNeedFetching.length} images`);

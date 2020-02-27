@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Container from "../../components/layout/Container";
 
@@ -9,14 +10,28 @@ type Location = {
   title: string;
   heartPieceIds: string[];
   goldSkulltulaIds: string[];
+  softSoilLocationIds: string[];
 };
 
 interface LocationListItemProps {
   location: Location;
 }
 
+const LocationListItemWrapper = styled.div`
+  margin-bottom: 4rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    display: inline: block;
+    margin-right: 0.5rem;
+  }
+`;
+
 const LocationListItem = ({ location }: LocationListItemProps) => (
-  <div>
+  <LocationListItemWrapper>
     <Link to={`/locations/${location.slug}`}>
       <h2>{location.title}</h2>
       <p>
@@ -25,9 +40,13 @@ const LocationListItem = ({ location }: LocationListItemProps) => (
           gold skulltulas:
           {location.goldSkulltulaIds.length}
         </span>
+        <span>
+          soft soil locations:
+          {location.softSoilLocationIds.length}
+        </span>
       </p>
     </Link>
-  </div>
+  </LocationListItemWrapper>
 );
 
 const LocationsIndexPage = () => {

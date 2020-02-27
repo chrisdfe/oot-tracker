@@ -22,6 +22,13 @@ const AppState = ({ children }: Props) => {
     // @ts-ignore
   ] = usePersistedStringArray("oot-tracker.collected-gold-skulltulas", []);
 
+  const [
+    collectedSoftSoilLocations,
+    setCollectedSoftSoilLocations,
+    toggleCollectedSoftSoilLocation
+    // @ts-ignore
+  ] = usePersistedStringArray("oot-tracker.collected-soft-soil-locations", []);
+
   const state = {
     heartPieces: {
       collectedHearts,
@@ -32,6 +39,11 @@ const AppState = ({ children }: Props) => {
       collectedGoldSkulltulas,
       setCollectedGoldSkulltulas,
       toggleCollectedGoldSkulltula
+    },
+    softSoilLocations: {
+      collectedSoftSoilLocations,
+      setCollectedSoftSoilLocations,
+      toggleCollectedSoftSoilLocation
     }
   };
 

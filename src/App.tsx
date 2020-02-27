@@ -13,6 +13,7 @@ import LocationDetailPage from "./pages/locations/LocationDetailPage";
 import LocationsIndexPage from "./pages/locations/LocationsIndexPage";
 import HeartsPiecesPage from "./pages/HeartPieces/HeartPiecesPage";
 import GoldSkulltulasPage from "./pages/GoldSkulltulas/GoldSkulltulasPage";
+import SoftSoilLocationsPage from "./pages/SoftSoilLocations/SoftSoilLocationsPage";
 
 function App() {
   return (
@@ -55,6 +56,9 @@ function App() {
               </Route>
               <Route path="/gold-skulltulas">
                 <GoldSkulltulasPage />
+              </Route>
+              <Route path="/soft-soil-locations">
+                <SoftSoilLocationsPage />
               </Route>
               <Route path="/">
                 <h2>home</h2>

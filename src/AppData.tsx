@@ -3,6 +3,7 @@ import React, { ReactNode, createContext } from "react";
 import heartPieces from "./data/heartPieces.json";
 import goldSkulltulas from "./data/goldSkulltulas.json";
 import locations from "./data/locations.json";
+import softSoilLocations from "./data/softSoilLocations.json";
 
 export const AppDataContext = createContext({});
 
@@ -14,7 +15,8 @@ const AppData = ({ children }: Props) => {
   const data = {
     heartPieces,
     goldSkulltulas,
-    locations
+    locations,
+    softSoilLocations
   };
 
   return (

@@ -1,11 +1,14 @@
 const fetchHeartPieces = require("./fetchHeartPieces");
 const fetchGoldSkulltulas = require("./fetchGoldSkulltulas");
+const fetchSoftSoilLocations = require("./fetchSoftSoilLocations");
 const extractLocations = require("./extractLocations");
 
 const run = async () => {
-  // const heartPieces = await fetchHeartPieces();
+  const heartPieces = await fetchHeartPieces();
   const goldSkulltulas = await fetchGoldSkulltulas();
-  // await extractLocations(heartPieces, goldSkulltulas);
+  const softSoilLocations = await fetchSoftSoilLocations();
+
+  await extractLocations(heartPieces, goldSkulltulas, softSoilLocations);
   console.log("done.");
 };
 

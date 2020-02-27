@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { AppDataContext } from "../../../AppData";
 import { AppStateContext } from "../../../AppState";
 
+import Button from "../../../components/Button";
+
 const Wrapper = styled.div`
   position: sticky;
   top: 0;
@@ -13,7 +15,11 @@ const Wrapper = styled.div`
   text-align: center;
 
   button {
-    font-size: 0.7em;
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 `;
 
@@ -25,7 +31,7 @@ const HeadingWrapper = styled.div`
 
 const Heading = styled.h2`
   display: block;
-  margin: 0 1rem 0 0;
+  margin: 0 1rem 1rem 0;
 `;
 
 const StickyInfoBar = () => {
@@ -50,7 +56,7 @@ const StickyInfoBar = () => {
               heart pieces: {collectedHearts.length}/{heartPieces.length}
             </Heading>
           </HeadingWrapper>
-          <button
+          <Button
             onClick={() => {
               setCollectedHearts(
                 // @ts-ignore
@@ -59,14 +65,14 @@ const StickyInfoBar = () => {
             }}
           >
             collect all
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => {
               setCollectedHearts([]);
             }}
           >
             uncollect all
-          </button>
+          </Button>
         </ContentWrapper>
       </div>
     </Wrapper>

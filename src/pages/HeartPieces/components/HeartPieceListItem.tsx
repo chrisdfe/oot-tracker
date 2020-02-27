@@ -10,7 +10,7 @@ export interface Props {
 const Wrapper = styled.div`
   padding: 0rem;
   text-align: left;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid ${({ theme }) => theme.border.color.primary};
 
   &:last-child {
     border-bottom-width: 0;
@@ -28,10 +28,6 @@ const HeadingWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-
-  button {
-    font-size: 0.7em;
-  }
 `;
 
 const Heading = styled.h4`

@@ -7,6 +7,8 @@ import { createGlobalStyle } from "styled-components";
 import AppContainer from "./AppContainer";
 import AppGlobalStyles from "./AppGlobalStyles";
 
+import ScrollToTop from "./utils/ScrollToTop";
+
 import Navbar from "./components/Navbar";
 
 import LocationDetailPage from "./pages/locations/LocationDetailPage";
@@ -42,6 +44,7 @@ function App() {
           </Helmet>
 
           <Router>
+            <ScrollToTop />
             <Navbar />
 
             <Switch>

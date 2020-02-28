@@ -3,6 +3,9 @@
 - Add amount of acquired heart pieces/gold skulltulas on locations index page
 - Add "has heart pieces" or "add gold skulltulas" filters to locations page
 - Add filters bar back in
+- Clean up all of these typescript warnings
+- Clean up types + remove @ts-ignores
+- Clean up App\*\*\*\* components - put into separate subdirectory
 
 # Done
 
@@ -15,3 +18,5 @@
 - Move data up the tree using the context api
 - Grab gold skulltula images from source
 - Add gold skulltula data to gold skulltula page
+- Add soft soil locations
+- Fix annoying scroll issue between page transitions

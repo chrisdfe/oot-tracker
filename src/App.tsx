@@ -64,7 +64,7 @@ function App() {
                 <SoftSoilLocationsPage />
               </Route>
               <Route path="/">
-                <h2>home</h2>
+                <div />
               </Route>
             </Switch>
           </Router>

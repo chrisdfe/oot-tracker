@@ -9,6 +9,7 @@
 - Add "3/4" to Locations index page
 - Make entire header portion clickable instead of just the checkbox???
 - Fix number padding - "#0100" for "100"
+- Add confirmation before "collect all" or "uncollect all" - those are pretty annoying to accidentally click
 
 # Done
 

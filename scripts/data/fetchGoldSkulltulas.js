@@ -13,20 +13,19 @@ const {
   fetchFromURLOrCache,
   outputJSONToFile,
   readJSONFromFile,
-  // getImagesThatNeedFetching,
-  // fetchImage,
-  downloadImage
+  getImagesThatNeedFetching,
+  fetchImages
 } = require("./utils");
 
 const GOLD_SKULLTULA_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Gold_Skulltulas`;
 const GOLD_SKULLTULAS_BASE_PATH = "gold-skulltulas";
 const GOLD_SKULLTULAS_JSON_FILENAME = "goldSkulltulas.json";
 
-const fetchGoldSkulltulaPageBody = async () =>
-  fetchFromURLOrCache(GOLD_SKULLTULA_URL, "gold-skulltulas.html");
-
 const fetchGoldSkulltulaData = async () => {
-  const { document } = await fetchGoldSkulltulaPageBody();
+  const { document } = await fetchFromURLOrCache(
+    GOLD_SKULLTULA_URL,
+    "gold-skulltulas.html"
+  );
   const boxes = document.querySelectorAll("li.gallerybox");
 
   const sections = Array.from(boxes).map((box, index) => {
@@ -59,82 +58,17 @@ const fetchGoldSkulltulaData = async () => {
   return sections;
 };
 
-const writeGoldSkulltulasData = async data =>
-  await outputJSONToFile(GOLD_SKULLTULAS_JSON_FILENAME, data);
-
-const fetchAndWriteGoldSkulltulaData = async () => {
-  const data = await fetchGoldSkulltulaData();
-  await writeGoldSkulltulasData(data);
-  return data;
-};
-
-const fetchGoldSkulltulaImage = async ({
-  number,
-  sourceImageUrl,
-  localImageUrl
-}) => {
-  console.log(`fetching gold skulltula #${number}`);
-  const fullImageUrl = `${ZELDA_DUNGEON_BASE_URL}${sourceImageUrl}`;
-  await downloadImage(fullImageUrl, path.join(IMAGES_PATH, localImageUrl));
-};
-
-const getImagesThatNeedFetching = async data => {
-  const imageExistenceArray = await Promise.all(
-    data.map(goldSkulltula =>
-      fs.pathExists(path.join(IMAGES_PATH, goldSkulltula.localImageUrl))
-    )
-  );
-
-  return imageExistenceArray
-    .map((exists, index) => {
-      if (!exists) {
-        return data[index];
-      }
-      return null;
-    })
-    .filter(val => !!val);
-};
-
 const fetchGoldSkulltulaImages = async data => {
   console.log("fetching gold skulltula images");
-  await fs.mkdirp(path.join(IMAGES_PATH, GOLD_SKULLTULAS_BASE_PATH));
 
-  const imagesThatNeedFetching = await getImagesThatNeedFetching(data);
+  const images = data.map(({ number, sourceImageUrl, localImageUrl }) => ({
+    name: `Gold Skulltula #${number}`,
+    sourceImageUrl,
+    localImageUrl
+  }));
 
-  // Don't get rate limited again!
-  const limiter = new Bottleneck({
-    maxConcurrent: 1,
-    minTime: 5000
-  });
-
-  console.log("imagesThatNeedFetching.length", imagesThatNeedFetching.length);
-
-  const imageFetchList = imagesThatNeedFetching.map(
-    ({ number, sourceImageUrl, localImageUrl }) => ({
-      name: `Gold Skulltula #${number}`,
-      sourceImageUrl,
-      localImageUrl
-    })
-  );
-
-  if (imagesThatNeedFetching.length) {
-    console.log(`fetching ${imagesThatNeedFetching.length} images`);
-    const allTasks = imagesThatNeedFetching.map(async goldSkulltula =>
-      limiter.schedule(async () => await fetchGoldSkulltulaImage(goldSkulltula))
-    );
-    return Promise.all(allTasks);
-  }
+  await fetchImages(path.join(IMAGES_PATH, GOLD_SKULLTULAS_BASE_PATH), images);
 };
-
-const run = async () => {
-  console.log("fetching gold skulltula data");
-  const data = await fetchAndWriteGoldSkulltulaData();
-  await fetchGoldSkulltulaImages(data);
-  console.log("done collecting gold skulltulas.");
-  return data;
-};
-
-module.exports = run;
 
 // const getRewards = async document => {
 //   const table = document.querySelector(".wikitable");
@@ -157,3 +91,14 @@ module.exports = run;
 //       return data;
 //     });
 // };
+
+const run = async () => {
+  console.log("fetching gold skulltula data");
+  const data = await fetchGoldSkulltulaData();
+  await outputJSONToFile(GOLD_SKULLTULAS_JSON_FILENAME, data);
+  await fetchGoldSkulltulaImages(data);
+  console.log("done collecting gold skulltulas.");
+  return data;
+};
+
+module.exports = run;

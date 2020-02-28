@@ -13,25 +13,22 @@ const {
   fetchFromURLOrCache,
   outputJSONToFile,
   readJSONFromFile,
-  // getImagesThatNeedFetching,
-  // fetchImage,
-  downloadImage
+  fetchImages
 } = require("./utils");
 
 const SOFT_SOIL_LOCATIONS_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Soft_Soil_Locations`;
 const SOFT_SOIL_LOCATIONS_BASE_PATH = "soft-soil-locations";
 const SOFT_SOIL_LOCATIONS_JSON_FILENAME = "softSoilLocations.json";
 
-const fetchSoftSoilLocationsPageBody = async () =>
-  fetchFromURLOrCache(SOFT_SOIL_LOCATIONS_URL, "soft-soil-locations.html");
-
 const fetchSoftSoilLocationsData = async () => {
-  const { document } = await fetchSoftSoilLocationsPageBody();
+  const { document } = await fetchFromURLOrCache(
+    SOFT_SOIL_LOCATIONS_URL,
+    "soft-soil-locations.html"
+  );
   const content = document.querySelector(".mw-parser-output");
   const contentChildren = Array.from(content.children);
   // Skip over the introductory content
   const titleIndex = contentChildren.findIndex(child => child.tagName === "H2");
-  console.log("titleIndex", titleIndex);
 
   const soilBeanLocationElements = contentChildren
     .slice(titleIndex + 1)
@@ -98,83 +95,30 @@ const fetchSoftSoilLocationsData = async () => {
     };
   });
 
-  // console.log("sections", sections);
   return sections;
 };
 
-const writeSoftSoilLocationsData = async data =>
-  await outputJSONToFile(SOFT_SOIL_LOCATIONS_JSON_FILENAME, data);
-
-const fetchAndWriteSoftSoilLocationsData = async () => {
-  const data = await fetchSoftSoilLocationsData();
-  await writeSoftSoilLocationsData(data);
-  return data;
-};
-
-const fetchSoftSoilLocationsImage = async ({
-  number,
-  sourceImageUrl,
-  localImageUrl
-}) => {
-  console.log(`fetching gold skulltula #${number}`);
-  const fullImageUrl = `${ZELDA_DUNGEON_BASE_URL}${sourceImageUrl}`;
-  await downloadImage(fullImageUrl, path.join(IMAGES_PATH, localImageUrl));
-};
-
-const getImagesThatNeedFetching = async data => {
-  const imageExistenceArray = await Promise.all(
-    data.map(SoftSoilLocations =>
-      fs.pathExists(path.join(IMAGES_PATH, SoftSoilLocations.localImageUrl))
-    )
-  );
-
-  return imageExistenceArray
-    .map((exists, index) => {
-      if (!exists) {
-        return data[index];
-      }
-      return null;
-    })
-    .filter(val => !!val);
-};
-
 const fetchSoftSoilLocationsImages = async data => {
-  console.log("fetching gold skulltula images");
-  await fs.mkdirp(path.join(IMAGES_PATH, SOFT_SOIL_LOCATIONS_BASE_PATH));
+  const allImages = data.reduce((acc, softSoilLocation, imageIndex) => {
+    const { images } = softSoilLocation;
+    return [
+      ...acc,
+      ...images.map(({ sourceImageUrl, localImageUrl }, childIndex) => ({
+        name: `Soft soil location #${imageIndex + 1} img ${childIndex + 1}`,
+        sourceImageUrl,
+        localImageUrl
+      }))
+    ];
+  }, []);
 
-  const imagesThatNeedFetching = await getImagesThatNeedFetching(data);
-
-  // Don't get rate limited again!
-  const limiter = new Bottleneck({
-    maxConcurrent: 1,
-    minTime: 5000
-  });
-
-  console.log("imagesThatNeedFetching.length", imagesThatNeedFetching.length);
-
-  const imageFetchList = imagesThatNeedFetching.map(
-    ({ number, sourceImageUrl, localImageUrl }) => ({
-      name: `Soft Soil Location #${number}`,
-      sourceImageUrl,
-      localImageUrl
-    })
-  );
-
-  if (imagesThatNeedFetching.length) {
-    console.log(`fetching ${imagesThatNeedFetching.length} images`);
-    const allTasks = imagesThatNeedFetching.map(async softSoilLocation =>
-      limiter.schedule(
-        async () => await fetchSoftSoilLocationsImage(softSoilLocation)
-      )
-    );
-    return Promise.all(allTasks);
-  }
+  return await fetchImages(SOFT_SOIL_LOCATIONS_BASE_PATH, allImages);
 };
 
 const run = async () => {
-  console.log("fetching gold skulltula data");
-  const data = await fetchAndWriteSoftSoilLocationsData();
-  // await fetchSoftSoilLocationsImages(data);
+  console.log("fetching soft soil location data");
+  const data = await fetchSoftSoilLocationsData();
+  await outputJSONToFile(SOFT_SOIL_LOCATIONS_JSON_FILENAME, data);
+  await fetchSoftSoilLocationsImages(data);
   console.log("done collecting soft soil locations.", data.length);
   return data;
 };

@@ -6,6 +6,9 @@
 - Clean up all of these typescript warnings
 - Clean up types + remove @ts-ignores
 - Clean up App\*\*\*\* components - put into separate subdirectory
+- Add "3/4" to Locations index page
+- Make entire header portion clickable instead of just the checkbox???
+- Fix number padding - "#0100" for "100"
 
 # Done
 

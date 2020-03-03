@@ -1,8 +1,8 @@
 import React, { useContext, ReactNode } from "react";
 import styled from "styled-components";
 
-import { AppDataContext } from "../../../AppData";
-import { AppStateContext } from "../../../AppState";
+import { AppDataContext } from "../../../App/AppData";
+import { AppStateContext } from "../../../App/AppState";
 
 import {
   filterCollectablesByLocation,

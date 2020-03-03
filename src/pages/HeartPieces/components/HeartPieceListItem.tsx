@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
-import { AppStateContext } from "../../../AppState";
+import { AppStateContext } from "../../../App/AppState";
 
 import CollectableDetail from "../../../components/CollectableDetail";
 import TitledParagraph from "../../../components/typography/TitledParagraph";

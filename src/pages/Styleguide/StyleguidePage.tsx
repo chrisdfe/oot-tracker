@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Container from "../../components/layout/Container";
 import Hero from "../../components/layout/Hero";
 
-import ThemeRegion from "../../ThemeRegion";
+import ThemeRegion from "../../App/ThemeRegion";
 
 const slugify = (s: string) =>
   s

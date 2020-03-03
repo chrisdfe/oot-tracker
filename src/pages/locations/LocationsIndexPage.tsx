@@ -2,15 +2,13 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import ThemeRegion, { RegionName } from "../../ThemeRegion";
-
 import Container from "../../components/layout/Container";
 import Hero from "../../components/layout/Hero";
 
 import LocationCollectableSummary from "./components/LocationCollectableSummary";
 
-import { AppDataContext } from "../../AppData";
-import allLocations from "../../data/locations.json";
+import { AppDataContext } from "../../App/AppData";
+import ThemeRegion, { RegionName } from "../../App/ThemeRegion";
 
 // TODO - fix conflict with global 'Location'
 // TODO - move elsewhere
@@ -114,7 +112,8 @@ const LocationsIndexPage = () => {
         </Container>
       </Hero>
       <Container>
-        {allLocations.map(location => (
+        {/*@ts-ignore*/}
+        {locations.map((location: any) => (
           <LocationListItem key={location.slug} location={location} />
         ))}
       </Container>

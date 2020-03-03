@@ -2,14 +2,13 @@ import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import ThemeRegion, { RegionName } from "../../ThemeRegion";
-
 import Container from "../../components/layout/Container";
 import Hero from "../../components/layout/Hero";
 import FancyLink from "../../components/FancyLink";
 
-import { AppDataContext } from "../../AppData";
-import { AppStateContext } from "../../AppState";
+import { AppDataContext } from "../../App/AppData";
+import { AppStateContext } from "../../App/AppState";
+import ThemeRegion, { RegionName } from "../../App/ThemeRegion";
 
 import HeartPieceList from "../../pages/HeartPieces/components/HeartPieceList";
 import GoldSkulltulaList from "../../pages/GoldSkulltulas/components/GoldSkulltulaList";

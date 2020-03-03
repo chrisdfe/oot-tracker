@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { AppDataContext } from "../../AppData";
+import { AppDataContext } from "../../App/AppData";
 
 import Container from "../../components/layout/Container";
 

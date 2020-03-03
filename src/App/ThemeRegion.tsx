@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-
 import { ThemeProvider } from "styled-components";
 
 export type RegionName = "default" | "zora" | "kokiri" | "goron";

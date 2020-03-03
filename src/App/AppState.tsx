@@ -1,6 +1,6 @@
 import React, { ReactNode, createContext } from "react";
 
-import usePersistedStringArray from "./utils/usePersistedStringArray";
+import usePersistedStringArray from "../utils/usePersistedStringArray";
 
 export const AppStateContext = createContext({});
 

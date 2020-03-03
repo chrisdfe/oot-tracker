@@ -6,16 +6,16 @@ import { Helmet } from "react-helmet";
 import AppContainer from "./AppContainer";
 import AppGlobalStyles from "./AppGlobalStyles";
 
-import ScrollToTop from "./utils/ScrollToTop";
+import ScrollToTop from "../utils/ScrollToTop";
 
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 
-import LocationDetailPage from "./pages/locations/LocationDetailPage";
-import LocationsIndexPage from "./pages/locations/LocationsIndexPage";
-import HeartsPiecesPage from "./pages/HeartPieces/HeartPiecesPage";
-import GoldSkulltulasPage from "./pages/GoldSkulltulas/GoldSkulltulasPage";
-import SoftSoilLocationsPage from "./pages/SoftSoilLocations/SoftSoilLocationsPage";
-import StyleguidePage from "./pages/Styleguide/StyleguidePage";
+import LocationDetailPage from "../pages/locations/LocationDetailPage";
+import LocationsIndexPage from "../pages/locations/LocationsIndexPage";
+import HeartsPiecesPage from "../pages/HeartPieces/HeartPiecesPage";
+import GoldSkulltulasPage from "../pages/GoldSkulltulas/GoldSkulltulasPage";
+import SoftSoilLocationsPage from "../pages/SoftSoilLocations/SoftSoilLocationsPage";
+import StyleguidePage from "../pages/Styleguide/StyleguidePage";
 
 function App() {
   return (

@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { AppDataContext } from "../AppData";
-import { AppStateContext } from "../AppState";
+import { AppDataContext } from "../App/AppData";
+import { AppStateContext } from "../App/AppState";
 
 const StyledNavbar = styled.div`
   font-weight: bold;

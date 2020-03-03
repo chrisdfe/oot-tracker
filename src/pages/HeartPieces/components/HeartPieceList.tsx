@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-
-import { AppStateContext } from "../../../AppState";
 
 import HeartPieceListItem from "./HeartPieceListItem";
 
@@ -14,8 +12,6 @@ const HeartPieceListWrapper = styled.div`
 `;
 
 const HeartPieceList = ({ heartPieces }: Props) => {
-  const appState = useContext(AppStateContext);
-
   return (
     <HeartPieceListWrapper>
       {heartPieces.map(heartPiece => (

@@ -1,34 +1,12 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 
 import { AppDataContext } from "../../../AppData";
 import { AppStateContext } from "../../../AppState";
 
-const Wrapper = styled.div`
-  position: sticky;
-  top: 0;
-  background-color: ${({ theme }) => theme.background.color.primary};
-  border-bottom: 1px solid ${({ theme }) => theme.border.color.primary};
-  padding: 0.5rem 0;
-  text-align: center;
+import StickyInfoBar from "../../../components/StickyInfoBar";
+import Button from "../../../components/Button";
 
-  button {
-    font-size: 0.7em;
-  }
-`;
-
-const ContentWrapper = styled.div``;
-
-const HeadingWrapper = styled.div`
-  text-align: center;
-`;
-
-const Heading = styled.h2`
-  display: block;
-  margin: 0 1rem 0 0;
-`;
-
-const StickyInfoBar = () => {
+const GoldSkulltulaStickyInfoBar = () => {
   const appData = useContext(AppDataContext);
   const appState = useContext(AppStateContext);
 
@@ -37,42 +15,34 @@ const StickyInfoBar = () => {
 
   const {
     collectedGoldSkulltulas,
-    setCollectedGoldSkulltulas,
-    toggleCollectedGoldSkulltula
+    setCollectedGoldSkulltulas
     // @ts-ignore
   } = appState.goldSkulltulas;
 
   return (
-    <Wrapper>
-      <div className="container">
-        <ContentWrapper>
-          <HeadingWrapper>
-            <Heading>
-              gold skulltulas: {collectedGoldSkulltulas.length}/
-              {goldSkulltulas.length}
-            </Heading>
-          </HeadingWrapper>
-          <button
-            onClick={() => {
-              setCollectedGoldSkulltulas(
-                // @ts-ignore
-                goldSkulltulas.map(goldSkulltula => goldSkulltula.number)
-              );
-            }}
-          >
-            collect all
-          </button>
-          <button
-            onClick={() => {
-              setCollectedGoldSkulltulas([]);
-            }}
-          >
-            uncollect all
-          </button>
-        </ContentWrapper>
-      </div>
-    </Wrapper>
+    <StickyInfoBar
+      headingText={`gold skulltulas: ${collectedGoldSkulltulas.length}/
+              ${goldSkulltulas.length}`}
+    >
+      <Button
+        onClick={() => {
+          setCollectedGoldSkulltulas(
+            // @ts-ignore
+            goldSkulltulas.map(goldSkulltula => goldSkulltula.number)
+          );
+        }}
+      >
+        collect all
+      </Button>
+      <Button
+        onClick={() => {
+          setCollectedGoldSkulltulas([]);
+        }}
+      >
+        uncollect all
+      </Button>
+    </StickyInfoBar>
   );
 };
 
-export default StickyInfoBar;
+export default GoldSkulltulaStickyInfoBar;

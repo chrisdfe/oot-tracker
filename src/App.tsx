@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Helmet } from "react-helmet";
-import { createGlobalStyle } from "styled-components";
 
 import AppContainer from "./AppContainer";
 import AppGlobalStyles from "./AppGlobalStyles";
@@ -16,6 +15,7 @@ import LocationsIndexPage from "./pages/locations/LocationsIndexPage";
 import HeartsPiecesPage from "./pages/HeartPieces/HeartPiecesPage";
 import GoldSkulltulasPage from "./pages/GoldSkulltulas/GoldSkulltulasPage";
 import SoftSoilLocationsPage from "./pages/SoftSoilLocations/SoftSoilLocationsPage";
+import StyleguidePage from "./pages/Styleguide/StyleguidePage";
 
 function App() {
   return (
@@ -25,20 +25,9 @@ function App() {
           <Helmet>
             <meta charSet="utf-8" />
             <title>OOT item tracker</title>
-            <link
-              rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-              integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
-              // @ts-ignore
-              crossorigin="anonymous"
-            />
-            <link
-              href="https://fonts.googleapis.com/css?family=Merriweather&display=swap"
-              rel="stylesheet"
-            />
 
             <link
-              href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
+              href="https://fonts.googleapis.com/css?family=Merriweather:700,900|Open+Sans:400,600,700,700i,800&display=swap"
               rel="stylesheet"
             />
           </Helmet>
@@ -62,6 +51,9 @@ function App() {
               </Route>
               <Route path="/soft-soil-locations">
                 <SoftSoilLocationsPage />
+              </Route>
+              <Route path="/styleguide">
+                <StyleguidePage />
               </Route>
               <Route path="/">
                 <div />

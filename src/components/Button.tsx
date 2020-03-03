@@ -2,12 +2,13 @@ import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  border: 1px solid ${({ theme }) => theme.border.color.primary};
+  border: 2px solid ${({ theme }) => theme.border.color.primary};
   color: ${({ theme }) => theme.text.color.primary};
-  padding: 0.2rem;
+  padding: 0.2rem 0.4rem;
   background: transparent;
   border-radius: 3px;
   font-size: 0.8em;
+  font-weight: 700;
 `;
 
 interface Props {

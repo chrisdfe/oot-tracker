@@ -1,12 +1,10 @@
 import React, { useContext } from "react";
 
 import { AppDataContext } from "../../AppData";
-import { AppStateContext } from "../../AppState";
 
 import Container from "../../components/layout/Container";
 
 import SoftSoilLocationsList from "./components/SoftSoilLocationsList";
-// import FiltersBar from "./components/FiltersBar";
 import StickyInfoBar from "./components/StickyInfoBar";
 
 const SoftSoilLocationsPage = () => {

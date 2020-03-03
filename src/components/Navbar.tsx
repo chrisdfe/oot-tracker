@@ -5,9 +5,9 @@ import styled from "styled-components";
 import { AppDataContext } from "../AppData";
 import { AppStateContext } from "../AppState";
 
-import Container from "./layout/Container";
-
 const StyledNavbar = styled.div`
+  font-weight: bold;
+
   nav {
     display: flex;
   }
@@ -29,18 +29,20 @@ const StyledNavbar = styled.div`
 
   a {
     display: block;
-    padding: 15px;
+    padding: 1rem 0.6rem;
     text-decoration: none;
+    font-family: ${({ theme }) => theme.fonts.heading};
+    border-bottom: 5px solid transparent;
 
     &:hover {
-      // background: ${({ theme }) => theme.rawColors.white};
-      background: rgba(255, 255, 255, 0.7);
+      border-bottom-color: #fff;
     }
 
     span {
       display: inline-block;
       margin-left: 0.5rem;
       font-size: 0.7em;
+      font-weight: normal;
     }
   }
 `;
@@ -104,6 +106,9 @@ const Navbar = () => {
                   {collectedSoftSoilLocations.length}/{softSoilLocations.length}
                 </span>
               </Link>
+            </li>
+            <li>
+              <Link to="/styleguide">Styleguide</Link>
             </li>
           </ul>
         </nav>

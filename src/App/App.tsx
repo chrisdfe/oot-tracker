@@ -12,9 +12,10 @@ import Navbar from "../components/Navbar";
 
 import LocationDetailPage from "../pages/locations/LocationDetailPage";
 import LocationsIndexPage from "../pages/locations/LocationsIndexPage";
-import HeartsPiecesPage from "../pages/HeartPieces/HeartPiecesPage";
-import GoldSkulltulasPage from "../pages/GoldSkulltulas/GoldSkulltulasPage";
-import SoftSoilLocationsPage from "../pages/SoftSoilLocations/SoftSoilLocationsPage";
+import HeartsPiecesPage from "../pages/collectables/HeartPieces/HeartPiecesPage";
+import GoldSkulltulasPage from "../pages/collectables/GoldSkulltulas/GoldSkulltulasPage";
+import SoftSoilLocationsPage from "../pages/collectables/SoftSoilLocations/SoftSoilLocationsPage";
+import CollectablesIndexPage from "../pages/collectables/CollectablesIndexPage";
 import StyleguidePage from "../pages/Styleguide/StyleguidePage";
 
 function App() {
@@ -43,14 +44,17 @@ function App() {
               <Route path="/locations">
                 <LocationsIndexPage />
               </Route>
-              <Route path="/heart-pieces">
+              <Route path="/collectables/heart-pieces">
                 <HeartsPiecesPage />
               </Route>
-              <Route path="/gold-skulltulas">
+              <Route path="/collectables/gold-skulltulas">
                 <GoldSkulltulasPage />
               </Route>
-              <Route path="/soft-soil-locations">
+              <Route path="/collectables/soft-soil-locations">
                 <SoftSoilLocationsPage />
+              </Route>
+              <Route path="/collectables">
+                <CollectablesIndexPage />
               </Route>
               <Route path="/styleguide">
                 <StyleguidePage />

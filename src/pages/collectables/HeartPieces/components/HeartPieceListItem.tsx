@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
-import { AppStateContext } from "../../../App/AppState";
+import { AppStateContext } from "../../../../App/AppState";
 
-import CollectableDetail from "../../../components/CollectableDetail";
-import TitledParagraph from "../../../components/typography/TitledParagraph";
+import CollectableDetail from "../../../../components/CollectableDetail";
+import TitledParagraph from "../../../../components/typography/TitledParagraph";
 
-import padNumber from "../../../utils/padNumber";
+import padNumber from "../../../../utils/padNumber";
 
 export interface Props {
   heartPiece: HeartPiece;
@@ -21,7 +21,9 @@ const Paragraph = styled.p`
 `;
 
 const HeartPieceListItem = ({ heartPiece }: Props) => {
-  const imageSrc = require(`../../../data/images/${heartPiece.localImageUrl}`);
+  const imageSrc = require(`../../../../data/images/${
+    heartPiece.localImageUrl
+  }`);
 
   const appState = useContext(AppStateContext);
 

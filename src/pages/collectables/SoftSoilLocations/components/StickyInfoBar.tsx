@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 
-import { AppDataContext } from "../../../App/AppData";
-import { AppStateContext } from "../../../App/AppState";
+import { AppDataContext } from "../../../../App/AppData";
+import { AppStateContext } from "../../../../App/AppState";
 
-import StickyInfoBar from "../../../components/StickyInfoBar";
-import Button from "../../../components/Button";
+import StickyInfoBar from "../../../../components/StickyInfoBar";
+import Button from "../../../../components/Button";
 
 const SoftSoilLocationsStickyInfoBar = () => {
   const appData = useContext(AppDataContext);

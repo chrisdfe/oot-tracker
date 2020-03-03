@@ -10,9 +10,9 @@ import { AppDataContext } from "../../App/AppData";
 import { AppStateContext } from "../../App/AppState";
 import ThemeRegion, { RegionName } from "../../App/ThemeRegion";
 
-import HeartPieceList from "../../pages/HeartPieces/components/HeartPieceList";
-import GoldSkulltulaList from "../../pages/GoldSkulltulas/components/GoldSkulltulaList";
-import SoftSoilLocationsList from "../../pages/SoftSoilLocations/components/SoftSoilLocationsList";
+import HeartPieceList from "../../pages/collectables/HeartPieces/components/HeartPieceList";
+import GoldSkulltulaList from "../../pages/collectables/GoldSkulltulas/components/GoldSkulltulaList";
+import SoftSoilLocationsList from "../../pages/collectables/SoftSoilLocations/components/SoftSoilLocationsList";
 
 import LocationCollectableSummary from "./components/LocationCollectableSummary";
 

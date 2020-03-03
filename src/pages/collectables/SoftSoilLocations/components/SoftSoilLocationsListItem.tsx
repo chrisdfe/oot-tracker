@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
-import { AppStateContext } from "../../../App/AppState";
+import { AppStateContext } from "../../../../App/AppState";
 
-import CollectableDetail from "../../../components/CollectableDetail";
-import TitledParagraph from "../../../components/typography/TitledParagraph";
+import CollectableDetail from "../../../../components/CollectableDetail";
+import TitledParagraph from "../../../../components/typography/TitledParagraph";
 
-import padNumber from "../../../utils/padNumber";
+import padNumber from "../../../../utils/padNumber";
 
 export interface Props {
   softSoilLocation: SoftSoilLocationData;
@@ -22,7 +22,7 @@ const Paragraph = styled.p`
 
 const HeartPieceListItem = ({ softSoilLocation }: Props) => {
   const imageUrls = softSoilLocation.images.map(({ localImageUrl }) =>
-    require(`../../../data/images/${localImageUrl}`)
+    require(`../../../../data/images/${localImageUrl}`)
   );
 
   const appState = useContext(AppStateContext);

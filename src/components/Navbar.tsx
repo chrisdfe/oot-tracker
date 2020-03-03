@@ -52,28 +52,6 @@ const NavbarInner = styled.div`
 `;
 
 const Navbar = () => {
-  // @ts-ignore
-  const { heartPieces, goldSkulltulas, softSoilLocations } = useContext(
-    AppDataContext
-  );
-
-  const appState = useContext(AppStateContext);
-
-  const {
-    collectedHearts
-    // @ts-ignore
-  } = appState.heartPieces;
-
-  const {
-    collectedGoldSkulltulas
-    // @ts-ignore
-  } = appState.goldSkulltulas;
-
-  const {
-    collectedSoftSoilLocations
-    // @ts-ignore
-  } = appState.softSoilLocations;
-
   return (
     <StyledNavbar>
       <NavbarInner>
@@ -83,28 +61,7 @@ const Navbar = () => {
               <Link to="/locations">Locations</Link>
             </li>
             <li>
-              <Link to="/heart-pieces">
-                Heart Pieces
-                <span>
-                  {collectedHearts.length}/{heartPieces.length}
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/gold-skulltulas">
-                Gold Skulltulas
-                <span>
-                  {collectedGoldSkulltulas.length}/{goldSkulltulas.length}
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/soft-soil-locations">
-                Soft Soil Locations
-                <span>
-                  {collectedSoftSoilLocations.length}/{softSoilLocations.length}
-                </span>
-              </Link>
+              <Link to="/collectables">Collectables</Link>
             </li>
             <li>
               <Link to="/styleguide">Styleguide</Link>

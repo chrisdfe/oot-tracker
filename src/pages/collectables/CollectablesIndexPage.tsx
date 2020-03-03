@@ -64,6 +64,11 @@ const CollectableListItem = ({
   </CollectableListItemWrapper>
 );
 
+const getPercentage = (amount: number, total: number) => {
+  const percentage = Math.floor((amount * 100) / total);
+  return `${percentage}%`;
+};
+
 const CollectablesIndexPage = () => {
   // const appData = useContext(AppDataContext);
   // @ts-ignore
@@ -99,24 +104,36 @@ const CollectablesIndexPage = () => {
         </Container>
       </Hero>
       <Container>
-        <CollectableListItem
-          url="heart-pieces"
-          title={`${collectedHearts.length}/${heartPieces.length} Heart Pieces`}
-        />
+        <CollectableListItem url="heart-pieces" title="Heart Pieces">
+          <h4>
+            {collectedHearts.length}/{heartPieces.length}:&nbsp;
+            {getPercentage(collectedHearts.length, heartPieces.length)}
+          </h4>
+        </CollectableListItem>
 
-        <CollectableListItem
-          url="gold-skulltulas"
-          title={`${collectedGoldSkulltulas.length}/${
-            goldSkulltulas.length
-          }  Gold Skulltulas`}
-        />
+        <CollectableListItem url="gold-skulltulas" title="Gold Skulltulas">
+          <h4>
+            {collectedGoldSkulltulas.length}/{goldSkulltulas.length}:&nbsp;
+            {getPercentage(
+              collectedGoldSkulltulas.length,
+              goldSkulltulas.length
+            )}
+          </h4>
+        </CollectableListItem>
 
         <CollectableListItem
           url="soft-soil-locations"
-          title={`${collectedSoftSoilLocations.length}/${
-            softSoilLocations.length
-          }  Soft Soil Locations`}
-        />
+          title="Soft Soil Locations"
+        >
+          <h4>
+            {collectedSoftSoilLocations.length}/{softSoilLocations.length}
+            :&nbsp;
+            {getPercentage(
+              collectedSoftSoilLocations.length,
+              softSoilLocations.length
+            )}
+          </h4>
+        </CollectableListItem>
       </Container>
     </>
   );

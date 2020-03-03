@@ -64,19 +64,27 @@ export const getRegionFromTitle = (title: string): RegionName => {
   if (
     title.includes("Goron") ||
     title.includes("Death") ||
-    title.includes("Dodongo")
+    title.includes("Dodongo") ||
+    title.includes("Fire")
   ) {
     return "goron";
   }
 
-  if (title.includes("Zora") || title.includes("Jabu")) {
+  if (
+    title.includes("Zora") ||
+    title.includes("Jabu") ||
+    title.includes("Hylia") ||
+    title.includes("Water")
+  ) {
     return "zora";
   }
 
   if (
     title.includes("Kokiri") ||
     title.includes("Lost Woods") ||
-    title.includes("Sacred")
+    title.includes("Sacred") ||
+    title.includes("Forest") ||
+    title.includes("Deku")
   ) {
     return "kokiri";
   }

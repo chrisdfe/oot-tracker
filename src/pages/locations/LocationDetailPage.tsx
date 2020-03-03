@@ -9,12 +9,18 @@ import Hero from "../../components/layout/Hero";
 import FancyLink from "../../components/FancyLink";
 
 import { AppDataContext } from "../../AppData";
+import { AppStateContext } from "../../AppState";
 
 import HeartPieceList from "../../pages/HeartPieces/components/HeartPieceList";
 import GoldSkulltulaList from "../../pages/GoldSkulltulas/components/GoldSkulltulaList";
 import SoftSoilLocationsList from "../../pages/SoftSoilLocations/components/SoftSoilLocationsList";
 
 import LocationCollectableSummary from "./components/LocationCollectableSummary";
+
+import {
+  filterCollectablesByLocation,
+  getCollectablesByIds
+} from "../../utils/appState";
 
 // TODO - hardcode in location data instead of this
 import { getRegionFromTitle } from "./LocationsIndexPage";
@@ -39,7 +45,7 @@ const Wrapper = styled.div`
 `;
 
 const HeroHeadline = styled.div`
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 
   h1 {
     margin-bottom: 1.2rem;
@@ -50,8 +56,11 @@ const Section = styled.section`
   padding-bottom: 4rem;
 
   h2 {
+    // position: sticky;
+    // top: 0;
     padding-bottom: 0.8rem;
     border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
+    // background-color: ${({ theme }) => theme.background.color.primary};
   }
 `;
 
@@ -65,6 +74,7 @@ const LocationDetailPage = () => {
   const { slug } = useParams();
 
   const appData = useContext(AppDataContext);
+  const appState = useContext(AppStateContext);
 
   const {
     // @ts-ignore
@@ -77,22 +87,51 @@ const LocationDetailPage = () => {
     softSoilLocations
   } = appData;
 
+  const {
+    collectedHearts
+    // @ts-ignore
+  } = appState.heartPieces;
+
+  const {
+    collectedGoldSkulltulas
+    // @ts-ignore
+  } = appState.goldSkulltulas;
+
+  const {
+    collectedSoftSoilLocations
+    // @ts-ignore
+  } = appState.softSoilLocations;
+
   // @ts-ignore
   const currentLocation = allLocations.find(location => location.slug === slug);
 
   if (!currentLocation) return <LocationNotFound />;
 
-  const locationHeartPieces = heartPieces.filter(
-    // @ts-ignore
-    heartPiece => heartPiece.location === currentLocation.title
+  const locationHeartPieces = filterCollectablesByLocation(
+    heartPieces,
+    currentLocation
   );
-  const locationGoldSkulltulas = goldSkulltulas.filter(
-    // @ts-ignore
-    goldSkulltula => goldSkulltula.location === currentLocation.title
+  const collectedLocationHeartPieces = filterCollectablesByLocation(
+    getCollectablesByIds(heartPieces, collectedHearts),
+    currentLocation
   );
-  const locationSoftSoilLocations = softSoilLocations.filter(
-    // @ts-ignore
-    softSoilLocation => softSoilLocation.location === currentLocation.title
+
+  const locationGoldSkulltulas = filterCollectablesByLocation(
+    goldSkulltulas,
+    currentLocation
+  );
+  const collectedLocationGoldSkulltulas = filterCollectablesByLocation(
+    getCollectablesByIds(goldSkulltulas, collectedGoldSkulltulas),
+    currentLocation
+  );
+
+  const locationSoftSoilLocations = filterCollectablesByLocation(
+    softSoilLocations,
+    currentLocation
+  );
+  const collectedLocationSoftSoilLocations = filterCollectablesByLocation(
+    getCollectablesByIds(softSoilLocations, collectedSoftSoilLocations),
+    currentLocation
   );
 
   return (
@@ -110,17 +149,19 @@ const LocationDetailPage = () => {
             </FancyLink>
           </Container>
         </Hero>
+
         <Container>
           <Section>
             <h2>
-              {locationHeartPieces.length} heart{" "}
-              {locationHeartPieces.length === 1 ? "piece" : "pieces"}
+              {collectedLocationHeartPieces.length}/{locationHeartPieces.length}{" "}
+              heart {locationHeartPieces.length === 1 ? "piece" : "pieces"}
             </h2>
             <HeartPieceList heartPieces={locationHeartPieces} />
           </Section>
 
           <Section>
             <h2>
+              {collectedLocationGoldSkulltulas.length}/
               {locationGoldSkulltulas.length} gold{" "}
               {locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"}
             </h2>
@@ -129,6 +170,7 @@ const LocationDetailPage = () => {
 
           <Section>
             <h2>
+              {collectedLocationSoftSoilLocations.length}/
               {locationSoftSoilLocations.length} soft soil{" "}
               {locationSoftSoilLocations.length === 1
                 ? "location"

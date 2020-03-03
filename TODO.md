@@ -10,9 +10,9 @@
 - Make entire header portion clickable instead of just the checkbox???
 - Fix number padding - "#0100" for "100"
 - Add confirmation before "collect all" or "uncollect all" - those are pretty annoying to accidentally click
-- Region-specific styles (Zora's domain, Goron land etc)
-- Consolidate styles I've copied and pasted everywhere
 - 'active' Navbar link
+- Sort locations in a way other than alphabetical?
+- create ButtonGroup component
 
 # Done
 
@@ -27,3 +27,7 @@
 - Add gold skulltula data to gold skulltula page
 - Add soft soil locations
 - Fix annoying scroll issue between page transitions
+- Consolidate styles I've copied and pasted everywhere
+- Region-specific styles (Zora's domain, Goron land etc)
+- Change "heart pieces: 0" to "heart pieces: 2/2" for locations
+- Fix "2/2" bug - should filter collectable by location

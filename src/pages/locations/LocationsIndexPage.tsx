@@ -110,7 +110,7 @@ const LocationsIndexPage = () => {
     <>
       <Hero>
         <Container>
-          <h1>Locations</h1>
+          <h1>All Locations</h1>
         </Container>
       </Hero>
       <Container>

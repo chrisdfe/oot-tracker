@@ -21,10 +21,10 @@ const GoldSkulltulaStickyInfoBar = () => {
 
   return (
     <StickyInfoBar
-      headingText={`gold skulltulas: ${collectedGoldSkulltulas.length}/
-              ${goldSkulltulas.length}`}
+      headingText={`${collectedGoldSkulltulas.length}/
+              ${goldSkulltulas.length} gold skulltulas`}
     >
-      <Button
+      {/*      <Button
         onClick={() => {
           setCollectedGoldSkulltulas(
             // @ts-ignore
@@ -40,7 +40,7 @@ const GoldSkulltulaStickyInfoBar = () => {
         }}
       >
         uncollect all
-      </Button>
+      </Button>*/}
     </StickyInfoBar>
   );
 };

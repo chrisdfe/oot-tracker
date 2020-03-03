@@ -20,11 +20,11 @@ const HeartPiecesStickyInfoBar = () => {
   } = appState.heartPieces;
   return (
     <StickyInfoBar
-      headingText={`heart pieces: ${collectedHearts.length}/${
+      headingText={`${collectedHearts.length}/${
         heartPieces.length
-      }`}
+      } heart pieces`}
     >
-      <Button
+      {/*      <Button
         onClick={() => {
           setCollectedHearts(
             // @ts-ignore
@@ -40,7 +40,7 @@ const HeartPiecesStickyInfoBar = () => {
         }}
       >
         uncollect all
-      </Button>
+      </Button>*/}
     </StickyInfoBar>
   );
 };

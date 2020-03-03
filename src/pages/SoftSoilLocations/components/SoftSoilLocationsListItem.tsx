@@ -4,6 +4,9 @@ import styled from "styled-components";
 import { AppStateContext } from "../../../AppState";
 
 import CollectableDetail from "../../../components/CollectableDetail";
+import TitledParagraph from "../../../components/typography/TitledParagraph";
+
+import padNumber from "../../../utils/padNumber";
 
 export interface Props {
   softSoilLocation: SoftSoilLocationData;
@@ -17,13 +20,10 @@ const Paragraph = styled.p`
   }
 `;
 
-// TODO - move out into utility
-const padNumber = (num: string) => (num.length === 2 ? num : `0${num}`);
-
 const HeartPieceListItem = ({ softSoilLocation }: Props) => {
-  // const imageSrc = require(`../../../data/images/${
-  //   goldSkulltula.localImageUrl
-  // }`);
+  const imageUrls = softSoilLocation.images.map(({ localImageUrl }) =>
+    require(`../../../data/images/${localImageUrl}`)
+  );
 
   const appState = useContext(AppStateContext);
 
@@ -43,18 +43,20 @@ const HeartPieceListItem = ({ softSoilLocation }: Props) => {
       onToggleCollected={() => {
         toggleCollectedSoftSoilLocation(softSoilLocation.number);
       }}
+      thumbnails={imageUrls}
+      images={imageUrls}
       heading={<strong>#{padNumber(softSoilLocation.number)}</strong>}
     >
       {/*<ImageWrapper>
             <img src={imageSrc} />
           </ImageWrapper>*/}
-      <Paragraph>
-        <strong>directions:</strong> {softSoilLocation.directions}
-      </Paragraph>
 
-      <Paragraph>
-        <strong>reward:</strong> {softSoilLocation.rewards}
-      </Paragraph>
+      <TitledParagraph
+        title="directions"
+        paragraphs={[softSoilLocation.directions]}
+      />
+
+      <TitledParagraph title="reward" paragraphs={[softSoilLocation.rewards]} />
     </CollectableDetail>
   );
 };

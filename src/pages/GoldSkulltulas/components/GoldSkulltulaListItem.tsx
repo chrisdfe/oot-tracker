@@ -4,6 +4,9 @@ import styled from "styled-components";
 import { AppStateContext } from "../../../AppState";
 
 import CollectableDetail from "../../../components/CollectableDetail";
+import TitledParagraph from "../../../components/typography/TitledParagraph";
+
+import padNumber from "../../../utils/padNumber";
 
 export interface Props {
   goldSkulltula: GoldSkulltulaData;
@@ -16,8 +19,6 @@ const Paragraph = styled.p`
     margin-bottom: 0;
   }
 `;
-
-const padNumber = (num: string) => (num.length === 2 ? num : `0${num}`);
 
 const HeartPieceListItem = ({ goldSkulltula }: Props) => {
   const imageSrc = require(`../../../data/images/${
@@ -51,13 +52,14 @@ const HeartPieceListItem = ({ goldSkulltula }: Props) => {
         </>
       }
     >
-      <Paragraph>
-        <strong>conditions:</strong> {goldSkulltula.conditions}
-      </Paragraph>
-
-      {goldSkulltula.directions.split("\n").map((paragraph, index) => (
-        <Paragraph key={`paragraph-${index}`}>{paragraph}</Paragraph>
-      ))}
+      <TitledParagraph
+        title="conditions"
+        paragraphs={[goldSkulltula.conditions]}
+      />
+      <TitledParagraph
+        title="directions"
+        paragraphs={goldSkulltula.directions.split("\n")}
+      />
     </CollectableDetail>
   );
 };

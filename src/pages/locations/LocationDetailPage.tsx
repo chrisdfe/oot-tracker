@@ -56,11 +56,11 @@ const Section = styled.section`
   padding-bottom: 4rem;
 
   h2 {
-    // position: sticky;
-    // top: 0;
-    padding-bottom: 0.8rem;
+    position: sticky;
+    top: 0;
+    padding: 1rem 0;
     border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
-    // background-color: ${({ theme }) => theme.background.color.primary};
+    background-color: ${({ theme }) => theme.background.color.primary};
   }
 `;
 
@@ -69,6 +69,14 @@ const LocationNotFound = () => (
     <h2>Location not found</h2>
   </Container>
 );
+
+const EmptyListWrapper = styled.div`
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 3rem;
+`;
+
+const EmptyList = () => <EmptyListWrapper>♡</EmptyListWrapper>;
 
 const LocationDetailPage = () => {
   const { slug } = useParams();
@@ -156,7 +164,11 @@ const LocationDetailPage = () => {
               {collectedLocationHeartPieces.length}/{locationHeartPieces.length}{" "}
               heart {locationHeartPieces.length === 1 ? "piece" : "pieces"}
             </h2>
-            <HeartPieceList heartPieces={locationHeartPieces} />
+            {locationHeartPieces.length === 0 ? (
+              <EmptyList />
+            ) : (
+              <HeartPieceList heartPieces={locationHeartPieces} />
+            )}
           </Section>
 
           <Section>
@@ -165,7 +177,11 @@ const LocationDetailPage = () => {
               {locationGoldSkulltulas.length} gold{" "}
               {locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"}
             </h2>
-            <GoldSkulltulaList goldSkulltulas={locationGoldSkulltulas} />
+            {locationGoldSkulltulas.length === 0 ? (
+              <EmptyList />
+            ) : (
+              <GoldSkulltulaList goldSkulltulas={locationGoldSkulltulas} />
+            )}
           </Section>
 
           <Section>
@@ -176,9 +192,13 @@ const LocationDetailPage = () => {
                 ? "location"
                 : "locations"}
             </h2>
-            <SoftSoilLocationsList
-              softSoilLocations={locationSoftSoilLocations}
-            />
+            {locationSoftSoilLocations.length === 0 ? (
+              <EmptyList />
+            ) : (
+              <SoftSoilLocationsList
+                softSoilLocations={locationSoftSoilLocations}
+              />
+            )}
           </Section>
         </Container>
       </Wrapper>

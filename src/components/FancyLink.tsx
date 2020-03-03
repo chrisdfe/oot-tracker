@@ -16,7 +16,7 @@ const Wrapper = styled.div`
       content: "";
       position: absolute;
       right: 0;
-      top: 100%;
+      top: 110%;
       left: 0;
       height: 0;
       border-bottom: ${BORDER_HEIGHT}px solid

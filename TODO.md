@@ -2,17 +2,19 @@
 
 - Add amount of acquired heart pieces/gold skulltulas on locations index page
 - Add "has heart pieces" or "add gold skulltulas" filters to locations page
-- Add filters bar back in
-- Clean up all of these typescript warnings
 - Clean up types + remove @ts-ignores
 - Clean up App\*\*\*\* components - put into separate subdirectory
-- Add "3/4" to Locations index page
 - Make entire header portion clickable instead of just the checkbox???
-- Fix number padding - "#0100" for "100"
-- Add confirmation before "collect all" or "uncollect all" - those are pretty annoying to accidentally click
-- 'active' Navbar link
-- Sort locations in a way other than alphabetical?
-- create ButtonGroup component
+
+* Add title for soft soil locations
+* Make checkbox look nicer
+* 'active' Navbar link
+* Navbar left + right sections
+* Sticky navbar
+* Sort locations in a way other than alphabetical?
+* create ButtonGroup component
+* Create 'Heading' and 'Paragraph' components
+* Group 'heart pieces', 'gold skulltulas', and 'soft soil locations' into 'collectables' url/page group
 
 # Done
 
@@ -31,3 +33,7 @@
 - Region-specific styles (Zora's domain, Goron land etc)
 - Change "heart pieces: 0" to "heart pieces: 2/2" for locations
 - Fix "2/2" bug - should filter collectable by location
+- Clean up all of these typescript warnings
+- Add "3/4" to Locations index page
+- Add soft soil images to UI
+- Fix number padding - "#0100" for "100"

@@ -24,17 +24,13 @@ const AppGlobalStyles = ({ children }: Props) => {
     // TODO- heading component instead of this
     h1,
     h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    h3 {
       font-family: ${theme.fonts.heading};
     }
 
     h1,
     h2,
-    h3,
-    h4 {
+    h3 {
       font-weight: 800;
       line-height: 1.2em;
       letter-spacing: 0.015em;

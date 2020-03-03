@@ -4,6 +4,9 @@ import styled from "styled-components";
 import { AppStateContext } from "../../../AppState";
 
 import CollectableDetail from "../../../components/CollectableDetail";
+import TitledParagraph from "../../../components/typography/TitledParagraph";
+
+import padNumber from "../../../utils/padNumber";
 
 export interface Props {
   heartPiece: HeartPiece;
@@ -16,8 +19,6 @@ const Paragraph = styled.p`
     margin-bottom: 0;
   }
 `;
-
-const padNumber = (num: string) => (num.length === 2 ? num : `0${num}`);
 
 const HeartPieceListItem = ({ heartPiece }: Props) => {
   const imageSrc = require(`../../../data/images/${heartPiece.localImageUrl}`);
@@ -47,13 +48,15 @@ const HeartPieceListItem = ({ heartPiece }: Props) => {
         </>
       }
     >
-      <Paragraph>
-        <strong>conditions:</strong> {heartPiece.conditions}
-      </Paragraph>
+      <TitledParagraph
+        title="conditions"
+        paragraphs={[heartPiece.conditions]}
+      />
 
-      {heartPiece.directions.split("\n").map((paragraph, index) => (
-        <Paragraph key={`paragraph-${index}`}>{paragraph}</Paragraph>
-      ))}
+      <TitledParagraph
+        title="directions"
+        paragraphs={heartPiece.directions.split("\n")}
+      />
     </CollectableDetail>
   );
 };

@@ -89,7 +89,7 @@ const BodyContent = styled.div<BodyContentProps>`
   ${({ isOpen }) =>
     isOpen
       ? css`
-          max-height: 40em;
+          max-height: 100em;
         `
       : ""}
 `;

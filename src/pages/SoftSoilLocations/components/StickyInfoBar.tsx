@@ -21,10 +21,10 @@ const SoftSoilLocationsStickyInfoBar = () => {
 
   return (
     <StickyInfoBar
-      headingText={`soft soil locations: ${collectedSoftSoilLocations.length}/
-              ${softSoilLocations.length}`}
+      headingText={`${collectedSoftSoilLocations.length}/
+              ${softSoilLocations.length} soft soil locations`}
     >
-      <Button
+      {/*      <Button
         onClick={() => {
           setCollectedSoftSoilLocations(
             // @ts-ignore
@@ -43,7 +43,7 @@ const SoftSoilLocationsStickyInfoBar = () => {
         }}
       >
         uncollect all
-      </Button>
+      </Button>*/}
     </StickyInfoBar>
   );
 };

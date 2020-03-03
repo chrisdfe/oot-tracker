@@ -11,34 +11,21 @@ interface Props {
 const Wrapper = styled.div`
   position: sticky;
   top: 0;
-  background-color: ${({ theme }) => theme.background.color.primary};
-  border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
-  padding: 1.4rem 0;
-  text-align: center;
-
-  button {
-    font-size: 0.7em;
-  }
 `;
 
 const ContentWrapper = styled.div``;
 
-const HeadingWrapper = styled.div`
-  text-align: center;
-`;
-
-const Heading = styled.h3`
+const Heading = styled.h2`
   display: block;
-  margin: 0 1rem 1rem 0;
+  padding: 1rem 0;
+  margin: 0;
+  background-color: ${({ theme }) => theme.background.color.primary};
+  border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
 `;
 
 const renderHeading = (headingText?: string) => {
   if (!headingText) return null;
-  return (
-    <HeadingWrapper>
-      <Heading>{headingText}</Heading>
-    </HeadingWrapper>
-  );
+  return <Heading>{headingText}</Heading>;
 };
 
 const StickyInfoBar = ({ headingText, children }: Props) => {

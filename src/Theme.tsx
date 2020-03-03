@@ -2,6 +2,18 @@ import React, { ReactNode } from "react";
 
 import { ThemeProvider } from "styled-components";
 
+const hexToRGB = (hex: string, alpha?: number) => {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+
+  if (alpha) {
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
 interface Props {
   children: ReactNode;
 }
@@ -45,21 +57,24 @@ const defaultTheme: RegionTheme = {
   background: {
     color: {
       // primary: rawColors.caper,
-      primary: "#fefdfc",
+      primary: "#f0f3f7",
+      // primary: "#",
       secondary: rawColors.white
     }
   },
   text: {
     color: {
       // primary: rawColors.killarney
-      primary: "#3a3c3e"
+      // primary: "#353a3f"
+      primary: "#2A3854"
     }
   },
   border: {
     color: {
       // primary: rawColors.killarney,
-      primary: "#3a3c3e",
-      secondary: "#c0c3c6"
+      primary: "#2A3854",
+      secondary: hexToRGB("#2A3854", 0.2)
+      // secondary: "#c0c3c6"
     }
   }
 };

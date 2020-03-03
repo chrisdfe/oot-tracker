@@ -14,10 +14,6 @@ const Wrapper = styled.div`
   padding: 0;
   border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
   text-align: left;
-
-  &:last-child {
-    border-bottom-width: 0;
-  }
 `;
 
 const HeaderBar = styled.div`

@@ -38,6 +38,23 @@ const Wrapper = styled.div`
   }
 `;
 
+const HeroHeadline = styled.div`
+  margin-bottom: 3rem;
+
+  h1 {
+    margin-bottom: 1.2rem;
+  }
+`;
+
+const Section = styled.section`
+  padding-bottom: 4rem;
+
+  h2 {
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
+  }
+`;
+
 const LocationNotFound = () => (
   <Container>
     <h2>Location not found</h2>
@@ -83,8 +100,10 @@ const LocationDetailPage = () => {
       <Wrapper>
         <Hero>
           <Container>
-            <h1>{currentLocation.title}</h1>
-            <LocationCollectableSummary location={currentLocation} />
+            <HeroHeadline>
+              <h1>{currentLocation.title}</h1>
+              <LocationCollectableSummary location={currentLocation} />
+            </HeroHeadline>
 
             <FancyLink>
               <Link to="/locations">&#60; back</Link>
@@ -92,33 +111,33 @@ const LocationDetailPage = () => {
           </Container>
         </Hero>
         <Container>
-          <div>
-            <h3>
+          <Section>
+            <h2>
               {locationHeartPieces.length} heart{" "}
               {locationHeartPieces.length === 1 ? "piece" : "pieces"}
-            </h3>
+            </h2>
             <HeartPieceList heartPieces={locationHeartPieces} />
-          </div>
+          </Section>
 
-          <div>
-            <h3>
+          <Section>
+            <h2>
               {locationGoldSkulltulas.length} gold{" "}
               {locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"}
-            </h3>
+            </h2>
             <GoldSkulltulaList goldSkulltulas={locationGoldSkulltulas} />
-          </div>
+          </Section>
 
-          <div>
-            <h3>
+          <Section>
+            <h2>
               {locationSoftSoilLocations.length} soft soil{" "}
               {locationSoftSoilLocations.length === 1
                 ? "location"
                 : "locations"}
-            </h3>
+            </h2>
             <SoftSoilLocationsList
               softSoilLocations={locationSoftSoilLocations}
             />
-          </div>
+          </Section>
         </Container>
       </Wrapper>
     </ThemeRegion>

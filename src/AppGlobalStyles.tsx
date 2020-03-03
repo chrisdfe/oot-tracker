@@ -14,13 +14,11 @@ const AppGlobalStyles = ({ children }: Props) => {
     :root {
       font-size: 16px;
     }
-    * {
-      font-family: ${theme.fonts.body};
-      color: ${theme.text.color.primary};
-    }
 
     body {
       background-color: ${theme.background.color.primary};
+      font-family: ${theme.fonts.body};
+      color: ${theme.text.color.primary};
     }
 
     // TODO- heading component instead of this
@@ -60,6 +58,10 @@ const AppGlobalStyles = ({ children }: Props) => {
 
     p {
       line-height: 2.2em;
+    }
+
+    a {
+color: ${theme.text.color.primary};
     }
   `;
 

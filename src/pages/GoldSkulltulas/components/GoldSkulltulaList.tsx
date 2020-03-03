@@ -7,20 +7,24 @@ interface Props {
   goldSkulltulas: GoldSkulltulaData[];
 }
 
-const HeartPieceListWrapper = styled.div`
+const GoldSkulltulaListWrapper = styled.div`
   margin: 1rem 0;
+  color: ${props => {
+    console.log("props", props);
+    return "red";
+  }};
 `;
 
 const HeartPieceList = ({ goldSkulltulas }: Props) => {
   return (
-    <HeartPieceListWrapper>
+    <GoldSkulltulaListWrapper>
       {goldSkulltulas.map(goldSkulltula => (
         <GoldSkulltulaListItem
           key={goldSkulltula.number}
           goldSkulltula={goldSkulltula}
         />
       ))}
-    </HeartPieceListWrapper>
+    </GoldSkulltulaListWrapper>
   );
 };
 

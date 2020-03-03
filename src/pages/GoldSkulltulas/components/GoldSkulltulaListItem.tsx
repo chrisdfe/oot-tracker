@@ -10,20 +10,12 @@ export interface Props {
 }
 
 const Paragraph = styled.p`
-  line-height: 1.7em;
-  // font-size: 14px;
-  margin: 0 0;
+  margin-bottom: 1rem;
 
   &:last-child {
     margin-bottom: 0;
   }
 `;
-
-const ConditionsParagraph = styled(Paragraph)`
-  margin-bottom: 0.5rem;
-`;
-
-const DescriptionParagraph = styled(Paragraph)``;
 
 const padNumber = (num: string) => (num.length === 2 ? num : `0${num}`);
 
@@ -59,14 +51,12 @@ const HeartPieceListItem = ({ goldSkulltula }: Props) => {
         </>
       }
     >
-      <ConditionsParagraph>
+      <Paragraph>
         <strong>conditions:</strong> {goldSkulltula.conditions}
-      </ConditionsParagraph>
+      </Paragraph>
 
       {goldSkulltula.directions.split("\n").map((paragraph, index) => (
-        <DescriptionParagraph key={`paragraph-${index}`}>
-          {paragraph}
-        </DescriptionParagraph>
+        <Paragraph key={`paragraph-${index}`}>{paragraph}</Paragraph>
       ))}
     </CollectableDetail>
   );

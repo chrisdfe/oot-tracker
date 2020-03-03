@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-const BORDER_HEIGHT = 10;
+const BORDER_HEIGHT = 4;
 
 const Wrapper = styled.div`
   display: inline-block;
@@ -9,21 +9,23 @@ const Wrapper = styled.div`
   a {
     text-decoration: none;
     position: relative;
+    font-weight: bold;
+    line-height: 1.8em;
 
     &:before {
       content: "";
-      z-index: -1;
       position: absolute;
-      top: 50%;
+      right: 0;
+      top: 100%;
       left: 0;
-      width: 100%;
-      border-bottom: ${BORDER_HEIGHT}px solid rgba(255, 255, 255, 1);
+      height: 0;
+      border-bottom: ${BORDER_HEIGHT}px solid
+        ${({ theme }) => theme.border.color.secondary};
       transition: all 0.2s;
     }
 
     &:hover {
       &:before {
-        // top: calc(50% + 4px);
         border-bottom-color: rgba(255, 255, 255, 0);
       }
     }

@@ -10,20 +10,11 @@ export interface Props {
 }
 
 const Paragraph = styled.p`
-  line-height: 1.7em;
-  margin: 0;
+  margin-bottom: 1rem;
 
   &:last-child {
     margin-bottom: 0;
   }
-`;
-
-const ConditionsParagraph = styled(Paragraph)`
-  margin-bottom: 0.5rem;
-`;
-
-const DescriptionParagraph = styled(Paragraph)`
-  // font-size: 14px;
 `;
 
 // TODO - move out into utility
@@ -57,13 +48,13 @@ const HeartPieceListItem = ({ softSoilLocation }: Props) => {
       {/*<ImageWrapper>
             <img src={imageSrc} />
           </ImageWrapper>*/}
-      <ConditionsParagraph>
+      <Paragraph>
         <strong>directions:</strong> {softSoilLocation.directions}
-      </ConditionsParagraph>
+      </Paragraph>
 
-      <DescriptionParagraph>
+      <Paragraph>
         <strong>reward:</strong> {softSoilLocation.rewards}
-      </DescriptionParagraph>
+      </Paragraph>
     </CollectableDetail>
   );
 };

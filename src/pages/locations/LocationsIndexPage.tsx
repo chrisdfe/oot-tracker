@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
+import ThemeRegion, { RegionName } from "../../ThemeRegion";
 
 import Container from "../../components/layout/Container";
 import Hero from "../../components/layout/Hero";
 
+import LocationCollectableSummary from "./components/LocationCollectableSummary";
+
+import { AppDataContext } from "../../AppData";
 import allLocations from "../../data/locations.json";
 
+// TODO - fix conflict with global 'Location'
+// TODO - move elsewhere
 type Location = {
   slug: string;
   title: string;
@@ -21,56 +28,76 @@ interface LocationListItemProps {
 
 const LocationListItemWrapper = styled.div`
   margin-bottom: 2rem;
+  background-color: ${({ theme }) => theme.background.color.primary};
 
   h2 {
     margin: 0 0 0.4rem;
+    color: ${({ theme }) => theme.text.color.primary}
   }
 
   h4 {
     margin: 0;
+    color: ${({ theme }) => theme.text.color.primary}
   }
 
   a {
     display: block;
-    padding: 1.2rem 0 ;
+    padding: 1.2rem 2rem;
     text-decoration: none;
     border-bottom: 4px solid rgba(255, 255, 255, 0);
     transition: border-color 0.2s;
-    // transition: background-color 0.2s;
 
     &:hover {
-      // h2 {
-        border-bottom-color: #fff;
-      // }
+      border-bottom-color: ${({ theme }) => theme.border.color.secondary};
     }
   }
 
   span {
     display: inline: block;
     margin-right: 0.5rem;
+    color: ${({ theme }) => theme.text.color.primary}
   }
 `;
 
+// TODO - hardcode in location data instead of this
+export const getRegionFromTitle = (title: string): RegionName => {
+  if (
+    title.includes("Goron") ||
+    title.includes("Death") ||
+    title.includes("Dodongo")
+  ) {
+    return "goron";
+  }
+
+  if (title.includes("Zora") || title.includes("Jabu")) {
+    return "zora";
+  }
+
+  if (
+    title.includes("Kokiri") ||
+    title.includes("Lost Woods") ||
+    title.includes("Sacred")
+  ) {
+    return "kokiri";
+  }
+  return "default";
+};
+
 const LocationListItem = ({ location }: LocationListItemProps) => (
-  <LocationListItemWrapper>
-    <Link to={`/locations/${location.slug}`}>
-      <h2>{location.title}</h2>
-      <h4>
-        <span>heart pieces:&nbsp;{location.heartPieceIds.length}</span>&nbsp;
-        <span>
-          gold skulltulas:&nbsp;
-          {location.goldSkulltulaIds.length}
-        </span>
-        <span>
-          soft soil locations:&nbsp;
-          {location.softSoilLocationIds.length}
-        </span>
-      </h4>
-    </Link>
-  </LocationListItemWrapper>
+  <ThemeRegion region={getRegionFromTitle(location.title)}>
+    <LocationListItemWrapper>
+      <Link to={`/locations/${location.slug}`}>
+        <h2>{location.title}</h2>
+        <LocationCollectableSummary location={location} />
+      </Link>
+    </LocationListItemWrapper>
+  </ThemeRegion>
 );
 
 const LocationsIndexPage = () => {
+  const appData = useContext(AppDataContext);
+  // @ts-ignore
+  const { locations } = appData;
   return (
     <>
       <Hero>

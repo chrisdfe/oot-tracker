@@ -1,8 +1,16 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 import Container from "../../components/layout/Container";
 import Hero from "../../components/layout/Hero";
+
+import ThemeRegion from "../../ThemeRegion";
+
+const slugify = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/'/g, "");
 
 const LoremParagraph = () => (
   <p>
@@ -28,8 +36,43 @@ interface SectionHeadingProps {
 
 const SectionHeading = ({ title }: SectionHeadingProps) => (
   <SectionHeadingWrapper>
-    <h2>{title}</h2>
+    <h2 id={slugify(title)}>{title}</h2>
   </SectionHeadingWrapper>
+);
+
+const StyleguideSectionWrapper = styled.div`
+  padding: 2rem 0;
+`;
+
+interface SectionProps {
+  title: string;
+  children: ReactNode;
+}
+
+const StyleguideSection = ({ title, children }: SectionProps) => {
+  return (
+    <StyleguideSectionWrapper>
+      <Container>
+        <SectionHeading title={title} />
+        <div>{children}</div>
+      </Container>
+    </StyleguideSectionWrapper>
+  );
+};
+
+const RegionSection = styled.div`
+  padding: 3rem;
+  background-color: ${props => props.theme.background.color.primary};
+`;
+
+const RegionHeading = styled.h2`
+  color: ${props => props.theme.text.color.primary};
+`;
+
+const RegionTestContent = () => (
+  <RegionSection>
+    <RegionHeading>Heading</RegionHeading>
+  </RegionSection>
 );
 
 const StyleguidePage = () => {
@@ -40,9 +83,8 @@ const StyleguidePage = () => {
           <h1>Styleguide</h1>
         </Container>
       </Hero>
-      <Container>
-        <SectionHeading title="Typography" />
 
+      <StyleguideSection title="Typography">
         <h1>h1. Lorem ipsum dolor sit amet</h1>
         <h2>h2. Lorem ipsum dolor sit amet</h2>
         <h3>h3. Lorem ipsum dolor sit amet</h3>
@@ -51,7 +93,24 @@ const StyleguidePage = () => {
         <h6>h6. Lorem ipsum dolor sit amet</h6>
         <LoremParagraph />
         <LoremParagraph />
-      </Container>
+      </StyleguideSection>
+
+      <StyleguideSection title="Theme regions">
+        <h3>Default</h3>
+        <ThemeRegion region="default">
+          <RegionTestContent />
+        </ThemeRegion>
+
+        <h3>Zora</h3>
+        <ThemeRegion region="zora">
+          <RegionTestContent />
+        </ThemeRegion>
+
+        <h3>Kokiri</h3>
+        <ThemeRegion region="kokiri">
+          <RegionTestContent />
+        </ThemeRegion>
+      </StyleguideSection>
     </div>
   );
 };

@@ -35,7 +35,7 @@ const StyledNavbar = styled.div`
     border-bottom: 5px solid transparent;
 
     &:hover {
-      border-bottom-color: #fff;
+      border-bottom-color: ${({ theme }) => theme.border.color.primary};
     }
 
     span {
@@ -77,7 +77,6 @@ const Navbar = () => {
   return (
     <StyledNavbar>
       <NavbarInner>
-        {/*<Container>*/}
         <nav>
           <ul>
             <li>
@@ -112,7 +111,6 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        {/*</Container>*/}
       </NavbarInner>
     </StyledNavbar>
   );

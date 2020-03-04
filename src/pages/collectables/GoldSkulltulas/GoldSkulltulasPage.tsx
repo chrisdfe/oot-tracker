@@ -16,7 +16,6 @@ const BackLinkWrapper = styled.div`
 const GoldSkulltulasPage = () => {
   const appData = useContext(AppDataContext);
 
-  // @ts-ignore
   const { goldSkulltulas } = appData;
 
   return (

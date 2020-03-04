@@ -10,18 +10,10 @@ import LocationCollectableSummary from "./components/LocationCollectableSummary"
 import { AppDataContext } from "../../App/AppData";
 import ThemeRegion, { RegionName } from "../../App/ThemeRegion";
 
-// TODO - fix conflict with global 'Location'
-// TODO - move elsewhere
-type Location = {
-  slug: string;
-  title: string;
-  heartPieceIds: string[];
-  goldSkulltulaIds: string[];
-  softSoilLocationIds: string[];
-};
+import { GameLocation } from "../../data/types/GameLocation";
 
 interface LocationListItemProps {
-  location: Location;
+  location: GameLocation;
 }
 
 const LocationListItemWrapper = styled.div`
@@ -121,8 +113,8 @@ const LocationListItem = ({ location }: LocationListItemProps) => (
 
 const LocationsIndexPage = () => {
   const appData = useContext(AppDataContext);
-  // @ts-ignore
   const { locations } = appData;
+
   return (
     <>
       <Hero>
@@ -131,8 +123,7 @@ const LocationsIndexPage = () => {
         </Container>
       </Hero>
       <Container>
-        {/*@ts-ignore*/}
-        {locations.map((location: any) => (
+        {locations.map(location => (
           <LocationListItem key={location.slug} location={location} />
         ))}
       </Container>

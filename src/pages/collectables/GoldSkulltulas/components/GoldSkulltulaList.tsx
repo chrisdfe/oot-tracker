@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 import GoldSkulltulaListItem from "./GoldSkulltulaListItem";
 
+import { GoldSkulltula } from "../../../../data/types/GoldSkulltula";
+
 interface Props {
-  goldSkulltulas: GoldSkulltulaData[];
+  goldSkulltulas: GoldSkulltula[];
 }
 
-const GoldSkulltulaListWrapper = styled.div`
-  // margin: 1rem 0;
-`;
+const GoldSkulltulaListWrapper = styled.div``;
 
 const HeartPieceList = ({ goldSkulltulas }: Props) => {
   return (

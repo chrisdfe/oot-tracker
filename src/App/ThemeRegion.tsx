@@ -15,8 +15,9 @@ interface Props {
 }
 
 const getTheme = (region: string, theme: any) => {
-  if (theme[region]) {
-    return { ...theme, ...theme[region] };
+  const matchingRegion = theme.regions[region];
+  if (matchingRegion) {
+    return { ...theme, ...matchingRegion };
   }
   return theme;
 };

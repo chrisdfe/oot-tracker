@@ -5,20 +5,32 @@ import goldSkulltulas from "../data/build/goldSkulltulas.json";
 import locations from "../data/build/locations.json";
 import softSoilLocations from "../data/build/softSoilLocations.json";
 
-export const AppDataContext = createContext({});
+import { HeartPiece } from "../data/types/HeartPiece";
+import { GoldSkulltula } from "../data/types/GoldSkulltula";
+import { SoftSoilLocation } from "../data/types/SoftSoilLocation";
+import { GameLocation } from "../data/types/GameLocation";
 
 interface Props {
   children: ReactNode;
 }
 
-const AppData = ({ children }: Props) => {
-  const data = {
-    heartPieces,
-    goldSkulltulas,
-    locations,
-    softSoilLocations
-  };
+export type AppData = {
+  heartPieces: HeartPiece[];
+  goldSkulltulas: GoldSkulltula[];
+  softSoilLocations: SoftSoilLocation[];
+  locations: GameLocation[];
+};
 
+const data: AppData = {
+  heartPieces,
+  goldSkulltulas,
+  locations,
+  softSoilLocations
+};
+
+export const AppDataContext = createContext<AppData>(data);
+
+const AppData = ({ children }: Props) => {
   return (
     <AppDataContext.Provider value={data}>{children}</AppDataContext.Provider>
   );

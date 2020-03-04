@@ -8,6 +8,8 @@ import TitledParagraph from "../../../../components/typography/TitledParagraph";
 
 import padNumber from "../../../../utils/padNumber";
 
+import { HeartPiece } from "../../../../data/types/HeartPiece";
+
 export interface Props {
   heartPiece: HeartPiece;
 }
@@ -27,11 +29,7 @@ const HeartPieceListItem = ({ heartPiece }: Props) => {
 
   const appState = useContext(AppStateContext);
 
-  const {
-    collectedHearts,
-    toggleCollectedHeart
-    // @ts-ignore
-  } = appState.heartPieces;
+  const { collectedHearts, toggleCollectedHeart } = appState.heartPieces;
 
   const hasBeenCollected = collectedHearts.includes(heartPiece.number);
 
@@ -45,7 +43,7 @@ const HeartPieceListItem = ({ heartPiece }: Props) => {
       images={[imageSrc]}
       heading={
         <>
-          <strong>#{padNumber(heartPiece.number)}</strong>&nbsp;
+          <strong>#{padNumber(heartPiece.number, 2)}</strong>&nbsp;
           {heartPiece.location}
         </>
       }

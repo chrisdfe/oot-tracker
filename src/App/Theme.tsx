@@ -2,17 +2,7 @@ import React, { ReactNode } from "react";
 
 import { ThemeProvider } from "styled-components";
 
-const hexToRGB = (hex: string, alpha?: number) => {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-
-  if (alpha) {
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-  }
-
-  return `rgb(${r}, ${g}, ${b})`;
-};
+import hexToRGB from "../utils/hexToRGB";
 
 interface Props {
   children: ReactNode;
@@ -38,7 +28,24 @@ type RegionTheme = {
   };
 };
 
-const rawColors = {
+type RegionThemeMap = {
+  [regionName: string]: RegionTheme;
+};
+
+type ValueMap = {
+  [name: string]: string;
+};
+
+export type AppTheme =
+  | RegionTheme
+  | {
+      rawColors: ValueMap;
+      rawFonts: ValueMap;
+      fonts: ValueMap;
+      regions: RegionThemeMap;
+    };
+
+const rawColors: ValueMap = {
   white: "#fff",
   // caper: "#d1e9b9",
   // caper: "#dce8c9",
@@ -48,7 +55,7 @@ const rawColors = {
   kellyGreen: "#22d07a"
 };
 
-const rawFonts = {
+const rawFonts: ValueMap = {
   merriweather: "Merriweather, sans-serif",
   openSans: "'Open Sans', sans-serif"
 };
@@ -233,7 +240,7 @@ const gerudoTheme: RegionTheme = {
   }
 };
 
-const theme = {
+const theme: AppTheme = {
   rawColors,
   rawFonts,
 
@@ -244,19 +251,14 @@ const theme = {
 
   ...defaultTheme,
 
-  default: defaultTheme,
-  defaultInverse: defaultInverseTheme,
-  zora: zoraTheme,
-  kokiri: kokiriTheme,
-  goron: goronTheme,
-  shadow: shadowTheme,
-  gerudo: gerudoTheme
-
-  // interactive: {
-  //   color: {
-  //     primary: rawColors.kellyGreen
-  //   }
-  // }
+  regions: {
+    default: defaultTheme,
+    zora: zoraTheme,
+    kokiri: kokiriTheme,
+    goron: goronTheme,
+    shadow: shadowTheme,
+    gerudo: gerudoTheme
+  }
 };
 
 const Theme = ({ children }: Props) => {

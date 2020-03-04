@@ -13,6 +13,5 @@ export const getCollectablesByIds = (
   numbers: string[]
 ) =>
   numbers.map(number =>
-    // @ts-ignore
     fullCollectableList.find(collectable => collectable.number === number)
   );

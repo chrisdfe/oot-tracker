@@ -1,7 +1,5 @@
 # TODO
 
-- Clean up types + remove @ts-ignores
-
 - "nearby" locations?
 - Group locations on index page by proximity?
 - Add region on backend, not 'getRegionFromTitle'
@@ -68,3 +66,4 @@
 - Group 'heart pieces', 'gold skulltulas', and 'soft soil locations' into 'collectables' url/page group
 - Make checkbox look nicer
 - Clean up App\*\*\*\* components - put into separate subdirectory
+- Clean up types + remove @ts-ignores

@@ -6,10 +6,12 @@ import { AppStateContext } from "../../../../App/AppState";
 import CollectableDetail from "../../../../components/CollectableDetail";
 import TitledParagraph from "../../../../components/typography/TitledParagraph";
 
+import { GoldSkulltula } from "../../../../data/types/GoldSkulltula";
+
 import padNumber from "../../../../utils/padNumber";
 
 export interface Props {
-  goldSkulltula: GoldSkulltulaData;
+  goldSkulltula: GoldSkulltula;
 }
 
 const Paragraph = styled.p`
@@ -30,7 +32,6 @@ const HeartPieceListItem = ({ goldSkulltula }: Props) => {
   const {
     collectedGoldSkulltulas,
     toggleCollectedGoldSkulltula
-    // @ts-ignore
   } = appState.goldSkulltulas;
 
   const hasBeenCollected = collectedGoldSkulltulas.includes(

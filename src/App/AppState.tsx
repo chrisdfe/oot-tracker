@@ -2,11 +2,47 @@ import React, { ReactNode, createContext } from "react";
 
 import usePersistedStringArray from "../utils/usePersistedStringArray";
 
-export const AppStateContext = createContext({});
-
 interface Props {
   children: ReactNode;
 }
+
+export type AppState = {
+  heartPieces: {
+    collectedHearts: string[];
+    setCollectedHearts: (heartIds: string[]) => void;
+    toggleCollectedHeart: (heartId: string) => void;
+  };
+  goldSkulltulas: {
+    collectedGoldSkulltulas: string[];
+    setCollectedGoldSkulltulas: (goldSkulltulaIds: string[]) => void;
+    toggleCollectedGoldSkulltula: (goldSkulltulaId: string) => void;
+  };
+  softSoilLocations: {
+    collectedSoftSoilLocations: string[];
+    setCollectedSoftSoilLocations: (softSoilLocationIds: string[]) => void;
+    toggleCollectedSoftSoilLocation: (softSoilLocationId: string) => void;
+  };
+};
+
+const initialState = {
+  heartPieces: {
+    collectedHearts: [],
+    setCollectedHearts: () => {},
+    toggleCollectedHeart: () => {}
+  },
+  goldSkulltulas: {
+    collectedGoldSkulltulas: [],
+    setCollectedGoldSkulltulas: () => {},
+    toggleCollectedGoldSkulltula: () => {}
+  },
+  softSoilLocations: {
+    collectedSoftSoilLocations: [],
+    setCollectedSoftSoilLocations: () => {},
+    toggleCollectedSoftSoilLocation: () => {}
+  }
+};
+
+export const AppStateContext = createContext<AppState>(initialState);
 
 const AppState = ({ children }: Props) => {
   const [
@@ -19,17 +55,15 @@ const AppState = ({ children }: Props) => {
     collectedGoldSkulltulas,
     setCollectedGoldSkulltulas,
     toggleCollectedGoldSkulltula
-    // @ts-ignore
   ] = usePersistedStringArray("oot-tracker.collected-gold-skulltulas", []);
 
   const [
     collectedSoftSoilLocations,
     setCollectedSoftSoilLocations,
     toggleCollectedSoftSoilLocation
-    // @ts-ignore
   ] = usePersistedStringArray("oot-tracker.collected-soft-soil-locations", []);
 
-  const state = {
+  const state: AppState = {
     heartPieces: {
       collectedHearts,
       setCollectedHearts,

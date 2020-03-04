@@ -49,8 +49,6 @@ interface CollectableListItemProps {
   children?: ReactNode;
 }
 
-// {<ThemeRegion region={getRegionFromTitle(location.title)}>}
-// // </ThemeRegion>
 const CollectableListItem = ({
   title,
   url,
@@ -70,31 +68,15 @@ const getPercentage = (amount: number, total: number) => {
 };
 
 const CollectablesIndexPage = () => {
-  // const appData = useContext(AppDataContext);
-  // @ts-ignore
-  // const { locations } = appData;
-
-  // @ts-ignore
   const { heartPieces, goldSkulltulas, softSoilLocations } = useContext(
     AppDataContext
   );
 
   const appState = useContext(AppStateContext);
 
-  const {
-    collectedHearts
-    // @ts-ignore
-  } = appState.heartPieces;
-
-  const {
-    collectedGoldSkulltulas
-    // @ts-ignore
-  } = appState.goldSkulltulas;
-
-  const {
-    collectedSoftSoilLocations
-    // @ts-ignore
-  } = appState.softSoilLocations;
+  const { collectedHearts } = appState.heartPieces;
+  const { collectedGoldSkulltulas } = appState.goldSkulltulas;
+  const { collectedSoftSoilLocations } = appState.softSoilLocations;
 
   return (
     <>

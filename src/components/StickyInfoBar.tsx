@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Container from "./layout/Container";
 
 interface Props {
-  children: ReactNode;
   headingText?: string;
 }
 
@@ -12,8 +11,6 @@ const Wrapper = styled.div`
   position: sticky;
   top: 0;
 `;
-
-const ContentWrapper = styled.div``;
 
 const Heading = styled.h2`
   display: block;
@@ -28,13 +25,10 @@ const renderHeading = (headingText?: string) => {
   return <Heading>{headingText}</Heading>;
 };
 
-const StickyInfoBar = ({ headingText, children }: Props) => {
+const StickyInfoBar = ({ headingText }: Props) => {
   return (
     <Wrapper>
-      <Container>
-        {renderHeading(headingText)}
-        <ContentWrapper>{children}</ContentWrapper>
-      </Container>
+      <Container>{renderHeading(headingText)}</Container>
     </Wrapper>
   );
 };

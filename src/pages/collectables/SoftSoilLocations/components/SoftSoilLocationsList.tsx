@@ -3,8 +3,10 @@ import styled from "styled-components";
 
 import SoftSoilLocationsListItem from "./SoftSoilLocationsListItem";
 
+import { SoftSoilLocation } from "../../../../data/types/SoftSoilLocation";
+
 interface Props {
-  softSoilLocations: SoftSoilLocationData[];
+  softSoilLocations: SoftSoilLocation[];
 }
 
 const SoftSoilLocationsListWrapper = styled.div``;

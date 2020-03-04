@@ -16,7 +16,6 @@ const BackLinkWrapper = styled.div`
 const SoftSoilLocationsPage = () => {
   const appData = useContext(AppDataContext);
 
-  // @ts-ignore
   const { softSoilLocations } = appData;
 
   return (

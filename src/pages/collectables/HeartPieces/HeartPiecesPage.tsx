@@ -16,7 +16,6 @@ const BackLinkWrapper = styled.div`
 const HeartPiecesPage = () => {
   const appData = useContext(AppDataContext);
 
-  // @ts-ignore
   const { heartPieces } = appData;
 
   return (

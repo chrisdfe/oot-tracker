@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import HeartPieceListItem from "./HeartPieceListItem";
 
+import { HeartPiece } from "../../../../data/types/HeartPiece";
+
 interface Props {
   heartPieces: HeartPiece[];
 }

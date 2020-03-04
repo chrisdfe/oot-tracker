@@ -8,8 +8,10 @@ import TitledParagraph from "../../../../components/typography/TitledParagraph";
 
 import padNumber from "../../../../utils/padNumber";
 
+import { SoftSoilLocation } from "../../../../data/types/SoftSoilLocation";
+
 export interface Props {
-  softSoilLocation: SoftSoilLocationData;
+  softSoilLocation: SoftSoilLocation;
 }
 
 const Paragraph = styled.p`
@@ -30,7 +32,6 @@ const HeartPieceListItem = ({ softSoilLocation }: Props) => {
   const {
     collectedSoftSoilLocations,
     toggleCollectedSoftSoilLocation
-    // @ts-ignore
   } = appState.softSoilLocations;
 
   const hasBeenCollected = collectedSoftSoilLocations.includes(
@@ -45,12 +46,8 @@ const HeartPieceListItem = ({ softSoilLocation }: Props) => {
       }}
       thumbnails={imageUrls}
       images={imageUrls}
-      heading={<strong>#{padNumber(softSoilLocation.number)}</strong>}
+      heading={<strong>#{padNumber(softSoilLocation.number, 2)}</strong>}
     >
-      {/*<ImageWrapper>
-            <img src={imageSrc} />
-          </ImageWrapper>*/}
-
       <TitledParagraph
         title="directions"
         paragraphs={[softSoilLocation.directions]}

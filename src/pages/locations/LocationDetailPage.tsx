@@ -24,13 +24,10 @@ import {
 // TODO - hardcode in location data instead of this
 import { getRegionFromTitle } from "./LocationsIndexPage";
 
-type Location = {
-  slug: string;
-  title: string;
-};
+import { GameLocation } from "../../data/types/GameLocation";
 
 interface LocationListItemProps {
-  location: Location;
+  location: GameLocation;
 }
 
 const Wrapper = styled.div`
@@ -86,32 +83,18 @@ const LocationDetailPage = () => {
   const appState = useContext(AppStateContext);
 
   const {
-    // @ts-ignore
     locations: allLocations,
-    // @ts-ignore
     heartPieces,
-    // @ts-ignore
     goldSkulltulas,
-    // @ts-ignore
     softSoilLocations
   } = appData;
 
-  const {
-    collectedHearts
-    // @ts-ignore
-  } = appState.heartPieces;
+  const { collectedHearts } = appState.heartPieces;
 
-  const {
-    collectedGoldSkulltulas
-    // @ts-ignore
-  } = appState.goldSkulltulas;
+  const { collectedGoldSkulltulas } = appState.goldSkulltulas;
 
-  const {
-    collectedSoftSoilLocations
-    // @ts-ignore
-  } = appState.softSoilLocations;
+  const { collectedSoftSoilLocations } = appState.softSoilLocations;
 
-  // @ts-ignore
   const currentLocation = allLocations.find(location => location.slug === slug);
 
   if (!currentLocation) return <LocationNotFound />;

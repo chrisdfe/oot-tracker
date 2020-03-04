@@ -1,27 +1,29 @@
 # TODO
 
-- Add amount of acquired heart pieces/gold skulltulas on locations index page
-- Add "has heart pieces" or "add gold skulltulas" filters to locations page
 - Clean up types + remove @ts-ignores
-- Clean up App\*\*\*\* components - put into separate subdirectory
-- Make entire header portion clickable instead of just the checkbox???
 
+- "nearby" locations?
+- Group locations on index page by proximity?
+- Add region on backend, not 'getRegionFromTitle'
+- Ability to filter locations index by region
+- Sort locations index locations by region
+
+## UI
+
+- Add amount of acquired heart pieces/gold skulltulas on locations index page
+- Make entire header portion of CollectableDetail clickable instead of just the checkbox???
+- Add "has things left to collect" filters to locations page
 - Add title for soft soil locations
-- Make checkbox look nicer
 - 'active' Navbar link
 - Sticky navbar
-- Sort locations in a way other than alphabetical?
 - create ButtonGroup component
 - Create 'Heading' and 'Paragraph' components
-- Group 'heart pieces', 'gold skulltulas', and 'soft soil locations' into 'collectables' url/page group
-
+- "everything collected in this location" indicator on index/details page
+- checkbox outline goes outside of sticky h2 on LocationDetailPage
 - Tone the region themes down on LocationIndex - smaller color indicator of the theme
 - Add 'reset everything' button, or abilities to have multiple slots?
 - Add something to home screen
 - Smarter 'scroll to top' ing - I wish it would save my scroll top on the locations index page
-- "everything collected in this location" indicator on index/details page
-- "nearby" locations?
-- Group locations on index page by proximity?
 
 ## Data
 
@@ -31,6 +33,12 @@
 - Add great fairy fountains
 - Add bottles
 - Add big poes
+- Add songs
+- Add stones/medallions
+- Add masks
+- Add "item" collectable (hookshot etc)
+- associate collectables to "required" other collectables or location
+  -Pull image stuff into a separate object, create "CollectableImage" type
 
 - Set up 'location links to' associations - e.g kokiri forest -> lost woods, hyrule field
 
@@ -57,3 +65,6 @@
 - Fix number padding - "#0100" for "100"
 - Navbar left + right sections
 - Add 'back link' component
+- Group 'heart pieces', 'gold skulltulas', and 'soft soil locations' into 'collectables' url/page group
+- Make checkbox look nicer
+- Clean up App\*\*\*\* components - put into separate subdirectory

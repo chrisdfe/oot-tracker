@@ -28,7 +28,7 @@
     },
     {
         "number": "4",
-        "location": "Castle Town",
+        "location": "Castle Town Market",
         "conditions": "Reach the Castle Market (Past)",
         "directions": "Once you enter Castle Market, enter the first building where you will find a Soldier. At the back of the room, roll into a wooden crate to get the Skulltula.",
         "fileName": "gold-skulltula-4.jpg",
@@ -46,7 +46,7 @@
     },
     {
         "number": "6",
-        "location": "Kakariko Graveyard",
+        "location": "Kakariko Village Graveyard",
         "conditions": "An Empty Bottle and Bottle Bugs (Past)",
         "directions": "In the Graveyard, there is a soft soil location on the left side. Drop some bugs from a bottle to get a Skulltula to pop out.",
         "fileName": "gold-skulltula-6.jpg",
@@ -379,7 +379,7 @@
     },
     {
         "number": "43",
-        "location": "Kakariko Graveyard",
+        "location": "Kakariko Village Graveyard",
         "conditions": "Boomerang (Past) (Night)",
         "directions": "Found on the wall at the southeast corner of the Graveyard. The Skulltula can be found at nighttime and you'll need the Boomerang to retrieve the token.",
         "fileName": "gold-skulltula-43.jpg",

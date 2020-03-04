@@ -16,6 +16,8 @@ const {
   fetchImages
 } = require("./utils");
 
+const cleanLocations = require("./cleanLocations");
+
 const SOFT_SOIL_LOCATIONS_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Soft_Soil_Locations`;
 const SOFT_SOIL_LOCATIONS_BASE_PATH = "soft-soil-locations";
 const SOFT_SOIL_LOCATIONS_JSON_FILENAME = "softSoilLocations.json";
@@ -117,10 +119,11 @@ const fetchSoftSoilLocationsImages = async data => {
 const run = async () => {
   console.log("fetching soft soil location data");
   const data = await fetchSoftSoilLocationsData();
-  await outputJSONToFile(SOFT_SOIL_LOCATIONS_JSON_FILENAME, data);
+  const cleanedData = cleanLocations(data);
+  await outputJSONToFile(SOFT_SOIL_LOCATIONS_JSON_FILENAME, cleanedData);
   await fetchSoftSoilLocationsImages(data);
-  console.log("done collecting soft soil locations.", data.length);
-  return data;
+  console.log("done collecting soft soil locations.");
+  return cleanedData;
 };
 
 module.exports = run;

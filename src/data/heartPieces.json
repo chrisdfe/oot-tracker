@@ -73,7 +73,7 @@
     },
     {
         "number": "9",
-        "location": "Market",
+        "location": "Castle Town Market",
         "conditions": "Reach Market (Past)",
         "directions": "During the night, there are lots of dogs roaming the streets. If you touch one, it will follow you until you enter a building or leave the area entirely. There is one specific dog we want, which is the white one who is hanging out by the blue market stall. It is located to the left of the exit leading back to Hyrule Field. Make it follow you, then head over to the right a bit and enter the Back Alley between the buildings. Enter the door straight ahead to your left, which is the only one open at night. Inside, you will find Mamamu Yan who is constantly raving about her \"Little Richard\" during the day. For bringing him back, she will gift you with a Piece of Heart.",
         "fileName": "heart-piece-9.jpg",
@@ -109,7 +109,7 @@
     },
     {
         "number": "13",
-        "location": "Market",
+        "location": "Castle Town Market",
         "conditions": "Acquire Bombs (Past)",
         "directions": "During the day, the Bombchu Bowling Alley is open and ready for business! The game cycles through five different prizes, in this order: Bombchu, Piece of Heart, Bombs, Bomb Bag, and a purple Rupee (50). If you mess up playing the game for the prize you want, you will have to wait for the prize to cycle around again.",
         "fileName": "heart-piece-13.jpg",
@@ -289,7 +289,7 @@
     },
     {
         "number": "33",
-        "location": "Market",
+        "location": "Castle Town Market",
         "conditions": "Lens of Truth (Child)",
         "directions": "The Treasure Chest Shop is open only at night. Enter and you can play this game for 10 Rupees a try. In each room, you are given a choice between two chests, one being a prize while the other allows you to move forward to better prizes. Each decision is a fifty-fifty chance, so your chances of getting all the way through aren't that good. Once you have acquired the Lens of Truth, you can use it during the game in order to see what is inside the chests. Pick all the Small Key chests to get to the end.",
         "fileName": "heart-piece-33.jpg",

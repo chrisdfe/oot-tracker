@@ -99,7 +99,8 @@ export const getRegionFromTitle = (title: string): RegionName => {
   if (
     title.includes("Gerudo") ||
     title.includes("Haunted Wasteland") ||
-    title.includes("Spirit")
+    title.includes("Spirit") ||
+    title.includes("Desert")
   ) {
     return "gerudo";
   }

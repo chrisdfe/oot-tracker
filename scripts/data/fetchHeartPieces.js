@@ -13,6 +13,8 @@ const {
   fetchImages
 } = require("./utils");
 
+const cleanLocations = require("./cleanLocations");
+
 const HEART_PIECES_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Heart_Pieces`;
 const HEART_IMAGES_BASE_PATH = "heart-pieces";
 const HEART_PIECES_JSON_FILENAME = "heartPieces.json";
@@ -69,10 +71,11 @@ const fetchHeartPieceImages = async data => {
 const run = async () => {
   console.log("fetching heart piece data");
   const data = await fetchHeartPieceData();
-  await outputJSONToFile(HEART_PIECES_JSON_FILENAME, data);
+  const cleanedData = cleanLocations(data);
+  await outputJSONToFile(HEART_PIECES_JSON_FILENAME, cleanedData);
   await fetchHeartPieceImages(data);
   console.log("done collecting heart pieces.");
-  return data;
+  return cleanedData;
 };
 
 module.exports = run;

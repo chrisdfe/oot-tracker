@@ -17,6 +17,8 @@ const {
   fetchImages
 } = require("./utils");
 
+const cleanLocations = require("./cleanLocations");
+
 const GOLD_SKULLTULA_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Gold_Skulltulas`;
 const GOLD_SKULLTULAS_BASE_PATH = "gold-skulltulas";
 const GOLD_SKULLTULAS_JSON_FILENAME = "goldSkulltulas.json";
@@ -95,10 +97,11 @@ const fetchGoldSkulltulaImages = async data => {
 const run = async () => {
   console.log("fetching gold skulltula data");
   const data = await fetchGoldSkulltulaData();
-  await outputJSONToFile(GOLD_SKULLTULAS_JSON_FILENAME, data);
+  const cleanedData = cleanLocations(data);
+  await outputJSONToFile(GOLD_SKULLTULAS_JSON_FILENAME, cleanedData);
   await fetchGoldSkulltulaImages(data);
   console.log("done collecting gold skulltulas.");
-  return data;
+  return cleanedData;
 };
 
 module.exports = run;

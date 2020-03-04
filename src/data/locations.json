@@ -11,9 +11,13 @@
         "softSoilLocationIds": []
     },
     {
-        "slug": "castle-town",
-        "title": "Castle Town",
-        "heartPieceIds": [],
+        "slug": "castle-town-market",
+        "title": "Castle Town Market",
+        "heartPieceIds": [
+            "9",
+            "13",
+            "33"
+        ],
         "goldSkulltulaIds": [
             "4"
         ],
@@ -225,16 +229,6 @@
         "softSoilLocationIds": []
     },
     {
-        "slug": "kakariko-graveyard",
-        "title": "Kakariko Graveyard",
-        "heartPieceIds": [],
-        "goldSkulltulaIds": [
-            "6",
-            "43"
-        ],
-        "softSoilLocationIds": []
-    },
-    {
         "slug": "kakariko-village",
         "title": "Kakariko Village",
         "heartPieceIds": [
@@ -262,7 +256,10 @@
             "18",
             "20"
         ],
-        "goldSkulltulaIds": [],
+        "goldSkulltulaIds": [
+            "6",
+            "43"
+        ],
         "softSoilLocationIds": [
             "2"
         ]
@@ -329,17 +326,6 @@
             "4",
             "5"
         ]
-    },
-    {
-        "slug": "market",
-        "title": "Market",
-        "heartPieceIds": [
-            "9",
-            "13",
-            "33"
-        ],
-        "goldSkulltulaIds": [],
-        "softSoilLocationIds": []
     },
     {
         "slug": "sacred-forest-meadow",

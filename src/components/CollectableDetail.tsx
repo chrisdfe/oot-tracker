@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
+import Checkbox from "./Checkbox";
 
 interface Props {
   heading: ReactNode;
@@ -58,24 +59,6 @@ const ThumbCheckboxWrapper = styled.div`
   img {
     margin-right: 0.5rem;
   }
-`;
-
-interface CheckboxProps {
-  isSelected: boolean;
-}
-
-const Checkbox = styled.button<CheckboxProps>`
-  border: 2px solid ${({ theme }) => theme.border.color.primary};
-  border-radius: 3px;
-  width: 1.5rem;
-  height: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  color: ${({ theme }) => theme.text.color.primary};
-  cursor: pointer;
-  font-weight: bold;
 `;
 
 interface BodyContentProps {
@@ -151,9 +134,7 @@ const CollectableDetail = ({
             onClick={() => {
               onToggleCollected();
             }}
-          >
-            {hasBeenCollected ? "x" : ""}
-          </Checkbox>
+          />
         </ThumbCheckboxWrapper>
       </HeaderBar>
 

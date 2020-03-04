@@ -72,6 +72,7 @@ export const getRegionFromTitle = (title: string): RegionName => {
     title.includes("Zora") ||
     title.includes("Jabu") ||
     title.includes("Hylia") ||
+    title.includes("Ice") ||
     title.includes("Water")
   ) {
     return "zora";
@@ -86,6 +87,23 @@ export const getRegionFromTitle = (title: string): RegionName => {
   ) {
     return "kokiri";
   }
+
+  if (
+    title.includes("Shadow") ||
+    title.includes("Grave") ||
+    title.includes("Bottom of")
+  ) {
+    return "shadow";
+  }
+
+  if (
+    title.includes("Gerudo") ||
+    title.includes("Haunted Wasteland") ||
+    title.includes("Spirit")
+  ) {
+    return "gerudo";
+  }
+
   return "default";
 };
 

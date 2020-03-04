@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { AppDataContext } from "../App/AppData";
 import { AppStateContext } from "../App/AppState";
 
+import Container from "./layout/Container";
+
 const StyledNavbar = styled.div`
   font-weight: bold;
 
@@ -48,27 +50,44 @@ const StyledNavbar = styled.div`
 `;
 
 const NavbarInner = styled.div`
-  padding: 0 1rem;
+  display: flex;
+  align-items: space-around;
+`;
+
+const NavbarLeft = styled.div``;
+const NavbarRight = styled.div`
+  margin-left: auto;
 `;
 
 const Navbar = () => {
   return (
     <StyledNavbar>
-      <NavbarInner>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/locations">Locations</Link>
-            </li>
-            <li>
-              <Link to="/collectables">Collectables</Link>
-            </li>
-            <li>
-              <Link to="/styleguide">Styleguide</Link>
-            </li>
-          </ul>
-        </nav>
-      </NavbarInner>
+      <Container>
+        <NavbarInner>
+          <NavbarLeft>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/locations">Locations</Link>
+                </li>
+                <li>
+                  <Link to="/collectables">Collectables</Link>
+                </li>
+              </ul>
+            </nav>
+          </NavbarLeft>
+
+          <NavbarRight>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/styleguide">Styleguide</Link>
+                </li>
+              </ul>
+            </nav>
+          </NavbarRight>
+        </NavbarInner>
+      </Container>
     </StyledNavbar>
   );
 };

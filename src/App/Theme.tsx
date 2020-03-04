@@ -57,7 +57,8 @@ const defaultTheme: RegionTheme = {
   background: {
     color: {
       // primary: rawColors.caper,
-      primary: "#f0f3f7",
+      // primary: "#f0f3f7",
+      primary: rawColors.white,
       // primary: "#",
       secondary: rawColors.white
     }
@@ -74,6 +75,34 @@ const defaultTheme: RegionTheme = {
       // primary: rawColors.killarney,
       primary: "#2A3854",
       secondary: hexToRGB("#2A3854", 0.2)
+      // secondary: "#c0c3c6"
+    }
+  }
+};
+
+const defaultInverseTheme: RegionTheme = {
+  background: {
+    color: {
+      // primary: rawColors.caper,
+      // primary: "#f0f3f7",
+      primary: "#2A3854",
+      // primary: "#",
+      secondary: rawColors.white
+    }
+  },
+  text: {
+    color: {
+      // primary: rawColors.killarney
+      // primary: "#353a3f"
+      // primary: "#2A3854"
+      primary: rawColors.white
+    }
+  },
+  border: {
+    color: {
+      // primary: rawColors.killarney,
+      primary: rawColors.white,
+      secondary: hexToRGB(rawColors.white, 0.2)
       // secondary: "#c0c3c6"
     }
   }
@@ -142,6 +171,68 @@ const goronTheme: RegionTheme = {
   }
 };
 
+const shadowTheme: RegionTheme = {
+  background: {
+    color: {
+      // primary: "#e6d6ea",
+      primary: "#dddce5",
+      secondary: rawColors.white
+    }
+  },
+  text: {
+    color: {
+      // primary: "#373551"
+      // primary: "#684657"
+      primary: "#635566"
+      // secondary: "#e5cccc"
+    }
+  },
+  border: {
+    color: {
+      // primary: "#373551",
+      // primary: "#684657",
+      primary: "#635566",
+      secondary: rawColors.white
+    }
+  }
+};
+
+const gerudoTheme: RegionTheme = {
+  background: {
+    color: {
+      // primary: "#ffccba",
+      // primary: "#f2c1ba",
+      // primary: "#efd2ce",
+      // primary: "#ffcca5",
+      // primary: "#ffd7ba",
+      primary: "#FBDEC6",
+      // primary: "#ffdabf",
+      // primary: "#efd2ce",
+      // primary: "#f2e6d0",
+      // primary: "#e2d1c5",
+      secondary: rawColors.white
+    }
+  },
+  text: {
+    color: {
+      // primary: "#f95a5a"
+      // primary: "#f46464",
+      // primary: "#d35656"
+      primary: "#E5555E"
+      // secondary: "#e5cccc"
+    }
+  },
+  border: {
+    color: {
+      // primary: "#f95a5a",
+      // primary: "#f46464",
+      // primary: "#d35656",
+      primary: "#E5555E",
+      secondary: rawColors.white
+    }
+  }
+};
+
 const theme = {
   rawColors,
   rawFonts,
@@ -154,9 +245,12 @@ const theme = {
   ...defaultTheme,
 
   default: defaultTheme,
+  defaultInverse: defaultInverseTheme,
   zora: zoraTheme,
   kokiri: kokiriTheme,
-  goron: goronTheme
+  goron: goronTheme,
+  shadow: shadowTheme,
+  gerudo: gerudoTheme
 
   // interactive: {
   //   color: {

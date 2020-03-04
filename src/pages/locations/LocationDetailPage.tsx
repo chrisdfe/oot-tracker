@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import Container from "../../components/layout/Container";
 import Hero from "../../components/layout/Hero";
-import FancyLink from "../../components/FancyLink";
+import BackLink from "../../components/BackLink";
 
 import { AppDataContext } from "../../App/AppData";
 import { AppStateContext } from "../../App/AppState";
@@ -57,8 +57,10 @@ const Section = styled.section`
   h2 {
     position: sticky;
     top: 0;
+    z-index: 1;
     padding: 1rem 0;
     border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
+    margin-bottom: 0;
     background-color: ${({ theme }) => theme.background.color.primary};
   }
 `;
@@ -70,12 +72,12 @@ const LocationNotFound = () => (
 );
 
 const EmptyListWrapper = styled.div`
-  padding: 1rem 0;
+  padding: 7rem 0 2rem;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
 `;
 
-const EmptyList = () => <EmptyListWrapper>♡</EmptyListWrapper>;
+const EmptyList = () => <EmptyListWrapper>⦻</EmptyListWrapper>;
 
 const LocationDetailPage = () => {
   const { slug } = useParams();
@@ -151,9 +153,7 @@ const LocationDetailPage = () => {
               <LocationCollectableSummary location={currentLocation} />
             </HeroHeadline>
 
-            <FancyLink>
-              <Link to="/locations">&#60; back</Link>
-            </FancyLink>
+            <BackLink to="/locations" />
           </Container>
         </Hero>
 

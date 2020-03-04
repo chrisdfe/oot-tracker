@@ -7,9 +7,7 @@ interface Props {
   softSoilLocations: SoftSoilLocationData[];
 }
 
-const SoftSoilLocationsListWrapper = styled.div`
-  margin: 1rem 0;
-`;
+const SoftSoilLocationsListWrapper = styled.div``;
 
 const SoftSoilLocationsList = ({ softSoilLocations }: Props) => {
   return (

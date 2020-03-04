@@ -8,7 +8,7 @@ interface Props {
 }
 
 const GoldSkulltulaListWrapper = styled.div`
-  margin: 1rem 0;
+  // margin: 1rem 0;
 `;
 
 const HeartPieceList = ({ goldSkulltulas }: Props) => {

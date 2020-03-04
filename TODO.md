@@ -6,15 +6,33 @@
 - Clean up App\*\*\*\* components - put into separate subdirectory
 - Make entire header portion clickable instead of just the checkbox???
 
-* Add title for soft soil locations
-* Make checkbox look nicer
-* 'active' Navbar link
-* Navbar left + right sections
-* Sticky navbar
-* Sort locations in a way other than alphabetical?
-* create ButtonGroup component
-* Create 'Heading' and 'Paragraph' components
-* Group 'heart pieces', 'gold skulltulas', and 'soft soil locations' into 'collectables' url/page group
+- Add title for soft soil locations
+- Make checkbox look nicer
+- 'active' Navbar link
+- Sticky navbar
+- Sort locations in a way other than alphabetical?
+- create ButtonGroup component
+- Create 'Heading' and 'Paragraph' components
+- Group 'heart pieces', 'gold skulltulas', and 'soft soil locations' into 'collectables' url/page group
+
+- Tone the region themes down on LocationIndex - smaller color indicator of the theme
+- Add 'reset everything' button, or abilities to have multiple slots?
+- Add something to home screen
+- Smarter 'scroll to top' ing - I wish it would save my scroll top on the locations index page
+- "everything collected in this location" indicator on index/details page
+- "nearby" locations?
+- Group locations on index page by proximity?
+
+## Data
+
+- Dedupe 'kakariko graveyard' and 'kakariko villiage graveyard'
+- Dedupe 'market' and 'castle town'
+
+- Add great fairy fountains
+- Add bottles
+- Add big poes
+
+- Set up 'location links to' associations - e.g kokiri forest -> lost woods, hyrule field
 
 # Done
 
@@ -37,3 +55,5 @@
 - Add "3/4" to Locations index page
 - Add soft soil images to UI
 - Fix number padding - "#0100" for "100"
+- Navbar left + right sections
+- Add 'back link' component

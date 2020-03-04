@@ -1,7 +1,13 @@
 import React, { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 
-export type RegionName = "default" | "zora" | "kokiri" | "goron";
+export type RegionName =
+  | "default"
+  | "zora"
+  | "kokiri"
+  | "goron"
+  | "shadow"
+  | "gerudo";
 
 interface Props {
   region: RegionName;
@@ -10,7 +16,7 @@ interface Props {
 
 const getTheme = (region: string, theme: any) => {
   if (theme[region]) {
-    return theme[region];
+    return { ...theme, ...theme[region] };
   }
   return theme;
 };

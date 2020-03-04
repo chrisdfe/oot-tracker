@@ -7,9 +7,7 @@ interface Props {
   heartPieces: HeartPiece[];
 }
 
-const HeartPieceListWrapper = styled.div`
-  margin: 1rem 0;
-`;
+const HeartPieceListWrapper = styled.div``;
 
 const HeartPieceList = ({ heartPieces }: Props) => {
   return (

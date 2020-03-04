@@ -1,13 +1,17 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 import { AppDataContext } from "../../../App/AppData";
 
 import Container from "../../../components/layout/Container";
-import FancyLink from "../../../components/FancyLink";
+import BackLink from "../../../components/BackLink";
 
 import GoldSkulltulaList from "./components/GoldSkulltulaList";
 import StickyInfoBar from "./components/StickyInfoBar";
+
+const BackLinkWrapper = styled.div`
+  margin: 1rem 0;
+`;
 
 const GoldSkulltulasPage = () => {
   const appData = useContext(AppDataContext);
@@ -18,9 +22,9 @@ const GoldSkulltulasPage = () => {
   return (
     <div className="GoldSkulltulasPage">
       <Container>
-        <FancyLink>
-          <Link to="/collectables">&#60; back</Link>
-        </FancyLink>
+        <BackLinkWrapper>
+          <BackLink to="/collectables" />
+        </BackLinkWrapper>
       </Container>
 
       <StickyInfoBar />

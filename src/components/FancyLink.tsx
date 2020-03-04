@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-const BORDER_HEIGHT = 4;
+const BORDER_HEIGHT = 6;
 
 const Wrapper = styled.div`
   display: inline-block;

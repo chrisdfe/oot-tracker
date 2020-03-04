@@ -42,14 +42,14 @@ const fetchHeartPieceData = async () => {
     const sourceImageUrl = box.querySelector("img").src;
     const localImageUrl = path.join(HEART_IMAGES_BASE_PATH, fileName);
 
+    const images = [{ fileName, sourceImageUrl, localImageUrl }];
+
     return {
       number,
       location: cleanedLocation,
       conditions: cleanedConditions,
       directions: cleanedDirections,
-      fileName,
-      sourceImageUrl,
-      localImageUrl
+      images
     };
   });
 
@@ -57,13 +57,19 @@ const fetchHeartPieceData = async () => {
 };
 
 const fetchHeartPieceImages = async data => {
-  const images = data.map(({ number, sourceImageUrl, localImageUrl }) => {
-    return {
-      name: `Heart piece #${number}`,
-      sourceImageUrl,
-      localImageUrl
-    };
-  });
+  const images = data.reduce((acc, heartPiece) => {
+    const heartPieceImages = heartPiece.images.map(
+      ({ sourceImageUrl, localImageUrl }) => {
+        return {
+          name: `Heart piece #${heartPiece.number}`,
+          sourceImageUrl,
+          localImageUrl
+        };
+      }
+    );
+
+    return [...acc, ...heartPieceImages];
+  }, []);
 
   return await fetchImages(HEART_IMAGES_BASE_PATH, images);
 };

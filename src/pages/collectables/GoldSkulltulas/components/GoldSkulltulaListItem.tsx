@@ -22,7 +22,7 @@ const Paragraph = styled.p`
 
 const HeartPieceListItem = ({ goldSkulltula }: Props) => {
   const imageSrc = require(`../../../../data/images/${
-    goldSkulltula.localImageUrl
+    goldSkulltula.images[0].localImageUrl
   }`);
 
   const appState = useContext(AppStateContext);

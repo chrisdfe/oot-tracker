@@ -3,9 +3,13 @@ type GoldSkulltulaData = {
   location: string;
   conditions: string;
   directions: string;
-  fileName: string;
-  sourceImageUrl: string;
-  localImageUrl: string;
+  images: [
+    {
+      fileName: string;
+      sourceImageUrl: string;
+      localImageUrl: string;
+    }
+  ];
 };
 
 type GoldSkulltulaLocations = string[];

@@ -102,15 +102,14 @@ const fetchSoftSoilLocationsData = async () => {
 
 const fetchSoftSoilLocationsImages = async data => {
   const allImages = data.reduce((acc, softSoilLocation, imageIndex) => {
-    const { images } = softSoilLocation;
-    return [
-      ...acc,
-      ...images.map(({ sourceImageUrl, localImageUrl }, childIndex) => ({
+    const softSoilLoctionImages = softSoilLocation.images.map(
+      ({ sourceImageUrl, localImageUrl }, childIndex) => ({
         name: `Soft soil location #${imageIndex + 1} img ${childIndex + 1}`,
         sourceImageUrl,
         localImageUrl
-      }))
-    ];
+      })
+    );
+    return [...acc, ...softSoilLoctionImages];
   }, []);
 
   return await fetchImages(SOFT_SOIL_LOCATIONS_BASE_PATH, allImages);

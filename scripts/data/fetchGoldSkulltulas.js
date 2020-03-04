@@ -46,14 +46,14 @@ const fetchGoldSkulltulaData = async () => {
     const sourceImageUrl = box.querySelector("img").src;
     const localImageUrl = path.join(GOLD_SKULLTULAS_BASE_PATH, fileName);
 
+    const images = [{ fileName, sourceImageUrl, localImageUrl }];
+
     return {
       number,
       location: cleanedLocation,
       conditions: cleanedConditions,
       directions: cleanedDirections,
-      fileName,
-      sourceImageUrl,
-      localImageUrl
+      images
     };
   });
 
@@ -62,14 +62,21 @@ const fetchGoldSkulltulaData = async () => {
 
 const fetchGoldSkulltulaImages = async data => {
   console.log("fetching gold skulltula images");
+  const images = data.reduce((acc, goldSkulltula) => {
+    const heartPieceImages = goldSkulltula.images.map(
+      ({ sourceImageUrl, localImageUrl }) => {
+        return {
+          name: `Gold Skulltula #${goldSkulltula.number}`,
+          sourceImageUrl,
+          localImageUrl
+        };
+      }
+    );
 
-  const images = data.map(({ number, sourceImageUrl, localImageUrl }) => ({
-    name: `Gold Skulltula #${number}`,
-    sourceImageUrl,
-    localImageUrl
-  }));
+    return [...acc, ...heartPieceImages];
+  }, []);
 
-  await fetchImages(path.join(IMAGES_PATH, GOLD_SKULLTULAS_BASE_PATH), images);
+  await fetchImages(GOLD_SKULLTULAS_BASE_PATH, images);
 };
 
 // const getRewards = async document => {

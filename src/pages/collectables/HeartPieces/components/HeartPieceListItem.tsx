@@ -22,7 +22,7 @@ const Paragraph = styled.p`
 
 const HeartPieceListItem = ({ heartPiece }: Props) => {
   const imageSrc = require(`../../../../data/images/${
-    heartPiece.localImageUrl
+    heartPiece.images[0].localImageUrl
   }`);
 
   const appState = useContext(AppStateContext);

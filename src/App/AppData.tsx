@@ -1,9 +1,9 @@
 import React, { ReactNode, createContext } from "react";
 
-import heartPieces from "../data/heartPieces.json";
-import goldSkulltulas from "../data/goldSkulltulas.json";
-import locations from "../data/locations.json";
-import softSoilLocations from "../data/softSoilLocations.json";
+import heartPieces from "../data/build/heartPieces.json";
+import goldSkulltulas from "../data/build/goldSkulltulas.json";
+import locations from "../data/build/locations.json";
+import softSoilLocations from "../data/build/softSoilLocations.json";
 
 export const AppDataContext = createContext({});
 

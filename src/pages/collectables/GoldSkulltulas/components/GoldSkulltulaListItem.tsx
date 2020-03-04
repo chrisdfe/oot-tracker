@@ -21,7 +21,7 @@ const Paragraph = styled.p`
 `;
 
 const HeartPieceListItem = ({ goldSkulltula }: Props) => {
-  const imageSrc = require(`../../../../data/images/${
+  const imageSrc = require(`../../../../images/build/${
     goldSkulltula.images[0].localImageUrl
   }`);
 

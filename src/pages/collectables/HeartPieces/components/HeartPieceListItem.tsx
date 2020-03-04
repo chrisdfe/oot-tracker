@@ -21,7 +21,7 @@ const Paragraph = styled.p`
 `;
 
 const HeartPieceListItem = ({ heartPiece }: Props) => {
-  const imageSrc = require(`../../../../data/images/${
+  const imageSrc = require(`../../../../images/build/${
     heartPiece.images[0].localImageUrl
   }`);
 

@@ -8,8 +8,8 @@ const SCRIPTS_PATH = path.join(PROJECT_ROOT_PATH, "scripts");
 const CACHE_PATH = path.join(SCRIPTS_PATH, ".cache");
 
 const SOURCE_PATH = path.join(PROJECT_ROOT_PATH, "src");
-const DATA_PATH = path.join(SOURCE_PATH, "data");
-const IMAGES_PATH = path.join(DATA_PATH, "images");
+const DATA_PATH = path.join(SOURCE_PATH, "data", "build");
+const IMAGES_PATH = path.join(SOURCE_PATH, "images", "build");
 
 module.exports = {
   ZELDA_DUNGEON_BASE_URL,

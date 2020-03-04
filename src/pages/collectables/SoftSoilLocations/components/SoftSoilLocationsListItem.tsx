@@ -22,7 +22,7 @@ const Paragraph = styled.p`
 
 const HeartPieceListItem = ({ softSoilLocation }: Props) => {
   const imageUrls = softSoilLocation.images.map(({ localImageUrl }) =>
-    require(`../../../../data/images/${localImageUrl}`)
+    require(`../../../../images/build/${localImageUrl}`)
   );
 
   const appState = useContext(AppStateContext);

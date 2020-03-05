@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 
 import { AppStateContext } from "../../../../App/AppState";
 
@@ -13,14 +12,6 @@ import { SoftSoilLocation } from "../../../../data/types/SoftSoilLocation";
 export interface Props {
   softSoilLocation: SoftSoilLocation;
 }
-
-const Paragraph = styled.p`
-  margin-bottom: 1rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
 
 const HeartPieceListItem = ({ softSoilLocation }: Props) => {
   const imageUrls = softSoilLocation.images.map(({ localImageUrl }) =>

@@ -11,10 +11,7 @@ const SoftSoilLocationsStickyInfoBar = () => {
 
   const { softSoilLocations } = appData;
 
-  const {
-    collectedSoftSoilLocations,
-    setCollectedSoftSoilLocations
-  } = appState.softSoilLocations;
+  const { collectedSoftSoilLocations } = appState.softSoilLocations;
 
   return (
     <StickyInfoBar

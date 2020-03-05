@@ -1,9 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-import { AppDataContext } from "../App/AppData";
-import { AppStateContext } from "../App/AppState";
 
 import Container from "./layout/Container";
 

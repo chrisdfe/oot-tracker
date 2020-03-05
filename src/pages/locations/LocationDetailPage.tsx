@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 import Container from "../../components/layout/Container";
@@ -8,7 +8,7 @@ import BackLink from "../../components/BackLink";
 
 import { AppDataContext } from "../../App/AppData";
 import { AppStateContext } from "../../App/AppState";
-import ThemeRegion, { RegionName } from "../../App/ThemeRegion";
+import ThemeRegion from "../../App/ThemeRegion";
 
 import HeartPieceList from "../../pages/collectables/HeartPieces/components/HeartPieceList";
 import GoldSkulltulaList from "../../pages/collectables/GoldSkulltulas/components/GoldSkulltulaList";

@@ -1,4 +1,4 @@
-import React, { useContext, ReactNode } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 
 import { AppDataContext } from "../../../App/AppData";
@@ -45,52 +45,22 @@ const LocationCollectableSummary = ({ location }: Props) => {
   const appState = useContext(AppStateContext);
   const appData = useContext(AppDataContext);
 
-  const {
-    // @ts-ignore
-    heartPieces,
-    // @ts-ignore
-    goldSkulltulas,
-    // @ts-ignore
-    softSoilLocations
-  } = appData;
+  const { heartPieces, goldSkulltulas, softSoilLocations } = appData;
 
-  const {
-    collectedHearts
-    // @ts-ignore
-  } = appState.heartPieces;
+  const { collectedHearts } = appState.heartPieces;
+  const { collectedGoldSkulltulas } = appState.goldSkulltulas;
+  const { collectedSoftSoilLocations } = appState.softSoilLocations;
 
-  const {
-    collectedGoldSkulltulas
-    // @ts-ignore
-  } = appState.goldSkulltulas;
-
-  const {
-    collectedSoftSoilLocations
-    // @ts-ignore
-  } = appState.softSoilLocations;
-
-  const locationHeartPieces = filterCollectablesByLocation(
-    heartPieces,
-    location
-  );
   const collectedLocationHeartPieces = filterCollectablesByLocation(
     getCollectablesByIds(heartPieces, collectedHearts),
     location
   );
 
-  const locationGoldSkulltulas = filterCollectablesByLocation(
-    goldSkulltulas,
-    location
-  );
   const collectedLocationGoldSkulltulas = filterCollectablesByLocation(
     getCollectablesByIds(goldSkulltulas, collectedGoldSkulltulas),
     location
   );
 
-  const locationSoftSoilLocations = filterCollectablesByLocation(
-    softSoilLocations,
-    location
-  );
   const collectedLocationSoftSoilLocations = filterCollectablesByLocation(
     getCollectablesByIds(softSoilLocations, collectedSoftSoilLocations),
     location
@@ -98,7 +68,6 @@ const LocationCollectableSummary = ({ location }: Props) => {
 
   return (
     <Summary>
-      {/*@ts-ignore*/}
       <SummaryForCollectable>
         heart pieces:&nbsp;
         <span>
@@ -107,7 +76,6 @@ const LocationCollectableSummary = ({ location }: Props) => {
       </SummaryForCollectable>
       <SummaryForCollectable>
         gold skulltulas:&nbsp;
-        {/* @ts-ignore */}
         <span>
           {collectedLocationGoldSkulltulas.length}/
           {location.goldSkulltulaIds.length}
@@ -115,7 +83,6 @@ const LocationCollectableSummary = ({ location }: Props) => {
       </SummaryForCollectable>
       <SummaryForCollectable>
         soft soil locations:&nbsp;
-        {/* @ts-ignore */}
         <span>
           {collectedLocationSoftSoilLocations.length}/
           {location.softSoilLocationIds.length}

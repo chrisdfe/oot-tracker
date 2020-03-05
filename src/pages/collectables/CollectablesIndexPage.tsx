@@ -8,8 +8,6 @@ import { AppStateContext } from "../../App/AppState";
 import Hero from "../../components/layout/Hero";
 import Container from "../../components/layout/Container";
 
-import ThemeRegion, { RegionName } from "../../App/ThemeRegion";
-
 const CollectableListItemWrapper = styled.div`
   margin-bottom: 2rem;
   background-color: ${({ theme }) => theme.background.color.primary};

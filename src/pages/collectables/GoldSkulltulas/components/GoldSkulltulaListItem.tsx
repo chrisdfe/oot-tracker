@@ -1,26 +1,17 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 
 import { AppStateContext } from "../../../../App/AppState";
 
 import CollectableDetail from "../../../../components/CollectableDetail";
 import TitledParagraph from "../../../../components/typography/TitledParagraph";
 
-import { GoldSkulltula } from "../../../../data/types/GoldSkulltula";
-
 import padNumber from "../../../../utils/padNumber";
+
+import { GoldSkulltula } from "../../../../data/types/GoldSkulltula";
 
 export interface Props {
   goldSkulltula: GoldSkulltula;
 }
-
-const Paragraph = styled.p`
-  margin-bottom: 1rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
 
 const HeartPieceListItem = ({ goldSkulltula }: Props) => {
   const imageSrc = require(`../../../../images/build/${

@@ -11,7 +11,7 @@ const HeartPiecesStickyInfoBar = () => {
 
   const { heartPieces } = appData;
 
-  const { collectedHearts, setCollectedHearts } = appState.heartPieces;
+  const { collectedHearts } = appState.heartPieces;
 
   return (
     <StickyInfoBar

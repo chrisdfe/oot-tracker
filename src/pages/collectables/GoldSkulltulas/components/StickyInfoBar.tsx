@@ -11,10 +11,7 @@ const GoldSkulltulaStickyInfoBar = () => {
 
   const { goldSkulltulas } = appData;
 
-  const {
-    collectedGoldSkulltulas,
-    setCollectedGoldSkulltulas
-  } = appState.goldSkulltulas;
+  const { collectedGoldSkulltulas } = appState.goldSkulltulas;
 
   return (
     <StickyInfoBar

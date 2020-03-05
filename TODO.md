@@ -22,6 +22,7 @@
 - Add 'reset everything' button, or abilities to have multiple slots?
 - Add something to home screen
 - Smarter 'scroll to top' ing - I wish it would save my scroll top on the locations index page
+- Use 'text.color.interactive' instead of 'text.color.secondary'
 
 ## Data
 

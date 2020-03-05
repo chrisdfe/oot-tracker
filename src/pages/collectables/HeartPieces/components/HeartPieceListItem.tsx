@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 
 import { AppStateContext } from "../../../../App/AppState";
 
@@ -13,14 +12,6 @@ import { HeartPiece } from "../../../../data/types/HeartPiece";
 export interface Props {
   heartPiece: HeartPiece;
 }
-
-const Paragraph = styled.p`
-  margin-bottom: 1rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
 
 const HeartPieceListItem = ({ heartPiece }: Props) => {
   const imageSrc = require(`../../../../images/build/${

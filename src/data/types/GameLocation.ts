@@ -1,15 +1,7 @@
-export type RegionName =
-  | "default"
-  | "zora"
-  | "kokiri"
-  | "goron"
-  | "shadow"
-  | "gerudo";
-
 export type GameLocation = {
   slug: string;
   title: string;
-  region: RegionName;
+  regionId: string;
   heartPieceIds: string[];
   goldSkulltulaIds: string[];
   softSoilLocationIds: string[];

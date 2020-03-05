@@ -9,7 +9,7 @@
       "81"
     ],
     "softSoilLocationIds": [],
-    "regionId": 5
+    "regionId": "5"
   },
   {
     "slug": "castle-town-market",
@@ -23,7 +23,7 @@
       "4"
     ],
     "softSoilLocationIds": [],
-    "regionId": 1
+    "regionId": "1"
   },
   {
     "slug": "death-mountain-crater",
@@ -39,7 +39,7 @@
     "softSoilLocationIds": [
       "9"
     ],
-    "regionId": 3
+    "regionId": "3"
   },
   {
     "slug": "death-mountain-trail",
@@ -56,7 +56,7 @@
     "softSoilLocationIds": [
       "6"
     ],
-    "regionId": 3
+    "regionId": "3"
   },
   {
     "slug": "desert-colossus",
@@ -72,7 +72,7 @@
     "softSoilLocationIds": [
       "10"
     ],
-    "regionId": 6
+    "regionId": "6"
   },
   {
     "slug": "dodongos-cavern",
@@ -86,7 +86,7 @@
       "55"
     ],
     "softSoilLocationIds": [],
-    "regionId": 3
+    "regionId": "3"
   },
   {
     "slug": "fire-temple",
@@ -100,7 +100,7 @@
       "62"
     ],
     "softSoilLocationIds": [],
-    "regionId": 3
+    "regionId": "3"
   },
   {
     "slug": "forest-temple",
@@ -114,7 +114,7 @@
       "54"
     ],
     "softSoilLocationIds": [],
-    "regionId": 2
+    "regionId": "2"
   },
   {
     "slug": "ganons-castle",
@@ -124,7 +124,7 @@
       "46"
     ],
     "softSoilLocationIds": [],
-    "regionId": 1
+    "regionId": "1"
   },
   {
     "slug": "gerudo-valley",
@@ -142,7 +142,7 @@
     "softSoilLocationIds": [
       "8"
     ],
-    "regionId": 6
+    "regionId": "6"
   },
   {
     "slug": "gerudos-fortress",
@@ -156,7 +156,7 @@
       "90"
     ],
     "softSoilLocationIds": [],
-    "regionId": 6
+    "regionId": "6"
   },
   {
     "slug": "goron-city",
@@ -169,7 +169,7 @@
       "56"
     ],
     "softSoilLocationIds": [],
-    "regionId": 3
+    "regionId": "3"
   },
   {
     "slug": "haunted-wasteland",
@@ -179,7 +179,7 @@
       "91"
     ],
     "softSoilLocationIds": [],
-    "regionId": 6
+    "regionId": "6"
   },
   {
     "slug": "hyrule-castle",
@@ -190,7 +190,7 @@
       "78"
     ],
     "softSoilLocationIds": [],
-    "regionId": 1
+    "regionId": "1"
   },
   {
     "slug": "hyrule-field",
@@ -204,7 +204,7 @@
       "42"
     ],
     "softSoilLocationIds": [],
-    "regionId": 1
+    "regionId": "1"
   },
   {
     "slug": "ice-cavern",
@@ -218,7 +218,7 @@
       "70"
     ],
     "softSoilLocationIds": [],
-    "regionId": 4
+    "regionId": "4"
   },
   {
     "slug": "inside-jabu-jabus-belly",
@@ -231,7 +231,7 @@
       "34"
     ],
     "softSoilLocationIds": [],
-    "regionId": 4
+    "regionId": "4"
   },
   {
     "slug": "inside-the-deku-tree",
@@ -244,7 +244,7 @@
       "36"
     ],
     "softSoilLocationIds": [],
-    "regionId": 2
+    "regionId": "2"
   },
   {
     "slug": "kakariko-village",
@@ -264,7 +264,7 @@
       "45"
     ],
     "softSoilLocationIds": [],
-    "regionId": 1
+    "regionId": "1"
   },
   {
     "slug": "kakariko-village-graveyard",
@@ -282,7 +282,7 @@
     "softSoilLocationIds": [
       "2"
     ],
-    "regionId": 1
+    "regionId": "1"
   },
   {
     "slug": "kokiri-forest",
@@ -296,7 +296,7 @@
     "softSoilLocationIds": [
       "3"
     ],
-    "regionId": 2
+    "regionId": "2"
   },
   {
     "slug": "lake-hylia",
@@ -316,7 +316,7 @@
     "softSoilLocationIds": [
       "7"
     ],
-    "regionId": 4
+    "regionId": "4"
   },
   {
     "slug": "lon-lon-ranch",
@@ -331,7 +331,7 @@
       "38"
     ],
     "softSoilLocationIds": [],
-    "regionId": 1
+    "regionId": "1"
   },
   {
     "slug": "lost-woods",
@@ -349,7 +349,7 @@
       "4",
       "5"
     ],
-    "regionId": 2
+    "regionId": "2"
   },
   {
     "slug": "sacred-forest-meadow",
@@ -359,7 +359,7 @@
       "49"
     ],
     "softSoilLocationIds": [],
-    "regionId": 2
+    "regionId": "2"
   },
   {
     "slug": "shadow-temple",
@@ -373,7 +373,7 @@
       "86"
     ],
     "softSoilLocationIds": [],
-    "regionId": 5
+    "regionId": "5"
   },
   {
     "slug": "spirit-temple",
@@ -387,7 +387,7 @@
       "99"
     ],
     "softSoilLocationIds": [],
-    "regionId": 6
+    "regionId": "6"
   },
   {
     "slug": "water-temple",
@@ -401,7 +401,7 @@
       "76"
     ],
     "softSoilLocationIds": [],
-    "regionId": 4
+    "regionId": "4"
   },
   {
     "slug": "zoras-domain",
@@ -413,7 +413,7 @@
       "67"
     ],
     "softSoilLocationIds": [],
-    "regionId": 4
+    "regionId": "4"
   },
   {
     "slug": "zoras-fountain",
@@ -428,7 +428,7 @@
       "100"
     ],
     "softSoilLocationIds": [],
-    "regionId": 4
+    "regionId": "4"
   },
   {
     "slug": "zoras-river",
@@ -448,6 +448,6 @@
     "softSoilLocationIds": [
       "1"
     ],
-    "regionId": 4
+    "regionId": "4"
   }
 ]

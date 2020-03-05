@@ -97,17 +97,32 @@ const StyleguidePage = () => {
 
       <StyleguideSection title="Theme regions">
         <h3>Default</h3>
-        <ThemeRegion region="default">
-          <RegionTestContent />
-        </ThemeRegion>
-
-        <h3>Zora</h3>
-        <ThemeRegion region="zora">
+        <ThemeRegion regionSlug="default">
           <RegionTestContent />
         </ThemeRegion>
 
         <h3>Kokiri</h3>
-        <ThemeRegion region="kokiri">
+        <ThemeRegion regionSlug="kokiri">
+          <RegionTestContent />
+        </ThemeRegion>
+
+        <h3>Goron</h3>
+        <ThemeRegion regionSlug="goron">
+          <RegionTestContent />
+        </ThemeRegion>
+
+        <h3>Zora</h3>
+        <ThemeRegion regionSlug="zora">
+          <RegionTestContent />
+        </ThemeRegion>
+
+        <h3>Shadow</h3>
+        <ThemeRegion regionSlug="shadow">
+          <RegionTestContent />
+        </ThemeRegion>
+
+        <h3>Gerudo</h3>
+        <ThemeRegion regionSlug="gerudo">
           <RegionTestContent />
         </ThemeRegion>
       </StyleguideSection>

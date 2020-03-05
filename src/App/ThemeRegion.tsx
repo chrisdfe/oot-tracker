@@ -1,24 +1,23 @@
 import React, { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 import { AppTheme } from "./Theme";
-import { RegionName } from "../data/types/GameLocation";
 
 interface Props {
-  region: RegionName;
+  regionSlug: string;
   children: ReactNode;
 }
 
-const getTheme = (region: string, theme: any): AppTheme => {
-  const matchingRegion = theme.regions[region];
+const getTheme = (regionSlug: string, theme: any): AppTheme => {
+  const matchingRegion = theme.regions[regionSlug];
   if (matchingRegion) {
     return { ...theme, ...matchingRegion };
   }
   return theme;
 };
 
-const ThemeRegion = ({ region, children }: Props) => {
+const ThemeRegion = ({ regionSlug, children }: Props) => {
   return (
-    <ThemeProvider theme={(theme: AppTheme) => getTheme(region, theme)}>
+    <ThemeProvider theme={(theme: AppTheme) => getTheme(regionSlug, theme)}>
       {children}
     </ThemeProvider>
   );

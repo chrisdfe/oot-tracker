@@ -2,7 +2,7 @@ const { outputJSONToFile } = require("../utils");
 
 const regions = ["Default", "Kokiri", "Goron", "Zora", "Shadow", "Gerudo"].map(
   (title, index) => ({
-    id: index + 1,
+    id: `${index + 1}`,
     title,
     slug: title.toLowerCase()
   })

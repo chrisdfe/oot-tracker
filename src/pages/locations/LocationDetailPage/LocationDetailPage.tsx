@@ -2,26 +2,29 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import Container from "../../components/layout/Container";
-import Hero from "../../components/layout/Hero";
-import BackLink from "../../components/BackLink";
+import Container from "../../../components/layout/Container";
+import Hero from "../../../components/layout/Hero";
+import BackLink from "../../../components/BackLink";
 
-import { AppDataContext } from "../../App/AppData";
-import { AppStateContext } from "../../App/AppState";
-import ThemeRegion from "../../App/ThemeRegion";
+import { AppDataContext } from "../../../App/AppData";
+import { AppStateContext } from "../../../App/AppState";
 
-import HeartPieceList from "../../pages/collectables/HeartPieces/components/HeartPieceList";
-import GoldSkulltulaList from "../../pages/collectables/GoldSkulltulas/components/GoldSkulltulaList";
-import SoftSoilLocationsList from "../../pages/collectables/SoftSoilLocations/components/SoftSoilLocationsList";
+import ThemeRegion from "../../../App/ThemeRegion";
 
-import LocationCollectableSummary from "./components/LocationCollectableSummary";
+import HeartPieceList from "../../../pages/collectables/HeartPieces/components/HeartPieceList";
+import GoldSkulltulaList from "../../../pages/collectables/GoldSkulltulas/components/GoldSkulltulaList";
+import SoftSoilLocationsList from "../../../pages/collectables/SoftSoilLocations/components/SoftSoilLocationsList";
+
+import LocationCollectableSummary from "../components/LocationCollectableSummary";
 
 import {
   filterCollectablesByLocation,
   getCollectablesByIds
-} from "../../utils/appState";
+} from "../../../utils/appState";
 
-import { GameLocation } from "../../data/types/GameLocation";
+import { getRegionById } from "../../../data/selectors/regions";
+
+import { GameLocation } from "../../../data/types/GameLocation";
 
 interface LocationListItemProps {
   location: GameLocation;
@@ -46,15 +49,13 @@ const HeroHeadline = styled.div`
 `;
 
 const Section = styled.section`
-  padding-bottom: 4rem;
-
   h2 {
     position: sticky;
     top: 0;
     z-index: 1;
     padding: 1rem 0;
     border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
-    margin-bottom: 0;
+    margin: 0;
     background-color: ${({ theme }) => theme.background.color.primary};
   }
 `;
@@ -66,7 +67,7 @@ const LocationNotFound = () => (
 );
 
 const EmptyListWrapper = styled.div`
-  padding: 7rem 0 2rem;
+  padding: 6rem 0;
   text-align: center;
   font-size: 2rem;
 `;
@@ -123,8 +124,11 @@ const LocationDetailPage = () => {
     currentLocation
   );
 
+  const themeRegion = getRegionById(appData, currentLocation.regionId);
+  const regionSlug = themeRegion ? themeRegion.slug : "";
+
   return (
-    <ThemeRegion region={currentLocation.region}>
+    <ThemeRegion regionSlug={regionSlug}>
       <Wrapper>
         <Hero>
           <Container>

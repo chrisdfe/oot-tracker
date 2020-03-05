@@ -4,11 +4,13 @@ import heartPieces from "../data/build/heartPieces.json";
 import goldSkulltulas from "../data/build/goldSkulltulas.json";
 import locations from "../data/build/locations.json";
 import softSoilLocations from "../data/build/softSoilLocations.json";
+import regions from "../data/build/regions.json";
 
 import { HeartPiece } from "../data/types/HeartPiece";
 import { GoldSkulltula } from "../data/types/GoldSkulltula";
 import { SoftSoilLocation } from "../data/types/SoftSoilLocation";
 import { GameLocation } from "../data/types/GameLocation";
+import { Region } from "../data/types/Region";
 
 interface Props {
   children: ReactNode;
@@ -19,13 +21,15 @@ export type AppData = {
   goldSkulltulas: GoldSkulltula[];
   softSoilLocations: SoftSoilLocation[];
   locations: GameLocation[];
+  regions: Region[];
 };
 
 const data: AppData = {
   heartPieces,
   goldSkulltulas,
-  locations: locations.map(location => location as GameLocation),
-  softSoilLocations
+  locations,
+  softSoilLocations,
+  regions
 };
 
 export const AppDataContext = createContext<AppData>(data);

@@ -1,10 +1,6 @@
 # TODO
 
 - "nearby" locations?
-- Group locations on index page by proximity?
-- Add region on backend, not 'getRegionFromTitle'
-- Ability to filter locations index by region
-- Sort locations index locations by region
 
 ## UI
 
@@ -26,8 +22,7 @@
 
 ## Data
 
-- Dedupe 'kakariko graveyard' and 'kakariko villiage graveyard'
-- Dedupe 'market' and 'castle town'
+- Separate data/state from context provider/consumers
 
 - Add great fairy fountains
 - Add bottles
@@ -68,3 +63,9 @@
 - Make checkbox look nicer
 - Clean up App\*\*\*\* components - put into separate subdirectory
 - Clean up types + remove @ts-ignores
+- Dedupe 'kakariko graveyard' and 'kakariko villiage graveyard'
+- Dedupe 'market' and 'castle town'
+- Group locations on index page by proximity?
+- Add region on backend, not 'getRegionFromTitle'
+- Ability to filter locations index by region
+- Sort locations index locations by region

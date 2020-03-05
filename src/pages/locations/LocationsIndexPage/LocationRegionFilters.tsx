@@ -1,12 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
 
-import { GameLocation } from "../../../data/types/GameLocation";
-import LocationCollectableSummary from "../components/LocationCollectableSummary";
 import ThemeRegion from "../../../App/ThemeRegion";
-
-import { AppDataContext } from "../../../App/AppData";
 
 import { Region } from "../../../data/types/Region";
 
@@ -19,7 +14,7 @@ interface Props {
 }
 
 const Wrapper = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   h4 {
     color: ${({ theme }) => theme.text.color.primary};

@@ -1,4 +1,5 @@
-import React, { useContext, useState, useCallback } from "react";
+import React, { useContext, useCallback, useMemo } from "react";
+
 import groupBy from "lodash-es/groupBy";
 
 import Container from "../../../components/layout/Container";
@@ -8,28 +9,50 @@ import { AppDataContext } from "../../../App/AppData";
 
 import { getRegionById } from "../../../data/selectors/regions";
 
+import usePersistedState from "../../../utils/usePersistedState";
+
 import LocationRegionFilters from "./LocationRegionFilters";
 import LocationListItem from "./LocationListItem";
+import ListTitle from "./ListTitle";
 
 const LocationsIndexPage = () => {
   const appData = useContext(AppDataContext);
   const { locations, regions } = appData;
 
-  const [currentRegionFilterId, setCurrentRegionFilterId] = useState("");
+  const [currentRegionFilterId, setCurrentRegionFilterId] = usePersistedState(
+    "oot-tracker.region-filter-id",
+    ""
+  );
 
-  const groupedLocations = groupBy(locations, "regionId");
+  const currentRegion = useMemo(
+    () => regions.find(region => region.id === currentRegionFilterId),
+    [regions, currentRegionFilterId]
+  );
 
-  const filteredLocations = currentRegionFilterId
-    ? { [currentRegionFilterId]: groupedLocations[currentRegionFilterId] }
-    : groupedLocations;
+  const groupedLocations = useMemo(() => groupBy(locations, "regionId"), [
+    locations
+  ]);
 
-  const onRegionSelect = useCallback(region => {
-    if (currentRegionFilterId && currentRegionFilterId === region.id) {
-      setCurrentRegionFilterId("");
-    } else {
-      setCurrentRegionFilterId(region.id);
+  const filteredLocations = useMemo(() => {
+    if (currentRegionFilterId) {
+      return {
+        [currentRegionFilterId]: groupedLocations[currentRegionFilterId]
+      };
     }
-  }, []);
+
+    return groupedLocations;
+  }, [currentRegionFilterId, groupedLocations]);
+
+  const onRegionSelect = useCallback(
+    region => {
+      if (currentRegionFilterId && currentRegionFilterId === region.id) {
+        setCurrentRegionFilterId("");
+      } else {
+        setCurrentRegionFilterId(region.id);
+      }
+    },
+    [currentRegionFilterId, setCurrentRegionFilterId]
+  );
 
   return (
     <>
@@ -44,12 +67,15 @@ const LocationsIndexPage = () => {
           onRegionSelect={onRegionSelect}
           currentRegionFilterId={currentRegionFilterId}
         />
+
+        <ListTitle region={currentRegion} />
+
         {Object.keys(filteredLocations).map(regionId => {
           const locations = filteredLocations[regionId];
           const themeRegion = getRegionById(appData, regionId);
           const regionSlug = themeRegion ? themeRegion.slug : "";
           return (
-            <>
+            <div key={regionId}>
               {locations.map(location => (
                 <LocationListItem
                   key={location.slug}
@@ -57,7 +83,7 @@ const LocationsIndexPage = () => {
                   regionSlug={regionSlug}
                 />
               ))}
-            </>
+            </div>
           );
         })}
       </Container>

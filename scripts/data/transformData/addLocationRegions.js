@@ -1,12 +1,17 @@
 const { outputJSONToFile } = require("../utils");
 
-const regions = ["Default", "Kokiri", "Goron", "Zora", "Shadow", "Gerudo"].map(
-  (title, index) => ({
-    id: `${index + 1}`,
-    title,
-    slug: title.toLowerCase()
-  })
-);
+const regions = [
+  "Overworld",
+  "Kokiri",
+  "Goron",
+  "Zora",
+  "Shadow",
+  "Gerudo"
+].map((title, index) => ({
+  id: `${index + 1}`,
+  title,
+  slug: title.toLowerCase()
+}));
 
 const getRegionIdFromTitle = title => {
   const region = regions.find(r => r.title === title);
@@ -33,7 +38,7 @@ const getRegionTitleFromLocation = ({ title }) => {
     return "Zora";
   }
 
-  if (titleIncludes(title, ["Shadow", "Shadow", "Bottom of"])) {
+  if (titleIncludes(title, ["Shadow", "Graveyard", "Bottom of"])) {
     return "Shadow";
   }
 
@@ -43,7 +48,7 @@ const getRegionTitleFromLocation = ({ title }) => {
     return "Gerudo";
   }
 
-  return "Default";
+  return "Overworld";
 };
 
 const run = async payload => {

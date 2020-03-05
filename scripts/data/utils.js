@@ -7,7 +7,7 @@ const outputJSONToFile = async (outputPath, data) => {
   await fs.mkdirp(DATA_PATH);
   await fs.writeFile(
     path.join(DATA_PATH, outputPath),
-    JSON.stringify(data, null, 4)
+    JSON.stringify(data, null, 2)
   );
 };
 

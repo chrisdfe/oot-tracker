@@ -1,10 +1,13 @@
 const extractLocations = require("./transformData/extractLocations");
+const addLocationRegions = require("./transformData/addLocationRegions");
 
 const transformData = async payload => {
   console.log("Transforming data");
-  const modifiedPayload = await extractLocations(payload);
-  console.log("done.");
-  return modifiedPayload;
+  const transformedPayload = await Promise.resolve()
+    .then(() => extractLocations(payload))
+    .then(payload => addLocationRegions(payload));
+
+  return transformedPayload;
 };
 
 module.exports = transformData;

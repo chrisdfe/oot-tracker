@@ -8,7 +8,7 @@ import Hero from "../../components/layout/Hero";
 import LocationCollectableSummary from "./components/LocationCollectableSummary";
 
 import { AppDataContext } from "../../App/AppData";
-import ThemeRegion, { RegionName } from "../../App/ThemeRegion";
+import ThemeRegion from "../../App/ThemeRegion";
 
 import { GameLocation } from "../../data/types/GameLocation";
 
@@ -49,59 +49,8 @@ const LocationListItemWrapper = styled.div`
   }
 `;
 
-// TODO - hardcode in location data instead of this
-export const getRegionFromTitle = (title: string): RegionName => {
-  if (
-    title.includes("Goron") ||
-    title.includes("Death") ||
-    title.includes("Dodongo") ||
-    title.includes("Fire")
-  ) {
-    return "goron";
-  }
-
-  if (
-    title.includes("Zora") ||
-    title.includes("Jabu") ||
-    title.includes("Hylia") ||
-    title.includes("Ice") ||
-    title.includes("Water")
-  ) {
-    return "zora";
-  }
-
-  if (
-    title.includes("Kokiri") ||
-    title.includes("Lost Woods") ||
-    title.includes("Sacred") ||
-    title.includes("Forest") ||
-    title.includes("Deku")
-  ) {
-    return "kokiri";
-  }
-
-  if (
-    title.includes("Shadow") ||
-    title.includes("Grave") ||
-    title.includes("Bottom of")
-  ) {
-    return "shadow";
-  }
-
-  if (
-    title.includes("Gerudo") ||
-    title.includes("Haunted Wasteland") ||
-    title.includes("Spirit") ||
-    title.includes("Desert")
-  ) {
-    return "gerudo";
-  }
-
-  return "default";
-};
-
 const LocationListItem = ({ location }: LocationListItemProps) => (
-  <ThemeRegion region={getRegionFromTitle(location.title)}>
+  <ThemeRegion region={location.region}>
     <LocationListItemWrapper>
       <Link to={`/locations/${location.slug}`}>
         <h2>{location.title}</h2>

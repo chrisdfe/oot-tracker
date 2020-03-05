@@ -1,20 +1,14 @@
 import React, { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
-
-export type RegionName =
-  | "default"
-  | "zora"
-  | "kokiri"
-  | "goron"
-  | "shadow"
-  | "gerudo";
+import { AppTheme } from "./Theme";
+import { RegionName } from "../data/types/GameLocation";
 
 interface Props {
   region: RegionName;
   children: ReactNode;
 }
 
-const getTheme = (region: string, theme: any) => {
+const getTheme = (region: string, theme: any): AppTheme => {
   const matchingRegion = theme.regions[region];
   if (matchingRegion) {
     return { ...theme, ...matchingRegion };
@@ -24,8 +18,7 @@ const getTheme = (region: string, theme: any) => {
 
 const ThemeRegion = ({ region, children }: Props) => {
   return (
-    // @ts-ignore
-    <ThemeProvider theme={theme => getTheme(region, theme)}>
+    <ThemeProvider theme={(theme: AppTheme) => getTheme(region, theme)}>
       {children}
     </ThemeProvider>
   );

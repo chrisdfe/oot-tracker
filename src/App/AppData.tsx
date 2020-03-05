@@ -24,7 +24,7 @@ export type AppData = {
 const data: AppData = {
   heartPieces,
   goldSkulltulas,
-  locations,
+  locations: locations.map(location => location as GameLocation),
   softSoilLocations
 };
 

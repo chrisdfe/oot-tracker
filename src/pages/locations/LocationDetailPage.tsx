@@ -21,9 +21,6 @@ import {
   getCollectablesByIds
 } from "../../utils/appState";
 
-// TODO - hardcode in location data instead of this
-import { getRegionFromTitle } from "./LocationsIndexPage";
-
 import { GameLocation } from "../../data/types/GameLocation";
 
 interface LocationListItemProps {
@@ -127,7 +124,7 @@ const LocationDetailPage = () => {
   );
 
   return (
-    <ThemeRegion region={getRegionFromTitle(currentLocation.title)}>
+    <ThemeRegion region={currentLocation.region}>
       <Wrapper>
         <Hero>
           <Container>

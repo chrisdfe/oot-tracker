@@ -32,9 +32,10 @@ interface ListItemButtonProps {
 
 const ListItemButton = styled.button<ListItemButtonProps>`
   display: block;
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
   // border: 2px solid ${({ theme }) => theme.border.color.primary};
   border: 0 none;
+  border-bottom: 2px solid transparent;
   background-color: ${({ theme }) => theme.background.color.primary};
   color: ${({ theme }) => theme.text.color.primary};
   font-family: ${({ theme }) => theme.fonts.body};
@@ -49,7 +50,9 @@ const ListItemButton = styled.button<ListItemButtonProps>`
   ${({ theme, isActive }) =>
     isActive
       ? css`
-          box-shadow: 0 0 0 3px ${theme.border.color.primary};
+          // box-shadow: 0 0 0 3px ${theme.border.color.primary};
+          // border-bottom: 2px solid ${theme.border.color.primary};
+          background-color: ${({ theme }) => theme.background.color.primary};
         `
       : ""}
 
@@ -60,9 +63,8 @@ const ListItemButton = styled.button<ListItemButtonProps>`
 
   &:focus {
     outline: 0 none;
-    box-shadow: 0 0 0 3px
-      ${({ theme, isActive }) =>
-        hexToRGB(theme.border.color.primary, isActive ? 1 : 0.7)};
+    background-color: ${({ theme, isActive }) =>
+      hexToRGB(theme.background.color.primary, isActive ? 1 : 0.5)};
   }
 
   &:last-child {

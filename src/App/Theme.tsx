@@ -57,7 +57,7 @@ const rawFonts: ValueMap = {
   openSans: "'Open Sans', sans-serif"
 };
 
-const defaultTheme: RegionTheme = {
+const overworldTheme: RegionTheme = {
   background: {
     color: {
       primary: rawColors.white,
@@ -177,6 +177,8 @@ const gerudoTheme: RegionTheme = {
   }
 };
 
+const defaultTheme = overworldTheme;
+
 const theme: AppTheme = {
   rawColors,
   rawFonts,
@@ -189,7 +191,7 @@ const theme: AppTheme = {
   ...defaultTheme,
 
   regions: {
-    default: defaultTheme,
+    overworld: overworldTheme,
     zora: zoraTheme,
     kokiri: kokiriTheme,
     goron: goronTheme,

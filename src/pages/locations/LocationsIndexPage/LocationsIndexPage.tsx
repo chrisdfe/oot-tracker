@@ -58,7 +58,7 @@ const LocationsIndexPage = () => {
     <>
       <Hero>
         <Container>
-          <h1>All Locations</h1>
+          <h1>Locations</h1>
         </Container>
       </Hero>
       <Container>
@@ -69,24 +69,24 @@ const LocationsIndexPage = () => {
         />
 
         <ListTitle region={currentRegion} />
-
-        {Object.keys(filteredLocations).map(regionId => {
-          const locations = filteredLocations[regionId];
-          const themeRegion = getRegionById(appData, regionId);
-          const regionSlug = themeRegion ? themeRegion.slug : "";
-          return (
-            <div key={regionId}>
-              {locations.map(location => (
-                <LocationListItem
-                  key={location.slug}
-                  location={location}
-                  regionSlug={regionSlug}
-                />
-              ))}
-            </div>
-          );
-        })}
       </Container>
+
+      {Object.keys(filteredLocations).map(regionId => {
+        const locations = filteredLocations[regionId];
+        const themeRegion = getRegionById(appData, regionId);
+        const regionSlug = themeRegion ? themeRegion.slug : "";
+        return (
+          <div key={regionId}>
+            {locations.map(location => (
+              <LocationListItem
+                key={location.slug}
+                location={location}
+                regionSlug={regionSlug}
+              />
+            ))}
+          </div>
+        );
+      })}
     </>
   );
 };

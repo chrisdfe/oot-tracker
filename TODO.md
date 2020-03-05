@@ -69,3 +69,4 @@
 - Add region on backend, not 'getRegionFromTitle'
 - Ability to filter locations index by region
 - Sort locations index locations by region
+- Fix checkbox overflow but on LocationDetailsPage

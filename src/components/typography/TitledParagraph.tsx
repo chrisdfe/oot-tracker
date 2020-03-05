@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Title = styled.h4`
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin: 1rem 0 0.3rem;
 `;
 
 const Paragraph = styled.p`

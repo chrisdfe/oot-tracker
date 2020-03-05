@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import Container from "../../../components/layout/Container";
 import { GameLocation } from "../../../data/types/GameLocation";
 import LocationCollectableSummary from "../components/LocationCollectableSummary";
 import ThemeRegion from "../../../App/ThemeRegion";

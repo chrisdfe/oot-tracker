@@ -16,6 +16,7 @@ import GoldSkulltulaList from "../../../pages/collectables/GoldSkulltulas/compon
 import SoftSoilLocationsList from "../../../pages/collectables/SoftSoilLocations/components/SoftSoilLocationsList";
 
 import LocationCollectableSummary from "../components/LocationCollectableSummary";
+import LocationDetailSection from "./LocationDetailSection";
 
 import {
   filterCollectablesByLocation,
@@ -48,31 +49,11 @@ const HeroHeadline = styled.div`
   }
 `;
 
-const Section = styled.section`
-  h2 {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    padding: 1rem 0;
-    border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
-    margin: 0;
-    background-color: ${({ theme }) => theme.background.color.primary};
-  }
-`;
-
 const LocationNotFound = () => (
   <Container>
     <h2>Location not found</h2>
   </Container>
 );
-
-const EmptyListWrapper = styled.div`
-  padding: 6rem 0;
-  text-align: center;
-  font-size: 2rem;
-`;
-
-const EmptyList = () => <EmptyListWrapper>⦻</EmptyListWrapper>;
 
 const LocationDetailPage = () => {
   const { slug } = useParams();
@@ -141,49 +122,38 @@ const LocationDetailPage = () => {
           </Container>
         </Hero>
 
-        <Container>
-          <Section>
-            <h2>
-              {collectedLocationHeartPieces.length}/{locationHeartPieces.length}{" "}
-              heart {locationHeartPieces.length === 1 ? "piece" : "pieces"}
-            </h2>
-            {locationHeartPieces.length === 0 ? (
-              <EmptyList />
-            ) : (
-              <HeartPieceList heartPieces={locationHeartPieces} />
-            )}
-          </Section>
+        <LocationDetailSection
+          title={`${collectedLocationHeartPieces.length}/${
+            locationHeartPieces.length
+          } heart ${locationHeartPieces.length === 1 ? "piece" : "pieces"}`}
+          isEmpty={locationHeartPieces.length === 0}
+        >
+          <HeartPieceList heartPieces={locationHeartPieces} />
+        </LocationDetailSection>
 
-          <Section>
-            <h2>
-              {collectedLocationGoldSkulltulas.length}/
-              {locationGoldSkulltulas.length} gold{" "}
-              {locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"}
-            </h2>
-            {locationGoldSkulltulas.length === 0 ? (
-              <EmptyList />
-            ) : (
-              <GoldSkulltulaList goldSkulltulas={locationGoldSkulltulas} />
-            )}
-          </Section>
+        <LocationDetailSection
+          title={`${collectedLocationGoldSkulltulas.length}/${
+            locationGoldSkulltulas.length
+          } gold ${
+            locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"
+          }`}
+          isEmpty={locationGoldSkulltulas.length === 0}
+        >
+          <GoldSkulltulaList goldSkulltulas={locationGoldSkulltulas} />
+        </LocationDetailSection>
 
-          <Section>
-            <h2>
-              {collectedLocationSoftSoilLocations.length}/
-              {locationSoftSoilLocations.length} soft soil{" "}
-              {locationSoftSoilLocations.length === 1
-                ? "location"
-                : "locations"}
-            </h2>
-            {locationSoftSoilLocations.length === 0 ? (
-              <EmptyList />
-            ) : (
-              <SoftSoilLocationsList
-                softSoilLocations={locationSoftSoilLocations}
-              />
-            )}
-          </Section>
-        </Container>
+        <LocationDetailSection
+          title={`${collectedLocationSoftSoilLocations.length}/${
+            locationSoftSoilLocations.length
+          } soft soil ${
+            locationSoftSoilLocations.length === 1 ? "location" : "locations"
+          }`}
+          isEmpty={locationSoftSoilLocations.length === 0}
+        >
+          <SoftSoilLocationsList
+            softSoilLocations={locationSoftSoilLocations}
+          />
+        </LocationDetailSection>
       </Wrapper>
     </ThemeRegion>
   );

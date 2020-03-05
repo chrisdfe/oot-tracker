@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+const fetchAll = require('../scripts/data/fetchAll');
+
+const run = async () => {
+  await fetchAll();
+}
+
+run();

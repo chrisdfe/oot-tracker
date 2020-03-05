@@ -1,23 +1,18 @@
 const path = require("path");
 
+const { outputJSONToFile, readJSONFromFile } = require("../utils");
+
+const { fetchFromURLOrCache, cleanLocations } = require("./utils");
+
 const {
   PROJECT_ROOT_PATH,
   ZELDA_DUNGEON_BASE_URL,
-  IMAGES_PATH
-} = require("./constants");
+  IMAGES_PATH,
 
-const {
-  fetchFromURLOrCache,
-  outputJSONToFile,
-  readJSONFromFile,
-  fetchImages
-} = require("./utils");
-
-const cleanLocations = require("./cleanLocations");
-
-const HEART_PIECES_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Heart_Pieces`;
-const HEART_IMAGES_BASE_PATH = "heart-pieces";
-const HEART_PIECES_JSON_FILENAME = "heartPieces.json";
+  HEART_PIECES_URL,
+  HEART_IMAGES_BASE_PATH,
+  HEART_PIECES_JSON_FILENAME
+} = require("../constants");
 
 const fetchHeartPieceData = async () => {
   const { document } = await fetchFromURLOrCache(
@@ -56,30 +51,11 @@ const fetchHeartPieceData = async () => {
   return sections;
 };
 
-const fetchHeartPieceImages = async data => {
-  const images = data.reduce((acc, heartPiece) => {
-    const heartPieceImages = heartPiece.images.map(
-      ({ sourceImageUrl, localImageUrl }) => {
-        return {
-          name: `Heart piece #${heartPiece.number}`,
-          sourceImageUrl,
-          localImageUrl
-        };
-      }
-    );
-
-    return [...acc, ...heartPieceImages];
-  }, []);
-
-  return await fetchImages(HEART_IMAGES_BASE_PATH, images);
-};
-
 const run = async () => {
   console.log("fetching heart piece data");
   const data = await fetchHeartPieceData();
   const cleanedData = cleanLocations(data);
   await outputJSONToFile(HEART_PIECES_JSON_FILENAME, cleanedData);
-  await fetchHeartPieceImages(data);
   console.log("done collecting heart pieces.");
   return cleanedData;
 };

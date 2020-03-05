@@ -1,27 +1,17 @@
 const path = require("path");
-const fs = require("fs-extra");
-const axios = require("axios");
-const Bottleneck = require("bottleneck");
+
+const { outputJSONToFile, readJSONFromFile } = require("../utils");
+
+const { fetchFromURLOrCache, cleanLocations } = require("./utils");
 
 const {
   PROJECT_ROOT_PATH,
   ZELDA_DUNGEON_BASE_URL,
-  IMAGES_PATH
-} = require("./constants");
-
-const {
-  fetchFromURLOrCache,
-  outputJSONToFile,
-  readJSONFromFile,
-  getImagesThatNeedFetching,
-  fetchImages
-} = require("./utils");
-
-const cleanLocations = require("./cleanLocations");
-
-const GOLD_SKULLTULA_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Gold_Skulltulas`;
-const GOLD_SKULLTULAS_BASE_PATH = "gold-skulltulas";
-const GOLD_SKULLTULAS_JSON_FILENAME = "goldSkulltulas.json";
+  IMAGES_PATH,
+  GOLD_SKULLTULA_URL,
+  GOLD_SKULLTULAS_BASE_PATH,
+  GOLD_SKULLTULAS_JSON_FILENAME
+} = require("../constants");
 
 const fetchGoldSkulltulaData = async () => {
   const { document } = await fetchFromURLOrCache(
@@ -60,25 +50,6 @@ const fetchGoldSkulltulaData = async () => {
   return sections;
 };
 
-const fetchGoldSkulltulaImages = async data => {
-  console.log("fetching gold skulltula images");
-  const images = data.reduce((acc, goldSkulltula) => {
-    const heartPieceImages = goldSkulltula.images.map(
-      ({ sourceImageUrl, localImageUrl }) => {
-        return {
-          name: `Gold Skulltula #${goldSkulltula.number}`,
-          sourceImageUrl,
-          localImageUrl
-        };
-      }
-    );
-
-    return [...acc, ...heartPieceImages];
-  }, []);
-
-  await fetchImages(GOLD_SKULLTULAS_BASE_PATH, images);
-};
-
 // const getRewards = async document => {
 //   const table = document.querySelector(".wikitable");
 
@@ -106,7 +77,6 @@ const run = async () => {
   const data = await fetchGoldSkulltulaData();
   const cleanedData = cleanLocations(data);
   await outputJSONToFile(GOLD_SKULLTULAS_JSON_FILENAME, cleanedData);
-  await fetchGoldSkulltulaImages(data);
   console.log("done collecting gold skulltulas.");
   return cleanedData;
 };

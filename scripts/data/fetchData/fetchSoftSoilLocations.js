@@ -1,26 +1,18 @@
 const path = require("path");
-const fs = require("fs-extra");
-const axios = require("axios");
-const Bottleneck = require("bottleneck");
+
+const { outputJSONToFile, readJSONFromFile } = require("../utils");
+
+const { fetchFromURLOrCache, cleanLocations } = require("./utils");
 
 const {
   PROJECT_ROOT_PATH,
   ZELDA_DUNGEON_BASE_URL,
-  IMAGES_PATH
-} = require("./constants");
+  IMAGES_PATH,
 
-const {
-  fetchFromURLOrCache,
-  outputJSONToFile,
-  readJSONFromFile,
-  fetchImages
-} = require("./utils");
-
-const cleanLocations = require("./cleanLocations");
-
-const SOFT_SOIL_LOCATIONS_URL = `${ZELDA_DUNGEON_BASE_URL}/wiki/Ocarina_of_Time_Soft_Soil_Locations`;
-const SOFT_SOIL_LOCATIONS_BASE_PATH = "soft-soil-locations";
-const SOFT_SOIL_LOCATIONS_JSON_FILENAME = "softSoilLocations.json";
+  SOFT_SOIL_LOCATIONS_URL,
+  SOFT_SOIL_LOCATIONS_BASE_PATH,
+  SOFT_SOIL_LOCATIONS_JSON_FILENAME
+} = require("../constants");
 
 const fetchSoftSoilLocationsData = async () => {
   const { document } = await fetchFromURLOrCache(
@@ -100,27 +92,11 @@ const fetchSoftSoilLocationsData = async () => {
   return sections;
 };
 
-const fetchSoftSoilLocationsImages = async data => {
-  const allImages = data.reduce((acc, softSoilLocation, imageIndex) => {
-    const softSoilLoctionImages = softSoilLocation.images.map(
-      ({ sourceImageUrl, localImageUrl }, childIndex) => ({
-        name: `Soft soil location #${imageIndex + 1} img ${childIndex + 1}`,
-        sourceImageUrl,
-        localImageUrl
-      })
-    );
-    return [...acc, ...softSoilLoctionImages];
-  }, []);
-
-  return await fetchImages(SOFT_SOIL_LOCATIONS_BASE_PATH, allImages);
-};
-
 const run = async () => {
   console.log("fetching soft soil location data");
   const data = await fetchSoftSoilLocationsData();
   const cleanedData = cleanLocations(data);
   await outputJSONToFile(SOFT_SOIL_LOCATIONS_JSON_FILENAME, cleanedData);
-  await fetchSoftSoilLocationsImages(data);
   console.log("done collecting soft soil locations.");
   return cleanedData;
 };

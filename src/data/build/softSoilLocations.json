@@ -1,182 +1,182 @@
 [
-    {
-        "number": "1",
-        "location": "Zora's River",
-        "directions": "Entrance of Zora's River, right next to the Bean Seller.",
-        "rewards": "Allows for quick navigation to Zora's Domain. Also makes it easier to reach the higher levels of the center of Zora's River, where there is a Piece of Heart and a Gold Skulltula. However, these collectibles can be acquired even without the magic bean.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-1-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/8/8a/Bean-Bed-01.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-1-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-1-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/c/c1/Bean-Plant-01.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-1-img-2.jpg"
-            }
-        ]
-    },
-    {
-        "number": "2",
-        "location": "Kakariko Village Graveyard",
-        "directions": "Kakariko Village Graveyard, on the left side near a series of gravestones.",
-        "rewards": "The bean will ride straight upward, allowing you to reach a higher ledge. You can roll into the nearby crate to acquire a Piece of Heart.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-2-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/b/b4/Bean-Bed-02.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-2-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-2-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/9/93/Bean-Plant-02.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-2-img-2.jpg"
-            }
-        ]
-    },
-    {
-        "number": "3",
-        "location": "Kokiri Forest",
-        "directions": "Kokiri Forest, just beside the Kokiri Shop.",
-        "rewards": "The bean will give a tour of Kokiri Forest, slowly moving around the small village. It will end just above where the bean plant started, where there are 26 rupees. Given the cost of purchase all the Magic Beans, this is certainly one of the beans that is not worth planting.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-3-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/9/99/Bean-Bed-03.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-3-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-3-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/2/27/Bean-Plant-03.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-3-img-2.jpg"
-            }
-        ]
-    },
-    {
-        "number": "4",
-        "location": "Lost Woods",
-        "directions": "Found in the Lost Woods. From the entrance, take a left, and then another left to reach the area with the bridge.",
-        "rewards": "This will allow for slightly quicker navigation from the Lost Woods to Hyrule Field. This helps during the Trading Sequence, after you acquire the Odd Mushroom from the Master Craftsman's Son in the Lost Woods. This is a timed event and Link only has 3 minutes to deliver the item, so this shortcut saves some time. That said, this is certainly one of the easier time based missions in the Trading Sequence and this bean plant is hardly worth it.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-4-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/e/e2/Bean-Bed-04.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-4-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-4-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/c/c6/Bean-Plant-04.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-4-img-2.jpg"
-            }
-        ]
-    },
-    {
-        "number": "5",
-        "location": "Lost Woods",
-        "directions": "Found in the Lost Woods in the Meadow, near the Forest Stage. From the Kokiri Forest entrance, take a right, then left, then right, then left, and another left to reach the Meadow. The soil location is on the right side, near a Business Scrub.",
-        "rewards": "The bean rides straight up, reaching a higher ledge where a Gold Skulltula can be found at nighttime.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-5-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/1/17/Bean-Bed-05.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-5-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-5-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/e/e9/Bean-Plant-05.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-5-img-2.jpg"
-            }
-        ]
-    },
-    {
-        "number": "6",
-        "location": "Death Mountain Trail",
-        "directions": "Located on the Death Mountain Trail, right in front of the entrance to Dodongo's Cavern.",
-        "rewards": "The bean rides straight up where you can land on a ledge, right above Dodongo's Cavern that contains a Piece of Heart. However, this heart piece can be acquired doing a strategic back-flip, near where the Bomb Flower is located. Additionally, this bean allows for very quick access to both Goron City and the upper portion of the Death Mountain Trail. This is particularly useful if you choose to go this route during the Trading Sequence as you have a limited time to deliver the Eye Drops to Biggoron. Despite it having multiple purposes, this bean plant is not required to get all the collectibles.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-6-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/b/b3/Bean-Bed-06.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-6-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-6-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/c/c3/Bean-Plant-06.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-6-img-2.jpg"
-            }
-        ]
-    },
-    {
-        "number": "7",
-        "location": "Lake Hylia",
-        "directions": "Located in Lake Hylia, right next to the Lakeside Laboratory.",
-        "rewards": "The bean rides straight up where Link can jump on top of the Laboratory. Here he can climb a ladder to reach a Piece of Heart found at the top of the watchtower. The bean plant will also carry Link over to the Fishing Pond, which until Link completes the Water Temple, is not reachable as the water level of the lake is too low. This plant however, is not required at all, as both locations can be reached by summoning Pierre with the Scarecrow's Song.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-7-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/8/86/Bean-Bed-07.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-7-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-7-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/3/3b/Bean-Plant-07.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-7-img-2.jpg"
-            }
-        ]
-    },
-    {
-        "number": "8",
-        "location": "Gerudo Valley",
-        "directions": "Located in Gerudo Valley, way down on the piece of land next to the river. As a child, a Gerudo and a Cow can be found next to the soil spot.",
-        "rewards": "This bean plant will take you across the water, where you will collect a number of red rupees that are hidden within the waterfalls. The bean will end up behind the large waterfall, where there is a piece of heart. However, this particular heart piece could be reached without the bean plant, as Link can simply jump into the water behind the waterfall and climb the ladder that leads to the heart piece.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-8-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/1/1f/Bean-Bed-08.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-8-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-8-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/e/ec/Bean-Plant-08.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-8-img-2.jpg"
-            }
-        ]
-    },
-    {
-        "number": "9",
-        "location": "Death Mountain Crater",
-        "directions": "Located in the Death Mountain Crater, right next to the pedestal. This can be only be reached after Link has learned the Bolero of Fire and can warp to the crater as a child.",
-        "rewards": "Riding the bean plant will allow Link to acquire a piece of heart, located on top of one of the smokey mountains. There is a second piece of heart that Link could have acquired much earlier in the quest, but it is in a notch in the wall, just across the lava, and the bean plant will carry Link right on over.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-9-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/e/e9/Bean-Bed-09.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-9-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-9-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/6/68/Bean-Plant-09.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-9-img-2.jpg"
-            }
-        ]
-    },
-    {
-        "number": "10",
-        "location": "Desert Colossus",
-        "directions": "Located in the Desert Colossus, right outside the entrance to the Spirit Temple. This bean can only be planted after Link first arrives as an Adult and learns the Requiem of Spirit.",
-        "rewards": "This bean will take you throughout the Desert Colossus and you'll be able to reach a Gold Skulltula that is located on one of the sand dunes in the center of the region. The bean plant will also take you to the rock archway that is right in front of the Spirit Temple entrance, where a Piece of Heart is located.",
-        "images": [
-            {
-                "fileName": "soft-soil-location-10-img-1.jpg",
-                "sourceImageUrl": "/wiki/images/f/f9/Bean-Bed-10.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-10-img-1.jpg"
-            },
-            {
-                "fileName": "soft-soil-location-10-img-2.jpg",
-                "sourceImageUrl": "/wiki/images/0/00/Bean-Plant-10.jpg",
-                "localImageUrl": "soft-soil-locations/soft-soil-location-10-img-2.jpg"
-            }
-        ]
-    }
+  {
+    "number": "1",
+    "location": "Zora's River",
+    "directions": "Entrance of Zora's River, right next to the Bean Seller.",
+    "rewards": "Allows for quick navigation to Zora's Domain. Also makes it easier to reach the higher levels of the center of Zora's River, where there is a Piece of Heart and a Gold Skulltula. However, these collectibles can be acquired even without the magic bean.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-1-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/8/8a/Bean-Bed-01.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-1-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-1-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/c/c1/Bean-Plant-01.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-1-img-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "2",
+    "location": "Kakariko Village Graveyard",
+    "directions": "Kakariko Village Graveyard, on the left side near a series of gravestones.",
+    "rewards": "The bean will ride straight upward, allowing you to reach a higher ledge. You can roll into the nearby crate to acquire a Piece of Heart.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-2-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/b/b4/Bean-Bed-02.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-2-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-2-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/9/93/Bean-Plant-02.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-2-img-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "3",
+    "location": "Kokiri Forest",
+    "directions": "Kokiri Forest, just beside the Kokiri Shop.",
+    "rewards": "The bean will give a tour of Kokiri Forest, slowly moving around the small village. It will end just above where the bean plant started, where there are 26 rupees. Given the cost of purchase all the Magic Beans, this is certainly one of the beans that is not worth planting.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-3-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/9/99/Bean-Bed-03.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-3-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-3-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/2/27/Bean-Plant-03.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-3-img-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "4",
+    "location": "Lost Woods",
+    "directions": "Found in the Lost Woods. From the entrance, take a left, and then another left to reach the area with the bridge.",
+    "rewards": "This will allow for slightly quicker navigation from the Lost Woods to Hyrule Field. This helps during the Trading Sequence, after you acquire the Odd Mushroom from the Master Craftsman's Son in the Lost Woods. This is a timed event and Link only has 3 minutes to deliver the item, so this shortcut saves some time. That said, this is certainly one of the easier time based missions in the Trading Sequence and this bean plant is hardly worth it.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-4-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/e/e2/Bean-Bed-04.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-4-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-4-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/c/c6/Bean-Plant-04.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-4-img-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "5",
+    "location": "Lost Woods",
+    "directions": "Found in the Lost Woods in the Meadow, near the Forest Stage. From the Kokiri Forest entrance, take a right, then left, then right, then left, and another left to reach the Meadow. The soil location is on the right side, near a Business Scrub.",
+    "rewards": "The bean rides straight up, reaching a higher ledge where a Gold Skulltula can be found at nighttime.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-5-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/1/17/Bean-Bed-05.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-5-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-5-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/e/e9/Bean-Plant-05.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-5-img-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "6",
+    "location": "Death Mountain Trail",
+    "directions": "Located on the Death Mountain Trail, right in front of the entrance to Dodongo's Cavern.",
+    "rewards": "The bean rides straight up where you can land on a ledge, right above Dodongo's Cavern that contains a Piece of Heart. However, this heart piece can be acquired doing a strategic back-flip, near where the Bomb Flower is located. Additionally, this bean allows for very quick access to both Goron City and the upper portion of the Death Mountain Trail. This is particularly useful if you choose to go this route during the Trading Sequence as you have a limited time to deliver the Eye Drops to Biggoron. Despite it having multiple purposes, this bean plant is not required to get all the collectibles.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-6-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/b/b3/Bean-Bed-06.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-6-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-6-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/c/c3/Bean-Plant-06.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-6-img-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "7",
+    "location": "Lake Hylia",
+    "directions": "Located in Lake Hylia, right next to the Lakeside Laboratory.",
+    "rewards": "The bean rides straight up where Link can jump on top of the Laboratory. Here he can climb a ladder to reach a Piece of Heart found at the top of the watchtower. The bean plant will also carry Link over to the Fishing Pond, which until Link completes the Water Temple, is not reachable as the water level of the lake is too low. This plant however, is not required at all, as both locations can be reached by summoning Pierre with the Scarecrow's Song.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-7-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/8/86/Bean-Bed-07.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-7-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-7-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/3/3b/Bean-Plant-07.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-7-img-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "8",
+    "location": "Gerudo Valley",
+    "directions": "Located in Gerudo Valley, way down on the piece of land next to the river. As a child, a Gerudo and a Cow can be found next to the soil spot.",
+    "rewards": "This bean plant will take you across the water, where you will collect a number of red rupees that are hidden within the waterfalls. The bean will end up behind the large waterfall, where there is a piece of heart. However, this particular heart piece could be reached without the bean plant, as Link can simply jump into the water behind the waterfall and climb the ladder that leads to the heart piece.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-8-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/1/1f/Bean-Bed-08.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-8-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-8-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/e/ec/Bean-Plant-08.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-8-img-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "9",
+    "location": "Death Mountain Crater",
+    "directions": "Located in the Death Mountain Crater, right next to the pedestal. This can be only be reached after Link has learned the Bolero of Fire and can warp to the crater as a child.",
+    "rewards": "Riding the bean plant will allow Link to acquire a piece of heart, located on top of one of the smokey mountains. There is a second piece of heart that Link could have acquired much earlier in the quest, but it is in a notch in the wall, just across the lava, and the bean plant will carry Link right on over.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-9-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/e/e9/Bean-Bed-09.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-9-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-9-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/6/68/Bean-Plant-09.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-9-img-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "10",
+    "location": "Desert Colossus",
+    "directions": "Located in the Desert Colossus, right outside the entrance to the Spirit Temple. This bean can only be planted after Link first arrives as an Adult and learns the Requiem of Spirit.",
+    "rewards": "This bean will take you throughout the Desert Colossus and you'll be able to reach a Gold Skulltula that is located on one of the sand dunes in the center of the region. The bean plant will also take you to the rock archway that is right in front of the Spirit Temple entrance, where a Piece of Heart is located.",
+    "images": [
+      {
+        "fileName": "soft-soil-location-10-img-1.jpg",
+        "sourceImageUrl": "/wiki/images/f/f9/Bean-Bed-10.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-10-img-1.jpg"
+      },
+      {
+        "fileName": "soft-soil-location-10-img-2.jpg",
+        "sourceImageUrl": "/wiki/images/0/00/Bean-Plant-10.jpg",
+        "localImageUrl": "soft-soil-locations/soft-soil-location-10-img-2.jpg"
+      }
+    ]
+  }
 ]

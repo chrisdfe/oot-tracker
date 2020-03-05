@@ -1,45 +1,61 @@
 const { outputJSONToFile } = require("../utils");
 
+const regions = ["Default", "Kokiri", "Goron", "Zora", "Shadow", "Gerudo"].map(
+  (title, index) => ({
+    id: index + 1,
+    title,
+    slug: title.toLowerCase()
+  })
+);
+
+const getRegionIdFromTitle = title => {
+  const region = regions.find(r => r.title === title);
+  if (!region) return null;
+  return region.id;
+};
+
 const titleIncludes = (title, regionPatterns) => {
   return !!regionPatterns.find(pattern => title.includes(pattern));
 };
 
-// TODO - hardcode in location data instead of this
-const getRegionFromTitle = title => {
-  if (titleIncludes(title, ["Goron", "Death", "Dodongo", "Fire"])) {
-    return "goron";
-  }
-
-  if (titleIncludes(title, ["Zora", "Jabu", "Hylia", "Ice", "Water"])) {
-    return "zora";
-  }
-
+const getRegionTitleFromLocation = ({ title }) => {
   if (
     titleIncludes(title, ["Kokiri", "Lost Woods", "Sacred", "Forest", "Deku"])
   ) {
-    return "kokiri";
+    return "Kokiri";
+  }
+
+  if (titleIncludes(title, ["Goron", "Death", "Dodongo", "Fire"])) {
+    return "Goron";
+  }
+
+  if (titleIncludes(title, ["Zora", "Jabu", "Hylia", "Ice", "Water"])) {
+    return "Zora";
   }
 
   if (titleIncludes(title, ["Shadow", "Shadow", "Bottom of"])) {
-    return "shadow";
+    return "Shadow";
   }
 
   if (
     titleIncludes(title, ["Gerudo", "Haunted Wasteland", "Spirit", "Desert"])
   ) {
-    return "gerudo";
+    return "Gerudo";
   }
 
-  return "default";
+  return "Default";
 };
 
 const run = async payload => {
   const { locations } = payload;
 
-  const locationsWithRegions = locations.map(location => {
-    const region = getRegionFromTitle(location.title);
+  await outputJSONToFile("regions.json", regions);
 
-    return { ...location, region };
+  const locationsWithRegions = locations.map(location => {
+    const regionTitle = getRegionTitleFromLocation(location);
+    const regionId = getRegionIdFromTitle(regionTitle);
+
+    return { ...location, regionId };
   });
 
   await outputJSONToFile("locations.json", locationsWithRegions);

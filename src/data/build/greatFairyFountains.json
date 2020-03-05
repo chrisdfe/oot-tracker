@@ -1,0 +1,92 @@
+[
+  {
+    "number": "1",
+    "location": "Death Mountain Trail",
+    "conditions": "Acquire Bombs",
+    "reward": "The Magic Meter and Spin Attack",
+    "directions": "Located at the very peak of the Death Mountain Trail. Link will need to have acquired the Bombs from Dodongo's Cavern in order to scale Death Mountain. Right next to Kaepora Gaebora, there is a wall that can be blasted open with a Bomb and inside is the Great Fairy. The Great Fairy will teach you the Spin Attack ability and in the process grant you the Magic Meter. This is a required Great Fairy as you will need magic to use the required magic-based weapons that are later acquired.",
+    "images": [
+      {
+        "name": "Great Fairy Fountain #1",
+        "fileName": "great-fairy-fountain-1.jpg",
+        "sourceImageUrl": "/wiki/images/0/08/OoT-Great-Fairy-Fountain-1.jpg",
+        "localImageUrl": "great-fairy-fountains/great-fairy-fountain-1.jpg"
+      }
+    ]
+  },
+  {
+    "number": "2",
+    "location": "Hyrule Castle",
+    "conditions": "Acquire Bombs (Past)",
+    "reward": "Din's Fire",
+    "directions": "Located on the pathway leading to Hyrule Castle. Reach this area from the Market and then climb up the nearby vines. Jump beyond the gate and you'll find a sign that says Dead End, with a boulder behind it. Blast the boulder and crawl into the Great Fairy Fountain. Link will need to first visit the Great Fairy Fountain on Death Mountain before he can acquire this item. This Great Fairy Fountain is required, as the reward is Din's Fire, which is essential to enter the Shadow Temple.",
+    "images": [
+      {
+        "name": "Great Fairy Fountain #2",
+        "fileName": "great-fairy-fountain-2.jpg",
+        "sourceImageUrl": "/wiki/images/a/a8/OoT-Great-Fairy-Fountain-2.jpg",
+        "localImageUrl": "great-fairy-fountains/great-fairy-fountain-2.jpg"
+      }
+    ]
+  },
+  {
+    "number": "3",
+    "location": "Zora's Fountain",
+    "conditions": "Acquire Bombs",
+    "reward": "Farore's Wind",
+    "directions": "Located at the southeast corner of Zora's Fountain, behind Lord Jabu-Jabu. Place a bomb against the brown boulder to explode the entire wall, revealing the Great Fairy Fountain. The reward is Farore's Wind, which allows Link to create a warp point at any single portion of any dungeon. By using Farore's Wind a second time, Link can warp there. This ability even allows Link to warp across dungeons. While it is not essential, it is helpful in quickly navigating through dungeons.",
+    "images": [
+      {
+        "name": "Great Fairy Fountain #3",
+        "fileName": "great-fairy-fountain-3.jpg",
+        "sourceImageUrl": "/wiki/images/a/a0/OoT-Great-Fairy-Fountain-3.jpg",
+        "localImageUrl": "great-fairy-fountains/great-fairy-fountain-3.jpg"
+      }
+    ]
+  },
+  {
+    "number": "4",
+    "location": "Death Mountain Crater",
+    "conditions": "Megaton Hammer",
+    "reward": "Magic Meter Upgrade",
+    "directions": "After acquiring the Megaton Hammer from the Fire Temple, make your way to the west end of the Death Mountain Crater. Here you will find a series of large rocks that can be broken up by using the Megaton Hammer. Walk inside to find the Great Fairy Fountain. The reward is an upgraded Magic Meter, which will double the capacity of magic that Link can have at any given time.",
+    "images": [
+      {
+        "name": "Great Fairy Fountain #4",
+        "fileName": "great-fairy-fountain-4.jpg",
+        "sourceImageUrl": "/wiki/images/2/2c/OoT-Great-Fairy-Fountain-4.jpg",
+        "localImageUrl": "great-fairy-fountains/great-fairy-fountain-4.jpg"
+      }
+    ]
+  },
+  {
+    "number": "5",
+    "location": "Desert Colossus",
+    "conditions": "Lens of Truth",
+    "reward": "Nayru's Love",
+    "directions": "When you first arrive at the Desert Colossus, if you follow the wall on the north side, you'll find a pair of Palm Trees with a cracked wall. Blast it open and head inside to find the Great Fairy Fountain. The reward is Nayru's Love, which will temporarily create a barrier around Link, preventing him from taking any damage for a period of time.",
+    "images": [
+      {
+        "name": "Great Fairy Fountain #5",
+        "fileName": "great-fairy-fountain-5.jpg",
+        "sourceImageUrl": "/wiki/images/5/58/OoT-Great-Fairy-Fountain-5.jpg",
+        "localImageUrl": "great-fairy-fountains/great-fairy-fountain-5.jpg"
+      }
+    ]
+  },
+  {
+    "number": "6",
+    "location": "Ganon's Castle",
+    "conditions": "Golden Gauntlets",
+    "reward": "Defense Upgrade",
+    "directions": "In the area just outside of Ganon's Castle, if you walk to the far end, you'll find a massive pillar right up against the wall. After acquiring the Golden Gauntlets from within Ganon's Castle, Link will have the ability to remove this large pillar, allowing access to the Great Fairy Fountain. The reward here is an upgrade to Link's Defense, which causes Link to take half the amount of damage from all attacks, which basically doubles the amount of health Link has.",
+    "images": [
+      {
+        "name": "Great Fairy Fountain #6",
+        "fileName": "great-fairy-fountain-6.jpg",
+        "sourceImageUrl": "/wiki/images/2/22/OoT-Great-Fairy-Fountain-6.jpg",
+        "localImageUrl": "great-fairy-fountains/great-fairy-fountain-6.jpg"
+      }
+    ]
+  }
+]

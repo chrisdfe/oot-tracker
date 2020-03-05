@@ -5,10 +5,6 @@ const { outputJSONToFile, readJSONFromFile } = require("../utils");
 const { fetchFromURLOrCache, cleanLocations } = require("./utils");
 
 const {
-  PROJECT_ROOT_PATH,
-  ZELDA_DUNGEON_BASE_URL,
-  IMAGES_PATH,
-
   HEART_PIECES_URL,
   HEART_IMAGES_BASE_PATH,
   HEART_PIECES_JSON_FILENAME
@@ -37,7 +33,14 @@ const fetchHeartPieceData = async () => {
     const sourceImageUrl = box.querySelector("img").src;
     const localImageUrl = path.join(HEART_IMAGES_BASE_PATH, fileName);
 
-    const images = [{ fileName, sourceImageUrl, localImageUrl }];
+    const images = [
+      {
+        name: `Heart Piece #${number}`,
+        fileName,
+        sourceImageUrl,
+        localImageUrl
+      }
+    ];
 
     return {
       number,

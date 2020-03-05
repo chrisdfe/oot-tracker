@@ -5,4 +5,5 @@ export type GameLocation = {
   heartPieceIds: string[];
   goldSkulltulaIds: string[];
   softSoilLocationIds: string[];
+  greatFairyFountainIds: string[];
 };

@@ -30,7 +30,8 @@ const fetchFromURLOrCache = async (url, cacheFile) => {
 const LOCATION_NAMES_MAP = {
   "Kakariko Graveyard": "Kakariko Village Graveyard",
   "Castle Town": "Castle Town Market",
-  Market: "Castle Town Market"
+  Market: "Castle Town Market",
+  "Outside Ganon's Castle": "Ganon's Castle"
 };
 
 // There's some weird duplicate locations in the list

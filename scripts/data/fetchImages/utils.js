@@ -1,8 +1,9 @@
 const fs = require("fs-extra");
 const path = require("path");
+const axios = require("axios");
 const Bottleneck = require("bottleneck");
 
-const { IMAGES_PATH } = require("../constants");
+const { ZELDA_DUNGEON_BASE_URL, IMAGES_PATH } = require("../constants");
 
 const getImagesThatNeedFetching = async data => {
   const imageExistenceArray = await Promise.all(
@@ -43,6 +44,7 @@ const downloadImage = async (url, outputPath) => {
 const fetchImage = async ({ name, sourceImageUrl, localImageUrl }) => {
   console.log(localImageUrl);
   console.log(`fetching image: ${name}`);
+  // TODO - ZELDA_DUNGEON_BASE_URL should be part of sourceImageUrl
   const fullImageUrl = `${ZELDA_DUNGEON_BASE_URL}${sourceImageUrl}`;
   console.log(fullImageUrl);
   await downloadImage(fullImageUrl, path.join(IMAGES_PATH, localImageUrl));

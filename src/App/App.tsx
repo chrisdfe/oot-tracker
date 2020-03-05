@@ -15,6 +15,7 @@ import LocationsIndexPage from "../pages/locations/LocationsIndexPage";
 import HeartsPiecesPage from "../pages/collectables/HeartPieces/HeartPiecesPage";
 import GoldSkulltulasPage from "../pages/collectables/GoldSkulltulas/GoldSkulltulasPage";
 import SoftSoilLocationsPage from "../pages/collectables/SoftSoilLocations/SoftSoilLocationsPage";
+import GreatFairyFountainsPage from "../pages/collectables/GreatFairyFountains/GreatFairyFountainsPage";
 import CollectablesIndexPage from "../pages/collectables/CollectablesIndexPage";
 import StyleguidePage from "../pages/Styleguide/StyleguidePage";
 
@@ -52,6 +53,9 @@ function App() {
               </Route>
               <Route path="/collectables/soft-soil-locations">
                 <SoftSoilLocationsPage />
+              </Route>
+              <Route path="/collectables/great-fairy-fountains">
+                <GreatFairyFountainsPage />
               </Route>
               <Route path="/collectables">
                 <CollectablesIndexPage />

@@ -1,18 +1,14 @@
 const { fetchImages } = require("./utils");
 
-const {
-  HEART_PIECES_URL,
-  HEART_IMAGES_BASE_PATH,
-  HEART_PIECES_JSON_FILENAME
-} = require("../constants");
+const { HEART_IMAGES_BASE_PATH } = require("../constants");
 
-const fetchHeartPieceImages = async data => {
+const fetchHeartPieceImages = async ({ heartPieceData }) => {
   console.log("fetching heart piece images");
-  const images = data.reduce((acc, heartPiece) => {
+  const images = heartPieceData.reduce((acc, heartPiece) => {
     const heartPieceImages = heartPiece.images.map(
-      ({ sourceImageUrl, localImageUrl }) => {
+      ({ name, sourceImageUrl, localImageUrl }) => {
         return {
-          name: `Heart piece #${heartPiece.number}`,
+          name,
           sourceImageUrl,
           localImageUrl
         };

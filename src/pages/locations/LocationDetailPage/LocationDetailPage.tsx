@@ -14,6 +14,7 @@ import ThemeRegion from "../../../App/ThemeRegion";
 import HeartPieceList from "../../../pages/collectables/HeartPieces/components/HeartPieceList";
 import GoldSkulltulaList from "../../../pages/collectables/GoldSkulltulas/components/GoldSkulltulaList";
 import SoftSoilLocationsList from "../../../pages/collectables/SoftSoilLocations/components/SoftSoilLocationsList";
+import GreatFairyFountainList from "../../../pages/collectables/GreatFairyFountains/components/GreatFairyFountainList";
 
 import LocationCollectableSummary from "../components/LocationCollectableSummary";
 import LocationDetailSection from "./LocationDetailSection";
@@ -65,14 +66,14 @@ const LocationDetailPage = () => {
     locations: allLocations,
     heartPieces,
     goldSkulltulas,
-    softSoilLocations
+    softSoilLocations,
+    greatFairyFountains
   } = appData;
 
   const { collectedHearts } = appState.heartPieces;
-
   const { collectedGoldSkulltulas } = appState.goldSkulltulas;
-
   const { collectedSoftSoilLocations } = appState.softSoilLocations;
+  const { collectedGreatFairyFountains } = appState.greatFairyFountains;
 
   const currentLocation = allLocations.find(location => location.slug === slug);
 
@@ -102,6 +103,15 @@ const LocationDetailPage = () => {
   );
   const collectedLocationSoftSoilLocations = filterCollectablesByLocation(
     getCollectablesByIds(softSoilLocations, collectedSoftSoilLocations),
+    currentLocation
+  );
+
+  const locationGreatFairyFountains = filterCollectablesByLocation(
+    greatFairyFountains,
+    currentLocation
+  );
+  const collectedLocationGreatFairyFountains = filterCollectablesByLocation(
+    getCollectablesByIds(greatFairyFountains, collectedGreatFairyFountains),
     currentLocation
   );
 
@@ -152,6 +162,19 @@ const LocationDetailPage = () => {
         >
           <SoftSoilLocationsList
             softSoilLocations={locationSoftSoilLocations}
+          />
+        </LocationDetailSection>
+
+        <LocationDetailSection
+          title={`${collectedLocationGreatFairyFountains.length}/${
+            locationGreatFairyFountains.length
+          } great fairy ${
+            locationGreatFairyFountains.length === 1 ? "fountain" : "fountains"
+          }`}
+          isEmpty={locationGreatFairyFountains.length === 0}
+        >
+          <GreatFairyFountainList
+            greatFairyFountains={locationGreatFairyFountains}
           />
         </LocationDetailSection>
       </Wrapper>

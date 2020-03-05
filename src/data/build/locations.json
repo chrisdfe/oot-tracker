@@ -9,6 +9,7 @@
       "81"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "5"
   },
   {
@@ -23,6 +24,7 @@
       "4"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "1"
   },
   {
@@ -38,6 +40,9 @@
     ],
     "softSoilLocationIds": [
       "9"
+    ],
+    "greatFairyFountainIds": [
+      "4"
     ],
     "regionId": "3"
   },
@@ -56,6 +61,9 @@
     "softSoilLocationIds": [
       "6"
     ],
+    "greatFairyFountainIds": [
+      "1"
+    ],
     "regionId": "3"
   },
   {
@@ -72,6 +80,9 @@
     "softSoilLocationIds": [
       "10"
     ],
+    "greatFairyFountainIds": [
+      "5"
+    ],
     "regionId": "6"
   },
   {
@@ -86,6 +97,7 @@
       "55"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "3"
   },
   {
@@ -100,6 +112,7 @@
       "62"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "3"
   },
   {
@@ -114,6 +127,7 @@
       "54"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "2"
   },
   {
@@ -124,6 +138,9 @@
       "46"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [
+      "6"
+    ],
     "regionId": "1"
   },
   {
@@ -142,6 +159,7 @@
     "softSoilLocationIds": [
       "8"
     ],
+    "greatFairyFountainIds": [],
     "regionId": "6"
   },
   {
@@ -156,6 +174,7 @@
       "90"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "6"
   },
   {
@@ -169,6 +188,7 @@
       "56"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "3"
   },
   {
@@ -179,6 +199,7 @@
       "91"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "6"
   },
   {
@@ -190,6 +211,9 @@
       "78"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [
+      "2"
+    ],
     "regionId": "1"
   },
   {
@@ -204,6 +228,7 @@
       "42"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "1"
   },
   {
@@ -218,6 +243,7 @@
       "70"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "4"
   },
   {
@@ -231,6 +257,7 @@
       "34"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "4"
   },
   {
@@ -244,6 +271,7 @@
       "36"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "2"
   },
   {
@@ -264,6 +292,7 @@
       "45"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "1"
   },
   {
@@ -282,6 +311,7 @@
     "softSoilLocationIds": [
       "2"
     ],
+    "greatFairyFountainIds": [],
     "regionId": "5"
   },
   {
@@ -296,6 +326,7 @@
     "softSoilLocationIds": [
       "3"
     ],
+    "greatFairyFountainIds": [],
     "regionId": "2"
   },
   {
@@ -316,6 +347,7 @@
     "softSoilLocationIds": [
       "7"
     ],
+    "greatFairyFountainIds": [],
     "regionId": "4"
   },
   {
@@ -331,6 +363,7 @@
       "38"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "1"
   },
   {
@@ -349,6 +382,7 @@
       "4",
       "5"
     ],
+    "greatFairyFountainIds": [],
     "regionId": "2"
   },
   {
@@ -359,6 +393,7 @@
       "49"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "2"
   },
   {
@@ -373,6 +408,7 @@
       "86"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "5"
   },
   {
@@ -387,6 +423,7 @@
       "99"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "6"
   },
   {
@@ -401,6 +438,7 @@
       "76"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "4"
   },
   {
@@ -413,6 +451,7 @@
       "67"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [],
     "regionId": "4"
   },
   {
@@ -428,6 +467,9 @@
       "100"
     ],
     "softSoilLocationIds": [],
+    "greatFairyFountainIds": [
+      "3"
+    ],
     "regionId": "4"
   },
   {
@@ -448,6 +490,7 @@
     "softSoilLocationIds": [
       "1"
     ],
+    "greatFairyFountainIds": [],
     "regionId": "4"
   }
 ]

@@ -22,6 +22,11 @@ export type AppState = {
     setCollectedSoftSoilLocations: (softSoilLocationIds: string[]) => void;
     toggleCollectedSoftSoilLocation: (softSoilLocationId: string) => void;
   };
+  greatFairyFountains: {
+    collectedGreatFairyFountains: string[];
+    setCollectedGreatFairyFountains: (greatFairyFountainIds: string[]) => void;
+    toggleCollectedGreatFairyFountain: (greatFairyFountainId: string) => void;
+  };
 };
 
 const initialState = {
@@ -39,6 +44,11 @@ const initialState = {
     collectedSoftSoilLocations: [],
     setCollectedSoftSoilLocations: () => {},
     toggleCollectedSoftSoilLocation: () => {}
+  },
+  greatFairyFountains: {
+    collectedGreatFairyFountains: [],
+    setCollectedGreatFairyFountains: () => {},
+    toggleCollectedGreatFairyFountain: () => {}
   }
 };
 
@@ -63,6 +73,15 @@ const AppState = ({ children }: Props) => {
     toggleCollectedSoftSoilLocation
   ] = usePersistedStringArray("oot-tracker.collected-soft-soil-locations", []);
 
+  const [
+    collectedGreatFairyFountains,
+    setCollectedGreatFairyFountains,
+    toggleCollectedGreatFairyFountain
+  ] = usePersistedStringArray(
+    "oot-tracker.collected-great-fairy-fountains",
+    []
+  );
+
   const state: AppState = {
     heartPieces: {
       collectedHearts,
@@ -78,6 +97,11 @@ const AppState = ({ children }: Props) => {
       collectedSoftSoilLocations,
       setCollectedSoftSoilLocations,
       toggleCollectedSoftSoilLocation
+    },
+    greatFairyFountains: {
+      collectedGreatFairyFountains,
+      setCollectedGreatFairyFountains,
+      toggleCollectedGreatFairyFountain
     }
   };
 

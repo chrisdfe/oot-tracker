@@ -66,15 +66,19 @@ const getPercentage = (amount: number, total: number) => {
 };
 
 const CollectablesIndexPage = () => {
-  const { heartPieces, goldSkulltulas, softSoilLocations } = useContext(
-    AppDataContext
-  );
+  const {
+    heartPieces,
+    goldSkulltulas,
+    softSoilLocations,
+    greatFairyFountains
+  } = useContext(AppDataContext);
 
   const appState = useContext(AppStateContext);
 
   const { collectedHearts } = appState.heartPieces;
   const { collectedGoldSkulltulas } = appState.goldSkulltulas;
   const { collectedSoftSoilLocations } = appState.softSoilLocations;
+  const { collectedGreatFairyFountains } = appState.greatFairyFountains;
 
   return (
     <>
@@ -83,6 +87,7 @@ const CollectablesIndexPage = () => {
           <h1>Collectables</h1>
         </Container>
       </Hero>
+
       <Container>
         <CollectableListItem url="heart-pieces" title="Heart Pieces">
           <h4>
@@ -111,6 +116,20 @@ const CollectablesIndexPage = () => {
             {getPercentage(
               collectedSoftSoilLocations.length,
               softSoilLocations.length
+            )}
+          </h4>
+        </CollectableListItem>
+
+        <CollectableListItem
+          url="great-fairy-fountains"
+          title="Great Fairy Fountains"
+        >
+          <h4>
+            {collectedGreatFairyFountains.length}/{greatFairyFountains.length}
+            :&nbsp;
+            {getPercentage(
+              collectedGreatFairyFountains.length,
+              greatFairyFountains.length
             )}
           </h4>
         </CollectableListItem>

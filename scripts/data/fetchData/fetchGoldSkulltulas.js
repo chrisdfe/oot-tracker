@@ -36,7 +36,14 @@ const fetchGoldSkulltulaData = async () => {
     const sourceImageUrl = box.querySelector("img").src;
     const localImageUrl = path.join(GOLD_SKULLTULAS_BASE_PATH, fileName);
 
-    const images = [{ fileName, sourceImageUrl, localImageUrl }];
+    const images = [
+      {
+        name: `Gold Skulltula #${number}`,
+        fileName,
+        sourceImageUrl,
+        localImageUrl
+      }
+    ];
 
     return {
       number,

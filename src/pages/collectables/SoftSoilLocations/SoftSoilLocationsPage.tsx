@@ -2,12 +2,13 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 
 import { AppDataContext } from "../../../App/AppData";
+import { AppStateContext } from "../../../App/AppState";
 
 import Container from "../../../components/layout/Container";
 import BackLink from "../../../components/BackLink";
+import StickyInfoBar from "../../../components/StickyInfoBar";
 
 import SoftSoilLocationsList from "./components/SoftSoilLocationsList";
-import StickyInfoBar from "./components/StickyInfoBar";
 
 const BackLinkWrapper = styled.div`
   margin: 1rem 0;
@@ -15,8 +16,11 @@ const BackLinkWrapper = styled.div`
 
 const SoftSoilLocationsPage = () => {
   const appData = useContext(AppDataContext);
+  const appState = useContext(AppStateContext);
 
   const { softSoilLocations } = appData;
+
+  const { collectedSoftSoilLocations } = appState.softSoilLocations;
 
   return (
     <div className="SoftSoilLocationsPage">
@@ -26,7 +30,10 @@ const SoftSoilLocationsPage = () => {
         </BackLinkWrapper>
       </Container>
 
-      <StickyInfoBar />
+      <StickyInfoBar
+        headingText={`${collectedSoftSoilLocations.length}/
+              ${softSoilLocations.length} soft soil locations`}
+      />
 
       <Container>
         <SoftSoilLocationsList softSoilLocations={softSoilLocations} />

@@ -5,10 +5,6 @@ const { outputJSONToFile, readJSONFromFile } = require("../utils");
 const { fetchFromURLOrCache, cleanLocations } = require("./utils");
 
 const {
-  PROJECT_ROOT_PATH,
-  ZELDA_DUNGEON_BASE_URL,
-  IMAGES_PATH,
-
   SOFT_SOIL_LOCATIONS_URL,
   SOFT_SOIL_LOCATIONS_BASE_PATH,
   SOFT_SOIL_LOCATIONS_JSON_FILENAME
@@ -74,6 +70,7 @@ const fetchSoftSoilLocationsData = async () => {
       const localImageUrl = path.join(SOFT_SOIL_LOCATIONS_BASE_PATH, fileName);
 
       return {
+        name: `Soft Soil Location #${sectionIndex + 1}.${childIndex + 1}`,
         fileName,
         sourceImageUrl,
         localImageUrl

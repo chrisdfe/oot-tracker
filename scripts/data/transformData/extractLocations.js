@@ -7,11 +7,21 @@ const slugify = str =>
     .replace(/[']/g, "");
 
 const getLocations = payload => {
-  const { heartPieceData, goldSkulltulaData, softSoilLocationData } = payload;
+  const {
+    heartPieceData,
+    goldSkulltulaData,
+    softSoilLocationData,
+    greatFairyFountainData
+  } = payload;
 
   // Build an array of location names from input lists
   return (
-    [heartPieceData, goldSkulltulaData, softSoilLocationData]
+    [
+      heartPieceData,
+      goldSkulltulaData,
+      softSoilLocationData,
+      greatFairyFountainData
+    ]
       // combine 'location' field from each list into 1 array + dedupe
       .reduce((acc, list) => {
         const listLocations = list.map(({ location }) => location);
@@ -46,11 +56,18 @@ const getLocations = payload => {
           )
           .map(location => location.number);
 
+        const greatFairyFountainIds = greatFairyFountainData
+          .filter(
+            greatFairyFountain => greatFairyFountain.location === location.title
+          )
+          .map(location => location.number);
+
         return {
           ...location,
           heartPieceIds,
           goldSkulltulaIds,
-          softSoilLocationIds
+          softSoilLocationIds,
+          greatFairyFountainIds
         };
       })
   );

@@ -19,12 +19,12 @@
 - Add something to home screen
 - Smarter 'scroll to top' ing - I wish it would save my scroll top on the locations index page
 - Use 'text.color.interactive' instead of 'text.color.secondary'
+- The checkbox overflow bug is still happening on Collectables pages
 
 ## Data
 
 - Separate data/state from context provider/consumers
 
-- Add great fairy fountains
 - Add bottles
 - Add big poes
 - Add songs
@@ -35,6 +35,8 @@
   -Pull image stuff into a separate object, create "CollectableImage" type
 
 - Set up 'location links to' associations - e.g kokiri forest -> lost woods, hyrule field
+
+- ZELDA_DUNGEON_BASE_URL should be part of sourceImageUrl - fetchImages/utils.js
 
 # Done
 
@@ -70,3 +72,4 @@
 - Ability to filter locations index by region
 - Sort locations index locations by region
 - Fix checkbox overflow but on LocationDetailsPage
+- Add great fairy fountains

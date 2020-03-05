@@ -45,7 +45,7 @@ const AppGlobalStyles = ({ children }: Props) => {
     }
 
     h3 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
 
     h4 {

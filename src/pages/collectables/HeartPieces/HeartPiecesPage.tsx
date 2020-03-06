@@ -11,7 +11,7 @@ import StickySectionHeader from "components/StickySectionHeader";
 import HeartPieceList from "./components/HeartPieceList";
 
 const BackLinkWrapper = styled.div`
-  margin: 1rem 0;
+  margin: 4rem 0 0;
 `;
 
 const HeartPiecesPage = () => {

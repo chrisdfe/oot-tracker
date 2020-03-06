@@ -1,6 +1,7 @@
 # TODO
 
 - "nearby" locations?
+- "connects to" locations?
 
 ## UI
 
@@ -15,7 +16,7 @@
 - Tone the region themes down on LocationIndex - smaller color indicator of the theme
 - Add 'reset everything' button, or abilities to have multiple slots?
 - Add something to home screen
-- Smarter 'scroll to top' ing - I wish it would save my scroll top on the locations index page
+- Smarter 'scroll to top' ing - I wish it would save my scrollTop on the locations index page
 - Use 'text.color.interactive' instead of 'text.color.secondary'
 - add progress bars to collectables
 - Fix themes so there is a more obvious color to use for hover/focus/active states

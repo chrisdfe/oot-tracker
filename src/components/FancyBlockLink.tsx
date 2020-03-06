@@ -7,18 +7,18 @@ import hexToRGB from "utils/hexToRGB";
 interface Props {
   to: string;
   title: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const NextArrow = styled.div`
   position: absolute;
   top: 0;
-  right: 0;
+  right: 2rem;
   bottom: 0;
   display: flex;
   align-items: center;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 0;
   color: ${({ theme }) => theme.text.color.primary};
   transition: transform 0.2s;
 
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
   a {
     position: relative;
     display: block;
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 3rem 1.2rem 2rem;
     text-decoration: none;
     background-color: ${({ theme }) => theme.background.color.primary};
     transition: all 0.2s;

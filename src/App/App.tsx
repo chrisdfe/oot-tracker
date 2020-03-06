@@ -12,12 +12,17 @@ import Navbar from "../components/Navbar";
 
 import LocationDetailPage from "../pages/locations/LocationDetailPage";
 import LocationsIndexPage from "../pages/locations/LocationsIndexPage";
+
 import HeartsPiecesPage from "../pages/collectables/HeartPieces/HeartPiecesPage";
 import GoldSkulltulasPage from "../pages/collectables/GoldSkulltulas/GoldSkulltulasPage";
 import SoftSoilLocationsPage from "../pages/collectables/SoftSoilLocations/SoftSoilLocationsPage";
 import GreatFairyFountainsPage from "../pages/collectables/GreatFairyFountains/GreatFairyFountainsPage";
 import CollectablesIndexPage from "../pages/collectables/CollectablesIndexPage";
-import StyleguidePage from "../pages/Styleguide/StyleguidePage";
+
+import StyleguideIndexPage from "../pages/styleguide/StyleguideIndexPage";
+import StyleguideTypographyPage from "../pages/styleguide/StyleguideTypographyPage";
+import StyleguideRegionsPage from "../pages/styleguide/StyleguideRegionsPage";
+import StyleguideComponentsPage from "../pages/styleguide/StyleguideComponentsPage";
 
 function App() {
   return (
@@ -60,8 +65,17 @@ function App() {
               <Route path="/collectables">
                 <CollectablesIndexPage />
               </Route>
+              <Route path="/styleguide/components">
+                <StyleguideComponentsPage />
+              </Route>
+              <Route path="/styleguide/typography">
+                <StyleguideTypographyPage />
+              </Route>
+              <Route path="/styleguide/regions">
+                <StyleguideRegionsPage />
+              </Route>
               <Route path="/styleguide">
-                <StyleguidePage />
+                <StyleguideIndexPage />
               </Route>
               <Route path="/">
                 <div />

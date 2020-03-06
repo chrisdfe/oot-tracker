@@ -6,7 +6,7 @@ import { AppStateContext } from "../../../App/AppState";
 
 import Container from "../../../components/layout/Container";
 import BackLink from "../../../components/BackLink";
-import StickyInfoBar from "../../../components/StickyInfoBar";
+import StickySectionHeader from "../../../components/StickySectionHeader";
 
 import HeartPieceList from "./components/HeartPieceList";
 
@@ -21,6 +21,9 @@ const HeartPiecesPage = () => {
   const { heartPieces } = appData;
 
   const { collectedHearts } = appState.heartPieces;
+
+  const title = `${collectedHearts.length}/${heartPieces.length} heart pieces`;
+
   return (
     <div className="HeartPiecesPage">
       <Container>
@@ -29,11 +32,7 @@ const HeartPiecesPage = () => {
         </BackLinkWrapper>
       </Container>
 
-      <StickyInfoBar
-        headingText={`${collectedHearts.length}/${
-          heartPieces.length
-        } heart pieces`}
-      />
+      <StickySectionHeader title={title} />
 
       <Container>
         <HeartPieceList heartPieces={heartPieces} />

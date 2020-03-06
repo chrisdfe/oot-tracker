@@ -6,6 +6,7 @@ import CollectableDetail from "../../../../components/CollectableDetail";
 import TitledParagraph from "../../../../components/typography/TitledParagraph";
 
 import padNumber from "../../../../utils/padNumber";
+import fetchedImagesToRenderedImages from "../../../../utils/fetchedImagesToRenderedImages";
 
 import { GoldSkulltula } from "../../../../data/types/GoldSkulltula";
 
@@ -14,11 +15,9 @@ export interface Props {
 }
 
 const HeartPieceListItem = ({ goldSkulltula }: Props) => {
-  const imageSrc = require(`../../../../images/build/${
-    goldSkulltula.images[0].localImageUrl
-  }`);
-
   const appState = useContext(AppStateContext);
+
+  const images = fetchedImagesToRenderedImages(goldSkulltula.images);
 
   const {
     collectedGoldSkulltulas,
@@ -35,8 +34,8 @@ const HeartPieceListItem = ({ goldSkulltula }: Props) => {
       onToggleCollected={() => {
         toggleCollectedGoldSkulltula(goldSkulltula.number);
       }}
-      thumbnails={[imageSrc]}
-      images={[imageSrc]}
+      thumbnails={images}
+      images={images}
       heading={
         <>
           <strong>#{padNumber(goldSkulltula.number)}</strong>&nbsp;

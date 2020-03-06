@@ -1,37 +1,19 @@
 import React, { ReactNode, useContext } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 import { AppDataContext } from "../../App/AppData";
 import { AppStateContext } from "../../App/AppState";
 
 import Hero from "../../components/layout/Hero";
 import Container from "../../components/layout/Container";
+import FancyBlockLink from "../../components/FancyBlockLink";
 
 const CollectableListItemWrapper = styled.div`
   margin-bottom: 2rem;
-  background-color: ${({ theme }) => theme.background.color.primary};
-
-  h2 {
-    margin: 0 0 0.4rem;
-    color: ${({ theme }) => theme.text.color.primary}
-  }
 
   h4 {
     margin: 0;
     color: ${({ theme }) => theme.text.color.primary}
-  }
-
-  a {
-    display: block;
-    padding: 1.2rem 2rem;
-    text-decoration: none;
-    border-bottom: 4px solid rgba(255, 255, 255, 0);
-    transition: border-color 0.2s;
-
-    &:hover {
-      border-bottom-color: ${({ theme }) => theme.border.color.secondary};
-    }
   }
 
   span {
@@ -53,10 +35,9 @@ const CollectableListItem = ({
   children
 }: CollectableListItemProps) => (
   <CollectableListItemWrapper>
-    <Link to={`/collectables/${url}`}>
-      <h2>{title}</h2>
+    <FancyBlockLink title={title} to={`/collectables/${url}`}>
       {children}
-    </Link>
+    </FancyBlockLink>
   </CollectableListItemWrapper>
 );
 

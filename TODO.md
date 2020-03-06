@@ -13,13 +13,14 @@
 - create ButtonGroup component
 - Create 'Heading' and 'Paragraph' components
 - "everything collected in this location" indicator on index/details page
-- checkbox outline goes outside of sticky h2 on LocationDetailPage
 - Tone the region themes down on LocationIndex - smaller color indicator of the theme
 - Add 'reset everything' button, or abilities to have multiple slots?
 - Add something to home screen
 - Smarter 'scroll to top' ing - I wish it would save my scroll top on the locations index page
 - Use 'text.color.interactive' instead of 'text.color.secondary'
-- The checkbox overflow bug is still happening on Collectables pages
+- add progress bars to collectables
+- Fix themes so there is a more obvious color to use for hover/focus/active states
+- Better indicator which region is currently filtered on LocationIndexPage
 
 ## Data
 
@@ -73,3 +74,6 @@
 - Sort locations index locations by region
 - Fix checkbox overflow but on LocationDetailsPage
 - Add great fairy fountains
+- The checkbox overflow bug is still happening on Collectables pages
+- checkbox outline goes outside of sticky h2 on LocationDetailPage
+- Clean up those image alt warnings

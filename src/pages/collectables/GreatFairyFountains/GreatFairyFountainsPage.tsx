@@ -6,7 +6,7 @@ import { AppStateContext } from "../../../App/AppState";
 
 import Container from "../../../components/layout/Container";
 import BackLink from "../../../components/BackLink";
-import StickyInfoBar from "../../../components/StickyInfoBar";
+import StickySectionHeader from "../../../components/StickySectionHeader";
 
 import GreatFairyFountainList from "./components/GreatFairyFountainList";
 
@@ -22,6 +22,10 @@ const HeartPiecesPage = () => {
 
   const { greatFairyFountains } = appData;
 
+  const title = `${collectedGreatFairyFountains.length}/${
+    greatFairyFountains.length
+  } great fairy fountains`;
+
   return (
     <div className="HeartPiecesPage">
       <Container>
@@ -30,11 +34,7 @@ const HeartPiecesPage = () => {
         </BackLinkWrapper>
       </Container>
 
-      <StickyInfoBar
-        headingText={`${collectedGreatFairyFountains.length}/${
-          greatFairyFountains.length
-        } great fairy fountains`}
-      />
+      <StickySectionHeader title={title} />
 
       <Container>
         <GreatFairyFountainList greatFairyFountains={greatFairyFountains} />

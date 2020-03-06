@@ -6,6 +6,7 @@ import CollectableDetail from "../../../../components/CollectableDetail";
 import TitledParagraph from "../../../../components/typography/TitledParagraph";
 
 import padNumber from "../../../../utils/padNumber";
+import fetchedImagesToRenderedImages from "../../../../utils/fetchedImagesToRenderedImages";
 
 import { SoftSoilLocation } from "../../../../data/types/SoftSoilLocation";
 
@@ -14,11 +15,9 @@ export interface Props {
 }
 
 const HeartPieceListItem = ({ softSoilLocation }: Props) => {
-  const imageUrls = softSoilLocation.images.map(({ localImageUrl }) =>
-    require(`../../../../images/build/${localImageUrl}`)
-  );
-
   const appState = useContext(AppStateContext);
+
+  const images = fetchedImagesToRenderedImages(softSoilLocation.images);
 
   const {
     collectedSoftSoilLocations,
@@ -35,8 +34,8 @@ const HeartPieceListItem = ({ softSoilLocation }: Props) => {
       onToggleCollected={() => {
         toggleCollectedSoftSoilLocation(softSoilLocation.number);
       }}
-      thumbnails={imageUrls}
-      images={imageUrls}
+      thumbnails={images}
+      images={images}
       heading={<strong>#{padNumber(softSoilLocation.number, 2)}</strong>}
     >
       <TitledParagraph

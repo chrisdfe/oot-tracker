@@ -2,10 +2,12 @@ import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 import Checkbox from "./Checkbox";
 
+import { RenderedImage } from "../data/types/RenderedImage";
+
 interface Props {
   heading: ReactNode;
-  thumbnails?: string[];
-  images?: string[];
+  thumbnails?: RenderedImage[];
+  images?: RenderedImage[];
   hasBeenCollected: boolean;
   onToggleCollected: () => void;
   children: ReactNode;
@@ -81,7 +83,7 @@ const BodyContentInner = styled.div`
   padding: 1.5rem 0;
 `;
 
-const renderThumbnails = (thumbnails?: string[]) => {
+const renderThumbnails = (thumbnails?: RenderedImage[]) => {
   if (!thumbnails || !thumbnails.length) {
     return null;
   }
@@ -89,15 +91,15 @@ const renderThumbnails = (thumbnails?: string[]) => {
   return (
     <>
       {thumbnails.map(thumbnail => (
-        <ThumbWrapper key={thumbnail}>
-          <img src={thumbnail} />
+        <ThumbWrapper key={thumbnail.src}>
+          <img src={thumbnail.src} alt={thumbnail.alt} />
         </ThumbWrapper>
       ))}
     </>
   );
 };
 
-const renderImages = (images?: string[]) => {
+const renderImages = (images?: RenderedImage[]) => {
   if (!images || !images.length) {
     return null;
   }
@@ -105,8 +107,8 @@ const renderImages = (images?: string[]) => {
   return (
     <>
       {images.map(image => (
-        <ImageWrapper key={image}>
-          <img src={image} />
+        <ImageWrapper key={image.src}>
+          <img src={image.src} alt={image.alt} />
         </ImageWrapper>
       ))}
     </>

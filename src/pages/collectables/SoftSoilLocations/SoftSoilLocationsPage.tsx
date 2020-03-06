@@ -6,7 +6,7 @@ import { AppStateContext } from "../../../App/AppState";
 
 import Container from "../../../components/layout/Container";
 import BackLink from "../../../components/BackLink";
-import StickyInfoBar from "../../../components/StickyInfoBar";
+import StickySectionHeader from "../../../components/StickySectionHeader";
 
 import SoftSoilLocationsList from "./components/SoftSoilLocationsList";
 
@@ -22,6 +22,8 @@ const SoftSoilLocationsPage = () => {
 
   const { collectedSoftSoilLocations } = appState.softSoilLocations;
 
+  const title = `${collectedSoftSoilLocations.length}/
+              ${softSoilLocations.length} soft soil locations`;
   return (
     <div className="SoftSoilLocationsPage">
       <Container>
@@ -30,10 +32,7 @@ const SoftSoilLocationsPage = () => {
         </BackLinkWrapper>
       </Container>
 
-      <StickyInfoBar
-        headingText={`${collectedSoftSoilLocations.length}/
-              ${softSoilLocations.length} soft soil locations`}
-      />
+      <StickySectionHeader title={title} />
 
       <Container>
         <SoftSoilLocationsList softSoilLocations={softSoilLocations} />

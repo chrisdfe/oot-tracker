@@ -6,6 +6,7 @@ import CollectableDetail from "../../../../components/CollectableDetail";
 import TitledParagraph from "../../../../components/typography/TitledParagraph";
 
 import padNumber from "../../../../utils/padNumber";
+import fetchedImagesToRenderedImages from "../../../../utils/fetchedImagesToRenderedImages";
 
 import { GreatFairyFountain } from "../../../../data/types/GreatFairyFountain";
 
@@ -14,11 +15,9 @@ export interface Props {
 }
 
 const GreatFairyFountainListItem = ({ greatFairyFountain }: Props) => {
-  const imageSrcs = greatFairyFountain.images.map(({ localImageUrl }) =>
-    require(`../../../../images/build/${localImageUrl}`)
-  );
-
   const appState = useContext(AppStateContext);
+
+  const images = fetchedImagesToRenderedImages(greatFairyFountain.images);
 
   const {
     collectedGreatFairyFountains,
@@ -35,8 +34,8 @@ const GreatFairyFountainListItem = ({ greatFairyFountain }: Props) => {
       onToggleCollected={() => {
         toggleCollectedGreatFairyFountain(greatFairyFountain.number);
       }}
-      thumbnails={imageSrcs}
-      images={imageSrcs}
+      thumbnails={images}
+      images={images}
       heading={
         <>
           <strong>#{padNumber(greatFairyFountain.number, 2)}</strong>&nbsp;

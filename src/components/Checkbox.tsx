@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 interface Props {
-  isSelected: boolean;
+  isChecked: boolean;
   onClick: () => void;
 }
 
 interface WrapperProps {
-  isSelected: boolean;
+  isChecked: boolean;
 }
 
 const Wrapper = styled.button<WrapperProps>`
@@ -36,16 +36,16 @@ const CheckWrapper = styled.div`
   font-size: 1.5em;
 `;
 
-const Checkbox = ({ isSelected, onClick }: Props) => {
+const Checkbox = ({ isChecked, onClick }: Props) => {
   return (
     <Wrapper
-      isSelected={isSelected}
+      isChecked={isChecked}
       onClick={() => {
         onClick();
       }}
     >
-      {/*<CheckWrapper>{isSelected ? "≋" : ""}</CheckWrapper>*/}
-      {<CheckWrapper>{isSelected ? "≜" : ""}</CheckWrapper>}
+      {/*<CheckWrapper>{isChecked ? "≋" : ""}</CheckWrapper>*/}
+      {<CheckWrapper>{isChecked ? "≜" : ""}</CheckWrapper>}
     </Wrapper>
   );
 };

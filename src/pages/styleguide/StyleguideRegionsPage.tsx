@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import ThemeRegion from "App/ThemeRegion";
 
+import StyleguidePage from "./components/StyleguidePage";
 import StyleguideSubpageHero from "./components/StyleguideSubpageHero";
 import StyleguideSection from "./components/StyleguideSection";
 
@@ -23,7 +24,7 @@ const RegionTestContent = () => (
 
 const StyleguideRegionsPage = () => {
   return (
-    <div className="StyleguideRegionsPage">
+    <StyleguidePage>
       <StyleguideSubpageHero title="Regions" />
 
       <StyleguideSection title="Theme regions">
@@ -57,7 +58,7 @@ const StyleguideRegionsPage = () => {
           <RegionTestContent />
         </ThemeRegion>
       </StyleguideSection>
-    </div>
+    </StyleguidePage>
   );
 };
 

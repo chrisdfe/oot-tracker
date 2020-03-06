@@ -9,6 +9,7 @@ const StyledButton = styled.button`
   border-radius: 3px;
   font-size: 0.8em;
   font-weight: 700;
+  cursor: pointer;
 `;
 
 interface Props {

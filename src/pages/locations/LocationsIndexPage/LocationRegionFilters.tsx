@@ -7,6 +7,8 @@ import { Region } from "data/types/Region";
 
 import hexToRGB from "utils/hexToRGB";
 
+import RegionSelector from "components/RegionSelector";
+
 interface Props {
   regions: Region[];
   onRegionSelect: (region: Region) => void;
@@ -22,56 +24,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const ListWrapper = styled.div`
-  display: flex;
-`;
-
-interface ListItemButtonProps {
-  isActive: boolean;
-}
-
-const ListItemButton = styled.button<ListItemButtonProps>`
-  display: block;
-  padding: 0.3rem 0.5rem;
-  // border: 2px solid ${({ theme }) => theme.border.color.primary};
-  border: 0 none;
-  border-bottom: 2px solid transparent;
-  // background-color: ${({ theme }) => theme.background.color.primary};
-  background-color: ${({ theme }) => theme.rawColors.white};
-  color: ${({ theme }) => theme.text.color.primary};
-  font-family: ${({ theme }) => theme.fonts.body};
-  font-weight: bold;
-  font-size: 0.8em;
-  cursor: pointer;
-
-  margin-right: 0.5rem;
-  border-radius: 3px;
-
-  transition: all 0.2s;
-  &:hover {
-    // opacity: 0.8;
-    background-color: ${({ theme }) =>
-      hexToRGB(theme.background.color.primary, 0.5)};
-  }
-
-  &:focus {
-    outline: 0 none;
-    background-color: ${({ theme, isActive }) =>
-      hexToRGB(theme.background.color.primary, isActive ? 1 : 0.5)};
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  ${({ theme, isActive }) =>
-    isActive
-      ? css`
-          background-color: ${({ theme }) => theme.background.color.primary};
-        `
-      : ""}
-`;
-
 const LocationRegionFilters = ({
   regions,
   onRegionSelect,
@@ -80,20 +32,10 @@ const LocationRegionFilters = ({
   return (
     <Wrapper>
       <h4>Filter regions</h4>
-      <ListWrapper>
-        {regions.map(region => (
-          <ThemeRegion key={region.slug} regionSlug={region.slug}>
-            <ListItemButton
-              isActive={currentRegionFilterId === region.id}
-              onClick={() => {
-                onRegionSelect(region);
-              }}
-            >
-              {region.title}
-            </ListItemButton>
-          </ThemeRegion>
-        ))}
-      </ListWrapper>
+      <RegionSelector
+        onRegionSelect={onRegionSelect}
+        currentRegionFilterId={currentRegionFilterId}
+      />
     </Wrapper>
   );
 };

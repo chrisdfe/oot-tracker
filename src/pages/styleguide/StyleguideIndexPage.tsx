@@ -4,6 +4,7 @@ import Container from "components/layout/Container";
 import Hero from "components/layout/Hero";
 import FancyBlockLink from "components/FancyBlockLink";
 
+import StyleguidePage from "./components/StyleguidePage";
 import StyleguideSection from "./components/StyleguideSection";
 
 const LINKS = [
@@ -23,7 +24,7 @@ const LINKS = [
 
 const StyleguideIndexPage = () => {
   return (
-    <div className="StyleguideIndexPage">
+    <StyleguidePage>
       <Hero>
         <Container>
           <h1>Styleguide</h1>
@@ -34,7 +35,7 @@ const StyleguideIndexPage = () => {
           <FancyBlockLink title={title} to={url} />
         ))}
       </StyleguideSection>
-    </div>
+    </StyleguidePage>
   );
 };
 

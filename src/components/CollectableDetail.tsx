@@ -132,7 +132,7 @@ const CollectableDetail = ({
         <ThumbCheckboxWrapper>
           {renderThumbnails(thumbnails)}
           <Checkbox
-            isSelected={hasBeenCollected}
+            isChecked={hasBeenCollected}
             onClick={() => {
               onToggleCollected();
             }}

@@ -1,7 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
-
-import ThemeRegion from "App/ThemeRegion";
+import styled from "styled-components";
 
 import { Region } from "data/types/Region";
 

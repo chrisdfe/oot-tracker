@@ -30,7 +30,7 @@ const StyleguideIndexPage = () => {
           <h1>Styleguide</h1>
         </Container>
       </Hero>
-      <StyleguideSection>
+      <StyleguideSection showRegionSelector={false}>
         {LINKS.map(({ title, url }) => (
           <FancyBlockLink title={title} to={url} />
         ))}

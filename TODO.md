@@ -2,6 +2,7 @@
 
 - "nearby" locations?
 - "connects to" locations?
+- Add index.ts to utils
 
 ## UI
 
@@ -79,3 +80,4 @@
 - Clean up those image alt warnings
 - Better indicator which region is currently filtered on LocationIndexPage
 - Fix these awful deeply-nested relative imports
+- ProgressBar component

@@ -4,6 +4,7 @@ import BackLink from "components/BackLink";
 import Button from "components/Button";
 import Checkbox from "components/Checkbox";
 import FancyBlockLink from "components/FancyBlockLink";
+import ProgressBar from "components/ProgressBar";
 
 import StyleguidePage from "./components/StyleguidePage";
 import StyleguideSubpageHero from "./components/StyleguideSubpageHero";
@@ -46,6 +47,22 @@ const CheckboxSectionContent = () => {
   );
 };
 
+const ProgressBarSectionContent = () => {
+  const currentAmount = 20;
+  const totalAmount = 80;
+
+  return (
+    <>
+      <ProgressBar currentAmount={currentAmount} totalAmount={totalAmount} />
+      <p>
+        currentAmount: <strong>{currentAmount}</strong>
+        <br />
+        totalAmount: <strong>{totalAmount}</strong>
+      </p>
+    </>
+  );
+};
+
 const StyleguideComponentsPage = () => {
   return (
     <StyleguidePage>
@@ -68,6 +85,10 @@ const StyleguideComponentsPage = () => {
         <FancyBlockLink title="FancyBlockLink title" to="#">
           <h4>With children prop</h4>
         </FancyBlockLink>
+      </StyleguideSection>
+
+      <StyleguideSection title="ProgressBar">
+        <ProgressBarSectionContent />
       </StyleguideSection>
     </StyleguidePage>
   );

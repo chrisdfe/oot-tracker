@@ -8,6 +8,8 @@ import Hero from "components/layout/Hero";
 import Container from "components/layout/Container";
 import FancyBlockLink from "components/FancyBlockLink";
 
+import getPercentage from "utils/getPercentage";
+
 const CollectableListItemWrapper = styled.div`
   margin-bottom: 2rem;
 
@@ -41,11 +43,6 @@ const CollectableListItem = ({
   </CollectableListItemWrapper>
 );
 
-const getPercentage = (amount: number, total: number) => {
-  const percentage = Math.floor((amount * 100) / total);
-  return `${percentage}%`;
-};
-
 const CollectablesIndexPage = () => {
   const {
     heartPieces,
@@ -73,7 +70,7 @@ const CollectablesIndexPage = () => {
         <CollectableListItem url="heart-pieces" title="Heart Pieces">
           <h4>
             {collectedHearts.length}/{heartPieces.length}:&nbsp;
-            {getPercentage(collectedHearts.length, heartPieces.length)}
+            {getPercentage(collectedHearts.length, heartPieces.length)}%
           </h4>
         </CollectableListItem>
 
@@ -84,6 +81,7 @@ const CollectablesIndexPage = () => {
               collectedGoldSkulltulas.length,
               goldSkulltulas.length
             )}
+            %
           </h4>
         </CollectableListItem>
 
@@ -98,6 +96,7 @@ const CollectablesIndexPage = () => {
               collectedSoftSoilLocations.length,
               softSoilLocations.length
             )}
+            %
           </h4>
         </CollectableListItem>
 
@@ -112,6 +111,7 @@ const CollectablesIndexPage = () => {
               collectedGreatFairyFountains.length,
               greatFairyFountains.length
             )}
+            %
           </h4>
         </CollectableListItem>
       </Container>

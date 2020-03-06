@@ -20,7 +20,6 @@
 - Use 'text.color.interactive' instead of 'text.color.secondary'
 - add progress bars to collectables
 - Fix themes so there is a more obvious color to use for hover/focus/active states
-- Better indicator which region is currently filtered on LocationIndexPage
 
 ## Data
 
@@ -77,3 +76,4 @@
 - The checkbox overflow bug is still happening on Collectables pages
 - checkbox outline goes outside of sticky h2 on LocationDetailPage
 - Clean up those image alt warnings
+- Better indicator which region is currently filtered on LocationIndexPage

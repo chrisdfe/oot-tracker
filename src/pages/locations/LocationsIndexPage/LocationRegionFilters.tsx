@@ -36,7 +36,8 @@ const ListItemButton = styled.button<ListItemButtonProps>`
   // border: 2px solid ${({ theme }) => theme.border.color.primary};
   border: 0 none;
   border-bottom: 2px solid transparent;
-  background-color: ${({ theme }) => theme.background.color.primary};
+  // background-color: ${({ theme }) => theme.background.color.primary};
+  background-color: ${({ theme }) => theme.rawColors.white};
   color: ${({ theme }) => theme.text.color.primary};
   font-family: ${({ theme }) => theme.fonts.body};
   font-weight: bold;
@@ -46,19 +47,11 @@ const ListItemButton = styled.button<ListItemButtonProps>`
   margin-right: 0.5rem;
   border-radius: 3px;
 
-  transition: opacity 0.2s;
-  ${({ theme, isActive }) =>
-    isActive
-      ? css`
-          // box-shadow: 0 0 0 3px ${theme.border.color.primary};
-          // border-bottom: 2px solid ${theme.border.color.primary};
-          background-color: ${({ theme }) => theme.background.color.primary};
-        `
-      : ""}
-
-
+  transition: all 0.2s;
   &:hover {
-    opacity: 0.8;
+    // opacity: 0.8;
+    background-color: ${({ theme }) =>
+      hexToRGB(theme.background.color.primary, 0.5)};
   }
 
   &:focus {
@@ -70,6 +63,13 @@ const ListItemButton = styled.button<ListItemButtonProps>`
   &:last-child {
     margin-right: 0;
   }
+
+  ${({ theme, isActive }) =>
+    isActive
+      ? css`
+          background-color: ${({ theme }) => theme.background.color.primary};
+        `
+      : ""}
 `;
 
 const LocationRegionFilters = ({

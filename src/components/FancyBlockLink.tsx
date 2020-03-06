@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import hexToRGB from "../utils/hexToRGB";
+import hexToRGB from "utils/hexToRGB";
 
 interface Props {
   to: string;

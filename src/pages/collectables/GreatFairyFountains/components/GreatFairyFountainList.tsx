@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import GreatFairyFountainListItem from "./GreatFairyFountainListItem";
+import { GreatFairyFountain } from "data/types/GreatFairyFountain";
 
-import { GreatFairyFountain } from "../../../../data/types/GreatFairyFountain";
+import GreatFairyFountainListItem from "./GreatFairyFountainListItem";
 
 interface Props {
   greatFairyFountains: GreatFairyFountain[];

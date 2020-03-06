@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
-import { AppDataContext } from "../../../App/AppData";
-import { AppStateContext } from "../../../App/AppState";
+import { AppDataContext } from "App/AppData";
+import { AppStateContext } from "App/AppState";
 
-import Container from "../../../components/layout/Container";
-import BackLink from "../../../components/BackLink";
-import StickySectionHeader from "../../../components/StickySectionHeader";
+import Container from "components/layout/Container";
+import BackLink from "components/BackLink";
+import StickySectionHeader from "components/StickySectionHeader";
 
 import HeartPieceList from "./components/HeartPieceList";
 

@@ -2,14 +2,14 @@ import React, { useContext, useCallback, useMemo } from "react";
 
 import groupBy from "lodash-es/groupBy";
 
-import Container from "../../../components/layout/Container";
-import Hero from "../../../components/layout/Hero";
+import Container from "components/layout/Container";
+import Hero from "components/layout/Hero";
 
-import { AppDataContext } from "../../../App/AppData";
+import { AppDataContext } from "App/AppData";
 
-import { getRegionById } from "../../../data/selectors/regions";
+import { getRegionById } from "data/selectors/regions";
 
-import usePersistedState from "../../../utils/usePersistedState";
+import usePersistedState from "utils/usePersistedState";
 
 import LocationRegionFilters from "./LocationRegionFilters";
 import LocationListItem from "./LocationListItem";

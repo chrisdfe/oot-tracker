@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import ThemeRegion from "../../../App/ThemeRegion";
+import ThemeRegion from "App/ThemeRegion";
 
-import { Region } from "../../../data/types/Region";
+import { Region } from "data/types/Region";
 
 interface Props {
   region?: Region;

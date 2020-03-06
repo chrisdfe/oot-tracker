@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { GameLocation } from "../../../data/types/GameLocation";
+import { GameLocation } from "data/types/GameLocation";
 
-import FancyBlockLink from "../../../components/FancyBlockLink";
+import ThemeRegion from "App/ThemeRegion";
+
+import FancyBlockLink from "components/FancyBlockLink";
 
 import LocationCollectableSummary from "../components/LocationCollectableSummary";
-
-import ThemeRegion from "../../../App/ThemeRegion";
 
 interface Props {
   regionSlug: string;

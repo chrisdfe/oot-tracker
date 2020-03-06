@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 
-import { AppStateContext } from "../../../../App/AppState";
+import { AppStateContext } from "App/AppState";
 
-import CollectableDetail from "../../../../components/CollectableDetail";
-import TitledParagraph from "../../../../components/typography/TitledParagraph";
+import CollectableDetail from "components/CollectableDetail";
+import TitledParagraph from "components/typography/TitledParagraph";
 
-import padNumber from "../../../../utils/padNumber";
-import fetchedImagesToRenderedImages from "../../../../utils/fetchedImagesToRenderedImages";
+import padNumber from "utils/padNumber";
+import fetchedImagesToRenderedImages from "utils/fetchedImagesToRenderedImages";
 
-import { HeartPiece } from "../../../../data/types/HeartPiece";
+import { HeartPiece } from "data/types/HeartPiece";
 
 export interface Props {
   heartPiece: HeartPiece;

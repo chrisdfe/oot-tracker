@@ -1,12 +1,12 @@
 import React, { ReactNode, useContext } from "react";
 import styled from "styled-components";
 
-import { AppDataContext } from "../../App/AppData";
-import { AppStateContext } from "../../App/AppState";
+import { AppDataContext } from "App/AppData";
+import { AppStateContext } from "App/AppState";
 
-import Hero from "../../components/layout/Hero";
-import Container from "../../components/layout/Container";
-import FancyBlockLink from "../../components/FancyBlockLink";
+import Hero from "components/layout/Hero";
+import Container from "components/layout/Container";
+import FancyBlockLink from "components/FancyBlockLink";
 
 const CollectableListItemWrapper = styled.div`
   margin-bottom: 2rem;

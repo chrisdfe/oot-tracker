@@ -1,11 +1,11 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import ThemeRegion from "../../../App/ThemeRegion";
+import ThemeRegion from "App/ThemeRegion";
 
-import { Region } from "../../../data/types/Region";
+import { Region } from "data/types/Region";
 
-import hexToRGB from "../../../utils/hexToRGB";
+import hexToRGB from "utils/hexToRGB";
 
 interface Props {
   regions: Region[];

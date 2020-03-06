@@ -1,5 +1,5 @@
-import { FetchedImage } from "../data/types/FetchedImage";
-import { RenderedImage } from "../data/types/RenderedImage";
+import { FetchedImage } from "data/types/FetchedImage";
+import { RenderedImage } from "data/types/RenderedImage";
 const fetchedImagesToRenderedImages = (
   images: FetchedImage[]
 ): RenderedImage[] =>

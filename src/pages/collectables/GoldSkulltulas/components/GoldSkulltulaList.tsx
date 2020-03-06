@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import GoldSkulltulaListItem from "./GoldSkulltulaListItem";
+import { GoldSkulltula } from "data/types/GoldSkulltula";
 
-import { GoldSkulltula } from "../../../../data/types/GoldSkulltula";
+import GoldSkulltulaListItem from "./GoldSkulltulaListItem";
 
 interface Props {
   goldSkulltulas: GoldSkulltula[];

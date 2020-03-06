@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import SoftSoilLocationsListItem from "./SoftSoilLocationsListItem";
+import { SoftSoilLocation } from "data/types/SoftSoilLocation";
 
-import { SoftSoilLocation } from "../../../../data/types/SoftSoilLocation";
+import SoftSoilLocationsListItem from "./SoftSoilLocationsListItem";
 
 interface Props {
   softSoilLocations: SoftSoilLocation[];

@@ -9,7 +9,6 @@
 - Add "has things left to collect" filters to locations page
 - Add title for soft soil locations
 - 'active' Navbar link
-- Sticky navbar
 - create ButtonGroup component
 - Create 'Heading' and 'Paragraph' components
 - "everything collected in this location" indicator on index/details page
@@ -20,6 +19,7 @@
 - Use 'text.color.interactive' instead of 'text.color.secondary'
 - add progress bars to collectables
 - Fix themes so there is a more obvious color to use for hover/focus/active states
+- "Scroll to top" button
 
 ## Data
 
@@ -77,3 +77,4 @@
 - checkbox outline goes outside of sticky h2 on LocationDetailPage
 - Clean up those image alt warnings
 - Better indicator which region is currently filtered on LocationIndexPage
+- Fix these awful deeply-nested relative imports

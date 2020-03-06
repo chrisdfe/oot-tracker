@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 
-import { AppStateContext } from "../../../../App/AppState";
+import { AppStateContext } from "App/AppState";
 
-import CollectableDetail from "../../../../components/CollectableDetail";
-import TitledParagraph from "../../../../components/typography/TitledParagraph";
+import CollectableDetail from "components/CollectableDetail";
+import TitledParagraph from "components/typography/TitledParagraph";
 
-import padNumber from "../../../../utils/padNumber";
-import fetchedImagesToRenderedImages from "../../../../utils/fetchedImagesToRenderedImages";
+import padNumber from "utils/padNumber";
+import fetchedImagesToRenderedImages from "utils/fetchedImagesToRenderedImages";
 
-import { GreatFairyFountain } from "../../../../data/types/GreatFairyFountain";
+import { GreatFairyFountain } from "data/types/GreatFairyFountain";
 
 export interface Props {
   greatFairyFountain: GreatFairyFountain;

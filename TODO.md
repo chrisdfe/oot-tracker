@@ -22,6 +22,7 @@
 - add progress bars to collectables
 - Fix themes so there is a more obvious color to use for hover/focus/active states
 - "Scroll to top" button
+- Button outline
 
 ## Data
 

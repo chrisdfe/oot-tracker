@@ -48,8 +48,8 @@ const Bar = styled.div<BarProps>`
 
 const PercentageText = styled.div`
   padding-left: 0.5rem;
-  width: 3rem;
-  text-align: right;
+  width: 2rem;
+  // text-align: right;
 `;
 
 const ProgressBar = ({ currentAmount, totalAmount, showPercentage }: Props) => {

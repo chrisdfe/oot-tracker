@@ -1,4 +1,4 @@
-import React, { ReactNode, useContext } from "react";
+import React, { ReactNode, useContext, useMemo } from "react";
 import styled from "styled-components";
 
 import { AppDataContext } from "App/AppData";
@@ -7,6 +7,7 @@ import { AppStateContext } from "App/AppState";
 import Hero from "components/layout/Hero";
 import Container from "components/layout/Container";
 import FancyBlockLink from "components/FancyBlockLink";
+import ProgressBar from "components/ProgressBar";
 
 import getPercentage from "utils/getPercentage";
 
@@ -14,7 +15,7 @@ const CollectableListItemWrapper = styled.div`
   margin-bottom: 2rem;
 
   h4 {
-    margin: 0;
+    margin: 0 0 0.3rem;
     color: ${({ theme }) => theme.text.color.primary}
   }
 
@@ -22,6 +23,16 @@ const CollectableListItemWrapper = styled.div`
     display: inline: block;
     margin-right: 0.5rem;
     color: ${({ theme }) => theme.text.color.primary}
+  }
+`;
+
+const HeroContents = styled.div`
+  h3 {
+    margin: 2rem 0 0.4rem;
+  }
+
+  h4 {
+    margin: 0 0 0.4rem;
   }
 `;
 
@@ -43,6 +54,9 @@ const CollectableListItem = ({
   </CollectableListItemWrapper>
 );
 
+const addListLengths = (lists: any[][]) =>
+  lists.reduce((acc, list) => acc + list.length, 0);
+
 const CollectablesIndexPage = () => {
   const {
     heartPieces,
@@ -58,31 +72,73 @@ const CollectablesIndexPage = () => {
   const { collectedSoftSoilLocations } = appState.softSoilLocations;
   const { collectedGreatFairyFountains } = appState.greatFairyFountains;
 
+  const currentAmount = useMemo(
+    () =>
+      addListLengths([
+        collectedHearts,
+        collectedGoldSkulltulas,
+        collectedSoftSoilLocations,
+        collectedGreatFairyFountains
+      ]),
+    [
+      collectedHearts,
+      collectedGoldSkulltulas,
+      collectedSoftSoilLocations,
+      collectedGreatFairyFountains
+    ]
+  );
+
+  const totalAmount = useMemo(
+    () =>
+      addListLengths([
+        heartPieces,
+        goldSkulltulas,
+        softSoilLocations,
+        greatFairyFountains
+      ]),
+    [heartPieces, goldSkulltulas, softSoilLocations, greatFairyFountains]
+  );
+
   return (
     <>
       <Hero>
         <Container>
-          <h1>Collectables</h1>
+          <HeroContents>
+            <h1>Collectables</h1>
+
+            <div>
+              <h3>Total collected</h3>
+              <h4>
+                {currentAmount}/{totalAmount}
+              </h4>
+              <ProgressBar
+                currentAmount={currentAmount}
+                totalAmount={totalAmount}
+              />
+            </div>
+          </HeroContents>
         </Container>
       </Hero>
 
       <Container>
         <CollectableListItem url="heart-pieces" title="Heart Pieces">
           <h4>
-            {collectedHearts.length}/{heartPieces.length}:&nbsp;
-            {getPercentage(collectedHearts.length, heartPieces.length)}%
+            {collectedHearts.length}/{heartPieces.length}
           </h4>
+          <ProgressBar
+            currentAmount={collectedHearts.length}
+            totalAmount={heartPieces.length}
+          />
         </CollectableListItem>
 
         <CollectableListItem url="gold-skulltulas" title="Gold Skulltulas">
           <h4>
-            {collectedGoldSkulltulas.length}/{goldSkulltulas.length}:&nbsp;
-            {getPercentage(
-              collectedGoldSkulltulas.length,
-              goldSkulltulas.length
-            )}
-            %
+            {collectedGoldSkulltulas.length}/{goldSkulltulas.length}
           </h4>
+          <ProgressBar
+            currentAmount={collectedGoldSkulltulas.length}
+            totalAmount={goldSkulltulas.length}
+          />
         </CollectableListItem>
 
         <CollectableListItem
@@ -91,13 +147,11 @@ const CollectablesIndexPage = () => {
         >
           <h4>
             {collectedSoftSoilLocations.length}/{softSoilLocations.length}
-            :&nbsp;
-            {getPercentage(
-              collectedSoftSoilLocations.length,
-              softSoilLocations.length
-            )}
-            %
           </h4>
+          <ProgressBar
+            currentAmount={collectedSoftSoilLocations.length}
+            totalAmount={softSoilLocations.length}
+          />
         </CollectableListItem>
 
         <CollectableListItem
@@ -106,13 +160,11 @@ const CollectablesIndexPage = () => {
         >
           <h4>
             {collectedGreatFairyFountains.length}/{greatFairyFountains.length}
-            :&nbsp;
-            {getPercentage(
-              collectedGreatFairyFountains.length,
-              greatFairyFountains.length
-            )}
-            %
           </h4>
+          <ProgressBar
+            currentAmount={collectedSoftSoilLocations.length}
+            totalAmount={softSoilLocations.length}
+          />
         </CollectableListItem>
       </Container>
     </>

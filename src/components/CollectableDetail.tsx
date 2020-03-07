@@ -6,6 +6,7 @@ import { RenderedImage } from "../data/types/RenderedImage";
 
 interface Props {
   heading: ReactNode;
+  headingExtraContent?: ReactNode;
   thumbnails?: RenderedImage[];
   images?: RenderedImage[];
   hasBeenCollected: boolean;
@@ -117,6 +118,7 @@ const renderImages = (images?: RenderedImage[]) => {
 
 const CollectableDetail = ({
   heading,
+  headingExtraContent,
   thumbnails,
   images,
   hasBeenCollected,
@@ -128,6 +130,7 @@ const CollectableDetail = ({
       <HeaderBar>
         <HeadingWrapper>
           <Heading>{heading}</Heading>
+          {headingExtraContent}
         </HeadingWrapper>
         <ThumbCheckboxWrapper>
           {renderThumbnails(thumbnails)}

@@ -13,7 +13,7 @@ interface Props {
 const NextArrow = styled.div`
   position: absolute;
   top: 0;
-  right: 2rem;
+  right: 0.7rem;
   bottom: 0;
   display: flex;
   align-items: center;

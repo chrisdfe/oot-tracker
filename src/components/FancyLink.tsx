@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     position: relative;
     font-weight: bold;
     line-height: 1.8em;
+    color: ${({ theme }) => theme.text.color.primary}
 
     &:before {
       content: "";
@@ -26,7 +27,7 @@ const Wrapper = styled.div`
 
     &:hover {
       &:before {
-        border-bottom-color: rgba(255, 255, 255, 0);
+        // border-bottom-color: rgba(255, 255, 255, 0);
       }
     }
   }

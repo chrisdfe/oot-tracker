@@ -1,10 +1,12 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
+import slugify from "utils/slugify";
+
 import Container from "./layout/Container";
 
 interface Props {
-  title: string;
+  title?: string;
   children?: ReactNode;
 }
 
@@ -21,6 +23,9 @@ const StickyHeaderWrapper = styled.div`
 `;
 
 const Inner = styled.div`
+  display: flex;
+  align-items: center;
+
   padding: 1rem 0;
   border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
 `;
@@ -30,7 +35,7 @@ const StickySectionHeader = ({ title, children }: Props) => {
     <StickyHeaderWrapper>
       <Container>
         <Inner>
-          <h2>{title}</h2>
+          {title && <h2 id={slugify(title)}>{title}</h2>}
           {children}
         </Inner>
       </Container>

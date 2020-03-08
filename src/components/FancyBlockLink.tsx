@@ -51,6 +51,11 @@ const Wrapper = styled.div`
         transform: translateX(5px);
       }
     }
+
+    &:focus {
+      outline: 0 none;
+      box-shadow: 0 0 0 3px ${({ theme }) => theme.border.color.secondary};
+    }
   }
 `;
 

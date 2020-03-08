@@ -10,6 +10,11 @@ const StyledButton = styled.button`
   font-size: 0.8em;
   font-weight: 700;
   cursor: pointer;
+
+  &:focus {
+    outline: 0 none;
+    box-shadow: 0 0 0 3px ${({ theme }) => theme.border.color.secondary};
+  }
 `;
 
 interface Props {

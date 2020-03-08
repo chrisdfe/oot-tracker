@@ -3,9 +3,8 @@ import styled from "styled-components";
 
 import { Region } from "data/types/Region";
 
-import slugify from "utils/slugify";
-
 import RegionSelector from "components/RegionSelector";
+import StickySectionHeader from "components/StickySectionHeader";
 
 interface SectionHeadingProps {
   title?: string;
@@ -14,18 +13,7 @@ interface SectionHeadingProps {
   currentRegionFilterId: string;
 }
 
-const SectionHeadingWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
-  margin: 0 0 1rem;
-
-  h2 {
-    padding: 0;
-    margin: 0;
-  }
-`;
+const SectionHeadingWrapper = styled.div``;
 
 const RegionSelectorWrapper = styled.div`
   margin-left: auto;
@@ -37,8 +25,7 @@ const SectionHeading = ({
   onRegionSelect,
   currentRegionFilterId
 }: SectionHeadingProps) => (
-  <SectionHeadingWrapper>
-    {title && <h2 id={slugify(title)}>{title}</h2>}
+  <StickySectionHeader title={title}>
     {showRegionSelector && (
       <RegionSelectorWrapper>
         <RegionSelector
@@ -47,7 +34,7 @@ const SectionHeading = ({
         />
       </RegionSelectorWrapper>
     )}
-  </SectionHeadingWrapper>
+  </StickySectionHeader>
 );
 
 SectionHeading.defaultProps = {

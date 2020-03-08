@@ -12,7 +12,7 @@ type RegionTheme = {
   background: {
     color: {
       primary: string;
-      secondary: string;
+      // secondary: string;
     };
   };
   text: {
@@ -60,8 +60,9 @@ const rawFonts: ValueMap = {
 const overworldTheme: RegionTheme = {
   background: {
     color: {
-      primary: rawColors.white,
-      secondary: rawColors.white
+      primary: rawColors.white
+      // secondary: "#2A3854"
+      // secondary: rawColors.white
     }
   },
   text: {
@@ -73,6 +74,7 @@ const overworldTheme: RegionTheme = {
     color: {
       primary: "#2A3854",
       secondary: hexToRGB("#2A3854", 0.2)
+      // secondary: hexToRGB("#2A3854", 0.2)
     }
   }
 };
@@ -80,8 +82,9 @@ const overworldTheme: RegionTheme = {
 const zoraTheme: RegionTheme = {
   background: {
     color: {
-      primary: "#d7e5ed",
-      secondary: "#08466e"
+      primary: "#d7e5ed"
+      // secondary: "#08466e"
+      // secondary: "#d7e5ed"
     }
   },
   text: {
@@ -92,7 +95,8 @@ const zoraTheme: RegionTheme = {
   border: {
     color: {
       primary: "#08466e",
-      secondary: rawColors.white
+      secondary: hexToRGB("#08466e", 0.2)
+      // secondary: rawColors.white
     }
   }
 };
@@ -100,8 +104,8 @@ const zoraTheme: RegionTheme = {
 const kokiriTheme: RegionTheme = {
   background: {
     color: {
-      primary: rawColors.caper,
-      secondary: rawColors.white
+      primary: rawColors.caper
+      // secondary: rawColors.white
     }
   },
   text: {
@@ -112,7 +116,8 @@ const kokiriTheme: RegionTheme = {
   border: {
     color: {
       primary: rawColors.killarney,
-      secondary: rawColors.white
+      secondary: hexToRGB(rawColors.killarney, 0.2)
+      // secondary: rawColors.white
     }
   }
 };
@@ -120,8 +125,8 @@ const kokiriTheme: RegionTheme = {
 const goronTheme: RegionTheme = {
   background: {
     color: {
-      primary: "#e5cccc",
-      secondary: "#c13540"
+      primary: "#e5cccc"
+      // secondary: "#c13540"
     }
   },
   text: {
@@ -132,7 +137,8 @@ const goronTheme: RegionTheme = {
   border: {
     color: {
       primary: "#c13540",
-      secondary: rawColors.white
+      secondary: hexToRGB("#c13540", 0.2)
+      // secondary: rawColors.white
     }
   }
 };
@@ -140,8 +146,8 @@ const goronTheme: RegionTheme = {
 const shadowTheme: RegionTheme = {
   background: {
     color: {
-      primary: "#dddce5",
-      secondary: rawColors.white
+      primary: "#dddce5"
+      // secondary: rawColors.white
     }
   },
   text: {
@@ -152,7 +158,8 @@ const shadowTheme: RegionTheme = {
   border: {
     color: {
       primary: "#635566",
-      secondary: rawColors.white
+      secondary: hexToRGB("#635566", 0.2)
+      // secondary: rawColors.white
     }
   }
 };
@@ -160,8 +167,8 @@ const shadowTheme: RegionTheme = {
 const gerudoTheme: RegionTheme = {
   background: {
     color: {
-      primary: "#FBDEC6",
-      secondary: rawColors.white
+      primary: "#FBDEC6"
+      // secondary: rawColors.white
     }
   },
   text: {
@@ -172,7 +179,8 @@ const gerudoTheme: RegionTheme = {
   border: {
     color: {
       primary: "#E5555E",
-      secondary: rawColors.white
+      secondary: hexToRGB("#E5555E", 0.2)
+      // secondary: rawColors.white
     }
   }
 };

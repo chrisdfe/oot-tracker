@@ -4,7 +4,10 @@ import styled from "styled-components";
 import { AppDataContext } from "App/AppData";
 import { AppStateContext } from "App/AppState";
 
+import Hero from "components/layout/Hero";
 import Container from "components/layout/Container";
+import PageSection from "components/layout/PageSection";
+
 import BackLink from "components/BackLink";
 import StickySectionHeader from "components/StickySectionHeader";
 
@@ -26,17 +29,21 @@ const HeartPiecesPage = () => {
 
   return (
     <div className="HeartPiecesPage">
-      <Container>
-        <BackLinkWrapper>
-          <BackLink to="/collectables" />
-        </BackLinkWrapper>
-      </Container>
+      <Hero backLink="/collectables">
+        <Container>
+          <h1>Heart Pieces</h1>
 
-      <StickySectionHeader title={title} />
+          <h4>
+            Total Collected: {collectedHearts.length}/{heartPieces.length}
+          </h4>
+        </Container>
+      </Hero>
 
-      <Container>
-        <HeartPieceList heartPieces={heartPieces} />
-      </Container>
+      <PageSection>
+        <Container>
+          <HeartPieceList heartPieces={heartPieces} />
+        </Container>
+      </PageSection>
     </div>
   );
 };

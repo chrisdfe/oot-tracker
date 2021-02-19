@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { AppDataContext } from "App/AppData";
 import { AppStateContext } from "App/AppState";
 
+import Hero from "components/layout/Hero";
+import PageSection from "components/layout/PageSection";
 import Container from "components/layout/Container";
 import BackLink from "components/BackLink";
 import StickySectionHeader from "components/StickySectionHeader";
@@ -14,7 +16,7 @@ const BackLinkWrapper = styled.div`
   margin: 1rem 0;
 `;
 
-const HeartPiecesPage = () => {
+const GreatFairyFountainsPage = () => {
   const appData = useContext(AppDataContext);
   const appState = useContext(AppStateContext);
 
@@ -27,20 +29,25 @@ const HeartPiecesPage = () => {
   } great fairy fountains`;
 
   return (
-    <div className="HeartPiecesPage">
-      <Container>
-        <BackLinkWrapper>
-          <BackLink to="/collectables" />
-        </BackLinkWrapper>
-      </Container>
+    <div className="GreatFairyFountainsPage">
+      <Hero backLink="/collectables">
+        <Container>
+          <h1>Great Fairy Fountains</h1>
 
-      <StickySectionHeader title={title} />
+          <h4>
+            Total Collected: {collectedGreatFairyFountains.length}/
+            {greatFairyFountains.length}
+          </h4>
+        </Container>
+      </Hero>
 
-      <Container>
-        <GreatFairyFountainList greatFairyFountains={greatFairyFountains} />
-      </Container>
+      <PageSection>
+        <Container>
+          <GreatFairyFountainList greatFairyFountains={greatFairyFountains} />
+        </Container>
+      </PageSection>
     </div>
   );
 };
 
-export default HeartPiecesPage;
+export default GreatFairyFountainsPage;

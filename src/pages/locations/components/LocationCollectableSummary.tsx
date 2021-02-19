@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { AppDataContext } from "../../../App/AppData";
 import { AppStateContext } from "../../../App/AppState";
 
 import {
   filterCollectablesByLocation,
-  getCollectablesByIds
+  getCollectablesByIds,
 } from "../../../utils/appState";
 
 const Summary = styled.div`
@@ -26,8 +26,18 @@ const Summary = styled.div`
   }
 `;
 
-const SummaryForCollectable = styled.div`
+interface SummaryForCollectableProps {
+  total: number;
+}
+
+const SummaryForCollectable = styled.div<SummaryForCollectableProps>`
   margin-right: 1.5rem;
+
+  ${({ total }) =>
+    total === 0 &&
+    css`
+      opacity: 0.1;
+    `}
 `;
 
 interface Props {
@@ -42,7 +52,7 @@ const LocationCollectableSummary = ({ location }: Props) => {
     heartPieces,
     goldSkulltulas,
     softSoilLocations,
-    greatFairyFountains
+    greatFairyFountains,
   } = appData;
 
   const { collectedHearts } = appState.heartPieces;
@@ -72,27 +82,30 @@ const LocationCollectableSummary = ({ location }: Props) => {
 
   return (
     <Summary>
-      <SummaryForCollectable>
+      <SummaryForCollectable total={location.heartPieceIds.length}>
         <h4>
           {collectedLocationHeartPieces.length}/{location.heartPieceIds.length}
         </h4>
         <span>heart pieces</span>
       </SummaryForCollectable>
-      <SummaryForCollectable>
+
+      <SummaryForCollectable total={location.goldSkulltulaIds.length}>
         <h4>
           {collectedLocationGoldSkulltulas.length}/
           {location.goldSkulltulaIds.length}
         </h4>
         <span>gold skulltulas</span>
       </SummaryForCollectable>
-      <SummaryForCollectable>
+
+      <SummaryForCollectable total={location.softSoilLocationIds.length}>
         <h4>
           {collectedLocationSoftSoilLocations.length}/
           {location.softSoilLocationIds.length}
         </h4>
         <span>soft soil locations</span>
       </SummaryForCollectable>
-      <SummaryForCollectable>
+
+      <SummaryForCollectable total={location.greatFairyFountainIds.length}>
         <h4>
           {collectedLocationGreatFairyFountains.length}/
           {location.greatFairyFountainIds.length}

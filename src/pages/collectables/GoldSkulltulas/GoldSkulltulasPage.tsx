@@ -4,7 +4,10 @@ import styled from "styled-components";
 import { AppDataContext } from "App/AppData";
 import { AppStateContext } from "App/AppState";
 
+import Hero from "components/layout/Hero";
+import PageSection from "components/layout/PageSection";
 import Container from "components/layout/Container";
+
 import BackLink from "components/BackLink";
 import StickySectionHeader from "components/StickySectionHeader";
 
@@ -27,17 +30,22 @@ const GoldSkulltulasPage = () => {
 
   return (
     <div className="GoldSkulltulasPage">
-      <Container>
-        <BackLinkWrapper>
-          <BackLink to="/collectables" />
-        </BackLinkWrapper>
-      </Container>
+      <Hero backLink="/collectables">
+        <Container>
+          <h1>Gold Skulltulas</h1>
 
-      <StickySectionHeader title={title} />
+          <h4>
+            Total Collected: {collectedGoldSkulltulas.length}/
+            {goldSkulltulas.length}
+          </h4>
+        </Container>
+      </Hero>
 
-      <Container>
-        <GoldSkulltulaList goldSkulltulas={goldSkulltulas} />
-      </Container>
+      <PageSection>
+        <Container>
+          <GoldSkulltulaList goldSkulltulas={goldSkulltulas} />
+        </Container>
+      </PageSection>
     </div>
   );
 };

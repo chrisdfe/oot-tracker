@@ -1,8 +1,9 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-import Container from "../../../components/layout/Container";
-import StickySectionHeader from "../../../components/StickySectionHeader";
+import PageSection from "components/layout/PageSection";
+import Container from "components/layout/Container";
+import StickySectionHeader from "components/StickySectionHeader";
 
 interface Props {
   title: string;
@@ -23,8 +24,10 @@ const Wrapper = styled.section``;
 const LocationDetailSection = ({ title, children, isEmpty }: Props) => {
   return (
     <Wrapper>
-      <StickySectionHeader title={title} />
-      <Container>{isEmpty ? <EmptyList /> : children}</Container>
+      <PageSection>
+        <StickySectionHeader title={title} />
+        <Container>{isEmpty ? <EmptyList /> : children}</Container>
+      </PageSection>
     </Wrapper>
   );
 };

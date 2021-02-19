@@ -4,7 +4,10 @@ import styled from "styled-components";
 import { AppDataContext } from "App/AppData";
 import { AppStateContext } from "App/AppState";
 
+import Hero from "components/layout/Hero";
 import Container from "components/layout/Container";
+import PageSection from "components/layout/PageSection";
+
 import BackLink from "components/BackLink";
 import StickySectionHeader from "components/StickySectionHeader";
 
@@ -26,17 +29,24 @@ const SoftSoilLocationsPage = () => {
               ${softSoilLocations.length} soft soil locations`;
   return (
     <div className="SoftSoilLocationsPage">
-      <Container>
-        <BackLinkWrapper>
-          <BackLink to="/collectables" />
-        </BackLinkWrapper>
-      </Container>
+      <Hero backLink="/collectables">
+        <Container>
+          <h1>Soft Soil Locations</h1>
 
-      <StickySectionHeader title={title} />
+          <h4>
+            Total Collected: {collectedSoftSoilLocations.length}/
+            {softSoilLocations.length}
+          </h4>
+        </Container>
+      </Hero>
 
-      <Container>
-        <SoftSoilLocationsList softSoilLocations={softSoilLocations} />
-      </Container>
+      {/*<StickySectionHeader title={title} />*/}
+
+      <PageSection>
+        <Container>
+          <SoftSoilLocationsList softSoilLocations={softSoilLocations} />
+        </Container>
+      </PageSection>
     </div>
   );
 };

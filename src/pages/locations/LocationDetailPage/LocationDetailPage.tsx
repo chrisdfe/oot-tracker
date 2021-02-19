@@ -2,26 +2,26 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import Container from "../../../components/layout/Container";
-import Hero from "../../../components/layout/Hero";
-import BackLink from "../../../components/BackLink";
+import Container from "components/layout/Container";
+import Hero from "components/layout/Hero";
+import BackLink from "components/BackLink";
 
-import { AppDataContext } from "../../../App/AppData";
-import { AppStateContext } from "../../../App/AppState";
+import { AppDataContext } from "App/AppData";
+import { AppStateContext } from "App/AppState";
 
-import ThemeRegion from "../../../App/ThemeRegion";
+import ThemeRegion from "App/ThemeRegion";
 
-import HeartPieceList from "../../../pages/collectables/HeartPieces/components/HeartPieceList";
-import GoldSkulltulaList from "../../../pages/collectables/GoldSkulltulas/components/GoldSkulltulaList";
-import SoftSoilLocationsList from "../../../pages/collectables/SoftSoilLocations/components/SoftSoilLocationsList";
-import GreatFairyFountainList from "../../../pages/collectables/GreatFairyFountains/components/GreatFairyFountainList";
+import HeartPieceList from "pages/collectables/HeartPieces/components/HeartPieceList";
+import GoldSkulltulaList from "pages/collectables/GoldSkulltulas/components/GoldSkulltulaList";
+import SoftSoilLocationsList from "pages/collectables/SoftSoilLocations/components/SoftSoilLocationsList";
+import GreatFairyFountainList from "pages/collectables/GreatFairyFountains/components/GreatFairyFountainList";
 
 import LocationCollectableSummary from "../components/LocationCollectableSummary";
 import LocationDetailSection from "./LocationDetailSection";
 
 import {
   filterCollectablesByLocation,
-  getCollectablesByIds
+  getCollectablesByIds,
 } from "../../../utils/appState";
 
 import { getRegionById } from "../../../data/selectors/regions";
@@ -43,10 +43,11 @@ const Wrapper = styled.div`
 `;
 
 const HeroHeadline = styled.div`
+  margin-top: 2rem;
   margin-bottom: 4rem;
 
   h1 {
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -67,7 +68,7 @@ const LocationDetailPage = () => {
     heartPieces,
     goldSkulltulas,
     softSoilLocations,
-    greatFairyFountains
+    greatFairyFountains,
   } = appData;
 
   const { collectedHearts } = appState.heartPieces;
@@ -75,7 +76,9 @@ const LocationDetailPage = () => {
   const { collectedSoftSoilLocations } = appState.softSoilLocations;
   const { collectedGreatFairyFountains } = appState.greatFairyFountains;
 
-  const currentLocation = allLocations.find(location => location.slug === slug);
+  const currentLocation = allLocations.find(
+    (location) => location.slug === slug
+  );
 
   if (!currentLocation) return <LocationNotFound />;
 
@@ -121,15 +124,11 @@ const LocationDetailPage = () => {
   return (
     <ThemeRegion regionSlug={regionSlug}>
       <Wrapper>
-        <Hero>
-          <Container>
-            <HeroHeadline>
-              <h1>{currentLocation.title}</h1>
-              <LocationCollectableSummary location={currentLocation} />
-            </HeroHeadline>
-
-            <BackLink to="/locations" />
-          </Container>
+        <Hero backLink="/locations">
+          <HeroHeadline>
+            <h1>{currentLocation.title}</h1>
+            <LocationCollectableSummary location={currentLocation} />
+          </HeroHeadline>
         </Hero>
 
         <LocationDetailSection

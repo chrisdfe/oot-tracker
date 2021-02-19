@@ -32,9 +32,13 @@ function App() {
           <Helmet>
             <meta charSet="utf-8" />
             <title>OOT item tracker</title>
-
-            <link
+            {/*<link
               href="https://fonts.googleapis.com/css?family=Merriweather:700,900|Open+Sans:400,600,700,700i,800&display=swap"
+              rel="stylesheet"
+            />*/}
+            *
+            <link
+              href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i,800&display=swap"
               rel="stylesheet"
             />
           </Helmet>

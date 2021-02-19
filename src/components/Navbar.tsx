@@ -31,7 +31,7 @@ const StyledNavbar = styled.div`
     padding: 1rem 0.6rem;
     text-decoration: none;
     font-family: ${({ theme }) => theme.fonts.heading};
-    border-bottom: 5px solid transparent;
+    border-bottom: 2px solid transparent;
 
     &:hover {
       border-bottom-color: ${({ theme }) => theme.border.color.primary};

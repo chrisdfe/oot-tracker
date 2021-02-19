@@ -6,6 +6,8 @@ import { AppStateContext } from "App/AppState";
 
 import Hero from "components/layout/Hero";
 import Container from "components/layout/Container";
+import PageSection from "components/layout/PageSection";
+
 import FancyBlockLink from "components/FancyBlockLink";
 import ProgressBar from "components/ProgressBar";
 
@@ -27,6 +29,10 @@ const CollectableListItemWrapper = styled.div`
 `;
 
 const HeroContents = styled.div`
+  h1 {
+    margin-bottom: 2rem;
+  }
+
   h3 {
     margin: 2rem 0 0.4rem;
   }
@@ -45,7 +51,7 @@ interface CollectableListItemProps {
 const CollectableListItem = ({
   title,
   url,
-  children
+  children,
 }: CollectableListItemProps) => (
   <CollectableListItemWrapper>
     <FancyBlockLink title={title} to={`/collectables/${url}`}>
@@ -62,7 +68,7 @@ const CollectablesIndexPage = () => {
     heartPieces,
     goldSkulltulas,
     softSoilLocations,
-    greatFairyFountains
+    greatFairyFountains,
   } = useContext(AppDataContext);
 
   const appState = useContext(AppStateContext);
@@ -78,13 +84,13 @@ const CollectablesIndexPage = () => {
         collectedHearts,
         collectedGoldSkulltulas,
         collectedSoftSoilLocations,
-        collectedGreatFairyFountains
+        collectedGreatFairyFountains,
       ]),
     [
       collectedHearts,
       collectedGoldSkulltulas,
       collectedSoftSoilLocations,
-      collectedGreatFairyFountains
+      collectedGreatFairyFountains,
     ]
   );
 
@@ -94,7 +100,7 @@ const CollectablesIndexPage = () => {
         heartPieces,
         goldSkulltulas,
         softSoilLocations,
-        greatFairyFountains
+        greatFairyFountains,
       ]),
     [heartPieces, goldSkulltulas, softSoilLocations, greatFairyFountains]
   );
@@ -106,67 +112,62 @@ const CollectablesIndexPage = () => {
           <HeroContents>
             <h1>Collectables</h1>
 
-            <div>
-              <h3>Total collected</h3>
-              <h4>
-                {currentAmount}/{totalAmount}
-              </h4>
-              <ProgressBar
-                currentAmount={currentAmount}
-                totalAmount={totalAmount}
-              />
-            </div>
+            <h4>
+              Total collected: {currentAmount}/{totalAmount}
+            </h4>
           </HeroContents>
         </Container>
       </Hero>
 
-      <Container>
-        <CollectableListItem url="heart-pieces" title="Heart Pieces">
-          <h4>
-            {collectedHearts.length}/{heartPieces.length}
-          </h4>
-          <ProgressBar
-            currentAmount={collectedHearts.length}
-            totalAmount={heartPieces.length}
-          />
-        </CollectableListItem>
+      <PageSection>
+        <Container>
+          <CollectableListItem url="heart-pieces" title="Heart Pieces">
+            <h4>
+              {collectedHearts.length}/{heartPieces.length}
+            </h4>
+            <ProgressBar
+              currentAmount={collectedHearts.length}
+              totalAmount={heartPieces.length}
+            />
+          </CollectableListItem>
 
-        <CollectableListItem url="gold-skulltulas" title="Gold Skulltulas">
-          <h4>
-            {collectedGoldSkulltulas.length}/{goldSkulltulas.length}
-          </h4>
-          <ProgressBar
-            currentAmount={collectedGoldSkulltulas.length}
-            totalAmount={goldSkulltulas.length}
-          />
-        </CollectableListItem>
+          <CollectableListItem url="gold-skulltulas" title="Gold Skulltulas">
+            <h4>
+              {collectedGoldSkulltulas.length}/{goldSkulltulas.length}
+            </h4>
+            <ProgressBar
+              currentAmount={collectedGoldSkulltulas.length}
+              totalAmount={goldSkulltulas.length}
+            />
+          </CollectableListItem>
 
-        <CollectableListItem
-          url="soft-soil-locations"
-          title="Soft Soil Locations"
-        >
-          <h4>
-            {collectedSoftSoilLocations.length}/{softSoilLocations.length}
-          </h4>
-          <ProgressBar
-            currentAmount={collectedSoftSoilLocations.length}
-            totalAmount={softSoilLocations.length}
-          />
-        </CollectableListItem>
+          <CollectableListItem
+            url="soft-soil-locations"
+            title="Soft Soil Locations"
+          >
+            <h4>
+              {collectedSoftSoilLocations.length}/{softSoilLocations.length}
+            </h4>
+            <ProgressBar
+              currentAmount={collectedSoftSoilLocations.length}
+              totalAmount={softSoilLocations.length}
+            />
+          </CollectableListItem>
 
-        <CollectableListItem
-          url="great-fairy-fountains"
-          title="Great Fairy Fountains"
-        >
-          <h4>
-            {collectedGreatFairyFountains.length}/{greatFairyFountains.length}
-          </h4>
-          <ProgressBar
-            currentAmount={collectedSoftSoilLocations.length}
-            totalAmount={softSoilLocations.length}
-          />
-        </CollectableListItem>
-      </Container>
+          <CollectableListItem
+            url="great-fairy-fountains"
+            title="Great Fairy Fountains"
+          >
+            <h4>
+              {collectedGreatFairyFountains.length}/{greatFairyFountains.length}
+            </h4>
+            <ProgressBar
+              currentAmount={collectedSoftSoilLocations.length}
+              totalAmount={softSoilLocations.length}
+            />
+          </CollectableListItem>
+        </Container>
+      </PageSection>
     </>
   );
 };

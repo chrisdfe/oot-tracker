@@ -14,7 +14,7 @@ interface Props {
 }
 
 const Wrapper = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   h4 {
     color: ${({ theme }) => theme.text.color.primary};
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 const LocationRegionFilters = ({
   regions,
   onRegionSelect,
-  currentRegionFilterId
+  currentRegionFilterId,
 }: Props) => {
   return (
     <Wrapper>

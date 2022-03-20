@@ -82,7 +82,7 @@ function App() {
                 <StyleguideIndexPage />
               </Route>
               <Route path="/">
-                <div />
+                <CollectablesIndexPage />
               </Route>
             </Switch>
           </Router>

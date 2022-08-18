@@ -31,10 +31,8 @@ const SoftSoilLocationsPage = () => {
               ${softSoilLocations.length} soft soil locations`;
   return (
     <div className="SoftSoilLocationsPage">
-      <Hero backLink="/collectables">
+      <Hero backLink="/collectables" subheading="collectables" heading="Soft Soil Locations">
         <Container>
-          <h1>Soft Soil Locations</h1>
-
           <h4>
             Total Collected: {collectedSoftSoilLocations.length}/
             {softSoilLocations.length}

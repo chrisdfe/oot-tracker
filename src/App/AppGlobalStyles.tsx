@@ -35,7 +35,7 @@ const AppGlobalStyles = ({ children }: Props) => {
     h1,
     h2,
     h3 {
-      font-weight: 800;
+      font-weight: 400;
       line-height: 1.2em;
       letter-spacing: 0.015em;
     }
@@ -53,11 +53,13 @@ const AppGlobalStyles = ({ children }: Props) => {
     }
 
     h4 {
-      font-size: 1rem;
+      font-size: 14px;
+      font-weight: 600;
     }
 
     p {
-      line-height: 2.2em;
+      line-height: 1.6em;
+      font-size: 14px;
     }
 
     a {

@@ -9,6 +9,8 @@ interface Props {
 }
 
 const BackLinkWrapper = styled.div`
+  font-size: 14px;
+  
   &:before {
     content: "←";
     padding-right: 0.2rem;

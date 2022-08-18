@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import PageSection from "components/layout/PageSection";
 import Container from "components/layout/Container";
@@ -11,19 +11,28 @@ interface Props {
   isEmpty: boolean;
 }
 
+interface WrapperProps {
+  isEmpty: boolean;
+}
+
 const EmptyListWrapper = styled.div`
-  padding: 6rem 0;
+  /* padding: 6rem 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2rem; */
 `;
 
-const EmptyList = () => <EmptyListWrapper>⦻</EmptyListWrapper>;
+const EmptyList = () => <EmptyListWrapper />;
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section<WrapperProps>`
+  margin-bottom: 6rem;
+  ${({ isEmpty }) => isEmpty && css`
+    opacity: 0.3;
+  `}
+`;
 
 const LocationDetailSection = ({ title, children, isEmpty }: Props) => {
   return (
-    <Wrapper>
+    <Wrapper isEmpty={isEmpty}>
       <PageSection>
         <StickySectionHeader title={title} />
         <Container>{isEmpty ? <EmptyList /> : children}</Container>

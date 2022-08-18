@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { ReactNode, useContext } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
@@ -28,6 +28,8 @@ import { getRegionById } from "../../../data/selectors/regions";
 
 import { GameLocation } from "../../../data/types/GameLocation";
 
+import hexToRGB from 'utils/hexToRGB';
+
 interface LocationListItemProps {
   location: GameLocation;
 }
@@ -42,20 +44,34 @@ const Wrapper = styled.div`
   }
 `;
 
-const HeroHeadline = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 4rem;
 
-  h1 {
-    margin-bottom: 2rem;
-  }
+interface LocationCollectableSummaryWrapperProps {
+  children: ReactNode;
+}
+
+const LocationCollectableSummaryBar = styled.div`
+  position: sticky;
+  top: 0;
+  background-color: ${({ theme }) => hexToRGB(theme.background.color.primary, 0.8)};
+  z-index:1000;
 `;
+
+const LocationCollectableSummaryWrapper = ({ children }: LocationCollectableSummaryWrapperProps) => {
+  return (
+    <LocationCollectableSummaryBar>
+      <Container>
+        {children}
+      </Container>
+    </LocationCollectableSummaryBar>
+  );
+};
 
 const LocationNotFound = () => (
   <Container>
     <h2>Location not found</h2>
   </Container>
 );
+
 
 const LocationDetailPage = () => {
   const { slug } = useParams();
@@ -124,39 +140,37 @@ const LocationDetailPage = () => {
   return (
     <ThemeRegion regionSlug={regionSlug}>
       <Wrapper>
-        <Hero backLink="/locations">
-          <HeroHeadline>
-            <h1>{currentLocation.title}</h1>
-            <LocationCollectableSummary location={currentLocation} />
-          </HeroHeadline>
-        </Hero>
+        <Hero
+          backLink="/locations"
+          subheading="locations"
+          heading={currentLocation.title}
+        />
+
+        <LocationCollectableSummaryWrapper>
+          <LocationCollectableSummary location={currentLocation} />
+        </LocationCollectableSummaryWrapper>
 
         <LocationDetailSection
-          title={`${collectedLocationHeartPieces.length}/${
-            locationHeartPieces.length
-          } heart ${locationHeartPieces.length === 1 ? "piece" : "pieces"}`}
+          title={`${collectedLocationHeartPieces.length}/${locationHeartPieces.length
+            } heart ${locationHeartPieces.length === 1 ? "piece" : "pieces"}`}
           isEmpty={locationHeartPieces.length === 0}
         >
           <HeartPieceList heartPieces={locationHeartPieces} />
         </LocationDetailSection>
 
         <LocationDetailSection
-          title={`${collectedLocationGoldSkulltulas.length}/${
-            locationGoldSkulltulas.length
-          } gold ${
-            locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"
-          }`}
+          title={`${collectedLocationGoldSkulltulas.length}/${locationGoldSkulltulas.length
+            } gold ${locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"
+            }`}
           isEmpty={locationGoldSkulltulas.length === 0}
         >
           <GoldSkulltulaList goldSkulltulas={locationGoldSkulltulas} />
         </LocationDetailSection>
 
         <LocationDetailSection
-          title={`${collectedLocationSoftSoilLocations.length}/${
-            locationSoftSoilLocations.length
-          } soft soil ${
-            locationSoftSoilLocations.length === 1 ? "location" : "locations"
-          }`}
+          title={`${collectedLocationSoftSoilLocations.length}/${locationSoftSoilLocations.length
+            } soft soil ${locationSoftSoilLocations.length === 1 ? "location" : "locations"
+            }`}
           isEmpty={locationSoftSoilLocations.length === 0}
         >
           <SoftSoilLocationsList
@@ -165,11 +179,9 @@ const LocationDetailPage = () => {
         </LocationDetailSection>
 
         <LocationDetailSection
-          title={`${collectedLocationGreatFairyFountains.length}/${
-            locationGreatFairyFountains.length
-          } great fairy ${
-            locationGreatFairyFountains.length === 1 ? "fountain" : "fountains"
-          }`}
+          title={`${collectedLocationGreatFairyFountains.length}/${locationGreatFairyFountains.length
+            } great fairy ${locationGreatFairyFountains.length === 1 ? "fountain" : "fountains"
+            }`}
           isEmpty={locationGreatFairyFountains.length === 0}
         >
           <GreatFairyFountainList

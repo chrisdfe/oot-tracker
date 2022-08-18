@@ -57,9 +57,7 @@ const LocationsIndexPage = () => {
 
   return (
     <>
-      <Hero>
-        <h1>Locations</h1>
-      </Hero>
+      <Hero heading="Locations" />
 
       <PageSection>
         <Container>

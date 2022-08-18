@@ -17,11 +17,13 @@ const Summary = styled.div`
   span {
     margin: 0;
     color: ${({ theme }) => theme.text.color.primary};
+    font-size: 14px;
   }
 
-  h4 {
-    margin: 0 0 0.4rem;
-    letter-spacing: -0.05em;
+  h3 {
+    margin: 1rem 0;
+    font-family: ${({ theme }) => theme.rawFonts.spaceMono};
+    font-weight: 600;
     color: ${({ theme }) => theme.text.color.primary};
   }
 `;
@@ -36,7 +38,7 @@ const SummaryForCollectable = styled.div<SummaryForCollectableProps>`
   ${({ total }) =>
     total === 0 &&
     css`
-      opacity: 0.1;
+      opacity: 0.5;
     `}
 `;
 
@@ -83,33 +85,33 @@ const LocationCollectableSummary = ({ location }: Props) => {
   return (
     <Summary>
       <SummaryForCollectable total={location.heartPieceIds.length}>
-        <h4>
+        <h3>
           {collectedLocationHeartPieces.length}/{location.heartPieceIds.length}
-        </h4>
+        </h3>
         <span>heart pieces</span>
       </SummaryForCollectable>
 
       <SummaryForCollectable total={location.goldSkulltulaIds.length}>
-        <h4>
+        <h3>
           {collectedLocationGoldSkulltulas.length}/
           {location.goldSkulltulaIds.length}
-        </h4>
+        </h3>
         <span>gold skulltulas</span>
       </SummaryForCollectable>
 
       <SummaryForCollectable total={location.softSoilLocationIds.length}>
-        <h4>
+        <h3>
           {collectedLocationSoftSoilLocations.length}/
           {location.softSoilLocationIds.length}
-        </h4>
+        </h3>
         <span>soft soil locations</span>
       </SummaryForCollectable>
 
       <SummaryForCollectable total={location.greatFairyFountainIds.length}>
-        <h4>
+        <h3>
           {collectedLocationGreatFairyFountains.length}/
           {location.greatFairyFountainIds.length}
-        </h4>
+        </h3>
         <span>great fairy fountains</span>
       </SummaryForCollectable>
     </Summary>

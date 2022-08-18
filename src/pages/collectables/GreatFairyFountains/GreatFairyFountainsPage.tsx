@@ -31,10 +31,8 @@ const GreatFairyFountainsPage = () => {
 
   return (
     <div className="GreatFairyFountainsPage">
-      <Hero backLink="/collectables">
+      <Hero backLink="/collectables" subheading="collectables" heading="Great Fairy Fountains">
         <Container>
-          <h1>Great Fairy Fountains</h1>
-
           <h4>
             Total Collected: {collectedGreatFairyFountains.length}/
             {greatFairyFountains.length}

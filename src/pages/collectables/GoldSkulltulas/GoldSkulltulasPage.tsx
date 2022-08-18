@@ -31,10 +31,12 @@ const GoldSkulltulasPage = () => {
 
   return (
     <div className="GoldSkulltulasPage">
-      <Hero backLink="/collectables">
+      <Hero
+        backLink="/collectables"
+        subheading="collectables"
+        heading="Gold Skulltulas"
+      >
         <Container>
-          <h1>Gold Skulltulas</h1>
-
           <h4>
             Total Collected: {collectedGoldSkulltulas.length}/
             {goldSkulltulas.length}

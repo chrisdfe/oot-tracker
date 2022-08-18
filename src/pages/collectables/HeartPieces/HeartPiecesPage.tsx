@@ -30,7 +30,7 @@ const HeartPiecesPage = () => {
 
   return (
     <div className="HeartPiecesPage">
-      <Hero backLink="/collectables">
+      <Hero backLink="/collectables" subheading="collectables">
         <Container>
           <h1>Heart Pieces</h1>
 

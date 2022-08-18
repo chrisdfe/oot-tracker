@@ -27,6 +27,7 @@ const NextArrow = styled.div`
   }
 `;
 
+// @ts-ignore I have no idea what's going on here, it says Props is a recursive type
 const Wrapper = styled.div`
   margin-bottom: 2rem;
 
@@ -38,7 +39,7 @@ const Wrapper = styled.div`
   a {
     position: relative;
     display: block;
-    padding: 1.2rem;
+    padding: 1.5rem;
     text-decoration: none;
     background-color: ${({ theme }) => theme.background.color.primary};
     transition: all 0.2s;

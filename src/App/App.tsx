@@ -36,11 +36,9 @@ function App() {
               href="https://fonts.googleapis.com/css?family=Merriweather:700,900|Open+Sans:400,600,700,700i,800&display=swap"
               rel="stylesheet"
             />*/}
-            *
-            <link
-              href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i,800&display=swap"
-              rel="stylesheet"
-            />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+            <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet" />
           </Helmet>
 
           <Router>

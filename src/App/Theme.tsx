@@ -37,24 +37,25 @@ type ValueMap = {
 };
 
 export type AppTheme =
-  | RegionTheme
-  | {
+  {
     rawColors: ValueMap;
     rawFonts: ValueMap;
     fonts: ValueMap;
     regions: RegionThemeMap;
   };
 
-const rawColors: ValueMap = {
-  white: "#fff",
+const rawColors = {
+  white: "#ffffff",
   caper: "#e1e5da",
   killarney: "#2f5e42",
   kellyGreen: "#22d07a",
 };
 
-const rawFonts: ValueMap = {
+const rawFonts = {
   merriweather: "Merriweather, sans-serif",
   openSans: "'Open Sans', sans-serif",
+  lora: "'Lora', serif",
+  spaceMono: "'Space Mono', monospace",
 };
 
 const overworldTheme: RegionTheme = {
@@ -186,8 +187,8 @@ const theme: AppTheme = {
 
   fonts: {
     // heading: rawFonts.merriweather,
-    heading: rawFonts.openSans,
-    body: rawFonts.openSans,
+    heading: rawFonts.lora,
+    body: rawFonts.spaceMono,
   },
 
   ...defaultTheme,

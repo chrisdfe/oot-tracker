@@ -10,6 +10,7 @@ import Container from "components/layout/Container";
 
 import BackLink from "components/BackLink";
 import StickySectionHeader from "components/StickySectionHeader";
+import ProgressBar from 'components/ProgressBar';
 
 import GoldSkulltulaList from "./components/GoldSkulltulaList";
 
@@ -38,6 +39,8 @@ const GoldSkulltulasPage = () => {
             Total Collected: {collectedGoldSkulltulas.length}/
             {goldSkulltulas.length}
           </h4>
+
+          <ProgressBar currentAmount={collectedGoldSkulltulas.length} totalAmount={goldSkulltulas.length} />
         </Container>
       </Hero>
 

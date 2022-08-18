@@ -12,6 +12,8 @@ import StickySectionHeader from "components/StickySectionHeader";
 
 import GreatFairyFountainList from "./components/GreatFairyFountainList";
 
+import ProgressBar from "components/ProgressBar";
+
 const BackLinkWrapper = styled.div`
   margin: 1rem 0;
 `;
@@ -24,9 +26,8 @@ const GreatFairyFountainsPage = () => {
 
   const { greatFairyFountains } = appData;
 
-  const title = `${collectedGreatFairyFountains.length}/${
-    greatFairyFountains.length
-  } great fairy fountains`;
+  const title = `${collectedGreatFairyFountains.length}/${greatFairyFountains.length
+    } great fairy fountains`;
 
   return (
     <div className="GreatFairyFountainsPage">
@@ -38,6 +39,11 @@ const GreatFairyFountainsPage = () => {
             Total Collected: {collectedGreatFairyFountains.length}/
             {greatFairyFountains.length}
           </h4>
+
+          <ProgressBar
+            currentAmount={collectedGreatFairyFountains.length}
+            totalAmount={greatFairyFountains.length}
+          />
         </Container>
       </Hero>
 

@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     position: relative;
     font-weight: bold;
     line-height: 1.8em;
-    color: ${({ theme }) => theme.text.color.primary}
+    color: ${({ theme }) => theme.text.color.primary};
 
     &:before {
       content: "";
@@ -20,12 +20,14 @@ const Wrapper = styled.div`
       top: 110%;
       left: 0;
       height: 0;
-      border-bottom: ${BORDER_HEIGHT}px solid
-        ${({ theme }) => theme.border.color.secondary};
+      /* border-bottom: ${BORDER_HEIGHT}px solid 
+      ${({ theme }) => theme.border.color.secondary};
+      */
       transition: all 0.2s;
     }
 
     &:hover {
+
       &:before {
         // border-bottom-color: rgba(255, 255, 255, 0);
       }

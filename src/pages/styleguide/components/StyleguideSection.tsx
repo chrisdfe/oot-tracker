@@ -14,7 +14,7 @@ const StyleguideSectionWrapper = styled.div`
 `;
 
 const StyleguideSectionContent = styled.div`
-  padding: 2rem;
+  padding: 2rem 1rem;
   background-color: ${({ theme }) => theme.background.color.primary};
 `;
 

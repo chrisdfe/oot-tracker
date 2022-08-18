@@ -23,7 +23,7 @@ const NextArrow = styled.div`
   transition: transform 0.2s;
 
   &:after {
-    content: "⇻";
+    content: "→";
   }
 `;
 
@@ -38,14 +38,13 @@ const Wrapper = styled.div`
   a {
     position: relative;
     display: block;
-    padding: 1.2rem 3rem 1.2rem 2rem;
+    padding: 1.2rem;
     text-decoration: none;
     background-color: ${({ theme }) => theme.background.color.primary};
     transition: all 0.2s;
 
     &:hover {
-      background-color: ${({ theme }) =>
-        hexToRGB(theme.background.color.primary, 0.7)};
+      background-color: ${({ theme }) => theme.background.color.secondary};
 
       ${NextArrow} {
         transform: translateX(5px);
@@ -66,7 +65,7 @@ const FancyBlockLink = ({ to, title, children }: Props) => {
         <h2>{title}</h2>
         {children}
 
-        <NextArrow />
+        {/* <NextArrow /> */}
       </Link>
     </Wrapper>
   );

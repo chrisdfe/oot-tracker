@@ -11,8 +11,6 @@ import PageSection from "components/layout/PageSection";
 import FancyBlockLink from "components/FancyBlockLink";
 import ProgressBar from "components/ProgressBar";
 
-import getPercentage from "utils/getPercentage";
-
 const CollectableListItemWrapper = styled.div`
   margin-bottom: 2rem;
 
@@ -22,7 +20,7 @@ const CollectableListItemWrapper = styled.div`
   }
 
   span {
-    display: inline: block;
+    display: inline-block;
     margin-right: 0.5rem;
     color: ${({ theme }) => theme.text.color.primary}
   }
@@ -35,10 +33,6 @@ const HeroContents = styled.div`
 
   h3 {
     margin: 2rem 0 0.4rem;
-  }
-
-  h4 {
-    margin: 0 0 0.4rem;
   }
 `;
 
@@ -115,6 +109,11 @@ const CollectablesIndexPage = () => {
             <h4>
               Total collected: {currentAmount}/{totalAmount}
             </h4>
+
+            <ProgressBar
+              currentAmount={currentAmount}
+              totalAmount={totalAmount}
+            />
           </HeroContents>
         </Container>
       </Hero>
@@ -162,8 +161,8 @@ const CollectablesIndexPage = () => {
               {collectedGreatFairyFountains.length}/{greatFairyFountains.length}
             </h4>
             <ProgressBar
-              currentAmount={collectedSoftSoilLocations.length}
-              totalAmount={softSoilLocations.length}
+              currentAmount={collectedGreatFairyFountains.length}
+              totalAmount={greatFairyFountains.length}
             />
           </CollectableListItem>
         </Container>

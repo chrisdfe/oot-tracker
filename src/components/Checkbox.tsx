@@ -32,8 +32,8 @@ const Wrapper = styled.button<WrapperProps>`
 
 const CheckWrapper = styled.div`
   line-height: 0;
-  transform: translateY(2px);
-  font-size: 1.5em;
+  /* transform: translateY(2px); */
+  /* font-size: 1em; */
 `;
 
 const Checkbox = ({ isChecked, onClick }: Props) => {
@@ -45,7 +45,7 @@ const Checkbox = ({ isChecked, onClick }: Props) => {
       }}
     >
       {/*<CheckWrapper>{isChecked ? "≋" : ""}</CheckWrapper>*/}
-      {<CheckWrapper>{isChecked ? "≜" : ""}</CheckWrapper>}
+      {<CheckWrapper>{isChecked ? "✕" : ""}</CheckWrapper>}
     </Wrapper>
   );
 };

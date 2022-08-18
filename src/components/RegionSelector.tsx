@@ -38,14 +38,13 @@ const ListItemButton = styled.button<ListItemButtonProps>`
   transition: all 0.2s;
 
   &:hover {
-    background-color: ${({ theme }) =>
-      hexToRGB(theme.background.color.primary, 0.5)};
+    background-color: ${({ theme }) => theme.background.color.secondary};
   }
 
   &:focus {
     outline: 0 none;
     background-color: ${({ theme, isActive }) =>
-      hexToRGB(theme.background.color.primary, isActive ? 1 : 0.5)};
+    hexToRGB(theme.background.color.primary, isActive ? 1 : 0.5)};
   }
 
   &:last-child {

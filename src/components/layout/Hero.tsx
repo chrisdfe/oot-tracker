@@ -5,7 +5,7 @@ import Container from "components/layout/Container";
 import BackLink from "components/BackLink";
 
 const Wrapper = styled.div`
-  padding: 4rem 0;
+  padding: 4rem 0 6rem;
   background-color: ${({ theme }) => theme.background.color.secondary};
 
   h1 {
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const BackLinkWrapper = styled.div`
-  margin: 0 0 1rem;
+  height: 2rem;
 `;
 
 interface Props {
@@ -26,11 +26,11 @@ const Hero = ({ children, backLink }: Props) => {
   return (
     <Wrapper>
       <Container>
-        {backLink && (
-          <BackLinkWrapper>
+        <BackLinkWrapper>
+          {backLink && (
             <BackLink to={backLink} />
-          </BackLinkWrapper>
-        )}
+          )}
+        </BackLinkWrapper>
         {children}
       </Container>
     </Wrapper>

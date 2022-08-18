@@ -10,10 +10,15 @@ interface Props {
 
 const BackLinkWrapper = styled.div`
   &:before {
-    // content: "↫";
-    content: "⇺";
+    content: "←";
     padding-right: 0.2rem;
     font-size: 1.2em;
+  }
+
+  &:hover {
+    &:before {
+      transform: translateX(-0.5rem);
+    }
   }
 `;
 

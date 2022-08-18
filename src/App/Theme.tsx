@@ -39,11 +39,11 @@ type ValueMap = {
 export type AppTheme =
   | RegionTheme
   | {
-      rawColors: ValueMap;
-      rawFonts: ValueMap;
-      fonts: ValueMap;
-      regions: RegionThemeMap;
-    };
+    rawColors: ValueMap;
+    rawFonts: ValueMap;
+    fonts: ValueMap;
+    regions: RegionThemeMap;
+  };
 
 const rawColors: ValueMap = {
   white: "#fff",
@@ -62,6 +62,7 @@ const overworldTheme: RegionTheme = {
     color: {
       primary: rawColors.white,
       secondary: "#eaecef",
+      // secondary: "#2A3854aa",
     },
   },
   text: {
@@ -101,7 +102,7 @@ const kokiriTheme: RegionTheme = {
   background: {
     color: {
       primary: rawColors.caper,
-      secondary: `${rawColors.white}aa`,
+      secondary: hexToRGB(rawColors.caper, 0.5),
     },
   },
   text: {

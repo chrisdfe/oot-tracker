@@ -11,6 +11,8 @@ import PageSection from "components/layout/PageSection";
 import BackLink from "components/BackLink";
 import StickySectionHeader from "components/StickySectionHeader";
 
+import ProgressBar from "components/ProgressBar";
+
 import SoftSoilLocationsList from "./components/SoftSoilLocationsList";
 
 const BackLinkWrapper = styled.div`
@@ -37,6 +39,11 @@ const SoftSoilLocationsPage = () => {
             Total Collected: {collectedSoftSoilLocations.length}/
             {softSoilLocations.length}
           </h4>
+
+          <ProgressBar
+            currentAmount={collectedSoftSoilLocations.length}
+            totalAmount={softSoilLocations.length}
+          />
         </Container>
       </Hero>
 

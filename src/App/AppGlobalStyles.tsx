@@ -16,6 +16,10 @@ const AppGlobalStyles = ({ children }: Props) => {
     }
 
     body {
+      overflow-y:scroll;
+    }
+
+    body {
       background-color: ${theme.background.color.primary};
       font-family: ${theme.fonts.body};
       color: ${theme.text.color.primary};

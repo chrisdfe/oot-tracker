@@ -8,8 +8,7 @@ import Hero from "components/layout/Hero";
 import Container from "components/layout/Container";
 import PageSection from "components/layout/PageSection";
 
-import BackLink from "components/BackLink";
-import StickySectionHeader from "components/StickySectionHeader";
+import ProgressBar from "components/ProgressBar";
 
 import HeartPieceList from "./components/HeartPieceList";
 
@@ -25,6 +24,8 @@ const HeartPiecesPage = () => {
 
   const { collectedHearts } = appState.heartPieces;
 
+  console.log("collectedHearts", collectedHearts);
+
   const title = `${collectedHearts.length}/${heartPieces.length} heart pieces`;
 
   return (
@@ -36,6 +37,11 @@ const HeartPiecesPage = () => {
           <h4>
             Total Collected: {collectedHearts.length}/{heartPieces.length}
           </h4>
+
+          <ProgressBar
+            currentAmount={collectedHearts.length}
+            totalAmount={heartPieces.length}
+          />
         </Container>
       </Hero>
 

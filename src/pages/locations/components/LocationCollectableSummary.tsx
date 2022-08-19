@@ -1,3 +1,4 @@
+import { GameLocation } from "data/types/GameLocation";
 import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 
@@ -10,7 +11,7 @@ import {
 } from "../../../utils/appState";
 
 const Summary = styled.div`
-  margin: 0;
+  padding: 0.5rem 0;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -49,7 +50,7 @@ const SummaryForCollectable = styled.div<SummaryForCollectableProps>`
 `;
 
 interface Props {
-  location: any;
+  location?: GameLocation;
 }
 
 const LocationCollectableSummary = ({ location }: Props) => {
@@ -68,55 +69,86 @@ const LocationCollectableSummary = ({ location }: Props) => {
   const { collectedSoftSoilLocations } = appState.softSoilLocations;
   const { collectedGreatFairyFountains } = appState.greatFairyFountains;
 
-  const collectedLocationHeartPieces = filterCollectablesByLocation(
-    getCollectablesByIds(heartPieces, collectedHearts),
-    location
-  );
+  // TODO - this is very messy and unperformant code right here
+  let totalHeartPieces;
+  let currentCollectedHeartPieces;
 
-  const collectedLocationGoldSkulltulas = filterCollectablesByLocation(
-    getCollectablesByIds(goldSkulltulas, collectedGoldSkulltulas),
-    location
-  );
+  let totalGoldSkulltulas;
+  let currentCollectedGoldSkulltulas;
 
-  const collectedLocationSoftSoilLocations = filterCollectablesByLocation(
-    getCollectablesByIds(softSoilLocations, collectedSoftSoilLocations),
-    location
-  );
+  let totalSoftSoilLocations;
+  let currentCollectedSoftSoilLocations;
 
-  const collectedLocationGreatFairyFountains = filterCollectablesByLocation(
-    getCollectablesByIds(greatFairyFountains, collectedGreatFairyFountains),
-    location
-  );
+  let totalGreatFairyFountains;
+  let currentCollectedGreatFairyFountains;
+
+  if (location) {
+    totalHeartPieces = location.heartPieceIds.length;
+    currentCollectedHeartPieces = filterCollectablesByLocation(
+      getCollectablesByIds(heartPieces, collectedHearts),
+      location
+    ).length;
+
+    totalGoldSkulltulas = location.goldSkulltulaIds.length;
+    currentCollectedGoldSkulltulas = filterCollectablesByLocation(
+      getCollectablesByIds(goldSkulltulas, collectedGoldSkulltulas),
+      location
+    ).length;
+
+    totalSoftSoilLocations = location.softSoilLocationIds.length;
+    currentCollectedSoftSoilLocations = filterCollectablesByLocation(
+      getCollectablesByIds(softSoilLocations, collectedSoftSoilLocations),
+      location
+    ).length;
+
+    totalGreatFairyFountains = location.greatFairyFountainIds.length;
+    currentCollectedGreatFairyFountains = filterCollectablesByLocation(
+      getCollectablesByIds(greatFairyFountains, collectedGreatFairyFountains),
+      location
+    ).length;
+  } else {
+    currentCollectedHeartPieces = collectedHearts.length;
+    totalHeartPieces = heartPieces.length;
+
+    totalGoldSkulltulas = goldSkulltulas.length;
+    currentCollectedGoldSkulltulas = collectedGoldSkulltulas.length;
+
+    totalSoftSoilLocations = softSoilLocations.length;
+    currentCollectedSoftSoilLocations = collectedSoftSoilLocations.length;
+
+    totalGreatFairyFountains = greatFairyFountains.length;
+    currentCollectedGreatFairyFountains = collectedGreatFairyFountains.length;
+  }
 
   return (
     <Summary>
-      <SummaryForCollectable total={location.heartPieceIds.length}>
+      <SummaryForCollectable total={totalHeartPieces}>
         <h3>
-          {collectedLocationHeartPieces.length}/{location.heartPieceIds.length}
+          {currentCollectedHeartPieces}/{totalHeartPieces}
         </h3>
         <span>heart pieces</span>
       </SummaryForCollectable>
 
-      <SummaryForCollectable total={location.goldSkulltulaIds.length}>
+      <SummaryForCollectable total={totalGoldSkulltulas}>
         <h3>
-          {collectedLocationGoldSkulltulas.length}/
-          {location.goldSkulltulaIds.length}
+          {currentCollectedGoldSkulltulas}/
+          {totalGoldSkulltulas}
         </h3>
         <span>gold skulltulas</span>
       </SummaryForCollectable>
 
-      <SummaryForCollectable total={location.softSoilLocationIds.length}>
+      <SummaryForCollectable total={totalSoftSoilLocations}>
         <h3>
-          {collectedLocationSoftSoilLocations.length}/
-          {location.softSoilLocationIds.length}
+          {currentCollectedSoftSoilLocations}/
+          {totalSoftSoilLocations}
         </h3>
         <span>soft soil locations</span>
       </SummaryForCollectable>
 
-      <SummaryForCollectable total={location.greatFairyFountainIds.length}>
+      <SummaryForCollectable total={totalGreatFairyFountains}>
         <h3>
-          {collectedLocationGreatFairyFountains.length}/
-          {location.greatFairyFountainIds.length}
+          {currentCollectedGreatFairyFountains}/
+          {totalGreatFairyFountains}
         </h3>
         <span>great fairy fountains</span>
       </SummaryForCollectable>

@@ -6,7 +6,7 @@ interface Props {
 }
 
 const StyledPageSection = styled.div`
-  margin: 3rem 0;
+  margin: 1rem 0;
 `;
 
 const PageSection = ({ children }: Props) => {

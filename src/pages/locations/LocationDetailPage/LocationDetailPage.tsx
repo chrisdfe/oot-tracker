@@ -15,7 +15,7 @@ import GoldSkulltulaList from "pages/collectables/GoldSkulltulas/components/Gold
 import SoftSoilLocationsList from "pages/collectables/SoftSoilLocations/components/SoftSoilLocationsList";
 import GreatFairyFountainList from "pages/collectables/GreatFairyFountains/components/GreatFairyFountainList";
 
-import LocationCollectableSummary from "../components/LocationCollectableSummary";
+import LocationCollectableSummarySticky from "../components/LocationCollectableSummarySticky";
 import LocationDetailSection from "./LocationDetailSection";
 
 import {
@@ -34,29 +34,6 @@ const Wrapper = styled.div`
     color: ${({ theme }) => theme.text.color.primary};
   }
 `;
-
-interface LocationCollectableSummaryWrapperProps {
-  children: ReactNode;
-}
-
-/* background-color: ${({ theme }) => hexToRGB(theme.background.color.primary, 0.8)}; */
-const LocationCollectableSummaryBar = styled.div`
-  position: sticky;
-  top: 0;
-  background-color: ${({ theme }) => theme.background.color.primary};
-  z-index: 1000;
-`;
-
-const LocationCollectableSummaryWrapper =
-  forwardRef<HTMLDivElement, LocationCollectableSummaryWrapperProps>(
-    ({ children }: LocationCollectableSummaryWrapperProps, ref) => (
-      <LocationCollectableSummaryBar ref={ref}>
-        <Container>
-          {children}
-        </Container>
-      </LocationCollectableSummaryBar>
-    )
-  );
 
 const LocationNotFound = () => (
   <Container>
@@ -143,9 +120,7 @@ const LocationDetailPage = () => {
           heading={currentLocation.title}
         />
 
-        <LocationCollectableSummaryWrapper ref={locationSummaryRef}>
-          <LocationCollectableSummary location={currentLocation} />
-        </LocationCollectableSummaryWrapper>
+        <LocationCollectableSummarySticky ref={locationSummaryRef} location={currentLocation} />
 
         <LocationDetailSection
           title={`${collectedLocationHeartPieces.length}/${locationHeartPieces.length

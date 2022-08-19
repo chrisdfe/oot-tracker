@@ -12,9 +12,12 @@ import { getRegionById } from "data/selectors/regions";
 
 import usePersistedState from "utils/usePersistedState";
 
+import LocationCollectableSummarySticky from "../components/LocationCollectableSummarySticky";
 import LocationRegionFilters from "./LocationRegionFilters";
 import LocationListItem from "./LocationListItem";
 import ListTitle from "./ListTitle";
+
+
 import { Region, RegionKey } from "data/types/Region";
 
 const LocationsIndexPage = () => {
@@ -60,6 +63,8 @@ const LocationsIndexPage = () => {
     <>
       <Hero heading="Locations" />
 
+      <LocationCollectableSummarySticky />
+
       <PageSection>
         <Container>
           <LocationRegionFilters
@@ -69,6 +74,8 @@ const LocationsIndexPage = () => {
           />
         </Container>
       </PageSection>
+
+
       <PageSection>
         <Container>
           <ListTitle region={currentRegion} />

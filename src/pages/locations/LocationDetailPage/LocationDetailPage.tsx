@@ -1,4 +1,4 @@
-import React, { ReactNode, useContext } from "react";
+import React, { ReactNode, useContext, useRef, forwardRef } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
@@ -41,22 +41,24 @@ interface LocationCollectableSummaryWrapperProps {
   children: ReactNode;
 }
 
+/* background-color: ${({ theme }) => hexToRGB(theme.background.color.primary, 0.8)}; */
 const LocationCollectableSummaryBar = styled.div`
   position: sticky;
   top: 0;
-  background-color: ${({ theme }) => hexToRGB(theme.background.color.primary, 0.8)};
-  z-index:1000;
+  background-color: ${({ theme }) => theme.background.color.primary};
+  z-index: 1000;
 `;
 
-const LocationCollectableSummaryWrapper = ({ children }: LocationCollectableSummaryWrapperProps) => {
-  return (
-    <LocationCollectableSummaryBar>
-      <Container>
-        {children}
-      </Container>
-    </LocationCollectableSummaryBar>
+const LocationCollectableSummaryWrapper =
+  forwardRef<HTMLDivElement, LocationCollectableSummaryWrapperProps>(
+    ({ children }: LocationCollectableSummaryWrapperProps, ref) => (
+      <LocationCollectableSummaryBar ref={ref}>
+        <Container>
+          {children}
+        </Container>
+      </LocationCollectableSummaryBar>
+    )
   );
-};
 
 const LocationNotFound = () => (
   <Container>
@@ -70,6 +72,8 @@ const LocationDetailPage = () => {
 
   const appData = useContext(AppDataContext);
   const appState = useContext(AppStateContext);
+
+  const locationSummaryRef = useRef<HTMLDivElement>(null);
 
   const {
     locations: allLocations,
@@ -128,6 +132,9 @@ const LocationDetailPage = () => {
 
   const themeRegion = getRegionById(appData, currentLocation.regionId);
 
+  // console.log(locationSummaryRef);
+  const locationSummaryHeight = locationSummaryRef?.current?.getBoundingClientRect().height;
+
   return (
     <ThemeRegion regionKey={themeRegion && themeRegion.key}>
       <Wrapper>
@@ -137,7 +144,7 @@ const LocationDetailPage = () => {
           heading={currentLocation.title}
         />
 
-        <LocationCollectableSummaryWrapper>
+        <LocationCollectableSummaryWrapper ref={locationSummaryRef}>
           <LocationCollectableSummary location={currentLocation} />
         </LocationCollectableSummaryWrapper>
 
@@ -145,6 +152,7 @@ const LocationDetailPage = () => {
           title={`${collectedLocationHeartPieces.length}/${locationHeartPieces.length
             } heart ${locationHeartPieces.length === 1 ? "piece" : "pieces"}`}
           isEmpty={locationHeartPieces.length === 0}
+          stickyTopOffset={locationSummaryHeight}
         >
           <HeartPieceList heartPieces={locationHeartPieces} />
         </LocationDetailSection>
@@ -154,6 +162,7 @@ const LocationDetailPage = () => {
             } gold ${locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"
             }`}
           isEmpty={locationGoldSkulltulas.length === 0}
+          stickyTopOffset={locationSummaryHeight}
         >
           <GoldSkulltulaList goldSkulltulas={locationGoldSkulltulas} />
         </LocationDetailSection>
@@ -163,6 +172,7 @@ const LocationDetailPage = () => {
             } soft soil ${locationSoftSoilLocations.length === 1 ? "location" : "locations"
             }`}
           isEmpty={locationSoftSoilLocations.length === 0}
+          stickyTopOffset={locationSummaryHeight}
         >
           <SoftSoilLocationsList
             softSoilLocations={locationSoftSoilLocations}
@@ -174,6 +184,7 @@ const LocationDetailPage = () => {
             } great fairy ${locationGreatFairyFountains.length === 1 ? "fountain" : "fountains"
             }`}
           isEmpty={locationGreatFairyFountains.length === 0}
+          stickyTopOffset={locationSummaryHeight}
         >
           <GreatFairyFountainList
             greatFairyFountains={locationGreatFairyFountains}

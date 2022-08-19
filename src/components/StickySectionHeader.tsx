@@ -8,11 +8,12 @@ import Container from "./layout/Container";
 interface Props {
   title?: string;
   children?: ReactNode;
+  stickyTopOffset?: number;
 }
 
-const StickyHeaderWrapper = styled.div`
+const StickyHeaderWrapper = styled.div<{ stickyTopOffset: number; }>`
   position: sticky;
-  top: 0;
+  top: ${({ stickyTopOffset }) => stickyTopOffset ? `${Math.floor(stickyTopOffset)}px` : 0};
   background-color: ${({ theme }) => theme.background.color.primary};
   z-index: 1;
 
@@ -30,9 +31,9 @@ const Inner = styled.div`
   border-bottom: 2px solid ${({ theme }) => theme.border.color.primary};
 `;
 
-const StickySectionHeader = ({ title, children }: Props) => {
+const StickySectionHeader = ({ title, children, stickyTopOffset = 0 }: Props) => {
   return (
-    <StickyHeaderWrapper>
+    <StickyHeaderWrapper stickyTopOffset={stickyTopOffset}>
       <Container>
         <Inner>
           {title && <h2 id={slugify(title)}>{title}</h2>}

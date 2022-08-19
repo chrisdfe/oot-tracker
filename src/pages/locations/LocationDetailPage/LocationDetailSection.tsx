@@ -9,6 +9,7 @@ interface Props {
   title: string;
   children: ReactNode;
   isEmpty: boolean;
+  stickyTopOffset?: number;
 }
 
 interface WrapperProps {
@@ -30,11 +31,11 @@ const Wrapper = styled.section<WrapperProps>`
   `}
 `;
 
-const LocationDetailSection = ({ title, children, isEmpty }: Props) => {
+const LocationDetailSection = ({ title, children, isEmpty, stickyTopOffset = 0 }: Props) => {
   return (
     <Wrapper isEmpty={isEmpty}>
       <PageSection>
-        <StickySectionHeader title={title} />
+        <StickySectionHeader title={title} stickyTopOffset={stickyTopOffset} />
         <Container>{isEmpty ? <EmptyList /> : children}</Container>
       </PageSection>
     </Wrapper>

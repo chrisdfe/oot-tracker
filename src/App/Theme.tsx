@@ -10,6 +10,9 @@ interface Props {
   children: ReactNode;
 }
 
+export const SECONDARY_BACKGROUND_OPACITY = 0.8;
+export const SECONDARY_BORDER_OPACITY = 0.4;
+
 export const rawColors = {
   white: "#ffffff",
   caper: "#e1e5da",
@@ -48,7 +51,7 @@ export const overworldTheme: DefaultTheme = defaultsDeep({
   border: {
     color: {
       primary: "#2A3854",
-      secondary: hexToRGB("#2A3854", 0.2),
+      secondary: hexToRGB("#2A3854", SECONDARY_BORDER_OPACITY),
     },
   },
 }, baseTheme);
@@ -57,7 +60,7 @@ export const zoraTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: "#d7e5ed",
-      secondary: "#d7e5edaa",
+      secondary: hexToRGB("#d7e5ed", SECONDARY_BACKGROUND_OPACITY),
     },
   },
   text: {
@@ -68,7 +71,7 @@ export const zoraTheme: DefaultTheme = defaultsDeep({
   border: {
     color: {
       primary: "#08466e",
-      secondary: hexToRGB("#08466e", 0.2),
+      secondary: hexToRGB("#08466e", SECONDARY_BORDER_OPACITY),
     },
   },
 }, baseTheme);
@@ -77,7 +80,7 @@ export const kokiriTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: rawColors.caper,
-      secondary: hexToRGB(rawColors.caper, 0.5),
+      secondary: hexToRGB(rawColors.caper, SECONDARY_BACKGROUND_OPACITY),
     },
   },
   text: {
@@ -88,7 +91,7 @@ export const kokiriTheme: DefaultTheme = defaultsDeep({
   border: {
     color: {
       primary: rawColors.killarney,
-      secondary: hexToRGB(rawColors.killarney, 0.2),
+      secondary: hexToRGB(rawColors.killarney, SECONDARY_BORDER_OPACITY),
     },
   },
 }, baseTheme);
@@ -97,7 +100,7 @@ export const goronTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: "#e5cccc",
-      secondary: "#e5ccccaa",
+      secondary: hexToRGB("#e5cccc", SECONDARY_BACKGROUND_OPACITY),
     },
   },
   text: {
@@ -108,7 +111,7 @@ export const goronTheme: DefaultTheme = defaultsDeep({
   border: {
     color: {
       primary: "#c13540",
-      secondary: hexToRGB("#c13540", 0.2),
+      secondary: hexToRGB("#c13540", SECONDARY_BORDER_OPACITY),
     },
   },
 }, baseTheme);
@@ -117,7 +120,7 @@ export const shadowTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: "#dddce5",
-      secondary: "#dddce5aa",
+      secondary: hexToRGB("#dddce5", SECONDARY_BACKGROUND_OPACITY),
     },
   },
   text: {
@@ -128,7 +131,7 @@ export const shadowTheme: DefaultTheme = defaultsDeep({
   border: {
     color: {
       primary: "#635566",
-      secondary: hexToRGB("#635566", 0.2),
+      secondary: hexToRGB("#635566", SECONDARY_BORDER_OPACITY),
     },
   },
 }, baseTheme);
@@ -137,7 +140,7 @@ export const gerudoTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: "#FBDEC6",
-      secondary: "#FBDEC6aa",
+      secondary: hexToRGB("#FBDEC6", SECONDARY_BACKGROUND_OPACITY),
     },
   },
   text: {
@@ -148,7 +151,7 @@ export const gerudoTheme: DefaultTheme = defaultsDeep({
   border: {
     color: {
       primary: "#E5555E",
-      secondary: hexToRGB("#E5555E", 0.2),
+      secondary: hexToRGB("#E5555E", SECONDARY_BORDER_OPACITY),
     },
   },
 }, baseTheme);

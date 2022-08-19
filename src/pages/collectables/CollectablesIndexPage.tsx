@@ -10,6 +10,7 @@ import PageSection from "components/layout/PageSection";
 
 import FancyBlockLink from "components/FancyBlockLink";
 import ProgressBar from "components/ProgressBar";
+import LocationCollectableSummarySticky from "pages/locations/components/LocationCollectableSummarySticky";
 
 const CollectableListItemWrapper = styled.div`
   margin-bottom: 2rem;
@@ -101,11 +102,9 @@ const CollectablesIndexPage = () => {
 
   return (
     <>
-      <Hero>
-        <Container>
-          <HeroContents>
-            <h1>Collectables</h1>
-
+      <Hero heading="Collectables">
+        <Container >
+          {/*
             <h4>
               Total collected: {currentAmount}/{totalAmount}
             </h4>
@@ -113,10 +112,11 @@ const CollectablesIndexPage = () => {
             <ProgressBar
               currentAmount={currentAmount}
               totalAmount={totalAmount}
-            />
-          </HeroContents>
+            /> */}
         </Container>
       </Hero>
+
+      {/* <LocationCollectableSummarySticky /> */}
 
       <PageSection>
         <Container>

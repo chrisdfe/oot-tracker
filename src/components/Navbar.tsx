@@ -30,8 +30,9 @@ const StyledNavbar = styled.div`
     display: block;
     padding: 1rem 0.6rem;
     text-decoration: none;
-    font-family: ${({ theme }) => theme.fonts.heading};
     border-bottom: 2px solid transparent;
+    font-size: 13px;
+    font-weight: normal;
 
     &:hover {
       border-bottom-color: ${({ theme }) => theme.border.color.primary};
@@ -40,7 +41,7 @@ const StyledNavbar = styled.div`
     span {
       display: inline-block;
       margin-left: 0.5rem;
-      font-size: 0.7em;
+      font-size: 13px;
       font-weight: normal;
     }
   }

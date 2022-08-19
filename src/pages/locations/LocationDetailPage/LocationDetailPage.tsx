@@ -51,7 +51,10 @@ const LocationDetailPage = () => {
   const locationSummaryRef = useRef<HTMLDivElement>(null);
   const [locationSummaryHeight, setLocationSummaryHeight] = useState(0);
   useEffect(() => {
-    setLocationSummaryHeight(locationSummaryRef?.current?.getBoundingClientRect().height || 0);
+    if (locationSummaryRef?.current) {
+      const height = Math.floor(locationSummaryRef.current.getBoundingClientRect().height);
+      setLocationSummaryHeight(height);
+    }
   }, []);
 
   const {
@@ -123,8 +126,10 @@ const LocationDetailPage = () => {
         <LocationCollectableSummarySticky ref={locationSummaryRef} location={currentLocation} />
 
         <LocationDetailSection
-          title={`${collectedLocationHeartPieces.length}/${locationHeartPieces.length
-            } heart ${locationHeartPieces.length === 1 ? "piece" : "pieces"}`}
+          title={<>
+            <strong>{collectedLocationHeartPieces.length}/{locationHeartPieces.length
+            }</strong>&nbsp;heart {locationHeartPieces.length === 1 ? "piece" : "pieces"}
+          </>}
           isEmpty={locationHeartPieces.length === 0}
           stickyTopOffset={locationSummaryHeight}
         >
@@ -132,9 +137,9 @@ const LocationDetailPage = () => {
         </LocationDetailSection>
 
         <LocationDetailSection
-          title={`${collectedLocationGoldSkulltulas.length}/${locationGoldSkulltulas.length
-            } gold ${locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"
-            }`}
+          title={<>
+            <strong>{collectedLocationGoldSkulltulas.length}/{locationGoldSkulltulas.length}</strong>&nbsp;gold {locationGoldSkulltulas.length === 1 ? "skulltula" : "skulltulas"}
+          </>}
           isEmpty={locationGoldSkulltulas.length === 0}
           stickyTopOffset={locationSummaryHeight}
         >
@@ -142,9 +147,9 @@ const LocationDetailPage = () => {
         </LocationDetailSection>
 
         <LocationDetailSection
-          title={`${collectedLocationSoftSoilLocations.length}/${locationSoftSoilLocations.length
-            } soft soil ${locationSoftSoilLocations.length === 1 ? "location" : "locations"
-            }`}
+          title={<>
+            <strong>{collectedLocationSoftSoilLocations.length}/{locationSoftSoilLocations.length}</strong>&nbsp;soft soil {locationSoftSoilLocations.length === 1 ? "location" : "locations"}
+          </>}
           isEmpty={locationSoftSoilLocations.length === 0}
           stickyTopOffset={locationSummaryHeight}
         >
@@ -154,9 +159,10 @@ const LocationDetailPage = () => {
         </LocationDetailSection>
 
         <LocationDetailSection
-          title={`${collectedLocationGreatFairyFountains.length}/${locationGreatFairyFountains.length
-            } great fairy ${locationGreatFairyFountains.length === 1 ? "fountain" : "fountains"
-            }`}
+          title={<>
+            <strong>{collectedLocationGreatFairyFountains.length}/{locationGreatFairyFountains.length
+            }</strong>&nbsp;great fairy {locationGreatFairyFountains.length === 1 ? "fountain" : "fountains"}
+          </>}
           isEmpty={locationGreatFairyFountains.length === 0}
           stickyTopOffset={locationSummaryHeight}
         >
@@ -165,7 +171,7 @@ const LocationDetailPage = () => {
           />
         </LocationDetailSection>
       </Wrapper>
-    </ThemeRegion>
+    </ThemeRegion >
   );
 };
 

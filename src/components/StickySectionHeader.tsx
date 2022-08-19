@@ -5,8 +5,10 @@ import slugify from "utils/slugify";
 
 import Container from "./layout/Container";
 
+import hexToRGB from 'utils/hexToRGB';
+
 interface Props {
-  title?: string;
+  title?: ReactNode;
   children?: ReactNode;
   stickyTopOffset?: number;
 }
@@ -14,12 +16,13 @@ interface Props {
 const StickyHeaderWrapper = styled.div<{ stickyTopOffset: number; }>`
   position: sticky;
   top: 0;
-  background-color: ${({ theme }) => theme.background.color.primary};
+  background-color: ${({ theme }) => hexToRGB(theme.background.color.primary, 1)};
   z-index: 1;
 
-  h2 {
+  h3 {
     padding: 0;
     margin: 0;
+    font-family: ${({ theme }) => theme.rawFonts.spaceMono};
   }
 `;
 
@@ -36,7 +39,7 @@ const StickySectionHeader = ({ title, children, stickyTopOffset = 0 }: Props) =>
     <StickyHeaderWrapper stickyTopOffset={stickyTopOffset} style={{ top: stickyTopOffset }}>
       <Container>
         <Inner>
-          {title && <h2 id={slugify(title)}>{title}</h2>}
+          {title && <h3 id={slugify(title.toString())}>{title}</h3>}
           {children}
         </Inner>
       </Container>

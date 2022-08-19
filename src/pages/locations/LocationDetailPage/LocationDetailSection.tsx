@@ -6,7 +6,7 @@ import Container from "components/layout/Container";
 import StickySectionHeader from "components/StickySectionHeader";
 
 interface Props {
-  title: string;
+  title: ReactNode;
   children: ReactNode;
   isEmpty: boolean;
   stickyTopOffset?: number;

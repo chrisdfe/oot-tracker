@@ -2,8 +2,10 @@ import { GameLocation } from "data/types/GameLocation";
 import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 
-import { AppDataContext } from "../../../App/AppData";
-import { AppStateContext } from "../../../App/AppState";
+import { AppDataContext } from "App/AppData";
+import { AppStateContext } from "App/AppState";
+
+import ProgressBar from "components/ProgressBar";
 
 import {
   filterCollectablesByLocation,
@@ -11,10 +13,11 @@ import {
 } from "../../../utils/appState";
 
 const Summary = styled.div`
-  padding: 0.5rem 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   text-align: center;
+  align-items: stretch;
   
   h3 {
     margin: 0 0 0.5rem;
@@ -37,6 +40,8 @@ interface SummaryForCollectableProps {
 }
 
 const SummaryForCollectable = styled.div<SummaryForCollectableProps>`
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   flex-shrink: 0;
   width: 25%;
@@ -47,6 +52,11 @@ const SummaryForCollectable = styled.div<SummaryForCollectableProps>`
     css`
       opacity: 0.5;
     `}
+`;
+
+const ProgressBarWrapper = styled.div`
+  margin-top: auto;
+  padding: 0.5rem 0.5rem 0;
 `;
 
 interface Props {
@@ -126,7 +136,16 @@ const LocationCollectableSummary = ({ location }: Props) => {
         <h3>
           {currentCollectedHeartPieces}/{totalHeartPieces}
         </h3>
+
         <span>heart pieces</span>
+
+        <ProgressBarWrapper>
+          <ProgressBar
+            currentAmount={currentCollectedHeartPieces}
+            totalAmount={totalHeartPieces}
+            showPercentage={false}
+          />
+        </ProgressBarWrapper>
       </SummaryForCollectable>
 
       <SummaryForCollectable total={totalGoldSkulltulas}>
@@ -134,7 +153,16 @@ const LocationCollectableSummary = ({ location }: Props) => {
           {currentCollectedGoldSkulltulas}/
           {totalGoldSkulltulas}
         </h3>
+
         <span>gold skulltulas</span>
+
+        <ProgressBarWrapper>
+          <ProgressBar
+            currentAmount={currentCollectedGoldSkulltulas}
+            totalAmount={totalGoldSkulltulas}
+            showPercentage={false}
+          />
+        </ProgressBarWrapper>
       </SummaryForCollectable>
 
       <SummaryForCollectable total={totalSoftSoilLocations}>
@@ -142,7 +170,16 @@ const LocationCollectableSummary = ({ location }: Props) => {
           {currentCollectedSoftSoilLocations}/
           {totalSoftSoilLocations}
         </h3>
+
         <span>soft soil locations</span>
+
+        <ProgressBarWrapper>
+          <ProgressBar
+            currentAmount={currentCollectedSoftSoilLocations}
+            totalAmount={totalSoftSoilLocations}
+            showPercentage={false}
+          />
+        </ProgressBarWrapper>
       </SummaryForCollectable>
 
       <SummaryForCollectable total={totalGreatFairyFountains}>
@@ -150,7 +187,16 @@ const LocationCollectableSummary = ({ location }: Props) => {
           {currentCollectedGreatFairyFountains}/
           {totalGreatFairyFountains}
         </h3>
+
         <span>great fairy fountains</span>
+
+        <ProgressBarWrapper>
+          <ProgressBar
+            currentAmount={currentCollectedGreatFairyFountains}
+            totalAmount={totalGreatFairyFountains}
+            showPercentage={false}
+          />
+        </ProgressBarWrapper>
       </SummaryForCollectable>
     </Summary>
   );

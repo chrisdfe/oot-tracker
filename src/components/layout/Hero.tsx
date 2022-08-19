@@ -13,6 +13,7 @@ interface Props {
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.background.color.secondary};
+  text-align: center;
   
   h1 {
     margin: 0;

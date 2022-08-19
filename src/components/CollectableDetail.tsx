@@ -24,7 +24,7 @@ const HeaderBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 `;
 
 const HeadingWrapper = styled.div`
@@ -42,6 +42,11 @@ const Heading = styled.h4`
   font-weight: normal;
 `;
 
+const ThumbnailListWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 const ThumbWrapper = styled.div`
   height: 30px;
 
@@ -51,8 +56,22 @@ const ThumbWrapper = styled.div`
   }
 `;
 
+const ImageListWrapper = styled.div`
+  display: flex;
+  margin: 0 -1% 1rem;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
+`;
+
 const ImageWrapper = styled.div`
-  margin-bottom: 1rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 48%;
+  width: 48%;
+  margin: 1%;
 `;
 
 const ThumbCheckboxWrapper = styled.div`
@@ -72,6 +91,8 @@ const BodyContent = styled.div<BodyContentProps>`
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease-in-out;
+  /* background-color: ${({ theme }) => theme.background.color.secondary}; */
+
   ${({ isOpen }) =>
     isOpen
       ? css`
@@ -81,7 +102,7 @@ const BodyContent = styled.div<BodyContentProps>`
 `;
 
 const BodyContentInner = styled.div`
-  padding: 1.5rem 0;
+  padding: 0 0 1.5rem;
 `;
 
 const renderThumbnails = (thumbnails?: RenderedImage[]) => {
@@ -90,13 +111,13 @@ const renderThumbnails = (thumbnails?: RenderedImage[]) => {
   }
 
   return (
-    <>
+    <ThumbnailListWrapper>
       {thumbnails.map(thumbnail => (
         <ThumbWrapper key={thumbnail.src}>
           <img src={thumbnail.src} alt={thumbnail.alt} />
         </ThumbWrapper>
       ))}
-    </>
+    </ThumbnailListWrapper>
   );
 };
 
@@ -106,13 +127,13 @@ const renderImages = (images?: RenderedImage[]) => {
   }
 
   return (
-    <>
+    <ImageListWrapper>
       {images.map(image => (
         <ImageWrapper key={image.src}>
           <img src={image.src} alt={image.alt} />
         </ImageWrapper>
       ))}
-    </>
+    </ImageListWrapper>
   );
 };
 

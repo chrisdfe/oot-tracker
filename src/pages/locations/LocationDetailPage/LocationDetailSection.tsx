@@ -16,14 +16,6 @@ interface WrapperProps {
   isEmpty: boolean;
 }
 
-const EmptyListWrapper = styled.div`
-  /* padding: 6rem 0;
-  text-align: center;
-  font-size: 2rem; */
-`;
-
-const EmptyList = () => <EmptyListWrapper />;
-
 const Wrapper = styled.section<WrapperProps>`
   margin-bottom: 6rem;
   ${({ isEmpty }) => isEmpty && css`
@@ -36,7 +28,7 @@ const LocationDetailSection = ({ title, children, isEmpty, stickyTopOffset = 0 }
     <Wrapper isEmpty={isEmpty}>
       <PageSection>
         <StickySectionHeader title={title} stickyTopOffset={stickyTopOffset} />
-        <Container>{isEmpty ? <EmptyList /> : children}</Container>
+        <Container>{isEmpty ? null : children}</Container>
       </PageSection>
     </Wrapper>
   );

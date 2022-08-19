@@ -13,18 +13,21 @@ const Summary = styled.div`
   margin: 0;
   display: flex;
   flex-direction: row;
-
-  span {
-    margin: 0;
-    color: ${({ theme }) => theme.text.color.primary};
-    font-size: 14px;
-  }
-
+  text-align: center;
+  
   h3 {
-    margin: 1rem 0;
+    margin: 0 0 0.5rem;
     font-family: ${({ theme }) => theme.rawFonts.spaceMono};
     font-weight: 600;
     color: ${({ theme }) => theme.text.color.primary};
+  }
+
+  span {
+    display: block;
+    margin: 0 0.5rem;
+    color: ${({ theme }) => theme.text.color.primary};
+    font-size: 13px;
+    text-align: center;
   }
 `;
 
@@ -33,7 +36,10 @@ interface SummaryForCollectableProps {
 }
 
 const SummaryForCollectable = styled.div<SummaryForCollectableProps>`
-  margin-right: 1.5rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 25%;
+  margin: 0.5rem 0;
 
   ${({ total }) =>
     total === 0 &&

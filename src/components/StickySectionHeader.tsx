@@ -13,7 +13,7 @@ interface Props {
 
 const StickyHeaderWrapper = styled.div<{ stickyTopOffset: number; }>`
   position: sticky;
-  top: ${({ stickyTopOffset }) => stickyTopOffset ? `${Math.floor(stickyTopOffset)}px` : 0};
+  top: 0;
   background-color: ${({ theme }) => theme.background.color.primary};
   z-index: 1;
 
@@ -33,7 +33,7 @@ const Inner = styled.div`
 
 const StickySectionHeader = ({ title, children, stickyTopOffset = 0 }: Props) => {
   return (
-    <StickyHeaderWrapper stickyTopOffset={stickyTopOffset}>
+    <StickyHeaderWrapper stickyTopOffset={stickyTopOffset} style={{ top: stickyTopOffset }}>
       <Container>
         <Inner>
           {title && <h2 id={slugify(title)}>{title}</h2>}

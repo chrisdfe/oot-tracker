@@ -1,4 +1,4 @@
-import React, { ReactNode, useContext, useRef, forwardRef } from "react";
+import React, { ReactNode, useContext, useRef, useEffect, useState, forwardRef } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
@@ -24,8 +24,6 @@ import {
 } from "../../../utils/appState";
 
 import { getRegionById } from "../../../data/selectors/regions";
-
-import hexToRGB from 'utils/hexToRGB';
 
 const Wrapper = styled.div`
   padding-bottom: 2rem;
@@ -74,6 +72,10 @@ const LocationDetailPage = () => {
   const appState = useContext(AppStateContext);
 
   const locationSummaryRef = useRef<HTMLDivElement>(null);
+  const [locationSummaryHeight, setLocationSummaryHeight] = useState(0);
+  useEffect(() => {
+    setLocationSummaryHeight(locationSummaryRef?.current?.getBoundingClientRect().height || 0);
+  }, []);
 
   const {
     locations: allLocations,
@@ -131,9 +133,6 @@ const LocationDetailPage = () => {
   );
 
   const themeRegion = getRegionById(appData, currentLocation.regionId);
-
-  // console.log(locationSummaryRef);
-  const locationSummaryHeight = locationSummaryRef?.current?.getBoundingClientRect().height;
 
   return (
     <ThemeRegion regionKey={themeRegion && themeRegion.key}>

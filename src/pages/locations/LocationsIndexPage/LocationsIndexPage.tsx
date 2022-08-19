@@ -15,6 +15,7 @@ import usePersistedState from "utils/usePersistedState";
 import LocationRegionFilters from "./LocationRegionFilters";
 import LocationListItem from "./LocationListItem";
 import ListTitle from "./ListTitle";
+import { Region, RegionKey } from "data/types/Region";
 
 const LocationsIndexPage = () => {
   const appData = useContext(AppDataContext);
@@ -45,7 +46,7 @@ const LocationsIndexPage = () => {
   }, [currentRegionFilterId, groupedLocations]);
 
   const onRegionSelect = useCallback(
-    (region) => {
+    (region: Region) => {
       if (currentRegionFilterId && currentRegionFilterId === region.id) {
         setCurrentRegionFilterId("");
       } else {
@@ -74,15 +75,16 @@ const LocationsIndexPage = () => {
 
           {Object.keys(filteredLocations).map((regionId) => {
             const locations = filteredLocations[regionId];
-            const themeRegion = getRegionById(appData, regionId);
-            const regionSlug = themeRegion ? themeRegion.slug : "";
+            const themeRegion = getRegionById(appData, regionId as RegionKey);
+            const regionKey = themeRegion ? themeRegion.key : undefined;
+
             return (
               <div key={regionId}>
                 {locations.map((location) => (
                   <LocationListItem
                     key={location.slug}
                     location={location}
-                    regionSlug={regionSlug}
+                    regionKey={regionKey}
                   />
                 ))}
               </div>

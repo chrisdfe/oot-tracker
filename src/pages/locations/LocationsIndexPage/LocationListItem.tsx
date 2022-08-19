@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { GameLocation } from "data/types/GameLocation";
+import { RegionKey } from "data/types/Region";
 
 import ThemeRegion from "App/ThemeRegion";
 
@@ -10,7 +11,7 @@ import FancyBlockLink from "components/FancyBlockLink";
 import LocationCollectableSummary from "../components/LocationCollectableSummary";
 
 interface Props {
-  regionSlug: string;
+  regionKey?: RegionKey;
   location: GameLocation;
 }
 
@@ -26,9 +27,9 @@ const LocationListItemWrapper = styled.div`
   }
 `;
 
-const LocationListItem = ({ regionSlug, location }: Props) => {
+const LocationListItem = ({ regionKey = RegionKey.overworld, location }: Props) => {
   return (
-    <ThemeRegion regionSlug={regionSlug}>
+    <ThemeRegion regionKey={regionKey}>
       <LocationListItemWrapper>
         <FancyBlockLink
           title={location.title}

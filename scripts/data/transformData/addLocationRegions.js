@@ -10,7 +10,7 @@ const regions = [
 ].map((title, index) => ({
   id: `${index + 1}`,
   title,
-  slug: title.toLowerCase()
+  key: title.toLowerCase()
 }));
 
 const getRegionIdFromTitle = title => {

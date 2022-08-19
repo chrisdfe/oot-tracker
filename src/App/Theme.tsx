@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
+import { defaultsDeep } from "lodash-es";
 
-import { ThemeProvider } from "styled-components";
+import { DefaultTheme, ThemeProvider } from "styled-components";
+import { RegionKey } from "data/types/Region";
 
 import hexToRGB from "../utils/hexToRGB";
 
@@ -8,62 +10,34 @@ interface Props {
   children: ReactNode;
 }
 
-type RegionTheme = {
-  background: {
-    color: {
-      primary: string;
-      secondary: string;
-    };
-  };
-  text: {
-    color: {
-      primary: string;
-    };
-  };
-  border: {
-    color: {
-      primary: string;
-      secondary: string;
-    };
-  };
-};
-
-type RegionThemeMap = {
-  [regionName: string]: RegionTheme;
-};
-
-type ValueMap = {
-  [name: string]: string;
-};
-
-export type AppTheme =
-  {
-    rawColors: ValueMap;
-    rawFonts: ValueMap;
-    fonts: ValueMap;
-    regions: RegionThemeMap;
-  };
-
-const rawColors = {
+export const rawColors = {
   white: "#ffffff",
   caper: "#e1e5da",
   killarney: "#2f5e42",
   kellyGreen: "#22d07a",
 };
 
-const rawFonts = {
+export const rawFonts = {
   merriweather: "Merriweather, sans-serif",
   openSans: "'Open Sans', sans-serif",
   lora: "'Lora', serif",
   spaceMono: "'Space Mono', monospace",
 };
 
-const overworldTheme: RegionTheme = {
+const baseTheme = {
+  fonts: {
+    heading: rawFonts.lora,
+    body: rawFonts.spaceMono
+  },
+  rawColors,
+  rawFonts,
+};
+
+export const overworldTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: rawColors.white,
       secondary: "#eaecef",
-      // secondary: "#2A3854aa",
     },
   },
   text: {
@@ -77,9 +51,9 @@ const overworldTheme: RegionTheme = {
       secondary: hexToRGB("#2A3854", 0.2),
     },
   },
-};
+}, baseTheme);
 
-const zoraTheme: RegionTheme = {
+export const zoraTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: "#d7e5ed",
@@ -97,9 +71,9 @@ const zoraTheme: RegionTheme = {
       secondary: hexToRGB("#08466e", 0.2),
     },
   },
-};
+}, baseTheme);
 
-const kokiriTheme: RegionTheme = {
+export const kokiriTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: rawColors.caper,
@@ -117,9 +91,9 @@ const kokiriTheme: RegionTheme = {
       secondary: hexToRGB(rawColors.killarney, 0.2),
     },
   },
-};
+}, baseTheme);
 
-const goronTheme: RegionTheme = {
+export const goronTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: "#e5cccc",
@@ -137,9 +111,9 @@ const goronTheme: RegionTheme = {
       secondary: hexToRGB("#c13540", 0.2),
     },
   },
-};
+}, baseTheme);
 
-const shadowTheme: RegionTheme = {
+export const shadowTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: "#dddce5",
@@ -157,9 +131,9 @@ const shadowTheme: RegionTheme = {
       secondary: hexToRGB("#635566", 0.2),
     },
   },
-};
+}, baseTheme);
 
-const gerudoTheme: RegionTheme = {
+export const gerudoTheme: DefaultTheme = defaultsDeep({
   background: {
     color: {
       primary: "#FBDEC6",
@@ -177,34 +151,21 @@ const gerudoTheme: RegionTheme = {
       secondary: hexToRGB("#E5555E", 0.2),
     },
   },
-};
+}, baseTheme);
 
-const defaultTheme = overworldTheme;
+export type ThemeRegionMap = { [key in RegionKey]: DefaultTheme };
 
-const theme: AppTheme = {
-  rawColors,
-  rawFonts,
-
-  fonts: {
-    // heading: rawFonts.merriweather,
-    heading: rawFonts.lora,
-    body: rawFonts.spaceMono,
-  },
-
-  ...defaultTheme,
-
-  regions: {
-    overworld: overworldTheme,
-    zora: zoraTheme,
-    kokiri: kokiriTheme,
-    goron: goronTheme,
-    shadow: shadowTheme,
-    gerudo: gerudoTheme,
-  },
+export const themeRegionMap = {
+  overworld: overworldTheme,
+  zora: zoraTheme,
+  kokiri: kokiriTheme,
+  goron: goronTheme,
+  shadow: shadowTheme,
+  gerudo: gerudoTheme,
 };
 
 const Theme = ({ children }: Props) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return <ThemeProvider theme={overworldTheme}>{children}</ThemeProvider>;
 };
 
 export default Theme;

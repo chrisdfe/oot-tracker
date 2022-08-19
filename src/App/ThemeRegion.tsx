@@ -1,23 +1,16 @@
 import React, { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
-import { AppTheme } from "./Theme";
+import { themeRegionMap } from "./Theme";
+import { RegionKey } from 'data/types/Region';
 
 interface Props {
-  regionSlug: string;
+  regionKey?: RegionKey;
   children: ReactNode;
 }
 
-const getTheme = (regionSlug: string, theme: any): AppTheme => {
-  const matchingRegion = theme.regions[regionSlug];
-  if (matchingRegion) {
-    return { ...theme, ...matchingRegion };
-  }
-  return theme;
-};
-
-const ThemeRegion = ({ regionSlug, children }: Props) => {
+const ThemeRegion = ({ regionKey = RegionKey.overworld, children }: Props) => {
   return (
-    <ThemeProvider theme={(theme: AppTheme) => getTheme(regionSlug, theme)}>
+    <ThemeProvider theme={() => themeRegionMap[regionKey]}>
       {children}
     </ThemeProvider>
   );

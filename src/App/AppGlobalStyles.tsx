@@ -1,5 +1,5 @@
 import React, { ReactNode, useContext } from "react";
-import { ThemeContext, createGlobalStyle } from "styled-components";
+import { useTheme, createGlobalStyle } from "styled-components";
 
 import "normalize.css";
 
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const AppGlobalStyles = ({ children }: Props) => {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
 
   const GlobalStyles = createGlobalStyle`
     :root {

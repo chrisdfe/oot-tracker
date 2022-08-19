@@ -1,6 +1,15 @@
+export enum RegionKey {
+  overworld = 'overworld',
+  kokiri = 'kokiri',
+  goron = 'goron',
+  zora = 'zora',
+  shadow = 'shadow',
+  gerudo = 'gerudo'
+};
+
 export type Region = {
   id: string;
   title: string;
-  slug: string;
+  key: RegionKey;
 };
 

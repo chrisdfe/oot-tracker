@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import { Helmet } from "react-helmet";
 
@@ -45,44 +45,21 @@ function App() {
             <ScrollToTop />
             <Navbar />
 
-            <Switch>
-              <Route path="/locations/:slug">
-                <LocationDetailPage />
-              </Route>
-              <Route path="/locations">
-                <LocationsIndexPage />
-              </Route>
-              <Route path="/collectables/heart-pieces">
-                <HeartsPiecesPage />
-              </Route>
-              <Route path="/collectables/gold-skulltulas">
-                <GoldSkulltulasPage />
-              </Route>
-              <Route path="/collectables/soft-soil-locations">
-                <SoftSoilLocationsPage />
-              </Route>
-              <Route path="/collectables/great-fairy-fountains">
-                <GreatFairyFountainsPage />
-              </Route>
-              <Route path="/collectables">
-                <CollectablesIndexPage />
-              </Route>
-              <Route path="/styleguide/components">
-                <StyleguideComponentsPage />
-              </Route>
-              <Route path="/styleguide/typography">
-                <StyleguideTypographyPage />
-              </Route>
-              <Route path="/styleguide/regions">
-                <StyleguideRegionsPage />
-              </Route>
-              <Route path="/styleguide">
-                <StyleguideIndexPage />
-              </Route>
-              <Route path="/">
-                <CollectablesIndexPage />
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/locations/:slug" element={<LocationDetailPage />} />
+              <Route path="/locations" element={<LocationsIndexPage />} />
+              <Route path="/collectables/heart-pieces" element={<HeartsPiecesPage />} />
+              <Route path="/collectables/gold-skulltulas" element={<GoldSkulltulasPage />} />
+              <Route path="/collectables/soft-soil-locations" element={<SoftSoilLocationsPage />} />
+              <Route path="/collectables/great-fairy-fountains" element={<GreatFairyFountainsPage />} />
+              <Route path="/collectables" element={<CollectablesIndexPage />} />
+              <Route path="/styleguide/components" element={<StyleguideComponentsPage />} />
+              <Route path="/styleguide/typography" element={<StyleguideTypographyPage />} />
+              <Route path="/styleguide/regions" element={<StyleguideRegionsPage />} />
+              <Route path="/styleguide" element={<StyleguideIndexPage />} />
+              <Route path="/" element={<CollectablesIndexPage />} />
+            </Routes>
+
           </Router>
         </AppGlobalStyles>
       </AppContainer>

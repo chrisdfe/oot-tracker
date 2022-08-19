@@ -27,7 +27,7 @@ const ListTitle = ({ region }: Props) => {
   return (
     <Wrapper>
       <h4>
-        <ThemeRegion regionSlug={region ? region.slug : ""}>
+        <ThemeRegion regionKey={region && region.key}>
           <RegionName>{regionName}</RegionName>
         </ThemeRegion>{" "}
         locations

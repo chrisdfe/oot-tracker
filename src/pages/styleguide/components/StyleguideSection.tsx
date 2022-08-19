@@ -29,10 +29,10 @@ const StyleguideSection = ({ title, showRegionSelector, children }: Props) => {
   const [currentRegion, setCurrentRegion] = useState<Region>(regions[0]);
 
   const onRegionSelect = useCallback(
-    region => {
+    (region: Region) => {
       setCurrentRegion(region);
     },
-    [currentRegion]
+    []
   );
 
   return (
@@ -46,7 +46,7 @@ const StyleguideSection = ({ title, showRegionSelector, children }: Props) => {
             currentRegionFilterId={currentRegion.id}
           />
         )}
-        <ThemeRegion regionSlug={currentRegion.slug}>
+        <ThemeRegion regionKey={currentRegion.key}>
           <StyleguideSectionContent>{children}</StyleguideSectionContent>
         </ThemeRegion>
       </Container>

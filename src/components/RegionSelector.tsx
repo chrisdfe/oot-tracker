@@ -69,7 +69,7 @@ const LocationRegionFilters = ({
   return (
     <ListWrapper>
       {regions.map((region) => (
-        <ThemeRegion key={region.slug} regionSlug={region.slug}>
+        <ThemeRegion key={region.key} regionKey={region.key}>
           <ListItemButton
             isActive={currentRegionFilterId === region.id}
             onClick={() => {

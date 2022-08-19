@@ -12,7 +12,7 @@ import { GoldSkulltula } from "../data/types/GoldSkulltula";
 import { SoftSoilLocation } from "../data/types/SoftSoilLocation";
 import { GreatFairyFountain } from "../data/types/GreatFairyFountain";
 import { GameLocation } from "../data/types/GameLocation";
-import { Region } from "../data/types/Region";
+import { Region, RegionKey } from "../data/types/Region";
 
 interface Props {
   children: ReactNode;
@@ -30,10 +30,10 @@ export type AppData = {
 const data: AppData = {
   heartPieces,
   goldSkulltulas,
-  locations,
+  locations: locations.map(location => ({ ...location, regionId: (location.regionId as RegionKey) })),
   softSoilLocations,
   greatFairyFountains,
-  regions
+  regions: regions.map(region => ({ ...region, key: (region.key as RegionKey) }))
 };
 
 export const AppDataContext = createContext<AppData>(data);

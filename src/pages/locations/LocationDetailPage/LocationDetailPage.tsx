@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 import Container from "components/layout/Container";
 import Hero from "components/layout/Hero";
-import BackLink from "components/BackLink";
 
 import { AppDataContext } from "App/AppData";
 import { AppStateContext } from "App/AppState";
@@ -26,13 +25,7 @@ import {
 
 import { getRegionById } from "../../../data/selectors/regions";
 
-import { GameLocation } from "../../../data/types/GameLocation";
-
 import hexToRGB from 'utils/hexToRGB';
-
-interface LocationListItemProps {
-  location: GameLocation;
-}
 
 const Wrapper = styled.div`
   padding-bottom: 2rem;
@@ -43,7 +36,6 @@ const Wrapper = styled.div`
     color: ${({ theme }) => theme.text.color.primary};
   }
 `;
-
 
 interface LocationCollectableSummaryWrapperProps {
   children: ReactNode;
@@ -135,10 +127,9 @@ const LocationDetailPage = () => {
   );
 
   const themeRegion = getRegionById(appData, currentLocation.regionId);
-  const regionSlug = themeRegion ? themeRegion.slug : "";
 
   return (
-    <ThemeRegion regionSlug={regionSlug}>
+    <ThemeRegion regionKey={themeRegion && themeRegion.key}>
       <Wrapper>
         <Hero
           backLink="/locations"

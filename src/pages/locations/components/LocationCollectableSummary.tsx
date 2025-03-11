@@ -18,7 +18,7 @@ const Summary = styled.div`
   flex-direction: row;
   text-align: center;
   align-items: stretch;
-  
+
   h3 {
     margin: 0 0 0.5rem;
     font-family: ${({ theme }) => theme.rawFonts.spaceMono};
@@ -45,7 +45,7 @@ const SummaryForCollectable = styled.div<SummaryForCollectableProps>`
   flex-grow: 1;
   flex-shrink: 0;
   width: 25%;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 
   ${({ total }) =>
     total === 0 &&
@@ -56,7 +56,7 @@ const SummaryForCollectable = styled.div<SummaryForCollectableProps>`
 
 const ProgressBarWrapper = styled.div`
   margin-top: auto;
-  padding: 0.5rem 0.5rem 0;
+  padding: 0 0.5rem;
 `;
 
 interface Props {
@@ -150,8 +150,7 @@ const LocationCollectableSummary = ({ location }: Props) => {
 
       <SummaryForCollectable total={totalGoldSkulltulas}>
         <h3>
-          {currentCollectedGoldSkulltulas}/
-          {totalGoldSkulltulas}
+          {currentCollectedGoldSkulltulas}/{totalGoldSkulltulas}
         </h3>
 
         <span>gold skulltulas</span>
@@ -167,8 +166,7 @@ const LocationCollectableSummary = ({ location }: Props) => {
 
       <SummaryForCollectable total={totalSoftSoilLocations}>
         <h3>
-          {currentCollectedSoftSoilLocations}/
-          {totalSoftSoilLocations}
+          {currentCollectedSoftSoilLocations}/{totalSoftSoilLocations}
         </h3>
 
         <span>soft soil locations</span>
@@ -184,8 +182,7 @@ const LocationCollectableSummary = ({ location }: Props) => {
 
       <SummaryForCollectable total={totalGreatFairyFountains}>
         <h3>
-          {currentCollectedGreatFairyFountains}/
-          {totalGreatFairyFountains}
+          {currentCollectedGreatFairyFountains}/{totalGreatFairyFountains}
         </h3>
 
         <span>great fairy fountains</span>
